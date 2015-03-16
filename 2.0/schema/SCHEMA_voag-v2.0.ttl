@@ -15,6 +15,10 @@
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+dct:description
+  rdfs:label "description"^^xsd:string ;
+  rdfs:range xsd:string ;
+.
 dct:subject
   rdf:type owl:AnnotationProperty ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
@@ -38,15 +42,26 @@ void:Dataset
   rdf:type owl:Ontology ;
   dct:author "Ralph Hodgson"^^xsd:string ;
   dct:modified "2014-07-24"^^xsd:date ;
+  vaem:hasGraphMetadata <http://voag.linkedmodel.org/2.0/schema/voag/GMD_VOAG> ;
+  owl:imports <http://rdfs.org/ns/void> ;
+  owl:imports <http://www.linkedmodel.org/1.1/schema/dtype> ;
+  owl:imports <http://www.linkedmodel.org/schema/vaem> ;
+  owl:versionIRI <http://voag.linkedmodel.org/2.0/schema/voag> ;
+.
+<http://voag.linkedmodel.org/2.0/schema/voag/GMD_VOAG>
+  rdf:type vaem:GraphMetaData ;
+  dct:description "VOAG stands for \"Vocabulary Of Attribution and Governance\". The ontology is intended to specify licensing, attribution, provenance and governance of an ontology. VOAG captures many common license types and their restrictions. Where a license requires attribution, VOAG provides resources that allow the attribution should be made. Provenance is defined in terms of source and pedigree. A miminal model of governance is provided based on how issues, releases and changes are managed. VOAG does not import, but makes uses of some concepts from VOID (http://vocab.deri.ie/void), notably void:Dataset."^^xsd:string ;
+  dct:modified "2014-07-24"^^xsd:date ;
   dct:subject "Licensing, Attribution and Governance"^^xsd:string ;
   dct:title "Schema for \"Vocabulary Of Attribution and Governance (VOAG)\" - Version 2.0"^^xsd:string ;
   voag:intent "VOAG is a schema for intellectual capital rights, attribution and governance. Uses the PROVO ontology for provenance.  Typical use of the ontology is to refer to its resources, as opposed to importing the ontology."^^xsd:string ;
-  dct:description "VOAG stands for \"Vocabulary Of Attribution and Governance\". The ontology is intended to specify licensing, attribution, provenance and governance of an ontology. VOAG captures many common license types and their restrictions. Where a license requires attribution, VOAG provides resources that allow the attribution should be made. Provenance is defined in terms of source and pedigree. A miminal model of governance is provided based on how issues, releases and changes are managed. VOAG does not import, but makes uses of some concepts from VOID (http://vocab.deri.ie/void), notably void:Dataset."^^xsd:string ;
   vaem:hasGraphRole vaem:SchemaGraph ;
   vaem:hasLicenseType <http://voag.linkedmodel.org/voag#CC-SHAREALIKE_3PT0-US> ;
-  vaem:name "VOAG"^^xsd:string ;
-  vaem:namespace "http://voag.linkedmodel.org/voag/"^^xsd:string ;
-  vaem:namespacePrefix "voag"^^xsd:string ;
+  vaem:hasOwner vaem:TopQuadrant ;
+  vaem:hasSteward vaem:TopQuadrant ;
+  vaem:isElaboratedIn <http://voag.linkedmodel.org/2.0/schema/voag> ;
+  vaem:isElaboratedIn <http://voag.linkedmodel.org/schema/voag> ;
+  vaem:name "voag"^^xsd:string ;
   vaem:owner "TopQuadrant, Inc."^^xsd:string ;
   vaem:rdfxmlFileURL "http://voag.linkedmodel.org/2.0/schema/SCHEMA_voag-v2.0.rdf"^^xsd:anyURI ;
   vaem:revision "2.0"^^xsd:string ;
@@ -59,10 +74,6 @@ void:Dataset
   vaem:usesNonImportedResource voag:TopQuadrantAttribution ;
   vaem:withAttributionTo voag:TopQuadrantAttribution ;
   rdfs:label "Schema for \"Vocabulary Of Attribution and Governance (VOAG)\" - Version 2.0"^^xsd:string ;
-  owl:imports <http://rdfs.org/ns/void> ;
-  owl:imports <http://www.linkedmodel.org/1.1/schema/dtype> ;
-  owl:imports <http://www.linkedmodel.org/schema/vaem> ;
-  owl:versionIRI <http://voag.linkedmodel.org/2.0/schema/voag> ;
 .
 voag:Accredidation
   rdf:type owl:Class ;
@@ -293,50 +304,50 @@ voag:CL_None
 .
 voag:CL_Restricted
   rdf:type voag:ConfidentialityLevel ;
+  dct:description "During and before World War II, the U.S. had a category of classified information called restricted, which was below confidential. The U.S. no longer has a restricted classification, but many other nations and NATO do. The U.S. treats \"restricted\" information it receives from other governments as confidential. The U.S. does use the term restricted data in a completely different way to refer to nuclear secrets." ;
   dtype:code 1 ;
   dtype:order "2"^^xsd:int ;
   dtype:value "restricted"^^xsd:string ;
-  dct:description "During and before World War II, the U.S. had a category of classified information called restricted, which was below confidential. The U.S. no longer has a restricted classification, but many other nations and NATO do. The U.S. treats \"restricted\" information it receives from other governments as confidential. The U.S. does use the term restricted data in a completely different way to refer to nuclear secrets." ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "Restricted"^^xsd:string ;
 .
 voag:CL_Secret
   rdf:type voag:ConfidentialityLevel ;
+  dct:description "\"Secret\" shall be applied to information, the unauthorized disclosure of which reasonably could be expected to cause serious damage to the national security that the original classification authority is able to identify or describe [US Executive Order 12958]." ;
   dtype:code 5 ;
   dtype:order "6"^^xsd:int ;
   dtype:value "secret"^^xsd:string ;
-  dct:description "\"Secret\" shall be applied to information, the unauthorized disclosure of which reasonably could be expected to cause serious damage to the national security that the original classification authority is able to identify or describe [US Executive Order 12958]." ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "Secret"^^xsd:string ;
 .
 voag:CL_SensitiveButUnclassified
   rdf:type voag:ConfidentialityLevel ;
+  dct:description "Sensitive but Unclassified (SBU) information should not be disclosed but is not national security information and cannot be classified according to Executive Order (EO)12958, as amended. These materials must be: properly marked, locked up when not under the supervision of an authorized person, and encrypted while in transit over a non-secure network. Some examples are: trade secrets, proprietary information, financial information, personnel and medical records, procurement-sensitive information, IT system security plans, contingency plans, audit logs (recordings of exceptions and other security-related events), vulnerability reports, incident reports and Personally Identifiable Information (PII)."^^xsd:string ;
   dtype:code 3 ;
   dtype:order "4"^^xsd:int ;
   dtype:value "sbu"^^xsd:string ;
-  dct:description "Sensitive but Unclassified (SBU) information should not be disclosed but is not national security information and cannot be classified according to Executive Order (EO)12958, as amended. These materials must be: properly marked, locked up when not under the supervision of an authorized person, and encrypted while in transit over a non-secure network. Some examples are: trade secrets, proprietary information, financial information, personnel and medical records, procurement-sensitive information, IT system security plans, contingency plans, audit logs (recordings of exceptions and other security-related events), vulnerability reports, incident reports and Personally Identifiable Information (PII)."^^xsd:string ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "Sensitive but Unclassified"^^xsd:string ;
 .
 voag:CL_TopSecret
   rdf:type voag:ConfidentialityLevel ;
+  dct:description "\"Top Secret\" shall be applied to information, the unauthorized disclosure of which reasonably could be expected to cause exceptionally grave damage to the national security that the original classification authority is able to identify or describe [US Executive Order 12958]." ;
   dtype:code 6 ;
   dtype:order "7"^^xsd:int ;
   dtype:value "topsecret"^^xsd:string ;
-  dct:description "\"Top Secret\" shall be applied to information, the unauthorized disclosure of which reasonably could be expected to cause exceptionally grave damage to the national security that the original classification authority is able to identify or describe [US Executive Order 12958]." ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "Top secret"^^xsd:string ;
 .
 voag:CL_Unclassified
   rdf:type voag:ConfidentialityLevel ;
+  dct:description "Unclassified is not technically a \"classification\"; this is the default, and refers to information that can be released to individuals without a clearance (Level 0). Information that is unclassified is sometimes restricted in its dissemination as SBU or FOUO. For example, the \"law enforcement bulletins\" often reported by the U.S. media when United States Department of Homeland Security raises the U.S. terror threat level are usually classified as \"U//LES\" or \"Unclassified - Law Enforcement Sensitive.\" This information is only supposed to be released to Law Enforcement groups (Sheriff, Police, etc.) Because the information is unclassified, however, it is sometimes released to the public as well. Information which is unclassified, but which the government does not believe should be subject to Freedom of Information Act requests is often classified as U//FOUO - \"Unclassified - For Official Use Only\". In addition to FOUO information, information can be categorized according to its availability to be distributed (Distribution D may only be released to approved Department of Defense and Government Contractor personnel). Also, the statement of NOFORN (meaning No Foreign Nationals) is applied to any information which may not be released to any non-US Citizen. NOFORN and Distribution statements are often used in conjunction with classified information or alone on SBU information. Documents subject to export controls have a specific warning to that effect." ;
   dtype:code 2 ;
   dtype:order "3"^^xsd:int ;
   dtype:value "unclassified"^^xsd:string ;
-  dct:description "Unclassified is not technically a \"classification\"; this is the default, and refers to information that can be released to individuals without a clearance (Level 0). Information that is unclassified is sometimes restricted in its dissemination as SBU or FOUO. For example, the \"law enforcement bulletins\" often reported by the U.S. media when United States Department of Homeland Security raises the U.S. terror threat level are usually classified as \"U//LES\" or \"Unclassified - Law Enforcement Sensitive.\" This information is only supposed to be released to Law Enforcement groups (Sheriff, Police, etc.) Because the information is unclassified, however, it is sometimes released to the public as well. Information which is unclassified, but which the government does not believe should be subject to Freedom of Information Act requests is often classified as U//FOUO - \"Unclassified - For Official Use Only\". In addition to FOUO information, information can be categorized according to its availability to be distributed (Distribution D may only be released to approved Department of Defense and Government Contractor personnel). Also, the statement of NOFORN (meaning No Foreign Nationals) is applied to any information which may not be released to any non-US Citizen. NOFORN and Distribution statements are often used in conjunction with classified information or alone on SBU information. Documents subject to export controls have a specific warning to that effect." ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "Unclassified"^^xsd:string ;
@@ -440,8 +451,8 @@ voag:CreativeCommonsProhibition
 .
 voag:CreativeCommonsRequirement
   rdf:type owl:Class ;
-  dct:description "an action that may or may not be requested of you"@en-US ;
   dct:description "An action that may or may not be requested of you"@en-US ;
+  dct:description "an action that may or may not be requested of you"@en-US ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "Requirement"@en-US ;
@@ -520,17 +531,17 @@ voag:Document
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dct:description ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty voag:title ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty vaem:dateCreated ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty dct:description ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -602,12 +613,12 @@ voag:Event
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty voag:id ;
+      owl:onProperty dct:description ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty dct:description ;
+      owl:onProperty voag:id ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -901,6 +912,11 @@ voag:GovernedObject
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dct:description ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty voag:documentedAt ;
     ] ;
   rdfs:subClassOf [
@@ -932,11 +948,6 @@ voag:GovernedObject
       rdf:type owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty vaem:dateCreated ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty dct:description ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -1156,12 +1167,12 @@ voag:Issue
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty voag:id ;
+      owl:onProperty dct:description ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty dct:description ;
+      owl:onProperty voag:id ;
     ] ;
 .
 voag:IssueResolutionProcess
@@ -1220,11 +1231,11 @@ voag:LicenseModel
 .
 voag:LinkedModelLogo-200x80
   rdf:type voag:Logo ;
+  dct:description "LinkedModel Logo"^^xsd:string ;
   voag:caption "LinkedModel Standard ICON"^^xsd:string ;
   voag:height "80"^^xsd:string ;
   voag:image "http://www.linkedmodel.org/lib/lm/images/logos/linkedmodels-logo.gif"^^xsd:anyURI ;
   voag:width "200"^^xsd:string ;
-  dct:description "LinkedModel Logo"^^xsd:string ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "LinkedModel ICON 200 x 80"^^xsd:string ;
@@ -1312,8 +1323,8 @@ voag:NonIssue
 .
 voag:OpenIssue
   rdf:type voag:IssueStatus ;
-  dtype:value "open"^^xsd:string ;
   dct:description "An issue with undetermined disposition,"^^xsd:string ;
+  dtype:value "open"^^xsd:string ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "Open"^^xsd:string ;
@@ -1443,8 +1454,8 @@ voag:Party
 .
 voag:Pedigree
   rdf:type owl:Class ;
-  dct:description "The origin or source of something. The primary purpose of provenance is to capture the time, place, and if appropriate the person responsible, for the creation, production or provisioning of some information object."^^xsd:string ;
   dct:description "Pedigree captures aspects of an artifact that have to do with maturity, quality, salience, and accredidation."^^xsd:string ;
+  dct:description "The origin or source of something. The primary purpose of provenance is to capture the time, place, and if appropriate the person responsible, for the creation, production or provisioning of some information object."^^xsd:string ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "Pedigree"^^xsd:string ;
@@ -1528,8 +1539,8 @@ voag:Proposed
 .
 voag:Provenance
   rdf:type owl:Class ;
-  dct:description "The origin or source of something. The primary purpose of provenance is to capture the time, place, and if appropriate the person responsible, for the creation, production or provisioning of some information object."^^xsd:string ;
   dct:description "Provenance specifies the origin or source of some artifact. The primary purpose of provenance is to capture the time, place, and if appropriate the person responsible, for the creation, production or provisioning of The artifact. Provenance also captures a record of how a version may have been superceded by another version of the artifact."^^xsd:string ;
+  dct:description "The origin or source of something. The primary purpose of provenance is to capture the time, place, and if appropriate the person responsible, for the creation, production or provisioning of some information object."^^xsd:string ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "Provenance"^^xsd:string ;
@@ -1629,11 +1640,11 @@ voag:Quarterly
 .
 voag:RDFIcon-32X35
   rdf:type voag:Icon ;
+  dct:description "RDF Standard"^^xsd:string ;
   voag:caption "RDF Standard ICON"^^xsd:string ;
   voag:height "35"^^xsd:string ;
   voag:image "http://www.linkedmodel.org/lib/lm/images/icons/rdf_w3c_icon.48.gif"^^xsd:anyURI ;
   voag:width "32"^^xsd:string ;
-  dct:description "RDF Standard"^^xsd:string ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "RDF Icon 32 X 35"^^xsd:string ;
@@ -1682,11 +1693,11 @@ voag:ReviewEvent
 .
 voag:SPARQLIcon-80X15
   rdf:type voag:Icon ;
+  dct:description "SPARQL Standard"^^xsd:string ;
   voag:caption "SPARQL Standard ICON"^^xsd:string ;
   voag:height "15"^^xsd:string ;
   voag:image "http://www.linkedmodel.org/lib/lm/images/icons/sw-sparql-blue.png"^^xsd:anyURI ;
   voag:width "80"^^xsd:string ;
-  dct:description "SPARQL Standard"^^xsd:string ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "SPARQL ICON 80 X 15"^^xsd:string ;
@@ -1793,21 +1804,21 @@ voag:TopQuadrantAttribution
 voag:TopQuadrantLogo-613x150
   rdf:type voag:AttributionLogo ;
   rdf:type voag:OrganizationLogo ;
+  dct:description "TopQuadrant's logo - diamond with company name to the right"^^xsd:string ;
   voag:height "150"^^xsd:string ;
   voag:image "http://www.linkedmodel.org/lib/lm/images/logos/TQ_logo_C_2009_SM_print.jpg"^^xsd:anyURI ;
   voag:width "613"^^xsd:string ;
-  dct:description "TopQuadrant's logo - diamond with company name to the right"^^xsd:string ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "TopQuadrant Logo 613 x 150"^^xsd:string ;
 .
 voag:TurtleIcon-32bX35
   rdf:type voag:Icon ;
+  dct:description "Turtle is a representation format for RDF/OWL."^^xsd:string ;
   voag:caption "Turtle ICON"^^xsd:string ;
   voag:height "35"^^xsd:string ;
   voag:image "http://www.linkedmodel.org/lib/lm/images/icons/turtle_icon_32x35.jpg"^^xsd:anyURI ;
   voag:width "32"^^xsd:string ;
-  dct:description "Turtle is a representation format for RDF/OWL."^^xsd:string ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "Turtle Icon 32 X 35"^^xsd:string ;
@@ -2663,8 +2674,4 @@ vaem:CatalogEntry
 .
 vaem:LicenseModel
   rdfs:subClassOf voag:LicenseModel ;
-.
-dct:description
-  rdfs:label "description"^^xsd:string ;
-  rdfs:range xsd:string ;
 .
