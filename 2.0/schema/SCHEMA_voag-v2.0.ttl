@@ -1,6 +1,6 @@
 # baseURI: http://voag.linkedmodel.org/2.0/schema/voag
 # imports: http://rdfs.org/ns/void
-# imports: http://www.linkedmodel.org/1.1/schema/dtype
+# imports: http://www.linkedmodel.org/schema/dtype
 # imports: http://www.linkedmodel.org/schema/vaem
 
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
@@ -44,7 +44,7 @@ void:Dataset
   dct:modified "2014-07-24"^^xsd:date ;
   vaem:hasGraphMetadata <http://voag.linkedmodel.org/2.0/schema/voag/GMD_VOAG> ;
   owl:imports <http://rdfs.org/ns/void> ;
-  owl:imports <http://www.linkedmodel.org/1.1/schema/dtype> ;
+  owl:imports <http://www.linkedmodel.org/schema/dtype> ;
   owl:imports <http://www.linkedmodel.org/schema/vaem> ;
   owl:versionIRI <http://voag.linkedmodel.org/2.0/schema/voag> ;
 .
