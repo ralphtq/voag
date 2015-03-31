@@ -41,39 +41,12 @@ void:Dataset
 <http://voag.linkedmodel.org/2.0/schema/voag>
   rdf:type owl:Ontology ;
   dct:author "Ralph Hodgson"^^xsd:string ;
-  dct:modified "2014-07-24"^^xsd:date ;
-  vaem:hasGraphMetadata <http://voag.linkedmodel.org/2.0/schema/voag/GMD_VOAG> ;
+  dct:modified "2015-03-30"^^xsd:date ;
+  vaem:hasGraphMetadata voag:GMD_VOAG ;
   owl:imports <http://rdfs.org/ns/void> ;
   owl:imports <http://www.linkedmodel.org/schema/dtype> ;
   owl:imports <http://www.linkedmodel.org/schema/vaem> ;
   owl:versionIRI <http://voag.linkedmodel.org/2.0/schema/voag> ;
-.
-<http://voag.linkedmodel.org/2.0/schema/voag/GMD_VOAG>
-  rdf:type vaem:GraphMetaData ;
-  dct:description "VOAG stands for \"Vocabulary Of Attribution and Governance\". The ontology is intended to specify licensing, attribution, provenance and governance of an ontology. VOAG captures many common license types and their restrictions. Where a license requires attribution, VOAG provides resources that allow the attribution should be made. Provenance is defined in terms of source and pedigree. A miminal model of governance is provided based on how issues, releases and changes are managed. VOAG does not import, but makes uses of some concepts from VOID (http://vocab.deri.ie/void), notably void:Dataset."^^xsd:string ;
-  dct:modified "2014-07-24"^^xsd:date ;
-  dct:subject "Licensing, Attribution and Governance"^^xsd:string ;
-  dct:title "Schema for \"Vocabulary Of Attribution and Governance (VOAG)\" - Version 2.0"^^xsd:string ;
-  voag:intent "VOAG is a schema for intellectual capital rights, attribution and governance. Uses the PROVO ontology for provenance.  Typical use of the ontology is to refer to its resources, as opposed to importing the ontology."^^xsd:string ;
-  vaem:hasGraphRole vaem:SchemaGraph ;
-  vaem:hasLicenseType <http://voag.linkedmodel.org/voag#CC-SHAREALIKE_3PT0-US> ;
-  vaem:hasOwner vaem:TopQuadrant ;
-  vaem:hasSteward vaem:TopQuadrant ;
-  vaem:isElaboratedIn <http://voag.linkedmodel.org/2.0/schema/voag> ;
-  vaem:isElaboratedIn <http://voag.linkedmodel.org/schema/voag> ;
-  vaem:name "voag"^^xsd:string ;
-  vaem:owner "TopQuadrant, Inc."^^xsd:string ;
-  vaem:rdfxmlFileURL "http://voag.linkedmodel.org/2.0/schema/SCHEMA_voag-v2.0.rdf"^^xsd:anyURI ;
-  vaem:revision "2.0"^^xsd:string ;
-  vaem:turtleFileURL "http://voag.linkedmodel.org/2.0/schema/SCHEMA_voag-v2.0.ttl"^^xsd:anyURI ;
-  vaem:usesNonImportedResource dct:author ;
-  vaem:usesNonImportedResource dct:contributor ;
-  vaem:usesNonImportedResource dct:description ;
-  vaem:usesNonImportedResource dct:subject ;
-  vaem:usesNonImportedResource dct:title ;
-  vaem:usesNonImportedResource voag:TopQuadrantAttribution ;
-  vaem:withAttributionTo voag:TopQuadrantAttribution ;
-  rdfs:label "Schema for \"Vocabulary Of Attribution and Governance (VOAG)\" - Version 2.0"^^xsd:string ;
 .
 voag:Accredidation
   rdf:type owl:Class ;
@@ -644,6 +617,40 @@ voag:Figure
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty voag:imageMap ;
     ] ;
+.
+voag:GMD_VOAG
+  rdf:type vaem:GraphMetaData ;
+  dct:modified "2015-03-30"^^xsd:date ;
+  dct:subject "Licensing, Attribution and Governance"^^xsd:string ;
+  dct:title "Schema for \"Vocabulary Of Attribution and Governance (VOAG)\" - Version 2.0"^^xsd:string ;
+  vaem:description "VOAG stands for \"Vocabulary Of Attribution and Governance\". The ontology is intended to specify licensing, attribution, provenance and governance of an ontology. VOAG captures many common license types and their restrictions. Where a license requires attribution, VOAG provides resources that allow the attribution should be made. Provenance is defined in terms of source and pedigree. A miminal model of governance is provided based on how issues, releases and changes are managed. VOAG does not import, but makes uses of some concepts from VOID (http://vocab.deri.ie/void), notably void:Dataset."^^xsd:string ;
+  vaem:hasGraphRole vaem:SchemaGraph ;
+  vaem:hasLicenseType <http://voag.linkedmodel.org/voag#CC-SHAREALIKE_3PT0-US> ;
+  vaem:hasOwner vaem:TopQuadrant ;
+  vaem:hasSteward vaem:TopQuadrant ;
+  vaem:intent "VOAG is a schema for intellectual capital rights, attribution and governance. Uses the PROVO ontology for provenance.  Typical use of the ontology is to refer to its resources, as opposed to importing the ontology."^^xsd:string ;
+  vaem:latestPublishedVersion "http://voag.linkedmodel.org/doc/2015/SCHEMA_voag-v2.0.html"^^xsd:anyURI ;
+  vaem:logo "http://www.linkedmodel.org/lib/lm/images/logos/voag_logo_360x110.png"^^xsd:anyURI ;
+  vaem:name "voag"^^xsd:string ;
+  vaem:namespace "http://voag.linkedmodel.org/voag/"^^xsd:anyURI ;
+  vaem:namespacePrefix "voag"^^xsd:string ;
+  vaem:owner "TopQuadrant, Inc."^^xsd:string ;
+  vaem:previousPublishedVersion "http://linkedmodel.org/doc/voag/1.0/"^^xsd:anyURI ;
+  vaem:rdfxmlFileURL "http://voag.linkedmodel.org/2.0/schema/SCHEMA_voag-v2.0.rdf"^^xsd:anyURI ;
+  vaem:revision "2.0"^^xsd:string ;
+  vaem:title "Vocabulary Of Attribution and Governance (VOAG) Schema Version 2.0"^^xsd:string ;
+  vaem:turtleFileURL "http://voag.linkedmodel.org/2.0/schema/SCHEMA_voag-v2.0.ttl"^^xsd:anyURI ;
+  vaem:usesNonImportedResource dct:author ;
+  vaem:usesNonImportedResource dct:contributor ;
+  vaem:usesNonImportedResource dct:description ;
+  vaem:usesNonImportedResource dct:subject ;
+  vaem:usesNonImportedResource dct:title ;
+  vaem:usesNonImportedResource voag:TopQuadrantAttribution ;
+  vaem:withAttributionTo voag:TopQuadrantAttribution ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
+  rdfs:label "Schema for \"Vocabulary Of Attribution and Governance (VOAG)\" - Version 2.0"^^xsd:string ;
+  rdfs:seeAlso <http://voag.linkedmodel.org/doc/2015/VOCAB_voag-v2.0.html> ;
 .
 voag:GR_Authorizer
   rdf:type voag:GovernanceRole ;
