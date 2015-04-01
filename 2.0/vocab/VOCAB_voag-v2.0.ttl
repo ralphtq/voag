@@ -538,12 +538,12 @@ voag:GNU-GPL_V3
   rdf:type voag:LicenseModel ;
   dct:description "This is the latest version of the GNU GPL: a free software license, and a copyleft license. We recommend it for most software packages. GPLv3 is not compatible with GPLv2 by itself. However, most software released under GPLv2 allows you to use the terms of later versions of the GPL as well. When this is the case, you can use the code under GPLv3 to make the desired combination."^^xsd:string ;
   voag:supercedes voag:GNU-GPL_V2 ;
+  voag:wasInfluencedBy <http://www.gnu.org/licenses/gpl.html> ;
   vaem:acronym "GNUGPL"^^xsd:string ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/vocab/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/vocab/voag> ;
   rdfs:label "GNU General Public License (GPL) version 3"^^xsd:string ;
   prov:wasDerivedFrom voag:GNU-GPL_V2 ;
-  prov:wasInfluencedBy <http://www.gnu.org/licenses/gpl.html> ;
 .
 voag:GNU-LGPL_V2PT1
   rdf:type voag:LicenseModel ;
@@ -1428,7 +1428,7 @@ vaem:CatalogEntry
 ].
 [
   rdf:type owl:Restriction ;
-  owl:allValuesFrom voag:Accredidation ;
+  owl:allValuesFrom voag:Accreditation ;
   owl:onProperty voag:hasAccredidation ;
 ].
 [
