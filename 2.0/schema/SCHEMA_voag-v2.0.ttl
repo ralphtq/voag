@@ -114,6 +114,11 @@ voag:ArchivalEvent
   rdfs:label "Archival Event"^^xsd:string ;
   rdfs:subClassOf voag:Event ;
 .
+voag:AttorneyFeesLicenseClause
+  rdf:type owl:Class ;
+  rdfs:label "Attorney fees license clause"^^xsd:string ;
+  rdfs:subClassOf voag:LicenseClause ;
+.
 voag:Attribution
   rdf:type owl:Class ;
   dct:description "An 'Attribution' specifies how credit should be given when citing the creators of a piece of work. Attribution must use the specified attribution text and optionally use logos that are provided in the attribution details below., with the names of points of contact."^^xsd:string ;
@@ -154,6 +159,11 @@ voag:AttributionLogo
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "Attribution logo"^^xsd:string ;
   rdfs:subClassOf voag:Logo ;
+.
+voag:AttributionRightsLicenseClause
+  rdf:type owl:Class ;
+  rdfs:label "Attribution rights license clause"^^xsd:string ;
+  rdfs:subClassOf voag:LicenseClause ;
 .
 voag:BiMonthly
   rdf:type voag:ChangeFrequency ;
@@ -408,6 +418,13 @@ voag:ConfidentialityLevel
   rdfs:label "Confidentiality level"^^xsd:string ;
   rdfs:subClassOf voag:EnumeratedValue ;
 .
+voag:CopyrightGrantLicenseClause
+  rdf:type owl:Class ;
+  vaem:description "A permission that a Licensor grants."^^xsd:string ;
+  rdfs:domain voag:License ;
+  rdfs:label "Cpyright grant license clause"^^xsd:string ;
+  rdfs:subClassOf voag:GrantLicenseClause ;
+.
 voag:CreativeCommonsJurisdiction
   rdf:type owl:Class ;
   dct:description "the legal jurisdiction of a license"@en-US ;
@@ -469,6 +486,11 @@ voag:DeferredIssue
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "Deferred"^^xsd:string ;
 .
+voag:DefinitionLicenseClause
+  rdf:type owl:Class ;
+  rdfs:label "Definition license clause"^^xsd:string ;
+  rdfs:subClassOf voag:LicenseClause ;
+.
 voag:DeletionEvent
   rdf:type owl:Class ;
   dct:description "A deletion."^^xsd:string ;
@@ -501,10 +523,10 @@ voag:DisapprovedIssue
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "Disapproved Issue"^^xsd:string ;
 .
-voag:DisclaimerWarranty
+voag:DisclaimerLicenceClause
   rdf:type owl:Class ;
-  rdfs:label "Disclaimer warranty"^^xsd:string ;
-  rdfs:subClassOf voag:Warranty ;
+  rdfs:label "Disclaimer license clause"^^xsd:string ;
+  rdfs:subClassOf voag:LicenseClause ;
 .
 voag:Document
   rdf:type owl:Class ;
@@ -612,21 +634,24 @@ voag:Event
       owl:onProperty vaem:name ;
     ] ;
 .
-voag:Exclusion
+voag:ExclusionLicenceClause
   rdf:type owl:Class ;
-  rdfs:label "Exclusion"^^xsd:string ;
-  rdfs:subClassOf voag:LicenseTermOrCondition ;
-.
-voag:ExclusionFromLicenseGrant
-  rdf:type owl:Class ;
-  rdfs:label "Exclusion from license grant"^^xsd:string ;
-  rdfs:subClassOf voag:Exclusion ;
+  rdfs:label "Exclusion llicense clause"^^xsd:string ;
+  rdfs:subClassOf voag:LicenseClause ;
 .
 voag:Experimental
   rdf:type voag:Maturity ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "Experimental"^^xsd:string ;
+.
+voag:ExternalDeploymentLicenseClause
+  rdf:type owl:Class ;
+  dct:description "The term \"External Deployment\" means the use, distribution, or communication of the Original Work or Derivative Works in any way such that the Original Work or Derivative Works may be used by anyone other than You, whether those works are distributed or communicated to those persons or made available as an application intended for use over a network."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
+  rdfs:label "External deployment license clause"^^xsd:string ;
+  rdfs:subClassOf voag:LicenseClause ;
 .
 voag:Figure
   rdf:type owl:Class ;
@@ -1019,11 +1044,11 @@ voag:GovernedService
   rdfs:subClassOf voag:Service ;
   owl:disjointWith voag:NonGovernedService ;
 .
-voag:Grant
+voag:GrantLicenseClause
   rdf:type owl:Class ;
   vaem:description "A grant is a permission to perform some action."^^xsd:string ;
-  rdfs:label "Grant"^^xsd:string ;
-  rdfs:subClassOf voag:LicenseTermOrCondition ;
+  rdfs:label "Grant license clause"^^xsd:string ;
+  rdfs:subClassOf voag:LicenseClause ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
@@ -1245,6 +1270,11 @@ voag:IssueStatus
   rdfs:label "Issue Status"^^xsd:string ;
   rdfs:subClassOf voag:EnumeratedValue ;
 .
+voag:JuristricationLicenseClause
+  rdf:type owl:Class ;
+  rdfs:label "Juristrication license clause"^^xsd:string ;
+  rdfs:subClassOf voag:LicenseClause ;
+.
 voag:License
   rdf:type owl:Class ;
   dct:description "A License describes the licensing conditions associated with a software artifact."^^xsd:string ;
@@ -1252,16 +1282,6 @@ voag:License
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "License Model"^^xsd:string ;
   rdfs:subClassOf voag:GovernedObject ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:allValuesFrom voag:Exclusion ;
-      owl:onProperty voag:exclusions ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:allValuesFrom voag:Grant ;
-      owl:onProperty voag:grants ;
-    ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:allValuesFrom voag:License ;
@@ -1279,43 +1299,13 @@ voag:License
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:allValuesFrom voag:Warranty ;
-      owl:onProperty voag:hasWarranty ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
       owl:maxCardinality "1"^^xsd:int ;
       owl:onProperty voag:image ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty voag:attributionRights ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty voag:exclusionFromLicenseGrant ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty voag:externalDeployment ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty voag:grantOfCopyrightLicense ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty voag:grantOfPatentLicense ;
-    ] ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty voag:grantOfSourceCodeLicense ;
+      owl:onProperty voag:ExternalDeploymentLicenseClause ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -1329,36 +1319,34 @@ voag:License
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-      owl:onProperty voag:hasDisclaimerWarranty ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty voag:hasLicenseClause ;
+    ] ;
+.
+voag:LicenseClause
+  rdf:type owl:Class ;
+  rdfs:label "License clause"^^xsd:string ;
+  rdfs:subClassOf owl:Thing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty voag:clauseNumber ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
-      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-      owl:onProperty voag:hasLimitationOfLiability ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty voag:title ;
     ] ;
-.
-voag:LicenseCopyrightGrant
-  rdf:type owl:Class ;
-  vaem:description "A permission that a Licensor grants."^^xsd:string ;
-  rdfs:domain voag:License ;
-  rdfs:label "License copyright grant"^^xsd:string ;
-  rdfs:subClassOf voag:Grant ;
-.
-voag:LicenseTermOrCondition
-  rdf:type owl:Class ;
-  rdfs:label "License term or condition"^^xsd:string ;
-  rdfs:subClassOf owl:Thing ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty vaem:description ;
     ] ;
 .
-voag:LimitationOfLiability
+voag:LimitationOfLiabilityLicenseClause
   rdf:type owl:Class ;
-  rdfs:label "Limitation of liability"^^xsd:string ;
-  rdfs:subClassOf voag:LicenseTermOrCondition ;
+  rdfs:label "Limitation of liability license clause"^^xsd:string ;
+  rdfs:subClassOf voag:LicenseClause ;
 .
 voag:LinkedModelLogo-200x80
   rdf:type voag:Logo ;
@@ -1394,12 +1382,22 @@ voag:Maturity
       voag:InDevelopment
     ) ;
 .
+voag:MiscLicenseClause
+  rdf:type owl:Class ;
+  rdfs:label "Misc license clause"^^xsd:string ;
+  rdfs:subClassOf voag:LicenseClause ;
+.
 voag:ModificationChange
   rdf:type voag:ChangeType ;
   dct:description "self-explanatory"^^xsd:string ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "Modification change"^^xsd:string ;
+.
+voag:ModificationLicenseClause
+  rdf:type owl:Class ;
+  rdfs:label "Modification license clause"^^xsd:string ;
+  rdfs:subClassOf voag:LicenseClause ;
 .
 voag:Monthly
   rdf:type voag:ChangeFrequency ;
@@ -1613,12 +1611,12 @@ voag:Party
       owl:onProperty vaem:name ;
     ] ;
 .
-voag:PatentLicenseGrant
+voag:PatentGrantLicenseClause
   rdf:type owl:Class ;
   vaem:description "A permission that a Licensor grants."^^xsd:string ;
   rdfs:domain voag:License ;
-  rdfs:label "Patent license grant"^^xsd:string ;
-  rdfs:subClassOf voag:Grant ;
+  rdfs:label "Patent grant license clause"^^xsd:string ;
+  rdfs:subClassOf voag:GrantLicenseClause ;
 .
 voag:Pedigree
   rdf:type owl:Class ;
@@ -1847,6 +1845,11 @@ voag:ResolvedIssue
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "Resolved"^^xsd:string ;
 .
+voag:RestrictionsLicenseClause
+  rdf:type owl:Class ;
+  rdfs:label "Restrictions license clause"^^xsd:string ;
+  rdfs:subClassOf voag:LicenseClause ;
+.
 voag:RetreivalEvent
   rdf:type owl:Class ;
   dct:description "A retrieval occurrence."^^xsd:string ;
@@ -1867,6 +1870,11 @@ voag:ReviewEvent
       owl:allValuesFrom voag:Organization ;
       owl:onProperty voag:performedBy ;
     ] ;
+.
+voag:RightToUseLicenseClause
+  rdf:type owl:Class ;
+  rdfs:label "Right to use license clause"^^xsd:string ;
+  rdfs:subClassOf voag:LicenseClause ;
 .
 voag:SPARQLIcon-80X15
   rdf:type voag:Icon ;
@@ -1929,12 +1937,12 @@ voag:SomeAdoption
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "Some adoption"^^xsd:string ;
 .
-voag:SourceCodeLicenseGrant
+voag:SourceCodeLicenseGrantClause
   rdf:type owl:Class ;
   vaem:description "A permission that a Licensor grants."^^xsd:string ;
   rdfs:domain voag:License ;
-  rdfs:label "Source code license grant"^^xsd:string ;
-  rdfs:subClassOf voag:Grant ;
+  rdfs:label "Source code license grant clause"^^xsd:string ;
+  rdfs:subClassOf voag:GrantLicenseClause ;
 .
 voag:StakeholderGroup
   rdf:type owl:Class ;
@@ -1977,6 +1985,11 @@ voag:Standard
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty voag:hasLogo ;
     ] ;
+.
+voag:TerminationLicenseClause
+  rdf:type owl:Class ;
+  rdfs:label "Termination clause"^^xsd:string ;
+  rdfs:subClassOf voag:LicenseClause ;
 .
 voag:TopQuadrantAttribution
   rdf:type voag:Attribution ;
@@ -2057,10 +2070,10 @@ voag:VocabGraph
         ) ;
     ] ;
 .
-voag:Warranty
+voag:WarrantyLicenseClause
   rdf:type owl:Class ;
-  rdfs:label "Warranty"^^xsd:string ;
-  rdfs:subClassOf voag:LicenseTermOrCondition ;
+  rdfs:label "Warranty license clause"^^xsd:string ;
+  rdfs:subClassOf voag:LicenseClause ;
 .
 voag:Weekly
   rdf:type voag:ChangeFrequency ;
@@ -2090,14 +2103,6 @@ voag:approves
   rdfs:subPropertyOf voag:governs ;
   owl:inverseOf voag:isApprovedBy ;
 .
-voag:attributionRights
-  rdf:type owl:DatatypeProperty ;
-  dct:description "self-explanatory"^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
-  rdfs:label "attribution rights"^^xsd:string ;
-  rdfs:range xsd:string ;
-.
 voag:attributionText
   rdf:type owl:DatatypeProperty ;
   dct:description "self-explanatory"^^xsd:string ;
@@ -2113,6 +2118,12 @@ voag:caption
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "caption"^^xsd:string ;
   rdfs:range xsd:string ;
+.
+voag:clauseNumber
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain voag:LicenseClause ;
+  rdfs:label "clause number"^^xsd:string ;
+  rdfs:range xsd:integer ;
 .
 voag:compatibleWith
   rdf:type owl:ObjectProperty ;
@@ -2200,26 +2211,6 @@ voag:exclude
   rdfs:label "exclude"^^xsd:string ;
   rdfs:range xsd:boolean ;
 .
-voag:exclusionFromLicenseGrant
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain voag:License ;
-  rdfs:label "exclusion from license grant"^^xsd:string ;
-  rdfs:range voag:ExclusionFromLicenseGrant ;
-  rdfs:subPropertyOf voag:exclusions ;
-.
-voag:exclusions
-  rdf:type owl:ObjectProperty ;
-  rdfs:label "exclusions"^^xsd:string ;
-.
-voag:externalDeployment
-  rdf:type owl:DatatypeProperty ;
-  dct:description "The term \"External Deployment\" means the use, distribution, or communication of the Original Work or Derivative Works in any way such that the Original Work or Derivative Works may be used by anyone other than You, whether those works are distributed or communicated to those persons or made available as an application intended for use over a network."^^xsd:string ;
-  rdfs:domain voag:License ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
-  rdfs:label "attribution text"^^xsd:string ;
-  rdfs:range xsd:string ;
-.
 voag:frequencyOfChange
   rdf:type owl:ObjectProperty ;
   dct:description "self-explanatory"^^xsd:string ;
@@ -2243,32 +2234,6 @@ voag:governs
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "governs"^^xsd:string ;
   owl:inverseOf voag:isGovernedBy ;
-.
-voag:grantOfCopyrightLicense
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain voag:License ;
-  rdfs:label "grant of copyright license"^^xsd:string ;
-  rdfs:range voag:LicenseCopyrightGrant ;
-  rdfs:subPropertyOf voag:grants ;
-.
-voag:grantOfPatentLicense
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain voag:License ;
-  rdfs:label "grant of patent license"^^xsd:string ;
-  rdfs:range voag:PatentLicenseGrant ;
-  rdfs:subPropertyOf voag:grants ;
-.
-voag:grantOfSourceCodeLicense
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain voag:License ;
-  rdfs:label "grant of source code license"^^xsd:string ;
-  rdfs:range voag:SourceCodeLicenseGrant ;
-  rdfs:subPropertyOf voag:grants ;
-.
-voag:grants
-  rdf:type owl:ObjectProperty ;
-  rdfs:label "grants"^^xsd:string ;
-  rdfs:range voag:Grant ;
 .
 voag:hasAccredidation
   rdf:type owl:ObjectProperty ;
@@ -2334,13 +2299,6 @@ voag:hasConfidentiality
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "has confidentiality"^^xsd:string ;
 .
-voag:hasDisclaimerWarranty
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain voag:License ;
-  rdfs:label "has disclaimer warranty"^^xsd:string ;
-  rdfs:range voag:DisclaimerWarranty ;
-  rdfs:subPropertyOf voag:hasWarranty ;
-.
 voag:hasGovernance
   rdf:type owl:ObjectProperty ;
   dct:description "self-explanatory"^^xsd:string ;
@@ -2378,11 +2336,14 @@ voag:hasIssueResolutionProcess
   rdfs:label "has issue resolution process"^^xsd:string ;
   rdfs:subPropertyOf voag:hasProcess ;
 .
-voag:hasLimitationOfLiability
+voag:hasLicenseClause
   rdf:type owl:ObjectProperty ;
+  dct:description "self-explanatory"^^xsd:string ;
   rdfs:domain voag:License ;
-  rdfs:label "has limitation of liability"^^xsd:string ;
-  rdfs:range voag:LimitationOfLiability ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
+  rdfs:label "has license clause"^^xsd:string ;
+  rdfs:range voag:LicenseClause ;
 .
 voag:hasLogo
   rdf:type owl:ObjectProperty ;
@@ -2475,12 +2436,6 @@ voag:hasSteward
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "has steward"^^xsd:string ;
-.
-voag:hasWarranty
-  rdf:type owl:ObjectProperty ;
-  rdfs:domain voag:License ;
-  rdfs:label "has warranty"^^xsd:string ;
-  rdfs:range voag:Warranty ;
 .
 voag:height
   rdf:type owl:DatatypeProperty ;
