@@ -182,8 +182,6 @@ voag:BiWeekly
 voag:CC-SHAREALIKE_3PT0-US
   rdf:type voag:LicenseModel ;
   dct:description "self-explanatory"^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "Creative Commons Attribution-Share Alike 3.0 United States License"^^xsd:string ;
 .
 voag:CCPH_CommercialUse
@@ -1266,8 +1264,6 @@ voag:LinkedModelLogo-200x80
   voag:height "80"^^xsd:string ;
   voag:image "http://www.linkedmodel.org/lib/lm/images/logos/linkedmodels-logo.gif"^^xsd:anyURI ;
   voag:width "200"^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "LinkedModel ICON 200 x 80"^^xsd:string ;
 .
 voag:Logo
@@ -1916,8 +1912,6 @@ voag:VOAG-OntologyLogo_360x110
   voag:height "55"^^xsd:string ;
   voag:image "http://www.linkedmodel.org/lib/lm/images/logos/voag_logo_360x110.png"^^xsd:anyURI ;
   voag:width "180"^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "VOAG Logo"^^xsd:string ;
 .
 voag:VocabGraph
@@ -2799,3 +2793,12 @@ prov:wasInfluencedBy
   rdfs:isDefinedBy <http://www.w3.org/TR/prov-o/> ;
   rdfs:seeAlso prov:wasInfluencedBy ;
 .
+(
+  voag:WidelyAdopted
+  voag:SomeAdoption
+  voag:EarlyAdoption
+  voag:Proposed
+  voag:UnknownMaturity
+  voag:Experimental
+  voag:InDevelopment
+).
