@@ -189,15 +189,6 @@ voag:ARPHIC_PUBLIC_LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Arphic Public License"^^xsd:string ;
 .
-voag:ARTISTIC_LICENSE_2PT0
-  rdf:type voag:License ;
-  voag:url "http://www.perlfoundation.org/artistic_license_2_0" ;
-  vaem:acronym "ArtisticLicense2"^^xsd:string ;
-  vaem:description "This license is a free software license, compatible with the GPL thanks to the relicensing option in section 4(c)(ii)."^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "Artistic License 2.0"^^xsd:string ;
-.
 voag:BERKELEY_DATABASE_LICENSE
   rdf:type voag:License ;
   voag:url "http://www.oracle.com/technology/software/products/berkeley-db/htdocs/oslicense.html" ;
@@ -888,6 +879,25 @@ voag:CLS_GPL-17
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "GPL - Interpretation of Sections 15 and 16"^^xsd:string ;
 .
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-00
+  rdf:type voag:DefinitionClause ;
+  voag:clauseNumber 0 ;
+  voag:title "Definitions"^^xsd:string ;
+  vaem:description """<p class=\"size-12\">\"Copyright Holder\" means the individual(s) or organization(s) named in the copyright notice for the entire Package.</p>
+<p class=\"size-12\">\"Contributor\" means any party that has contributed code or other material to the Package, in accordance with the Copyright Holder's procedures.</p>
+<p class=\"size-12\">\"You\" and \"your\" means any person who would like to copy, distribute, or modify the Package.</p>
+<p class=\"size-12\">\"Package\" means the collection of files distributed by the Copyright Holder, and derivatives of that collection and/or of those files. A given Package may consist of either the Standard Version, or a Modified Version.</p>
+<p class=\"size-12\">\"Distribute\" means providing a copy of the Package or making it accessible to anyone else, or in the case of a company or organization, to others outside of your company or organization.</p>
+<p class=\"size-12\">\"Distributor Fee\" means any fee that you charge for Distributing this Package or providing support for this Package to another party. It does not mean licensing fees.</p>
+<p class=\"size-12\">\"Standard Version\" refers to the Package if it has not been modified, or has been modified only in ways explicitly requested by the Copyright Holder.</p>
+<p class=\"size-12\">\"Modified Version\" means the Package, if it has been changed, and such changes were not explicitly requested by the Copyright Holder.</p>
+<p class=\"size-12\">\"Original License\" means this Artistic License as Distributed with the Standard Version of the Package, in its current version or as it may be modified by The Perl Foundation in the future.</p>
+<p class=\"size-12\">\"Source\" form means the source code, documentation source, and configuration files for the Package.</p>
+<p class=\"size-12\">\"Compiled\" form means the compiled bytecode, object code, binary, or any other form resulting from mechanical transformation or translation of the Source form.</p>"""^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 00: Definitions"^^xsd:string ;
+.
 voag:COMMON_PUBLIC_LICENSE_V1PT0
   rdf:type voag:License ;
   voag:incompatibleWith voag:GNU-GPL_V2 ;
@@ -1070,11 +1080,11 @@ voag:GMD_VOAG-LICENSES
   vaem:previousPublishedVersion "http://linkedmodel.org/doc/voag/1.0/"^^xsd:anyURI ;
   vaem:rdfxmlFileURL "http://voag.linkedmodel.org/2.0/schema/REFDATA_voag-licenses-v2.0.rdf"^^xsd:anyURI ;
   vaem:revision "2.0"^^xsd:string ;
-  vaem:title "Vocabulary Of Attribution and Governance (VOAG) Licenses  - Version 2.0"^^xsd:string ;
+  vaem:title "Software Licenses in the \"Vocabulary Of Attribution and Governance (VOAG)\", version 2.0"^^xsd:string ;
   vaem:turtleFileURL "http://voag.linkedmodel.org/2.0/schema/REFDATA_voag-licenses-v2.0.ttl"^^xsd:anyURI ;
   vaem:url "http://voag.linkedmodel.org/2.0/vocab/voag"^^xsd:anyURI ;
   vaem:withAttributionTo voag:TopQuadrantAttribution ;
-  rdfs:label "Vocabulary Of Attribution and Governance (VOAG) Licenses  - Version 2.0"^^xsd:string ;
+  rdfs:label "Software Licenses in the \"Vocabulary Of Attribution and Governance (VOAG)\", version 2.0"^^xsd:string ;
 .
 voag:GNU-FDL
   rdf:type voag:License ;
@@ -1556,6 +1566,16 @@ voag:OPL
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Open Public License"^^xsd:string ;
+.
+voag:PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0
+  rdf:type voag:License ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-00 ;
+  voag:url "http://www.perlfoundation.org/artistic_license_2_0" ;
+  vaem:acronym "ArtisticLicense2"^^xsd:string ;
+  vaem:description "This license establishes the terms under which a given free software Package may be copied, modified, distributed, and/or redistributed. The intent is that the Copyright Holder maintains some artistic control over the development of that Package while still keeping the Package available as open source and free software. You are always permitted to make arrangements wholly outside of this license directly with the Copyright Holder of a given Package. If the terms of this license do not permit the full use that you propose to make of the Package, you should contact the Copyright Holder and seek a different licensing arrangement. This Perl Foundation license is a free software license, compatible with the GPL."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "Perl Foundation Artistic License 2.0"^^xsd:string ;
 .
 voag:PHORUM_LICENSE_V2PT0
   rdf:type voag:License ;
