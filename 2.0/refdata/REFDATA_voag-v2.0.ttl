@@ -61,22 +61,22 @@ dct:title
 .
 voag:ACADEMIIC-FREE-LICENSE
   rdf:type voag:License ;
-  voag:hasLicenseClause voag:AFLC_ALF ;
-  voag:hasLicenseClause voag:ARLC_ALF ;
-  voag:hasLicenseClause voag:CGLC_AFL ;
-  voag:hasLicenseClause voag:DLC_AFL ;
-  voag:hasLicenseClause voag:DeLC_ALF ;
-  voag:hasLicenseClause voag:EDLC_ALF ;
-  voag:hasLicenseClause voag:ELC_AFL ;
-  voag:hasLicenseClause voag:JLC_ALF ;
-  voag:hasLicenseClause voag:LOLLC_AFL ;
-  voag:hasLicenseClause voag:MLC_ALF ;
-  voag:hasLicenseClause voag:MoLC_ALF ;
-  voag:hasLicenseClause voag:PGLC_AFL ;
-  voag:hasLicenseClause voag:RTULC_ALF ;
-  voag:hasLicenseClause voag:SCLGC_AFL ;
-  voag:hasLicenseClause voag:TLC_ALF-1 ;
-  voag:hasLicenseClause voag:TLC_ALF-2 ;
+  voag:hasClause voag:CLS_AFL-01 ;
+  voag:hasClause voag:CLS_AFL-02 ;
+  voag:hasClause voag:CLS_AFL-03 ;
+  voag:hasClause voag:CLS_AFL-04 ;
+  voag:hasClause voag:CLS_AFL-05 ;
+  voag:hasClause voag:CLS_AFL-06 ;
+  voag:hasClause voag:CLS_AFL-07 ;
+  voag:hasClause voag:CLS_AFL-08 ;
+  voag:hasClause voag:CLS_AFL-09 ;
+  voag:hasClause voag:CLS_AFL-10 ;
+  voag:hasClause voag:CLS_AFL-11 ;
+  voag:hasClause voag:CLS_AFL-12 ;
+  voag:hasClause voag:CLS_AFL-13 ;
+  voag:hasClause voag:CLS_AFL-14 ;
+  voag:hasClause voag:CLS_AFL-15 ;
+  voag:hasClause voag:CLS_AFL-16 ;
   voag:incompatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://opensource.org/licenses/academic.php" ;
   vaem:acronym "AFL"^^xsd:string ;
@@ -85,7 +85,7 @@ voag:ACADEMIIC-FREE-LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Academic Free License, all versions through 3.0"^^xsd:string ;
 .
-voag:ACDL-V1PT0
+voag:ACDL_V1PT0
   rdf:type voag:License ;
   voag:requires voag:CCR_Copyleft ;
   voag:url "http://fedoraproject.org/wiki/Licensing/Common_Documentation_License" ;
@@ -96,15 +96,6 @@ voag:ACDL-V1PT0
   rdfs:label "Apple's Common Documentation License, Version 1.0"^^xsd:string ;
   skos:closeMatch voag:GNU-FDL ;
   prov:wasInfluencedBy "http://en.wikipedia.org/wiki/GNU_Free_Documentation_License"^^xsd:string ;
-.
-voag:AFLC_ALF
-  rdf:type voag:AttorneyFeesLicenseClause ;
-  voag:clauseNumber 12 ;
-  voag:title "Attorneys' Fees"^^xsd:string ;
-  vaem:description "In any action to enforce the terms of this License or seeking damages relating thereto, the prevailing party shall be entitled to recover its costs and expenses, including, without limitation, reasonable attorneys' fees and costs incurred in connection with such action, including any appeal of such action. This section shall survive the termination of this License."^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "ALF Attorneys' Fees"^^xsd:string ;
 .
 voag:AGPL_V1PT0
   rdf:type voag:License ;
@@ -137,6 +128,7 @@ voag:APACHE_V1PT0
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Apache License, Version 1.0"^^xsd:string ;
+  rdfs:seeAlso voag:GNU-GPL ;
 .
 voag:APACHE_V1PT1
   rdf:type voag:License ;
@@ -186,15 +178,6 @@ voag:APSL_V2
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Apple Public Source License (APSL), version 2"^^xsd:string ;
-.
-voag:ARLC_ALF
-  rdf:type voag:AttributionRightsLicenseClause ;
-  voag:clauseNumber 6 ;
-  voag:title "Attribution Rights"^^xsd:string ;
-  vaem:description "You must retain, in the Source Code of any Derivative Works that You create, all copyright, patent, or trademark notices from the Source Code of the Original Work, as well as any notices of licensing and any descriptive text identified therein as an \"Attribution Notice.\" You must cause the Source Code for any Derivative Works that You create to carry a prominent Attribution Notice reasonably calculated to inform recipients that You have modified the Original Work."^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "ALF Attribution Rights"^^xsd:string ;
 .
 voag:ARPHIC_PUBLIC_LICENSE
   rdf:type voag:License ;
@@ -257,14 +240,14 @@ voag:BSD_ORIGINAL_LICENSE
 voag:CC-SHAREALIKE_3PT0-US
   rdf:type voag:License ;
   voag:documentedAt "http://creativecommons.org/licenses/by-sa/3.0/us/legalcode"^^xsd:string ;
-  voag:hasLicenseClause voag:DeLC_CC-SHAREALIKE_3PT0-US ;
-  voag:hasLicenseClause voag:LC_CC-SHAREALIKE_3PT0-US ;
-  voag:hasLicenseClause voag:LC_CC-SHAREALIKE_3PT0-US-2 ;
-  voag:hasLicenseClause voag:LOLLC_CC-SHAREALIKE_3PT0-US ;
-  voag:hasLicenseClause voag:MLC_CC-SHAREALIKE_3PT0-US ;
-  voag:hasLicenseClause voag:RLC_CC-SHAREALIKE_3PT0-US ;
-  voag:hasLicenseClause voag:RTULC_CC-SHAREALIKE_3PT0-US ;
-  voag:hasLicenseClause voag:TLC_CC-SHAREALIKE_3PT0-US ;
+  voag:hasClause voag:CLS_CC-SHAREALIKE_3PT0-US-01 ;
+  voag:hasClause voag:CLS_CC-SHAREALIKE_3PT0-US-02 ;
+  voag:hasClause voag:CLS_CC-SHAREALIKE_3PT0-US-03 ;
+  voag:hasClause voag:CLS_CC-SHAREALIKE_3PT0-US-04 ;
+  voag:hasClause voag:CLS_CC-SHAREALIKE_3PT0-US-05 ;
+  voag:hasClause voag:CLS_CC-SHAREALIKE_3PT0-US-06 ;
+  voag:hasClause voag:CLS_CC-SHAREALIKE_3PT0-US-07 ;
+  voag:hasClause voag:CLS_CC-SHAREALIKE_3PT0-US-08 ;
   voag:image "http://i.creativecommons.org/l/by-sa/3.0/us/88x31.png"^^xsd:anyURI ;
   voag:permits voag:CCP_DerivativeWorks ;
   voag:permits voag:CCP_Distribution ;
@@ -334,8 +317,19 @@ voag:CECILL_V2
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "CeCILL version 2"^^xsd:string ;
 .
-voag:CGLC_AFL
-  rdf:type voag:CopyrightGrantLicenseClause ;
+voag:CLEAR_BSD
+  rdf:type voag:License ;
+  voag:compatibleWith voag:GNU-GPL_V2 ;
+  voag:compatibleWith voag:GNU-GPL_V3 ;
+  voag:url "http://labs.metacarta.com/license-explanation.html#license" ;
+  vaem:acronym "clearbsd"^^xsd:string ;
+  vaem:description "This is a free software license, compatible with both GPLv2 and GPLv3. It is based on the modified BSD license, and adds a term expressly stating it does not grant you any patent licenses. Because of this, we encourage you to be careful about using software under this license; you should first consider whether the licensor might want to sue you for patent infringement. If the developer is disclaiming patent licenses to set up a trap for you, it would be wise to avoid the program."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "The Clear BSD License"^^xsd:string ;
+.
+voag:CLS_AFL-01
+  rdf:type voag:CopyrightGrantClause ;
   voag:clauseNumber 1 ;
   voag:title "Grant of Copyright License"^^xsd:string ;
   vaem:description """Licensor grants You a worldwide, royalty-free, non-exclusive, sublicensable license, for the duration of the copyright, to do the following:
@@ -351,18 +345,548 @@ d) to perform the Original Work publicly; and
 e) to display the Original Work publicly."""^^xsd:string ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "AFL grant of copyright"^^xsd:string ;
+  rdfs:label "AFL Clause 01: Grant of Copyright License"^^xsd:string ;
 .
-voag:CLEAR_BSD
-  rdf:type voag:License ;
-  voag:compatibleWith voag:GNU-GPL_V2 ;
-  voag:compatibleWith voag:GNU-GPL_V3 ;
-  voag:url "http://labs.metacarta.com/license-explanation.html#license" ;
-  vaem:acronym "clearbsd"^^xsd:string ;
-  vaem:description "This is a free software license, compatible with both GPLv2 and GPLv3. It is based on the modified BSD license, and adds a term expressly stating it does not grant you any patent licenses. Because of this, we encourage you to be careful about using software under this license; you should first consider whether the licensor might want to sue you for patent infringement. If the developer is disclaiming patent licenses to set up a trap for you, it would be wise to avoid the program."^^xsd:string ;
+voag:CLS_AFL-02
+  rdf:type voag:PatentGrantClause ;
+  voag:clauseNumber 2 ;
+  voag:title "Grant of Patent License"^^xsd:string ;
+  vaem:description "Licensor grants You a worldwide, royalty-free, non-exclusive, sublicensable license, under patent claims owned or controlled by the Licensor that are embodied in the Original Work as furnished by the Licensor, for the duration of the patents, to make, use, sell, offer for sale, have made, and import the Original Work and Derivative Works."^^xsd:string ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "The Clear BSD License"^^xsd:string ;
+  rdfs:label "AFL Clause 02: Grant of Patent License"^^xsd:string ;
+.
+voag:CLS_AFL-03
+  rdf:type voag:SourceCodeGrantClause ;
+  voag:clauseNumber 3 ;
+  voag:title "Grant of Source Code License"^^xsd:string ;
+  vaem:description "The term \"Source Code\" means the preferred form of the Original Work for making modifications to it and all available documentation describing how to modify the Original Work. Licensor agrees to provide a machine-readable copy of the Source Code of the Original Work along with each copy of the Original Work that Licensor distributes. Licensor reserves the right to satisfy this obligation by placing a machine-readable copy of the Source Code in an information repository reasonably calculated to permit inexpensive and convenient access by You for as long as Licensor continues to distribute the Original Work."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "AFL Clause 03: Grant of Source Code License"^^xsd:string ;
+.
+voag:CLS_AFL-04
+  rdf:type voag:ExclusionClause ;
+  voag:clauseNumber 4 ;
+  voag:title "Exclusions From License Grant"^^xsd:string ;
+  vaem:description "Neither the names of Licensor, nor the names of any contributors to the Original Work, nor any of their trademarks or service marks, may be used to endorse or promote products derived from this Original Work without express prior permission of the Licensor. Except as expressly stated herein, nothing in this License grants any license to Licensor's trademarks, copyrights, patents, trade secrets or any other intellectual property. No patent license is granted to make, use, sell, offer for sale, have made, or import embodiments of any patent claims other than the licensed claims defined in Section 2. No license is granted to the trademarks of Licensor even if such marks are included in the Original Work. Nothing in this License shall be interpreted to prohibit Licensor from licensing under terms different from this License any Original Work that Licensor otherwise would have a right to license."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "AFL Clause 04: Exclusions"^^xsd:string ;
+.
+voag:CLS_AFL-05
+  rdf:type voag:DistributionClause ;
+  voag:clauseNumber 5 ;
+  voag:title "External Deployment"^^xsd:string ;
+  vaem:description "The term \"External Deployment\" means the use, distribution, or communication of the Original Work or Derivative Works in any way such that the Original Work or Derivative Works may be used by anyone other than You, whether those works are distributed or communicated to those persons or made available as an application intended for use over a network. As an express condition for the grants of license hereunder, You must treat any External Deployment by You of the Original Work or a Derivative Work as a distribution under section 1(c)."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "AFL Clause 05; External Deployment"^^xsd:string ;
+.
+voag:CLS_AFL-06
+  rdf:type voag:AttributionRightsClause ;
+  voag:clauseNumber 6 ;
+  voag:title "Attribution Rights"^^xsd:string ;
+  vaem:description "You must retain, in the Source Code of any Derivative Works that You create, all copyright, patent, or trademark notices from the Source Code of the Original Work, as well as any notices of licensing and any descriptive text identified therein as an \"Attribution Notice.\" You must cause the Source Code for any Derivative Works that You create to carry a prominent Attribution Notice reasonably calculated to inform recipients that You have modified the Original Work."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "AFL Clause 06: Attribution Rights"^^xsd:string ;
+.
+voag:CLS_AFL-07
+  rdf:type voag:DisclaimerClause ;
+  voag:clauseNumber 7 ;
+  voag:title "Warranty of Provenance and Disclaimer of Warranty"^^xsd:string ;
+  vaem:description "Licensor warrants that the copyright in and to the Original Work and the patent rights granted herein by Licensor are owned by the Licensor or are sublicensed to You under the terms of this License with the permission of the contributor(s) of those copyrights and patent rights. Except as expressly stated in the immediately preceding sentence, the Original Work is provided under this License on an \"AS IS\" BASIS and WITHOUT WARRANTY, either express or implied, including, without limitation, the warranties of non-infringement, merchantability or fitness for a particular purpose. THE ENTIRE RISK AS TO THE QUALITY OF THE ORIGINAL WORK IS WITH YOU. This DISCLAIMER OF WARRANTY constitutes an essential part of this License. No license to the Original Work is granted by this License except under this disclaimer."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "AFL Clause 07: Disclaimer"^^xsd:string ;
+.
+voag:CLS_AFL-08
+  rdf:type voag:LimitationOfLiabilityClause ;
+  voag:clauseNumber 8 ;
+  voag:title "Limitation of Liability"^^xsd:string ;
+  vaem:description "Under no circumstances and under no legal theory, whether in tort (including negligence), contract, or otherwise, shall the Licensor be liable to anyone for any indirect, special, incidental, or consequential damages of any character arising as a result of this License or the use of the Original Work including, without limitation, damages for loss of goodwill, work stoppage, computer failure or malfunction, or any and all other commercial damages or losses. This limitation of liability shall not apply to the extent applicable law prohibits such limitation."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "AFL Clause 08: Limitation of Liability"^^xsd:string ;
+.
+voag:CLS_AFL-09
+  rdf:type voag:TerminationClause ;
+  voag:clauseNumber 9 ;
+  voag:title "Acceptance and Termination"^^xsd:string ;
+  vaem:description "If, at any time, You expressly assented to this License, that assent indicates your clear and irrevocable acceptance of this License and all of its terms and conditions. If You distribute or communicate copies of the Original Work or a Derivative Work, You must make a reasonable effort under the circumstances to obtain the express assent of recipients to the terms of this License. This License conditions your rights to undertake the activities listed in Section 1, including your right to create Derivative Works based upon the Original Work, and doing so without honoring these terms and conditions is prohibited by copyright law and international treaty. Nothing in this License is intended to affect copyright exceptions and limitations (including \"fair use\" or \"fair dealing\"). This License shall terminate immediately and You may no longer exercise any of the rights granted to You by this License upon your failure to honor the conditions in Section 1(c)."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "AFL Clause 09: Acceptance and Termination"^^xsd:string ;
+.
+voag:CLS_AFL-10
+  rdf:type voag:TerminationClause ;
+  voag:clauseNumber 10 ;
+  voag:title "Termination for Patent Action"^^xsd:string ;
+  vaem:description "This License shall terminate automatically and You may no longer exercise any of the rights granted to You by this License as of the date You commence an action, including a cross-claim or counterclaim, against Licensor or any licensee alleging that the Original Work infringes a patent. This termination provision shall not apply for an action alleging patent infringement by combinations of the Original Work with other software or hardware."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "AFL Clause 10: Termination for Patent Action"^^xsd:string ;
+.
+voag:CLS_AFL-11
+  rdf:type voag:JuristricationClause ;
+  voag:clauseNumber 11 ;
+  voag:title "Attorneys' Fees"^^xsd:string ;
+  voag:title "Jurisdiction, Venue and Governing Law"^^xsd:string ;
+  vaem:description "Any action or suit relating to this License may be brought only in the courts of a jurisdiction wherein the Licensor resides or in which Licensor conducts its primary business, and under the laws of that jurisdiction excluding its conflict-of-law provisions. The application of the United Nations Convention on Contracts for the International Sale of Goods is expressly excluded. Any use of the Original Work outside the scope of this License or after its termination shall be subject to the requirements and penalties of copyright or patent law in the appropriate jurisdiction. This section shall survive the termination of this License."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "AFL Clause 11: Jurisdiction, Venue and Governing Law"^^xsd:string ;
+.
+voag:CLS_AFL-12
+  rdf:type voag:AttorneyFeesClause ;
+  voag:clauseNumber 12 ;
+  voag:title "Attorneys' Fees"^^xsd:string ;
+  vaem:description "In any action to enforce the terms of this License or seeking damages relating thereto, the prevailing party shall be entitled to recover its costs and expenses, including, without limitation, reasonable attorneys' fees and costs incurred in connection with such action, including any appeal of such action. This section shall survive the termination of this License."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "AFL Clause 12: Attorneys' Fees"^^xsd:string ;
+.
+voag:CLS_AFL-13
+  rdf:type voag:MiscClause ;
+  voag:clauseNumber 13 ;
+  voag:title "Miscellaneous"^^xsd:string ;
+  vaem:description "If any provision of this License is held to be unenforceable, such provision shall be reformed only to the extent necessary to make it enforceable."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "AFL Clause 13: Miscellaneous"^^xsd:string ;
+.
+voag:CLS_AFL-14
+  rdf:type voag:DefinitionClause ;
+  voag:clauseNumber 14 ;
+  voag:title "Definition of \"You\" in This License"^^xsd:string ;
+  vaem:description "\"You\" throughout this License, whether in upper or lower case, means an individual or a legal entity exercising rights under, and complying with all of the terms of, this License. For legal entities, \"You\" includes any entity that controls, is controlled by, or is under common control with you. For purposes of this definition, \"control\" means (i) the power, direct or indirect, to cause the direction or management of such entity, whether by contract or otherwise, or (ii) ownership of fifty percent (50%) or more of the outstanding shares, or (iii) beneficial ownership of such entity."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "AFL Clause 14: Definition of \"You\""^^xsd:string ;
+.
+voag:CLS_AFL-15
+  rdf:type voag:RightToUseClause ;
+  voag:clauseNumber 15 ;
+  voag:title "Right to Use"^^xsd:string ;
+  vaem:description "You may use the Original Work in all ways not otherwise restricted or conditioned by this License or by law, and Licensor promises not to interfere with or be responsible for such uses by You."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "AFL Clause 15: Right to Use"^^xsd:string ;
+.
+voag:CLS_AFL-16
+  rdf:type voag:ModificationClause ;
+  voag:clauseNumber 16 ;
+  voag:title "Modification of This License"^^xsd:string ;
+  vaem:description "This License is Copyright © 2005 Lawrence Rosen. Permission is granted to copy, distribute, or communicate this License without modification. Nothing in this License permits You to modify this License as applied to the Original Work or to Derivative Works. However, You may modify the text of this License and copy, distribute or communicate your modified version (the \"Modified License\") and apply it to other original works of authorship subject to the following conditions: (i) You may not indicate in any way that your Modified License is the \"Academic Free License\" or \"AFL\" and you may not use those names in the name of your Modified License; (ii) You must replace the notice specified in the first paragraph above with the notice \"Licensed under <insert your license name here>\" or with a notice of your own that is not confusingly similar to the notice in this License; and (iii) You may not claim that your original works are open source software unless your Modified License has been approved by Open Source Initiative (OSI) and You comply with its license review and certification process."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "AFL Clause 16: Modification of This License"^^xsd:string ;
+.
+voag:CLS_CC-SHAREALIKE_3PT0-US-01
+  rdf:type voag:DefinitionClause ;
+  voag:clauseNumber 1 ;
+  voag:title "Definitions"^^xsd:string ;
+  vaem:description """<p class=\"size-12\">\"Collective Work\" means a work, such as a periodical issue, anthology or encyclopedia, in which the Work in its entirety in unmodified form, along with one or more other contributions, constituting separate and independent works in themselves, are assembled into a collective whole. A work that constitutes a Collective Work will not be considered a Derivative Work (as defined below) for the purposes of this License.</p>
+
+<p class=\"size-12\">\"Creative Commons Compatible License\" means a license that is listed at https://creativecommons.org/compatiblelicenses that has been approved by Creative Commons as being essentially equivalent to this License, including, at a minimum, because that license: (i) contains terms that have the same purpose, meaning and effect as the License Elements of this License; and, (ii) explicitly permits the relicensing of derivatives of works made available under that license under this License or either a Creative Commons unported license or a Creative Commons jurisdiction license with the same License Elements as this License.</p>
+
+<<p class=\"size-12\">\"Derivative Work\" means a work based upon the Work or upon the Work and other pre-existing works, such as a translation, musical arrangement, dramatization, fictionalization, motion picture version, sound recording, art reproduction, abridgment, condensation, or any other form in which the Work may be recast, transformed, or adapted, except that a work that constitutes a Collective Work will not be considered a Derivative Work for the purpose of this License. For the avoidance of doubt, where the Work is a musical composition or sound recording, the synchronization of the Work in timed-relation with a moving image (\"synching\") will be considered a Derivative Work for the purpose of this License.</p>
+
+<p class=\"size-12\">\"License Elements\" means the following high-level license attributes as selected by Licensor and indicated in the title of this License: Attribution, ShareAlike.</p>
+
+<p class=\"size-12\">\"Licensor\" means the individual, individuals, entity or entities that offers the Work under the terms of this License.</p>
+
+<p class=\"size-12\">\"Original Author\" means the individual, individuals, entity or entities who created the Work.</p>
+
+<p class=\"size-12\">\"Work\" means the copyrightable work of authorship offered under the terms of this License.</p>
+
+<p class=\"size-12\">\"You\" means an individual or entity exercising rights under this License who has not previously violated the terms of this License with respect to the Work, or who has received express permission from the Licensor to exercise rights under this License despite a previous violation.</p>"""^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "Creative Commons Sharealike v3.0 US - Definitions"^^xsd:string ;
+.
+voag:CLS_CC-SHAREALIKE_3PT0-US-02
+  rdf:type voag:RightToUseClause ;
+  voag:clauseNumber 2 ;
+  voag:title "Fair Use Rights"^^xsd:string ;
+  vaem:description "Nothing in this license is intended to reduce, limit, or restrict any rights arising from fair use, first sale or other limitations on the exclusive rights of the copyright owner under copyright law or other applicable laws."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "Creative Commons Sharealike v3.0 US - Fair Use Rights"^^xsd:string ;
+.
+voag:CLS_CC-SHAREALIKE_3PT0-US-03
+  rdf:type voag:Clause ;
+  voag:clauseNumber 3 ;
+  voag:title "License Grant"^^xsd:string ;
+  vaem:description """<p class=\"size-12\">Subject to the terms and conditions of this License, Licensor hereby grants You a worldwide, royalty-free, non-exclusive, perpetual (for the duration of the applicable copyright) license to exercise the rights in the Work as stated below:</p>
+<ol class=\"lower-alpha\">
+<li>to reproduce the Work, to incorporate the Work into one or more Collective Works, and to reproduce the Work as incorporated in the Collective Works;</li>
+
+<li>to create and reproduce Derivative Works provided that any such Derivative Work, including any translation in any medium, takes reasonable steps to clearly label, demarcate or otherwise identify that changes were made to the original Work. For example, a translation could be marked \"The original work was translated from English to Spanish,\" or a modification could indicate \"The original work has been modified.\";</li>
+
+<li>to distribute copies or phonorecords of, display publicly, perform publicly, and perform publicly by means of a digital audio transmission the Work including as incorporated in Collective Works;</li>
+
+<li>to distribute copies or phonorecords of, display publicly, perform publicly, and perform publicly by means of a digital audio transmission Derivative Works.</li>
+</ol>
+
+<p class=\"size-12\">For the avoidance of doubt, where the Work is a musical composition:</p>
+
+<p class=\"size-12\">Performance Royalties Under Blanket Licenses. Licensor waives the exclusive right to collect, whether individually or, in the event that Licensor is a member of a performance rights society (e.g. ASCAP, BMI, SESAC), via that society, royalties for the public performance or public digital performance (e.g. webcast) of the Work.</p>
+
+<p class=\"size-12\">Mechanical Rights and Statutory Royalties. Licensor waives the exclusive right to collect, whether individually or via a music rights agency or designated agent (e.g. Harry Fox Agency), royalties for any phonorecord You create from the Work (\"cover version\") and distribute, subject to the compulsory license created by 17 USC Section 115 of the US Copyright Act (or the equivalent in other jurisdictions).</p>
+
+<p class=\"size-12\">Webcasting Rights and Statutory Royalties. For the avoidance of doubt, where the Work is a sound recording, Licensor waives the exclusive right to collect, whether individually or via a performance-rights society (e.g. SoundExchange), royalties for the public digital performance (e.g. webcast) of the Work, subject to the compulsory license created by 17 USC Section 114 of the US Copyright Act (or the equivalent in other jurisdictions).</p>
+
+<p class=\"size-12\">The above rights may be exercised in all media and formats whether now known or hereafter devised. The above rights include the right to make such modifications as are technically necessary to exercise the rights in other media and formats. All rights not expressly granted by Licensor are hereby reserved.</p>"""^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "Creative Commons Sharealike v3.0 US - License Grant"^^xsd:string ;
+.
+voag:CLS_CC-SHAREALIKE_3PT0-US-04
+  rdf:type voag:RestrictionsClause ;
+  voag:clauseNumber 4 ;
+  voag:title "Restrictions"^^xsd:string ;
+  vaem:description """The license granted in Section 3 above is expressly made subject to and limited by the following restrictions:
+
+a) You may distribute, publicly display, publicly perform, or publicly digitally perform the Work only under the terms of this License, and You must include a copy of, or the Uniform Resource Identifier for, this License with every copy or phonorecord of the Work You distribute, publicly display, publicly perform, or publicly digitally perform. You may not offer or impose any terms on the Work that restrict the terms of this License or the ability of a recipient of the Work to exercise of the rights granted to that recipient under the terms of the License. You may not sublicense the Work. You must keep intact all notices that refer to this License and to the disclaimer of warranties. When You distribute, publicly display, publicly perform, or publicly digitally perform the Work, You may not impose any technological measures on the Work that restrict the ability of a recipient of the Work from You to exercise of the rights granted to that recipient under the terms of the License. This Section 4(a) applies to the Work as incorporated in a Collective Work, but this does not require the Collective Work apart from the Work itself to be made subject to the terms of this License. If You create a Collective Work, upon notice from any Licensor You must, to the extent practicable, remove from the Collective Work any credit as required by Section 4(c), as requested. If You create a Derivative Work, upon notice from any Licensor You must, to the extent practicable, remove from the Derivative Work any credit as required by Section 4(c), as requested.
+
+b) You may distribute, publicly display, publicly perform, or publicly digitally perform a Derivative Work only under: (i) the terms of this License; (ii) a later version of this License with the same License Elements as this License; (iii) either the Creative Commons (Unported) license or a Creative Commons jurisdiction license (either this or a later license version) that contains the same License Elements as this License (e.g. Attribution-ShareAlike 3.0 (Unported)); (iv) a Creative Commons Compatible License. If you license the Derivative Work under one of the licenses mentioned in (iv), you must comply with the terms of that license. If you license the Derivative Work under the terms of any of the licenses mentioned in (i), (ii) or (iii) (the \"Applicable License\"), you must comply with the terms of the Applicable License generally and with the following provisions: (I) You must include a copy of, or the Uniform Resource Identifier for, the Applicable License with every copy or phonorecord of each Derivative Work You distribute, publicly display, publicly perform, or publicly digitally perform; (II) You may not offer or impose any terms on the Derivative Works that restrict the terms of the Applicable License or the ability of a recipient of the Work to exercise the rights granted to that recipient under the terms of the Applicable License; (III) You must keep intact all notices that refer to the Applicable License and to the disclaimer of warranties; and, (IV) when You distribute, publicly display, publicly perform, or publicly digitally perform the Work, You may not impose any technological measures on the Derivative Work that restrict the ability of a recipient of the Derivative Work from You to exercise the rights granted to that recipient under the terms of the Applicable License. This Section 4(b) applies to the Derivative Work as incorporated in a Collective Work, but this does not require the Collective Work apart from the Derivative Work itself to be made subject to the terms of the Applicable License.
+
+c) If You distribute, publicly display, publicly perform, or publicly digitally perform the Work (as defined in Section 1 above) or any Derivative Works (as defined in Section 1 above) or Collective Works (as defined in Section 1 above), You must, unless a request has been made pursuant to Section 4(a), keep intact all copyright notices for the Work and provide, reasonable to the medium or means You are utilizing: (i) the name of the Original Author (or pseudonym, if applicable) if supplied, and/or (ii) if the Original Author and/or Licensor designate another party or parties (e.g. a sponsor institute, publishing entity, journal) for attribution (\"Attribution Parties\") in Licensor's copyright notice, terms of service or by other reasonable means, the name of such party or parties; the title of the Work if supplied; to the extent reasonably practicable, the Uniform Resource Identifier, if any, that Licensor specifies to be associated with the Work, unless such URI does not refer to the copyright notice or licensing information for the Work; and, consistent with Section 3(b) in the case of a Derivative Work, a credit identifying the use of the Work in the Derivative Work (e.g., \"French translation of the Work by Original Author,\" or \"Screenplay based on original Work by Original Author\"). The credit required by this Section 4(c) may be implemented in any reasonable manner; provided, however, that in the case of a Derivative Work or Collective Work, at a minimum such credit will appear, if a credit for all contributing authors of the Derivative Work or Collective Work appears, then as part of these credits and in a manner at least as prominent as the credits for the other contributing authors. For the avoidance of doubt, You may only use the credit required by this Section for the purpose of attribution in the manner set out above and, by exercising Your rights under this License, You may not implicitly or explicitly assert or imply any connection with, sponsorship or endorsement by the Original Author, Licensor and/or Attribution Parties, as appropriate, of You or Your use of the Work, without the separate, express prior written permission of the Original Author, Licensor and/or Attribution Parties."""^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "Creative Commons Sharealike v3.0 US - Restrictions"^^xsd:string ;
+.
+voag:CLS_CC-SHAREALIKE_3PT0-US-05
+  rdf:type voag:Clause ;
+  voag:clauseNumber 5 ;
+  voag:title "Representations, Warranties and Disclaimer"^^xsd:string ;
+  vaem:description "UNLESS OTHERWISE MUTUALLY AGREED TO BY THE PARTIES IN WRITING, LICENSOR OFFERS THE WORK AS-IS AND ONLY TO THE EXTENT OF ANY RIGHTS HELD IN THE LICENSED WORK BY THE LICENSOR. THE LICENSOR MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND CONCERNING THE WORK, EXPRESS, IMPLIED, STATUTORY OR OTHERWISE, INCLUDING, WITHOUT LIMITATION, WARRANTIES OF TITLE, MARKETABILITY, MERCHANTIBILITY, FITNESS FOR A PARTICULAR PURPOSE, NONINFRINGEMENT, OR THE ABSENCE OF LATENT OR OTHER DEFECTS, ACCURACY, OR THE PRESENCE OF ABSENCE OF ERRORS, WHETHER OR NOT DISCOVERABLE. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES, SO SUCH EXCLUSION MAY NOT APPLY TO YOU."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "Creative Commons Sharealike v3.0 US - Representations, Warranties and Disclaimer"^^xsd:string ;
+.
+voag:CLS_CC-SHAREALIKE_3PT0-US-06
+  rdf:type voag:LimitationOfLiabilityClause ;
+  voag:clauseNumber 6 ;
+  voag:title "Limitation on Liability"^^xsd:string ;
+  vaem:description "EXCEPT TO THE EXTENT REQUIRED BY APPLICABLE LAW, IN NO EVENT WILL LICENSOR BE LIABLE TO YOU ON ANY LEGAL THEORY FOR ANY SPECIAL, INCIDENTAL, CONSEQUENTIAL, PUNITIVE OR EXEMPLARY DAMAGES ARISING OUT OF THIS LICENSE OR THE USE OF THE WORK, EVEN IF LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "Creative Commons Sharealike v3.0 US - Limitation on Liability"^^xsd:string ;
+.
+voag:CLS_CC-SHAREALIKE_3PT0-US-07
+  rdf:type voag:TerminationClause ;
+  voag:clauseNumber 7 ;
+  voag:title "Termination"^^xsd:string ;
+  vaem:description """This License and the rights granted hereunder will terminate automatically upon any breach by You of the terms of this License. Individuals or entities who have received Derivative Works or Collective Works from You under this License, however, will not have their licenses terminated provided such individuals or entities remain in full compliance with those licenses. Sections 1, 2, 5, 6, 7, and 8 will survive any termination of this License.
+Subject to the above terms and conditions, the license granted here is perpetual (for the duration of the applicable copyright in the Work). Notwithstanding the above, Licensor reserves the right to release the Work under different license terms or to stop distributing the Work at any time; provided, however that any such election will not serve to withdraw this License (or any other license that has been, or is required to be, granted under the terms of this License), and this License will continue in full force and effect unless terminated as stated above."""^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "Creative Commons Sharealike v3.0 US - Termination"^^xsd:string ;
+.
+voag:CLS_CC-SHAREALIKE_3PT0-US-08
+  rdf:type voag:MiscClause ;
+  voag:clauseNumber 8 ;
+  voag:title "Miscellaneous"^^xsd:string ;
+  vaem:description """Each time You distribute or publicly digitally perform the Work (as defined in Section 1 above) or a Collective Work (as defined in Section 1 above), the Licensor offers to the recipient a license to the Work on the same terms and conditions as the license granted to You under this License.
+Each time You distribute or publicly digitally perform a Derivative Work, Licensor offers to the recipient a license to the original Work on the same terms and conditions as the license granted to You under this License.
+If any provision of this License is invalid or unenforceable under applicable law, it shall not affect the validity or enforceability of the remainder of the terms of this License, and without further action by the parties to this agreement, such provision shall be reformed to the minimum extent necessary to make such provision valid and enforceable.
+No term or provision of this License shall be deemed waived and no breach consented to unless such waiver or consent shall be in writing and signed by the party to be charged with such waiver or consent.
+This License constitutes the entire agreement between the parties with respect to the Work licensed here. There are no understandings, agreements or representations with respect to the Work not specified here. Licensor shall not be bound by any additional provisions that may appear in any communication from You. This License may not be modified without the mutual written agreement of the Licensor and You.
+Creative Commons Notice
+
+Creative Commons is not a party to this License, and makes no warranty whatsoever in connection with the Work. Creative Commons will not be liable to You or any party on any legal theory for any damages whatsoever, including without limitation any general, special, incidental or consequential damages arising in connection to this license. Notwithstanding the foregoing two (2) sentences, if Creative Commons has expressly identified itself as the Licensor hereunder, it shall have all rights and obligations of Licensor.
+
+Except for the limited purpose of indicating to the public that the Work is licensed under the CCPL, Creative Commons does not authorize the use by either party of the trademark \"Creative Commons\" or any related trademark or logo of Creative Commons without the prior written consent of Creative Commons. Any permitted use will be in compliance with Creative Commons' then-current trademark usage guidelines, as may be published on its website or otherwise made available upon request from time to time. For the avoidance of doubt, this trademark restriction does not form part of this License."""^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "Creative Commons Sharealike v3.0 US - Miscellaneous"^^xsd:string ;
+.
+voag:CLS_GPL-00
+  rdf:type voag:DefinitionClause ;
+  voag:clauseNumber 0 ;
+  voag:title "Definitions"^^xsd:string ;
+  vaem:description """<p class=\"size-12\">“This License” refers to version 3 of the GNU General Public License.</p>
+
+<p class=\"size-12\">“Copyright” also means copyright-like laws that apply to other kinds of works, such as semiconductor masks.</p>
+
+<p class=\"size-12\">“The Program” refers to any copyrightable work licensed under this License. Each licensee is addressed as “you”. “Licensees” and “recipients” may be individuals or organizations.</p>
+
+<p class=\"size-12\">To “modify” a work means to copy from or adapt all or part of the work in a fashion requiring copyright permission, other than the making of an exact copy. The resulting work is called a “modified version” of the earlier work or a work “based on” the earlier work.</p>
+
+<p class=\"size-12\">A “covered work” means either the unmodified Program or a work based on the Program.</p>
+
+<p class=\"size-12\">To “propagate” a work means to do anything with it that, without permission, would make you directly or secondarily liable for infringement under applicable copyright law, except executing it on a computer or modifying a private copy. Propagation includes copying, distribution (with or without modification), making available to the public, and in some countries other activities as well.</p>
+
+<p class=\"size-12\">To “convey” a work means any kind of propagation that enables other parties to make or receive copies. Mere interaction with a user through a computer network, with no transfer of a copy, is not conveying.</p>
+
+<p class=\"size-12\">An interactive user interface displays “Appropriate Legal Notices” to the extent that it includes a convenient and prominently visible feature that (1) displays an appropriate copyright notice, and (2) tells the user that there is no warranty for the work (except to the extent that warranties are provided), that licensees may convey the work under this License, and how to view a copy of this License. If the interface presents a list of user commands or options, such as a menu, a prominent item in the list meets this criterion.</p>"""^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "GPL Clause 00: Definitions"^^xsd:string ;
+.
+voag:CLS_GPL-01
+  rdf:type voag:SourceCodeGrantClause ;
+  voag:clauseNumber 1 ;
+  voag:title "Source Code"^^xsd:string ;
+  vaem:description """The “source code” for a work means the preferred form of the work for making modifications to it. “Object code” means any non-source form of a work.
+
+A “Standard Interface” means an interface that either is an official standard defined by a recognized standards body, or, in the case of interfaces specified for a particular programming language, one that is widely used among developers working in that language.
+
+The “System Libraries” of an executable work include anything, other than the work as a whole, that (a) is included in the normal form of packaging a Major Component, but which is not part of that Major Component, and (b) serves only to enable use of the work with that Major Component, or to implement a Standard Interface for which an implementation is available to the public in source code form. A “Major Component”, in this context, means a major essential component (kernel, window system, and so on) of the specific operating system (if any) on which the executable work runs, or a compiler used to produce the work, or an object code interpreter used to run it.
+
+The “Corresponding Source” for a work in object code form means all the source code needed to generate, install, and (for an executable work) run the object code and to modify the work, including scripts to control those activities. However, it does not include the work's System Libraries, or general-purpose tools or generally available free programs which are used unmodified in performing those activities but which are not part of the work. For example, Corresponding Source includes interface definition files associated with source files for the work, and the source code for shared libraries and dynamically linked subprograms that the work is specifically designed to require, such as by intimate data communication or control flow between those subprograms and other parts of the work.
+
+The Corresponding Source need not include anything that users can regenerate automatically from other parts of the Corresponding Source.
+
+The Corresponding Source for a work in source code form is that same work."""^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "GPL Source Code"^^xsd:string ;
+.
+voag:CLS_GPL-02
+  rdf:type voag:GrantClause ;
+  voag:clauseNumber 2 ;
+  voag:title "Basic Permissions"^^xsd:string ;
+  vaem:description """All rights granted under this License are granted for the term of copyright on the Program, and are irrevocable provided the stated conditions are met. This License explicitly affirms your unlimited permission to run the unmodified Program. The output from running a covered work is covered by this License only if the output, given its content, constitutes a covered work. This License acknowledges your rights of fair use or other equivalent, as provided by copyright law.
+
+You may make, run and propagate covered works that you do not convey, without conditions so long as your license otherwise remains in force. You may convey covered works to others for the sole purpose of having them make modifications exclusively for you, or provide you with facilities for running those works, provided that you comply with the terms of this License in conveying all material for which you do not control copyright. Those thus making or running the covered works for you must do so exclusively on your behalf, under your direction and control, on terms that prohibit them from making any copies of your copyrighted material outside their relationship with you.
+
+Conveying under any other circumstances is permitted solely under the conditions stated below. Sublicensing is not allowed; section 10 makes it unnecessary."""^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "GPL Basic Permissions"^^xsd:string ;
+.
+voag:CLS_GPL-03
+  rdf:type voag:ProtectionClause ;
+  voag:clauseNumber 3 ;
+  voag:title "Protecting Users' Legal Rights From Anti-Circumvention Law"^^xsd:string ;
+  vaem:description """No covered work shall be deemed part of an effective technological measure under any applicable law fulfilling obligations under article 11 of the WIPO copyright treaty adopted on 20 December 1996, or similar laws prohibiting or restricting circumvention of such measures.
+
+When you convey a covered work, you waive any legal power to forbid circumvention of technological measures to the extent such circumvention is effected by exercising rights under this License with respect to the covered work, and you disclaim any intention to limit operation or modification of the work as a means of enforcing, against the work's users, your or third parties' legal rights to forbid circumvention of technological measures."""^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "GPL - Protecton of Users' Legal Rights"^^xsd:string ;
+.
+voag:CLS_GPL-04
+  rdf:type voag:DistributionClause ;
+  voag:clauseNumber 4 ;
+  voag:title "Conveying Verbatim Copies"^^xsd:string ;
+  vaem:description """You may convey verbatim copies of the Program's source code as you receive it, in any medium, provided that you conspicuously and appropriately publish on each copy an appropriate copyright notice; keep intact all notices stating that this License and any non-permissive terms added in accord with section 7 apply to the code; keep intact all notices of the absence of any warranty; and give all recipients a copy of this License along with the Program.
+
+You may charge any price or no price for each copy that you convey, and you may offer support or warranty protection for a fee."""^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "GPL - Conveying Verbatim Copies"^^xsd:string ;
+.
+voag:CLS_GPL-05
+  rdf:type voag:DistributionClause ;
+  voag:clauseNumber 5 ;
+  voag:title "Conveying Modified Source Versions"^^xsd:string ;
+  vaem:description """<p class=\"size-12\">You may convey a work based on the Program, or the modifications to produce it from the Program, in the form of source code under the terms of section 4, provided that you also meet all of these conditions:</p>
+
+<ol class=\"lower-alpha\">
+<li>The work must carry prominent notices stating that you modified it, and giving a relevant date.</li>
+
+<li>The work must carry prominent notices stating that it is released under this License and any conditions added under section 7. This requirement modifies the requirement in section 4 to “keep intact all notices”.</li>
+
+<li>You must license the entire work, as a whole, under this License to anyone who comes into possession of a copy. This License will therefore apply, along with any applicable section 7 additional terms, to the whole of the work, and all its parts, regardless of how they are packaged. This License gives no permission to license the work in any other way, but it does not invalidate such permission if you have separately received it.</li>
+
+<li>If the work has interactive user interfaces, each must display Appropriate Legal Notices; however, if the Program has interactive interfaces that do not display Appropriate Legal Notices, your work need not make them do so.</li>
+
+</ol>
+
+<p class=\"size-12\">A compilation of a covered work with other separate and independent works, which are not by their nature extensions of the covered work, and which are not combined with it such as to form a larger program, in or on a volume of a storage or distribution medium, is called an “aggregate” if the compilation and its resulting copyright are not used to limit the access or legal rights of the compilation's users beyond what the individual works permit. Inclusion of a covered work in an aggregate does not cause this License to apply to the other parts of the aggregate.</p>"""^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "GPL - Conveying Modified Source Versions"^^xsd:string ;
+.
+voag:CLS_GPL-06
+  rdf:type voag:DistributionClause ;
+  voag:clauseNumber 6 ;
+  voag:title "Conveying Non-Source Forms"^^xsd:string ;
+  vaem:description """<p class=\"size-12\">You may convey a covered work in object code form under the terms of sections 4 and 5, provided that you also convey the machine-readable Corresponding Source under the terms of this License, in one of these ways:</p>
+
+<ol class=\"lower-alpha\">
+<li>Convey the object code in, or embodied in, a physical product (including a physical distribution medium), accompanied by the Corresponding Source fixed on a durable physical medium customarily used for software interchange.</li>
+
+<li>Convey the object code in, or embodied in, a physical product (including a physical distribution medium), accompanied by a written offer, valid for at least three years and valid for as long as you offer spare parts or customer support for that product model, to give anyone who possesses the object code either (1) a copy of the Corresponding Source for all the software in the product that is covered by this License, on a durable physical medium customarily used for software interchange, for a price no more than your reasonable cost of physically performing this conveying of source, or (2) access to copy the Corresponding Source from a network server at no charge.</li>
+
+<li>Convey individual copies of the object code with a copy of the written offer to provide the Corresponding Source. This alternative is allowed only occasionally and noncommercially, and only if you received the object code with such an offer, in accord with subsection 6b.</li>
+
+<li>Convey the object code by offering access from a designated place (gratis or for a charge), and offer equivalent access to the Corresponding Source in the same way through the same place at no further charge. You need not require recipients to copy the Corresponding Source along with the object code. If the place to copy the object code is a network server, the Corresponding Source may be on a different server (operated by you or a third party) that supports equivalent copying facilities, provided you maintain clear directions next to the object code saying where to find the Corresponding Source. Regardless of what server hosts the Corresponding Source, you remain obligated to ensure that it is available for as long as needed to satisfy these requirements.</li>
+
+<li>Convey the object code using peer-to-peer transmission, provided you inform other peers where the object code and Corresponding Source of the work are being offered to the general public at no charge under subsection 6d.</li>
+</ol>
+
+<p class=\"size-12\">A separable portion of the object code, whose source code is excluded from the Corresponding Source as a System Library, need not be included in conveying the object code work.</p>
+
+<p class=\"size-12\">A “User Product” is either (1) a “consumer product”, which means any tangible personal property which is normally used for personal, family, or household purposes, or (2) anything designed or sold for incorporation into a dwelling. In determining whether a product is a consumer product, doubtful cases shall be resolved in favor of coverage. For a particular product received by a particular user, “normally used” refers to a typical or common use of that class of product, regardless of the status of the particular user or of the way in which the particular user actually uses, or expects or is expected to use, the product. A product is a consumer product regardless of whether the product has substantial commercial, industrial or non-consumer uses, unless such uses represent the only significant mode of use of the product.</p>
+
+<p class=\"size-12\">“Installation Information” for a User Product means any methods, procedures, authorization keys, or other information required to install and execute modified versions of a covered work in that User Product from a modified version of its Corresponding Source. The information must suffice to ensure that the continued functioning of the modified object code is in no case prevented or interfered with solely because modification has been made.</p>
+
+<p class=\"size-12\">If you convey an object code work under this section in, or with, or specifically for use in, a User Product, and the conveying occurs as part of a transaction in which the right of possession and use of the User Product is transferred to the recipient in perpetuity or for a fixed term (regardless of how the transaction is characterized), the Corresponding Source conveyed under this section must be accompanied by the Installation Information. But this requirement does not apply if neither you nor any third party retains the ability to install modified object code on the User Product (for example, the work has been installed in ROM).</p>
+
+<p class=\"size-12\">The requirement to provide Installation Information does not include a requirement to continue to provide support service, warranty, or updates for a work that has been modified or installed by the recipient, or for the User Product in which it has been modified or installed. Access to a network may be denied when the modification itself materially and adversely affects the operation of the network or violates the rules and protocols for communication across the network.</p>
+
+<p class=\"size-12\">Corresponding Source conveyed, and Installation Information provided, in accord with this section must be in a format that is publicly documented (and with an implementation available to the public in source code form), and must require no special password or key for unpacking, reading or copying.</p>"""^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "GPL - Conveying Non-Source Forms"^^xsd:string ;
+.
+voag:CLS_GPL-07
+  rdf:type voag:AdditionalClause ;
+  voag:clauseNumber 7 ;
+  voag:title "Additional Terms"^^xsd:string ;
+  vaem:description """“Additional permissions” are terms that supplement the terms of this License by making exceptions from one or more of its conditions. Additional permissions that are applicable to the entire Program shall be treated as though they were included in this License, to the extent that they are valid under applicable law. If additional permissions apply only to part of the Program, that part may be used separately under those permissions, but the entire Program remains governed by this License without regard to the additional permissions.
+
+When you convey a copy of a covered work, you may at your option remove any additional permissions from that copy, or from any part of it. (Additional permissions may be written to require their own removal in certain cases when you modify the work.) You may place additional permissions on material, added by you to a covered work, for which you have or can give appropriate copyright permission.
+
+Notwithstanding any other provision of this License, for material you add to a covered work, you may (if authorized by the copyright holders of that material) supplement the terms of this License with terms:
+
+a) Disclaiming warranty or limiting liability differently from the terms of sections 15 and 16 of this License; or
+
+b) Requiring preservation of specified reasonable legal notices or author attributions in that material or in the Appropriate Legal Notices displayed by works containing it; or
+
+c) Prohibiting misrepresentation of the origin of that material, or requiring that modified versions of such material be marked in reasonable ways as different from the original version; or
+
+d) Limiting the use for publicity purposes of names of licensors or authors of the material; or
+
+e) Declining to grant rights under trademark law for use of some trade names, trademarks, or service marks; or
+
+f) Requiring indemnification of licensors and authors of that material by anyone who conveys the material (or modified versions of it) with contractual assumptions of liability to the recipient, for any liability that these contractual assumptions directly impose on those licensors and authors.
+All other non-permissive additional terms are considered “further restrictions” within the meaning of section 10. If the Program as you received it, or any part of it, contains a notice stating that it is governed by this License along with a term that is a further restriction, you may remove that term. If a license document contains a further restriction but permits relicensing or conveying under this License, you may add to a covered work material governed by the terms of that license document, provided that the further restriction does not survive such relicensing or conveying.
+
+If you add terms to a covered work in accord with this section, you must place, in the relevant source files, a statement of the additional terms that apply to those files, or a notice indicating where to find the applicable terms.
+
+Additional terms, permissive or non-permissive, may be stated in the form of a separately written license, or stated as exceptions; the above requirements apply either way."""^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "GPL - Additional Terms"^^xsd:string ;
+.
+voag:CLS_GPL-08
+  rdf:type voag:TerminationClause ;
+  voag:clauseNumber 8 ;
+  voag:title "Termination"^^xsd:string ;
+  vaem:description """You may not propagate or modify a covered work except as expressly provided under this License. Any attempt otherwise to propagate or modify it is void, and will automatically terminate your rights under this License (including any patent licenses granted under the third paragraph of section 11).
+
+However, if you cease all violation of this License, then your license from a particular copyright holder is reinstated (a) provisionally, unless and until the copyright holder explicitly and finally terminates your license, and (b) permanently, if the copyright holder fails to notify you of the violation by some reasonable means prior to 60 days after the cessation.
+
+Moreover, your license from a particular copyright holder is reinstated permanently if the copyright holder notifies you of the violation by some reasonable means, this is the first time you have received notice of violation of this License (for any work) from that copyright holder, and you cure the violation prior to 30 days after your receipt of the notice.
+
+Termination of your rights under this section does not terminate the licenses of parties who have received copies or rights from you under this License. If your rights have been terminated and not permanently reinstated, you do not qualify to receive new licenses for the same material under section 10."""^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "GPL Termination Clause"^^xsd:string ;
+.
+voag:CLS_GPL-09
+  rdf:type voag:ExclusionClause ;
+  voag:clauseNumber 9 ;
+  voag:title "Acceptance Not Required for Having Copies"^^xsd:string ;
+  vaem:description "You are not required to accept this License in order to receive or run a copy of the Program. Ancillary propagation of a covered work occurring solely as a consequence of using peer-to-peer transmission to receive a copy likewise does not require acceptance. However, nothing other than this License grants you permission to propagate or modify any covered work. These actions infringe copyright if you do not accept this License. Therefore, by modifying or propagating a covered work, you indicate your acceptance of this License to do so."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "GPL -Acceptance Not Required for Having Copies"^^xsd:string ;
+.
+voag:CLS_GPL-10
+  rdf:type voag:GrantClause ;
+  voag:clauseNumber 10 ;
+  voag:title "Automatic Licensing of Downstream Recipients"^^xsd:string ;
+  vaem:description """Each time you convey a covered work, the recipient automatically receives a license from the original licensors, to run, modify and propagate that work, subject to this License. You are not responsible for enforcing compliance by third parties with this License.
+
+An “entity transaction” is a transaction transferring control of an organization, or substantially all assets of one, or subdividing an organization, or merging organizations. If propagation of a covered work results from an entity transaction, each party to that transaction who receives a copy of the work also receives whatever licenses to the work the party's predecessor in interest had or could give under the previous paragraph, plus a right to possession of the Corresponding Source of the work from the predecessor in interest, if the predecessor has it or can get it with reasonable efforts.
+
+You may not impose any further restrictions on the exercise of the rights granted or affirmed under this License. For example, you may not impose a license fee, royalty, or other charge for exercise of rights granted under this License, and you may not initiate litigation (including a cross-claim or counterclaim in a lawsuit) alleging that any patent claim is infringed by making, using, selling, offering for sale, or importing the Program or any portion of it."""^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "GPL Automatic Licensing of Downstream Recipients"^^xsd:string ;
+.
+voag:CLS_GPL-11
+  rdf:type voag:PatentGrantClause ;
+  voag:clauseNumber 11 ;
+  voag:title "Patents"^^xsd:string ;
+  vaem:description """A “contributor” is a copyright holder who authorizes use under this License of the Program or a work on which the Program is based. The work thus licensed is called the contributor's “contributor version”.
+
+A contributor's “essential patent claims” are all patent claims owned or controlled by the contributor, whether already acquired or hereafter acquired, that would be infringed by some manner, permitted by this License, of making, using, or selling its contributor version, but do not include claims that would be infringed only as a consequence of further modification of the contributor version. For purposes of this definition, “control” includes the right to grant patent sublicenses in a manner consistent with the requirements of this License.
+
+Each contributor grants you a non-exclusive, worldwide, royalty-free patent license under the contributor's essential patent claims, to make, use, sell, offer for sale, import and otherwise run, modify and propagate the contents of its contributor version.
+
+In the following three paragraphs, a “patent license” is any express agreement or commitment, however denominated, not to enforce a patent (such as an express permission to practice a patent or covenant not to sue for patent infringement). To “grant” such a patent license to a party means to make such an agreement or commitment not to enforce a patent against the party.
+
+If you convey a covered work, knowingly relying on a patent license, and the Corresponding Source of the work is not available for anyone to copy, free of charge and under the terms of this License, through a publicly available network server or other readily accessible means, then you must either (1) cause the Corresponding Source to be so available, or (2) arrange to deprive yourself of the benefit of the patent license for this particular work, or (3) arrange, in a manner consistent with the requirements of this License, to extend the patent license to downstream recipients. “Knowingly relying” means you have actual knowledge that, but for the patent license, your conveying the covered work in a country, or your recipient's use of the covered work in a country, would infringe one or more identifiable patents in that country that you have reason to believe are valid.
+
+If, pursuant to or in connection with a single transaction or arrangement, you convey, or propagate by procuring conveyance of, a covered work, and grant a patent license to some of the parties receiving the covered work authorizing them to use, propagate, modify or convey a specific copy of the covered work, then the patent license you grant is automatically extended to all recipients of the covered work and works based on it.
+
+A patent license is “discriminatory” if it does not include within the scope of its coverage, prohibits the exercise of, or is conditioned on the non-exercise of one or more of the rights that are specifically granted under this License. You may not convey a covered work if you are a party to an arrangement with a third party that is in the business of distributing software, under which you make payment to the third party based on the extent of your activity of conveying the work, and under which the third party grants, to any of the parties who would receive the covered work from you, a discriminatory patent license (a) in connection with copies of the covered work conveyed by you (or copies made from those copies), or (b) primarily for and in connection with specific products or compilations that contain the covered work, unless you entered into that arrangement, or that patent license was granted, prior to 28 March 2007.
+
+Nothing in this License shall be construed as excluding or limiting any implied license or other defenses to infringement that may otherwise be available to you under applicable patent law."""^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "GPL - Patents"^^xsd:string ;
+.
+voag:CLS_GPL-12
+  rdf:type voag:Clause ;
+  voag:clauseNumber 12 ;
+  voag:title "No Surrender of Others' Freedom"^^xsd:string ;
+  vaem:description "If conditions are imposed on you (whether by court order, agreement or otherwise) that contradict the conditions of this License, they do not excuse you from the conditions of this License. If you cannot convey a covered work so as to satisfy simultaneously your obligations under this License and any other pertinent obligations, then as a consequence you may not convey it at all. For example, if you agree to terms that obligate you to collect a royalty for further conveying from those to whom you convey the Program, the only way you could satisfy both those terms and this License would be to refrain entirely from conveying the Program."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "GPL - No Surrender of Others' Freedom"^^xsd:string ;
+.
+voag:CLS_GPL-13
+  rdf:type voag:UsageClause ;
+  voag:clauseNumber 13 ;
+  voag:title "Use with the GNU Affero General Public License"^^xsd:string ;
+  vaem:description "Notwithstanding any other provision of this License, you have permission to link or combine any covered work with a work licensed under version 3 of the GNU Affero General Public License into a single combined work, and to convey the resulting work. The terms of this License will continue to apply to the part which is the covered work, but the special requirements of the GNU Affero General Public License, section 13, concerning interaction through a network will apply to the combination as such."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "GPL Clause 13: Use with the GNU Affero General Public License"^^xsd:string ;
+.
+voag:CLS_GPL-14
+  rdf:type voag:VersionClause ;
+  voag:clauseNumber 14 ;
+  voag:title "Revised Versions of this License"^^xsd:string ;
+  vaem:description """The Free Software Foundation may publish revised and/or new versions of the GNU General Public License from time to time. Such new versions will be similar in spirit to the present version, but may differ in detail to address new problems or concerns.
+
+Each version is given a distinguishing version number. If the Program specifies that a certain numbered version of the GNU General Public License “or any later version” applies to it, you have the option of following the terms and conditions either of that numbered version or of any later version published by the Free Software Foundation. If the Program does not specify a version number of the GNU General Public License, you may choose any version ever published by the Free Software Foundation.
+
+If the Program specifies that a proxy can decide which future versions of the GNU General Public License can be used, that proxy's public statement of acceptance of a version permanently authorizes you to choose that version for the Program.
+
+Later license versions may give you additional or different permissions. However, no additional obligations are imposed on any author or copyright holder as a result of your choosing to follow a later version."""^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "GPL Clause 14: Revised Versions of this License"^^xsd:string ;
+.
+voag:CLS_GPL-15
+  rdf:type voag:DisclaimerClause ;
+  voag:clauseNumber 15 ;
+  voag:title "Disclaimer of Warranty"^^xsd:string ;
+  vaem:description "THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "GPL Disclaimer of Warranty"^^xsd:string ;
+.
+voag:CLS_GPL-16
+  rdf:type voag:LimitationOfLiabilityClause ;
+  voag:clauseNumber 16 ;
+  voag:title "Limitation of Liability"^^xsd:string ;
+  vaem:description "IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "GPL - Limitation of Liability"^^xsd:string ;
+.
+voag:CLS_GPL-17
+  rdf:type voag:AdjunctClause ;
+  voag:clauseNumber 17 ;
+  voag:title "Interpretation of Sections 15 and 16"^^xsd:string ;
+  voag:withRespectTo voag:CLS_GPL-15 ;
+  voag:withRespectTo voag:CLS_GPL-16 ;
+  vaem:description "If the disclaimer of warranty and limitation of liability provided above cannot be given local legal effect according to their terms, reviewing courts shall apply local law that most closely approximates an absolute waiver of all civil liability in connection with the Program, unless a warranty or assumption of liability accompanies a copy of the Program in return for a fee."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "GPL - Interpretation of Sections 15 and 16"^^xsd:string ;
 .
 voag:COMMON_PUBLIC_LICENSE_V1PT0
   rdf:type voag:License ;
@@ -406,15 +930,6 @@ voag:CRYPTIX_GENERAL_LICENSE
   rdfs:label "Cryptix General License"^^xsd:string ;
   rdfs:seeAlso voag:X11_LICENSE ;
 .
-voag:DLC_AFL
-  rdf:type voag:DisclaimerLicenceClause ;
-  voag:clauseNumber 7 ;
-  voag:title "Warranty of Provenance and Disclaimer of Warranty"^^xsd:string ;
-  vaem:description "Licensor warrants that the copyright in and to the Original Work and the patent rights granted herein by Licensor are owned by the Licensor or are sublicensed to You under the terms of this License with the permission of the contributor(s) of those copyrights and patent rights. Except as expressly stated in the immediately preceding sentence, the Original Work is provided under this License on an \"AS IS\" BASIS and WITHOUT WARRANTY, either express or implied, including, without limitation, the warranties of non-infringement, merchantability or fitness for a particular purpose. THE ENTIRE RISK AS TO THE QUALITY OF THE ORIGINAL WORK IS WITH YOU. This DISCLAIMER OF WARRANTY constitutes an essential part of this License. No license to the Original Work is granted by this License except under this disclaimer."^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "AFL disclaimer"^^xsd:string ;
-.
 voag:DSL_LICENSE
   rdf:type voag:License ;
   voag:url "http://www.gnu.org/licenses/dsl.html" ;
@@ -422,43 +937,6 @@ voag:DSL_LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Design Science License (DSL)"^^xsd:string ;
-.
-voag:DTYPE-CatalogEntry
-  rdf:type voag:SchemaGraph ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-.
-voag:DeLC_ALF
-  rdf:type voag:DefinitionLicenseClause ;
-  voag:clauseNumber 14 ;
-  voag:title "Definition of \"You\" in This License"^^xsd:string ;
-  vaem:description "\"You\" throughout this License, whether in upper or lower case, means an individual or a legal entity exercising rights under, and complying with all of the terms of, this License. For legal entities, \"You\" includes any entity that controls, is controlled by, or is under common control with you. For purposes of this definition, \"control\" means (i) the power, direct or indirect, to cause the direction or management of such entity, whether by contract or otherwise, or (ii) ownership of fifty percent (50%) or more of the outstanding shares, or (iii) beneficial ownership of such entity."^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "ALF Definition of \"You\""^^xsd:string ;
-.
-voag:DeLC_CC-SHAREALIKE_3PT0-US
-  rdf:type voag:DefinitionLicenseClause ;
-  voag:clauseNumber 1 ;
-  voag:title "Definitions"^^xsd:string ;
-  vaem:description """\"Collective Work\" means a work, such as a periodical issue, anthology or encyclopedia, in which the Work in its entirety in unmodified form, along with one or more other contributions, constituting separate and independent works in themselves, are assembled into a collective whole. A work that constitutes a Collective Work will not be considered a Derivative Work (as defined below) for the purposes of this License.
-
-\"Creative Commons Compatible License\" means a license that is listed at https://creativecommons.org/compatiblelicenses that has been approved by Creative Commons as being essentially equivalent to this License, including, at a minimum, because that license: (i) contains terms that have the same purpose, meaning and effect as the License Elements of this License; and, (ii) explicitly permits the relicensing of derivatives of works made available under that license under this License or either a Creative Commons unported license or a Creative Commons jurisdiction license with the same License Elements as this License.
-
-\"Derivative Work\" means a work based upon the Work or upon the Work and other pre-existing works, such as a translation, musical arrangement, dramatization, fictionalization, motion picture version, sound recording, art reproduction, abridgment, condensation, or any other form in which the Work may be recast, transformed, or adapted, except that a work that constitutes a Collective Work will not be considered a Derivative Work for the purpose of this License. For the avoidance of doubt, where the Work is a musical composition or sound recording, the synchronization of the Work in timed-relation with a moving image (\"synching\") will be considered a Derivative Work for the purpose of this License.
-
-\"License Elements\" means the following high-level license attributes as selected by Licensor and indicated in the title of this License: Attribution, ShareAlike.
-
-\"Licensor\" means the individual, individuals, entity or entities that offers the Work under the terms of this License.
-
-\"Original Author\" means the individual, individuals, entity or entities who created the Work.
-
-\"Work\" means the copyrightable work of authorship offered under the terms of this License.
-
-\"You\" means an individual or entity exercising rights under this License who has not previously violated the terms of this License with respect to the Work, or who has received express permission from the Licensor to exercise rights under this License despite a previous violation."""^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "Creative Commons Sharealike v3.0 US - Definitions"^^xsd:string ;
 .
 voag:ECL_V2PT0
   rdf:type voag:License ;
@@ -491,15 +969,6 @@ voag:ECPAT_LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Expat License"^^xsd:string ;
 .
-voag:EDLC_ALF
-  rdf:type voag:ExternalDeploymentLicenseClause ;
-  voag:clauseNumber 5 ;
-  voag:title "External Deployment"^^xsd:string ;
-  vaem:description "The term \"External Deployment\" means the use, distribution, or communication of the Original Work or Derivative Works in any way such that the Original Work or Derivative Works may be used by anyone other than You, whether those works are distributed or communicated to those persons or made available as an application intended for use over a network. As an express condition for the grants of license hereunder, You must treat any External Deployment by You of the Original Work or a Derivative Work as a distribution under section 1(c)."^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "ALF External Deployment"^^xsd:string ;
-.
 voag:EIFFEL_FORUM_LICENSE_V2
   rdf:type voag:License ;
   voag:url "http://www.gnu.org/licenses/eiffel-forum-license-2.html" ;
@@ -507,15 +976,6 @@ voag:EIFFEL_FORUM_LICENSE_V2
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Eiffel Forum License, version 2"^^xsd:string ;
-.
-voag:ELC_AFL
-  rdf:type voag:ExclusionLicenceClause ;
-  voag:clauseNumber 4 ;
-  voag:title "Exclusions From License Grant"^^xsd:string ;
-  vaem:description "Neither the names of Licensor, nor the names of any contributors to the Original Work, nor any of their trademarks or service marks, may be used to endorse or promote products derived from this Original Work without express prior permission of the Licensor. Except as expressly stated herein, nothing in this License grants any license to Licensor's trademarks, copyrights, patents, trade secrets or any other intellectual property. No patent license is granted to make, use, sell, offer for sale, have made, or import embodiments of any patent claims other than the licensed claims defined in Section 2. No license is granted to the trademarks of Licensor even if such marks are included in the Original Work. Nothing in this License shall be interpreted to prohibit Licensor from licensing under terms different from this License any Original Work that Licensor otherwise would have a right to license."^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "AFL exclusions"^^xsd:string ;
 .
 voag:EPL_V1PT0
   rdf:type voag:License ;
@@ -626,6 +1086,24 @@ voag:GNU-FDL
 .
 voag:GNU-GPL
   rdf:type voag:License ;
+  voag:hasClause voag:CLS_GPL-00 ;
+  voag:hasClause voag:CLS_GPL-01 ;
+  voag:hasClause voag:CLS_GPL-02 ;
+  voag:hasClause voag:CLS_GPL-03 ;
+  voag:hasClause voag:CLS_GPL-04 ;
+  voag:hasClause voag:CLS_GPL-05 ;
+  voag:hasClause voag:CLS_GPL-06 ;
+  voag:hasClause voag:CLS_GPL-07 ;
+  voag:hasClause voag:CLS_GPL-08 ;
+  voag:hasClause voag:CLS_GPL-09 ;
+  voag:hasClause voag:CLS_GPL-10 ;
+  voag:hasClause voag:CLS_GPL-11 ;
+  voag:hasClause voag:CLS_GPL-12 ;
+  voag:hasClause voag:CLS_GPL-13 ;
+  voag:hasClause voag:CLS_GPL-14 ;
+  voag:hasClause voag:CLS_GPL-15 ;
+  voag:hasClause voag:CLS_GPL-16 ;
+  voag:hasClause voag:CLS_GPL-17 ;
   voag:url "http://www.gnu.org/licenses/gpl.html"^^xsd:anyURI ;
   vaem:acronym "GPL"^^xsd:string ;
   vaem:description "The GNU GPL can be used for general data which is not software, as long as one can determine what the definition of “source code” refers to in the particular case. As it turns out, the DSL (see below) also requires that you determine what the “source code” is, using approximately the same definition that the GPL uses."^^xsd:string ;
@@ -644,6 +1122,24 @@ voag:GNU-GPL_V2
 .
 voag:GNU-GPL_V3
   rdf:type voag:License ;
+  voag:hasClause voag:CLS_GPL-00 ;
+  voag:hasClause voag:CLS_GPL-01 ;
+  voag:hasClause voag:CLS_GPL-02 ;
+  voag:hasClause voag:CLS_GPL-03 ;
+  voag:hasClause voag:CLS_GPL-04 ;
+  voag:hasClause voag:CLS_GPL-05 ;
+  voag:hasClause voag:CLS_GPL-06 ;
+  voag:hasClause voag:CLS_GPL-07 ;
+  voag:hasClause voag:CLS_GPL-08 ;
+  voag:hasClause voag:CLS_GPL-09 ;
+  voag:hasClause voag:CLS_GPL-10 ;
+  voag:hasClause voag:CLS_GPL-11 ;
+  voag:hasClause voag:CLS_GPL-12 ;
+  voag:hasClause voag:CLS_GPL-13 ;
+  voag:hasClause voag:CLS_GPL-14 ;
+  voag:hasClause voag:CLS_GPL-15 ;
+  voag:hasClause voag:CLS_GPL-16 ;
+  voag:hasClause voag:CLS_GPL-17 ;
   voag:supercedes voag:GNU-GPL_V2 ;
   voag:wasInfluencedBy <http://www.gnu.org/licenses/gpl.html> ;
   vaem:acronym "GNUGPL"^^xsd:string ;
@@ -651,6 +1147,7 @@ voag:GNU-GPL_V3
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "GNU General Public License (GPL) version 3"^^xsd:string ;
+  owl:sameAs voag:GNU-GPL ;
   prov:wasDerivedFrom voag:GNU-GPL_V2 ;
 .
 voag:GNU-LGPL_V2PT1
@@ -797,15 +1294,6 @@ voag:JAHIA_COMMUNITY_SOURCE_LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Jahia Community Source License"^^xsd:string ;
 .
-voag:JLC_ALF
-  rdf:type voag:JuristricationLicenseClause ;
-  voag:clauseNumber 11 ;
-  voag:title "Jurisdiction, Venue and Governing Law"^^xsd:string ;
-  vaem:description "Any action or suit relating to this License may be brought only in the courts of a jurisdiction wherein the Licensor resides or in which Licensor conducts its primary business, and under the laws of that jurisdiction excluding its conflict-of-law provisions. The application of the United Nations Convention on Contracts for the International Sale of Goods is expressly excluded. Any use of the Original Work outside the scope of this License or after its termination shall be subject to the requirements and penalties of copyright or patent law in the appropriate jurisdiction. This section shall survive the termination of this License."^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "ALF Jurisdiction, Venue and Governing Law"^^xsd:string ;
-.
 voag:JOSL_V1PT0
   rdf:type voag:License ;
   voag:incompatibleWith voag:GNU-GPL_V3 ;
@@ -825,59 +1313,6 @@ voag:JSON_LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "The JSON License"^^xsd:string ;
-.
-voag:LC_CC-SHAREALIKE_3PT0-US
-  rdf:type voag:LicenseClause ;
-  voag:clauseNumber 3 ;
-  voag:title "License Grant"^^xsd:string ;
-  vaem:description """Subject to the terms and conditions of this License, Licensor hereby grants You a worldwide, royalty-free, non-exclusive, perpetual (for the duration of the applicable copyright) license to exercise the rights in the Work as stated below:
-
-to reproduce the Work, to incorporate the Work into one or more Collective Works, and to reproduce the Work as incorporated in the Collective Works;
-
-to create and reproduce Derivative Works provided that any such Derivative Work, including any translation in any medium, takes reasonable steps to clearly label, demarcate or otherwise identify that changes were made to the original Work. For example, a translation could be marked \"The original work was translated from English to Spanish,\" or a modification could indicate \"The original work has been modified.\";
-
-to distribute copies or phonorecords of, display publicly, perform publicly, and perform publicly by means of a digital audio transmission the Work including as incorporated in Collective Works;
-
-to distribute copies or phonorecords of, display publicly, perform publicly, and perform publicly by means of a digital audio transmission Derivative Works.
-
-For the avoidance of doubt, where the Work is a musical composition:
-
-Performance Royalties Under Blanket Licenses. Licensor waives the exclusive right to collect, whether individually or, in the event that Licensor is a member of a performance rights society (e.g. ASCAP, BMI, SESAC), via that society, royalties for the public performance or public digital performance (e.g. webcast) of the Work.
-
-Mechanical Rights and Statutory Royalties. Licensor waives the exclusive right to collect, whether individually or via a music rights agency or designated agent (e.g. Harry Fox Agency), royalties for any phonorecord You create from the Work (\"cover version\") and distribute, subject to the compulsory license created by 17 USC Section 115 of the US Copyright Act (or the equivalent in other jurisdictions).
-
-Webcasting Rights and Statutory Royalties. For the avoidance of doubt, where the Work is a sound recording, Licensor waives the exclusive right to collect, whether individually or via a performance-rights society (e.g. SoundExchange), royalties for the public digital performance (e.g. webcast) of the Work, subject to the compulsory license created by 17 USC Section 114 of the US Copyright Act (or the equivalent in other jurisdictions).
-The above rights may be exercised in all media and formats whether now known or hereafter devised. The above rights include the right to make such modifications as are technically necessary to exercise the rights in other media and formats. All rights not expressly granted by Licensor are hereby reserved."""^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "Creative Commons Sharealike v3.0 US - License Grant"^^xsd:string ;
-.
-voag:LC_CC-SHAREALIKE_3PT0-US-2
-  rdf:type voag:LicenseClause ;
-  voag:clauseNumber 5 ;
-  voag:title "Representations, Warranties and Disclaimer"^^xsd:string ;
-  vaem:description "UNLESS OTHERWISE MUTUALLY AGREED TO BY THE PARTIES IN WRITING, LICENSOR OFFERS THE WORK AS-IS AND ONLY TO THE EXTENT OF ANY RIGHTS HELD IN THE LICENSED WORK BY THE LICENSOR. THE LICENSOR MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND CONCERNING THE WORK, EXPRESS, IMPLIED, STATUTORY OR OTHERWISE, INCLUDING, WITHOUT LIMITATION, WARRANTIES OF TITLE, MARKETABILITY, MERCHANTIBILITY, FITNESS FOR A PARTICULAR PURPOSE, NONINFRINGEMENT, OR THE ABSENCE OF LATENT OR OTHER DEFECTS, ACCURACY, OR THE PRESENCE OF ABSENCE OF ERRORS, WHETHER OR NOT DISCOVERABLE. SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES, SO SUCH EXCLUSION MAY NOT APPLY TO YOU."^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "Creative Commons Sharealike v3.0 US - Representations, Warranties and Disclaimer"^^xsd:string ;
-.
-voag:LOLLC_AFL
-  rdf:type voag:LimitationOfLiabilityLicenseClause ;
-  voag:clauseNumber 8 ;
-  voag:title "Limitation of Liability"^^xsd:string ;
-  vaem:description "Under no circumstances and under no legal theory, whether in tort (including negligence), contract, or otherwise, shall the Licensor be liable to anyone for any indirect, special, incidental, or consequential damages of any character arising as a result of this License or the use of the Original Work including, without limitation, damages for loss of goodwill, work stoppage, computer failure or malfunction, or any and all other commercial damages or losses. This limitation of liability shall not apply to the extent applicable law prohibits such limitation."^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "AFL Limitation of Liability"^^xsd:string ;
-.
-voag:LOLLC_CC-SHAREALIKE_3PT0-US
-  rdf:type voag:LimitationOfLiabilityLicenseClause ;
-  voag:clauseNumber 6 ;
-  voag:title "Limitation on Liability"^^xsd:string ;
-  vaem:description "EXCEPT TO THE EXTENT REQUIRED BY APPLICABLE LAW, IN NO EVENT WILL LICENSOR BE LIABLE TO YOU ON ANY LEGAL THEORY FOR ANY SPECIAL, INCIDENTAL, CONSEQUENTIAL, PUNITIVE OR EXEMPLARY DAMAGES ARISING OUT OF THIS LICENSE OR THE USE OF THE WORK, EVEN IF LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES."^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "Creative Commons Sharealike v3.0 US - Limitation on Liability"^^xsd:string ;
 .
 voag:LPPL_V1PT2
   rdf:type voag:License ;
@@ -921,33 +1356,6 @@ voag:LinkedModelLogo-200x80
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "LinkedModel ICON 200 x 80"^^xsd:string ;
-.
-voag:MLC_ALF
-  rdf:type voag:MiscLicenseClause ;
-  voag:clauseNumber 13 ;
-  voag:title "Miscellaneous"^^xsd:string ;
-  vaem:description "If any provision of this License is held to be unenforceable, such provision shall be reformed only to the extent necessary to make it enforceable."^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "ALF Miscellaneous"^^xsd:string ;
-.
-voag:MLC_CC-SHAREALIKE_3PT0-US
-  rdf:type voag:MiscLicenseClause ;
-  voag:clauseNumber 8 ;
-  voag:title "Miscellaneous"^^xsd:string ;
-  vaem:description """Each time You distribute or publicly digitally perform the Work (as defined in Section 1 above) or a Collective Work (as defined in Section 1 above), the Licensor offers to the recipient a license to the Work on the same terms and conditions as the license granted to You under this License.
-Each time You distribute or publicly digitally perform a Derivative Work, Licensor offers to the recipient a license to the original Work on the same terms and conditions as the license granted to You under this License.
-If any provision of this License is invalid or unenforceable under applicable law, it shall not affect the validity or enforceability of the remainder of the terms of this License, and without further action by the parties to this agreement, such provision shall be reformed to the minimum extent necessary to make such provision valid and enforceable.
-No term or provision of this License shall be deemed waived and no breach consented to unless such waiver or consent shall be in writing and signed by the party to be charged with such waiver or consent.
-This License constitutes the entire agreement between the parties with respect to the Work licensed here. There are no understandings, agreements or representations with respect to the Work not specified here. Licensor shall not be bound by any additional provisions that may appear in any communication from You. This License may not be modified without the mutual written agreement of the Licensor and You.
-Creative Commons Notice
-
-Creative Commons is not a party to this License, and makes no warranty whatsoever in connection with the Work. Creative Commons will not be liable to You or any party on any legal theory for any damages whatsoever, including without limitation any general, special, incidental or consequential damages arising in connection to this license. Notwithstanding the foregoing two (2) sentences, if Creative Commons has expressly identified itself as the Licensor hereunder, it shall have all rights and obligations of Licensor.
-
-Except for the limited purpose of indicating to the public that the Work is licensed under the CCPL, Creative Commons does not authorize the use by either party of the trademark \"Creative Commons\" or any related trademark or logo of Creative Commons without the prior written consent of Creative Commons. Any permitted use will be in compliance with Creative Commons' then-current trademark usage guidelines, as may be published on its website or otherwise made available upon request from time to time. For the avoidance of doubt, this trademark restriction does not form part of this License."""^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "Creative Commons Sharealike v3.0 US - Miscellaneous"^^xsd:string ;
 .
 voag:MODIFIED_BSD_LICENSE
   rdf:type voag:License ;
@@ -1027,15 +1435,6 @@ voag:MS-SSL
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Microsoft's Shared Source CLI, C#, and Jscript License"^^xsd:string ;
-.
-voag:MoLC_ALF
-  rdf:type voag:ModificationLicenseClause ;
-  voag:clauseNumber 16 ;
-  voag:title "Modification of This License"^^xsd:string ;
-  vaem:description "This License is Copyright © 2005 Lawrence Rosen. Permission is granted to copy, distribute, or communicate this License without modification. Nothing in this License permits You to modify this License as applied to the Original Work or to Derivative Works. However, You may modify the text of this License and copy, distribute or communicate your modified version (the \"Modified License\") and apply it to other original works of authorship subject to the following conditions: (i) You may not indicate in any way that your Modified License is the \"Academic Free License\" or \"AFL\" and you may not use those names in the name of your Modified License; (ii) You must replace the notice specified in the first paragraph above with the notice \"Licensed under <insert your license name here>\" or with a notice of your own that is not confusingly similar to the notice in this License; and (iii) You may not claim that your original works are open source software unless your Modified License has been approved by Open Source Initiative (OSI) and You comply with its license review and certification process."^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "ALF Modification of This License"^^xsd:string ;
 .
 voag:NASA_OPEN_SOURCE_AGREEMENT
   rdf:type voag:License ;
@@ -1158,15 +1557,6 @@ voag:OPL
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Open Public License"^^xsd:string ;
 .
-voag:PGLC_AFL
-  rdf:type voag:PatentGrantLicenseClause ;
-  voag:clauseNumber 2 ;
-  voag:title "Grant of Patent License"^^xsd:string ;
-  vaem:description "Licensor grants You a worldwide, royalty-free, non-exclusive, sublicensable license, under patent claims owned or controlled by the Licensor that are embodied in the Original Work as furnished by the Licensor, for the duration of the patents, to make, use, sell, offer for sale, have made, and import the Original Work and Derivative Works."^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "AFL Grant of Patent License"^^xsd:string ;
-.
 voag:PHORUM_LICENSE_V2PT0
   rdf:type voag:License ;
   voag:incompatibleWith voag:GNU-GPL_V3 ;
@@ -1215,24 +1605,6 @@ voag:QPL_LICENSE_V1PT0
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Q Public License (QPL), Version 1.0"^^xsd:string ;
 .
-voag:RLC_CC-SHAREALIKE_3PT0-US
-  rdf:type voag:RestrictionsLicenseClause ;
-  voag:clauseNumber 4 ;
-  voag:title "Restrictions"^^xsd:string ;
-  vaem:description """The license granted in Section 3 above is expressly made subject to and limited by the following restrictions:
-
-<ol>
-
-<li>You may distribute, publicly display, publicly perform, or publicly digitally perform the Work only under the terms of this License, and You must include a copy of, or the Uniform Resource Identifier for, this License with every copy or phonorecord of the Work You distribute, publicly display, publicly perform, or publicly digitally perform. You may not offer or impose any terms on the Work that restrict the terms of this License or the ability of a recipient of the Work to exercise of the rights granted to that recipient under the terms of the License. You may not sublicense the Work. You must keep intact all notices that refer to this License and to the disclaimer of warranties. When You distribute, publicly display, publicly perform, or publicly digitally perform the Work, You may not impose any technological measures on the Work that restrict the ability of a recipient of the Work from You to exercise of the rights granted to that recipient under the terms of the License. This Section 4(a) applies to the Work as incorporated in a Collective Work, but this does not require the Collective Work apart from the Work itself to be made subject to the terms of this License. If You create a Collective Work, upon notice from any Licensor You must, to the extent practicable, remove from the Collective Work any credit as required by Section 4(c), as requested. If You create a Derivative Work, upon notice from any Licensor You must, to the extent practicable, remove from the Derivative Work any credit as required by Section 4(c), as requested.</li>
-
-<li>You may distribute, publicly display, publicly perform, or publicly digitally perform a Derivative Work only under: (i) the terms of this License; (ii) a later version of this License with the same License Elements as this License; (iii) either the Creative Commons (Unported) license or a Creative Commons jurisdiction license (either this or a later license version) that contains the same License Elements as this License (e.g. Attribution-ShareAlike 3.0 (Unported)); (iv) a Creative Commons Compatible License. If you license the Derivative Work under one of the licenses mentioned in (iv), you must comply with the terms of that license. If you license the Derivative Work under the terms of any of the licenses mentioned in (i), (ii) or (iii) (the \"Applicable License\"), you must comply with the terms of the Applicable License generally and with the following provisions: (I) You must include a copy of, or the Uniform Resource Identifier for, the Applicable License with every copy or phonorecord of each Derivative Work You distribute, publicly display, publicly perform, or publicly digitally perform; (II) You may not offer or impose any terms on the Derivative Works that restrict the terms of the Applicable License or the ability of a recipient of the Work to exercise the rights granted to that recipient under the terms of the Applicable License; (III) You must keep intact all notices that refer to the Applicable License and to the disclaimer of warranties; and, (IV) when You distribute, publicly display, publicly perform, or publicly digitally perform the Work, You may not impose any technological measures on the Derivative Work that restrict the ability of a recipient of the Derivative Work from You to exercise the rights granted to that recipient under the terms of the Applicable License. This Section 4(b) applies to the Derivative Work as incorporated in a Collective Work, but this does not require the Collective Work apart from the Derivative Work itself to be made subject to the terms of the Applicable License.</li>
-
-<li>If You distribute, publicly display, publicly perform, or publicly digitally perform the Work (as defined in Section 1 above) or any Derivative Works (as defined in Section 1 above) or Collective Works (as defined in Section 1 above), You must, unless a request has been made pursuant to Section 4(a), keep intact all copyright notices for the Work and provide, reasonable to the medium or means You are utilizing: (i) the name of the Original Author (or pseudonym, if applicable) if supplied, and/or (ii) if the Original Author and/or Licensor designate another party or parties (e.g. a sponsor institute, publishing entity, journal) for attribution (\"Attribution Parties\") in Licensor's copyright notice, terms of service or by other reasonable means, the name of such party or parties; the title of the Work if supplied; to the extent reasonably practicable, the Uniform Resource Identifier, if any, that Licensor specifies to be associated with the Work, unless such URI does not refer to the copyright notice or licensing information for the Work; and, consistent with Section 3(b) in the case of a Derivative Work, a credit identifying the use of the Work in the Derivative Work (e.g., \"French translation of the Work by Original Author,\" or \"Screenplay based on original Work by Original Author\"). The credit required by this Section 4(c) may be implemented in any reasonable manner; provided, however, that in the case of a Derivative Work or Collective Work, at a minimum such credit will appear, if a credit for all contributing authors of the Derivative Work or Collective Work appears, then as part of these credits and in a manner at least as prominent as the credits for the other contributing authors. For the avoidance of doubt, You may only use the credit required by this Section for the purpose of attribution in the manner set out above and, by exercising Your rights under this License, You may not implicitly or explicitly assert or imply any connection with, sponsorship or endorsement by the Original Author, Licensor and/or Attribution Parties, as appropriate, of You or Your use of the Work, without the separate, express prior written permission of the Original Author, Licensor and/or Attribution Parties.</li>
-</ol>"""^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "Creative Commons Sharealike v3.0 US - Restrictions"^^xsd:string ;
-.
 voag:RPL
   rdf:type voag:License ;
   voag:incompatibleWith voag:GNU-GPL_V3 ;
@@ -1253,24 +1625,6 @@ voag:RPSL_V1PT0
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "RealNetworks Public Source License (RPSL), Version 1.0"^^xsd:string ;
 .
-voag:RTULC_ALF
-  rdf:type voag:RightToUseLicenseClause ;
-  voag:clauseNumber 15 ;
-  voag:title "Right to Use"^^xsd:string ;
-  vaem:description "You may use the Original Work in all ways not otherwise restricted or conditioned by this License or by law, and Licensor promises not to interfere with or be responsible for such uses by You."^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "ALF Right to Use"^^xsd:string ;
-.
-voag:RTULC_CC-SHAREALIKE_3PT0-US
-  rdf:type voag:RightToUseLicenseClause ;
-  voag:clauseNumber 2 ;
-  voag:title "Fair Use Rights"^^xsd:string ;
-  vaem:description "Nothing in this license is intended to reduce, limit, or restrict any rights arising from fair use, first sale or other limitations on the exclusive rights of the copyright owner under copyright law or other applicable laws."^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "Creative Commons Sharealike v3.0 US - Fair Use Rights"^^xsd:string ;
-.
 voag:RUBY_LICENSE
   rdf:type voag:License ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
@@ -1280,15 +1634,6 @@ voag:RUBY_LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "License of Ruby"^^xsd:string ;
-.
-voag:SCLGC_AFL
-  rdf:type voag:SourceCodeLicenseGrantClause ;
-  voag:clauseNumber 3 ;
-  voag:title "Grant of Source Code License"^^xsd:string ;
-  vaem:description "The term \"Source Code\" means the preferred form of the Original Work for making modifications to it and all available documentation describing how to modify the Original Work. Licensor agrees to provide a machine-readable copy of the Source Code of the Original Work along with each copy of the Original Work that Licensor distributes. Licensor reserves the right to satisfy this obligation by placing a machine-readable copy of the Source Code in an information repository reasonably calculated to permit inexpensive and convenient access by You for as long as Licensor continues to distribute the Original Work."^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "AFL Grant of Source Code License"^^xsd:string ;
 .
 voag:SGI_FREE_SOFTWARE_LICENSE_B_V2PT0
   rdf:type voag:License ;
@@ -1359,34 +1704,6 @@ voag:SYSTEMC_V3PT0
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "SystemC \"Open Source\" License, Version 3.0"^^xsd:string ;
 .
-voag:TLC_ALF-1
-  rdf:type voag:TerminationLicenseClause ;
-  voag:clauseNumber 9 ;
-  voag:title "Acceptance and Termination"^^xsd:string ;
-  vaem:description "If, at any time, You expressly assented to this License, that assent indicates your clear and irrevocable acceptance of this License and all of its terms and conditions. If You distribute or communicate copies of the Original Work or a Derivative Work, You must make a reasonable effort under the circumstances to obtain the express assent of recipients to the terms of this License. This License conditions your rights to undertake the activities listed in Section 1, including your right to create Derivative Works based upon the Original Work, and doing so without honoring these terms and conditions is prohibited by copyright law and international treaty. Nothing in this License is intended to affect copyright exceptions and limitations (including \"fair use\" or \"fair dealing\"). This License shall terminate immediately and You may no longer exercise any of the rights granted to You by this License upon your failure to honor the conditions in Section 1(c)."^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "ALF Acceptance and Termination"^^xsd:string ;
-.
-voag:TLC_ALF-2
-  rdf:type voag:TerminationLicenseClause ;
-  voag:clauseNumber 10 ;
-  voag:title "Termination for Patent Action"^^xsd:string ;
-  vaem:description "This License shall terminate automatically and You may no longer exercise any of the rights granted to You by this License as of the date You commence an action, including a cross-claim or counterclaim, against Licensor or any licensee alleging that the Original Work infringes a patent. This termination provision shall not apply for an action alleging patent infringement by combinations of the Original Work with other software or hardware."^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "ALF Termination for Patent Action"^^xsd:string ;
-.
-voag:TLC_CC-SHAREALIKE_3PT0-US
-  rdf:type voag:TerminationLicenseClause ;
-  voag:clauseNumber 7 ;
-  voag:title "Termination"^^xsd:string ;
-  vaem:description """This License and the rights granted hereunder will terminate automatically upon any breach by You of the terms of this License. Individuals or entities who have received Derivative Works or Collective Works from You under this License, however, will not have their licenses terminated provided such individuals or entities remain in full compliance with those licenses. Sections 1, 2, 5, 6, 7, and 8 will survive any termination of this License.
-Subject to the above terms and conditions, the license granted here is perpetual (for the duration of the applicable copyright in the Work). Notwithstanding the above, Licensor reserves the right to release the Work under different license terms or to stop distributing the Work at any time; provided, however that any such election will not serve to withdraw this License (or any other license that has been, or is required to be, granted under the terms of this License), and this License will continue in full force and effect unless terminated as stated above."""^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "Creative Commons Sharealike v3.0 US - Termination"^^xsd:string ;
-.
 voag:UNICODE_LICENSE
   rdf:type voag:License ;
   voag:url "http://www.unicode.org/copyright.html#Exhibit1" ;
@@ -1415,16 +1732,6 @@ voag:UtahPublicLicense
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "University of Utah Public License"^^xsd:string ;
-.
-voag:VAEM-CatalogEntry
-  rdf:type voag:SchemaGraph ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-.
-voag:VAEM-XINA-CatalogEntry
-  rdf:type voag:SchemaGraph ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
 .
 voag:VIM_LICENSE_V6PT1_OR_LATER
   rdf:type voag:License ;
@@ -1570,7 +1877,7 @@ voag:ZOPE_PUBLIC_LICENSE_V2PT1
   rdfs:label "Zope Public License, versions 2.1"^^xsd:string ;
   prov:wasDerivedFrom voag:ZOPE_PUBLIC_LICENSE_V2PT0 ;
 .
-voag:hasLicenseClause
+voag:hasClause
   dct:description "The term \"Source Code\" means the preferred form of the Original Work for making modifications to it and all available documentation describing how to modify the Original Work. "^^xsd:string ;
 .
 vaem:Attribution
