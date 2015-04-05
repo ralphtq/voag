@@ -59,7 +59,7 @@ dct:title
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:versionIRI <http://voag.linkedmodel.org/1.1/vocab/voag> ;
 .
-voag:ACADEMIIC-FREE-LICENSE
+voag:ACADEMIC-FREE-LICENSE
   rdf:type voag:License ;
   voag:hasClause voag:CLS_AFL-01 ;
   voag:hasClause voag:CLS_AFL-02 ;
@@ -80,10 +80,11 @@ voag:ACADEMIIC-FREE-LICENSE
   voag:incompatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://opensource.org/licenses/academic.php" ;
   vaem:acronym "AFL"^^xsd:string ;
-  vaem:description "The Academic Free License is a free software license, not copyleft, and incompatible with the GNU GPL. Recent versions contain contract clauses similar to the Open Software License, and should be avoided for the same reasons."^^xsd:string ;
+  vaem:description "The Academic Free License is a free software license, not copyleft, and incompatible with the GNU GPL. Some versions contain contract clauses similar to the Open Software License."^^xsd:string ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Academic Free License, all versions through 3.0"^^xsd:string ;
+  rdfs:seeAlso voag:OPEN-SOFTWARE-LICENSE ;
 .
 voag:ACDL_V1PT0
   rdf:type voag:License ;
@@ -179,7 +180,7 @@ voag:APSL_V2
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Apple Public Source License (APSL), version 2"^^xsd:string ;
 .
-voag:ARPHIC_PUBLIC_LICENSE
+voag:ARPHIC-PUBLIC-LICENSE
   rdf:type voag:License ;
   voag:compatibleWith voag:GNU-GPL ;
   voag:url "http://ftp.gnu.org/gnu/non-gnu/chinese-fonts-truetype/LICENSE" ;
@@ -189,7 +190,7 @@ voag:ARPHIC_PUBLIC_LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Arphic Public License"^^xsd:string ;
 .
-voag:BERKELEY_DATABASE_LICENSE
+voag:BERKELEY-DATABASE-LICENSE
   rdf:type voag:License ;
   voag:url "http://www.oracle.com/technology/software/products/berkeley-db/htdocs/oslicense.html" ;
   vaem:acronym "BerkleyDB"^^xsd:string ;
@@ -198,7 +199,7 @@ voag:BERKELEY_DATABASE_LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Berkeley Database License"^^xsd:string ;
 .
-voag:BITTORRENT_LICENSE
+voag:BITTORRENT-LICENSE
   rdf:type voag:License ;
   voag:incompatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://www.bittorrent.com/bittorrent-open-source-license" ;
@@ -208,7 +209,7 @@ voag:BITTORRENT_LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "BitTorrent Open Source License"^^xsd:string ;
 .
-voag:BOOST_LICENSE
+voag:BOOST-LICENSE
   rdf:type voag:License ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://www.boost.org/LICENSE_1_0.txt" ;
@@ -218,7 +219,7 @@ voag:BOOST_LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Boost Software License"^^xsd:string ;
 .
-voag:BSD_ORIGINAL_LICENSE
+voag:BSD-ORIGINAL-LICENSE
   rdf:type voag:License ;
   voag:incompatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://www.xfree86.org/3.3.6/COPYRIGHT2.html#6" ;
@@ -263,6 +264,14 @@ voag:CC0
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "CC0"^^xsd:string ;
 .
+voag:CCBY-LICENSE
+  rdf:type voag:License ;
+  voag:url "http://creativecommons.org/licenses/by/2.0/legalcode" ;
+  vaem:acronym "ccby"^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "Creative Commons Attribution 2.0 license"^^xsd:string ;
+.
 voag:CCBY-ND
   rdf:type voag:License ;
   voag:url "http://creativecommons.org/licenses/by-nd/3.0/legalcode" ;
@@ -279,14 +288,6 @@ voag:CCBY-SA
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Creative Commons Attribution-Sharealike 2.0 license"^^xsd:string ;
-.
-voag:CCBY_LICENSE
-  rdf:type voag:License ;
-  voag:url "http://creativecommons.org/licenses/by/2.0/legalcode" ;
-  vaem:acronym "ccby"^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "Creative Commons Attribution 2.0 license"^^xsd:string ;
 .
 voag:CDDL_V1PT0
   rdf:type voag:License ;
@@ -308,7 +309,7 @@ voag:CECILL_V2
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "CeCILL version 2"^^xsd:string ;
 .
-voag:CLEAR_BSD
+voag:CLEAR-BSD-LICENSE
   rdf:type voag:License ;
   voag:compatibleWith voag:GNU-GPL_V2 ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
@@ -731,28 +732,30 @@ voag:CLS_GPL-07
   rdf:type voag:AdditionalClause ;
   voag:clauseNumber 7 ;
   voag:title "Additional Terms"^^xsd:string ;
-  vaem:description """“Additional permissions” are terms that supplement the terms of this License by making exceptions from one or more of its conditions. Additional permissions that are applicable to the entire Program shall be treated as though they were included in this License, to the extent that they are valid under applicable law. If additional permissions apply only to part of the Program, that part may be used separately under those permissions, but the entire Program remains governed by this License without regard to the additional permissions.
+  vaem:description """<p class=\"size-12\">“Additional permissions” are terms that supplement the terms of this License by making exceptions from one or more of its conditions. Additional permissions that are applicable to the entire Program shall be treated as though they were included in this License, to the extent that they are valid under applicable law. If additional permissions apply only to part of the Program, that part may be used separately under those permissions, but the entire Program remains governed by this License without regard to the additional permissions.</p>
 
-When you convey a copy of a covered work, you may at your option remove any additional permissions from that copy, or from any part of it. (Additional permissions may be written to require their own removal in certain cases when you modify the work.) You may place additional permissions on material, added by you to a covered work, for which you have or can give appropriate copyright permission.
+<p class=\"size-12\">When you convey a copy of a covered work, you may at your option remove any additional permissions from that copy, or from any part of it. (Additional permissions may be written to require their own removal in certain cases when you modify the work.) You may place additional permissions on material, added by you to a covered work, for which you have or can give appropriate copyright permission.</p>
 
-Notwithstanding any other provision of this License, for material you add to a covered work, you may (if authorized by the copyright holders of that material) supplement the terms of this License with terms:
+<p class=\"size-12\">Notwithstanding any other provision of this License, for material you add to a covered work, you may (if authorized by the copyright holders of that material) supplement the terms of this License with terms:</p>
 
-a) Disclaiming warranty or limiting liability differently from the terms of sections 15 and 16 of this License; or
+<ol class=\"lower-alpha\">
+<li>Disclaiming warranty or limiting liability differently from the terms of sections 15 and 16 of this License; or</li>
 
-b) Requiring preservation of specified reasonable legal notices or author attributions in that material or in the Appropriate Legal Notices displayed by works containing it; or
+<li>Requiring preservation of specified reasonable legal notices or author attributions in that material or in the Appropriate Legal Notices displayed by works containing it; or</li>
 
-c) Prohibiting misrepresentation of the origin of that material, or requiring that modified versions of such material be marked in reasonable ways as different from the original version; or
+<li>Prohibiting misrepresentation of the origin of that material, or requiring that modified versions of such material be marked in reasonable ways as different from the original version; or</li>
 
-d) Limiting the use for publicity purposes of names of licensors or authors of the material; or
+<li>Limiting the use for publicity purposes of names of licensors or authors of the material; or</li>
 
-e) Declining to grant rights under trademark law for use of some trade names, trademarks, or service marks; or
+<li>Declining to grant rights under trademark law for use of some trade names, trademarks, or service marks; or</li>
 
-f) Requiring indemnification of licensors and authors of that material by anyone who conveys the material (or modified versions of it) with contractual assumptions of liability to the recipient, for any liability that these contractual assumptions directly impose on those licensors and authors.
-All other non-permissive additional terms are considered “further restrictions” within the meaning of section 10. If the Program as you received it, or any part of it, contains a notice stating that it is governed by this License along with a term that is a further restriction, you may remove that term. If a license document contains a further restriction but permits relicensing or conveying under this License, you may add to a covered work material governed by the terms of that license document, provided that the further restriction does not survive such relicensing or conveying.
+<li>Requiring indemnification of licensors and authors of that material by anyone who conveys the material (or modified versions of it) with contractual assumptions of liability to the recipient, for any liability that these contractual assumptions directly impose on those licensors and authors.
+All other non-permissive additional terms are considered “further restrictions” within the meaning of section 10. If the Program as you received it, or any part of it, contains a notice stating that it is governed by this License along with a term that is a further restriction, you may remove that term. If a license document contains a further restriction but permits relicensing or conveying under this License, you may add to a covered work material governed by the terms of that license document, provided that the further restriction does not survive such relicensing or conveying.</li>
+</ol>
 
-If you add terms to a covered work in accord with this section, you must place, in the relevant source files, a statement of the additional terms that apply to those files, or a notice indicating where to find the applicable terms.
+<p class=\"size-12\">If you add terms to a covered work in accord with this section, you must place, in the relevant source files, a statement of the additional terms that apply to those files, or a notice indicating where to find the applicable terms.</p>
 
-Additional terms, permissive or non-permissive, may be stated in the form of a separately written license, or stated as exceptions; the above requirements apply either way."""^^xsd:string ;
+<p class=\"size-12\">Additional terms, permissive or non-permissive, may be stated in the form of a separately written license, or stated as exceptions; the above requirements apply either way.</p>"""^^xsd:string ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "GPL - Additional Terms"^^xsd:string ;
@@ -898,7 +901,144 @@ voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-00
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Perl Foundation Artistic License 2.0 Clause 00: Definitions"^^xsd:string ;
 .
-voag:COMMON_PUBLIC_LICENSE_V1PT0
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-01
+  rdf:type voag:GrantClause ;
+  voag:clauseNumber 1 ;
+  voag:title "Permission for Use and Modification Without Distribution"^^xsd:string ;
+  vaem:description """<p class=\"size-12\">You are permitted to use the Standard Version and create and use Modified Versions for any purpose without restriction, provided that you do not Distribute the Modified Version.
+Permissions for Redistribution of the Standard Version</p>"""^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 01: Permission for Use and Modification Without Distribution"^^xsd:string ;
+.
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-02
+  rdf:type voag:DistributionClause ;
+  voag:clauseNumber 2 ;
+  voag:title "Permission for Use and Modification Without Distribution"^^xsd:string ;
+  vaem:description "<p class=\"size-12\">You may Distribute verbatim copies of the Source form of the Standard Version of this Package in any medium without restriction, either gratis or for a Distributor Fee, provided that you duplicate all of the original copyright notices and associated disclaimers. At your discretion, such verbatim copies may or may not include a Compiled form of the Package.</p>"^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 02: Permission for Use and Modification Without Distribution"^^xsd:string ;
+.
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-03
+  rdf:type voag:GrantClause ;
+  voag:clauseNumber 3 ;
+  voag:title "Distribution of Modified Versions of the Package as Source"^^xsd:string ;
+  vaem:description "<p class=\"size-12\">You may apply any bug fixes, portability changes, and other modifications made available from the Copyright Holder. The resulting Package will still be considered the Standard Version, and as such will be subject to the Original License.</p>"^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 03: Distribution of Modified Versions of the Package as Source"^^xsd:string ;
+.
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-04
+  rdf:type voag:GrantClause ;
+  voag:clauseNumber 4 ;
+  voag:title "Permission for Use and Modification Without Distribution"^^xsd:string ;
+  vaem:description """<p class=\"size-12\">You may Distribute your Modified Version as Source (either gratis or for a Distributor Fee, and with or without a Compiled form of the Modified Version) provided that you clearly document how it differs from the Standard Version, including, but not limited to, documenting any non-standard features, executables, or modules, and provided that you do at least ONE of the following:</p>
+<ol class=\"lower-alpha\">
+<li>make the Modified Version available to the Copyright Holder of the Standard Version, under the Original License, so that the Copyright Holder may include your modifications in the Standard Version.</li>
+
+<li>ensure that installation of your Modified Version does not prevent the user installing or running the Standard Version. In addition, the Modified Version must bear a name that is different from the name of the Standard Version.</li>
+<li> allow anyone who receives a copy of the Modified Version to make the Source form of the Modified Version available to others under
+<ol class=\"lm-lower-roman\"><li>the Original License or</li>
+<li>a license that permits the licensee to freely copy, modify and redistribute the Modified Version using the same licensing terms that apply to the copy that the licensee received, and requires that the Source form of the Modified Version, and of any works derived from it, be made freely available in that license fees are prohibited but Distributor Fees are allowed.</li>
+</ol>
+</li>
+</ol>"""^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 04: Permission for Use and Modification Without Distribution"^^xsd:string ;
+.
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-05
+  rdf:type voag:DistributionClause ;
+  voag:clauseNumber 5 ;
+  voag:title "Distribution of Compiled Forms of the Standard Version or Modified Versions without the Source"^^xsd:string ;
+  vaem:description "<p class=\"size-12\">You may Distribute Compiled forms of the Standard Version without the Source, provided that you include complete instructions on how to get the Source of the Standard Version. Such instructions must be valid at the time of your distribution. If these instructions, at any time while you are carrying out such distribution, become invalid, you must provide new instructions on demand or cease further distribution. If you provide valid instructions or cease distribution within thirty days after you become aware that the instructions are invalid, then you do not forfeit any of your rights under this license.</p>"^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 05: Distribution of Compiled Forms of the Standard Version or Modified Versions without the Source"^^xsd:string ;
+.
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-06
+  rdf:type voag:DistributionClause ;
+  voag:clauseNumber 6 ;
+  voag:title "Distribution of Compiled Forms of the Standard Version or Modified Versions without the Source"^^xsd:string ;
+  vaem:description "<p class=\"size-12\">You may Distribute a Modified Version in Compiled form without the Source, provided that you comply with Section 4 with respect to the Source of the Modified Version.</p>"^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 06: Distribution of Compiled Forms of the Standard Version or Modified Versions without the Source"^^xsd:string ;
+.
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-07
+  rdf:type voag:DistributionClause ;
+  voag:clauseNumber 7 ;
+  voag:title "Distribution of Compiled Forms of the Standard Version or Modified Versions without the Source"^^xsd:string ;
+  vaem:description "<p class=\"size-12\">You may aggregate the Package (either the Standard Version or Modified Version) with other packages and Distribute the resulting aggregation provided that you do not charge a licensing fee for the Package. Distributor Fees are permitted, and licensing fees for other components in the aggregation are permitted. The terms of this license apply to the use and Distribution of the Standard or Modified Versions as included in the aggregation.</p>"^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 05: Distribution of Compiled Forms of the Standard Version or Modified Versions without the Source"^^xsd:string ;
+.
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-08
+  rdf:type voag:DistributionClause ;
+  voag:clauseNumber 8 ;
+  voag:title "Items That are Not Considered Part of a Modified Version"^^xsd:string ;
+  vaem:description "<p class=\"size-12\">You are permitted to link Modified and Standard Versions with other works, to embed the Package in a larger work of your own, or to build stand-alone binary or bytecode versions of applications that include the Package, and Distribute the result without restriction, provided the result does not expose a direct interface to the Package.</p>"^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 08: Items That are Not Considered Part of a Modified Version"^^xsd:string ;
+.
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-09
+  rdf:type voag:GeneralProvisionsClause ;
+  voag:clauseNumber 9 ;
+  voag:title "General Provisions"^^xsd:string ;
+  vaem:description "<p class=\"size-12\">Works (including, but not limited to, modules and scripts) that merely extend or make use of the Package, do not, by themselves, cause the Package to be a Modified Version. In addition, such works are not considered parts of the Package itself, and are not subject to the terms of this license.</p>"^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 09: General Provisions"^^xsd:string ;
+.
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-10
+  rdf:type voag:GeneralProvisionsClause ;
+  voag:clauseNumber 10 ;
+  voag:title "General Provisions"^^xsd:string ;
+  vaem:description "<p class=\"size-12\">Any use, modification, and distribution of the Standard or Modified Versions is governed by this Artistic License. By using, modifying or distributing the Package, you accept this license. Do not use, modify, or distribute the Package, if you do not accept this license.</p>"^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 10: General Provisions"^^xsd:string ;
+.
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-11
+  rdf:type voag:GeneralProvisionsClause ;
+  voag:clauseNumber 11 ;
+  voag:title "General Provisions"^^xsd:string ;
+  vaem:description "<p class=\"size-12\">If your Modified Version has been derived from a Modified Version made by someone other than you, you are nevertheless required to ensure that your Modified Version complies with the requirements of this license.</p>"^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 11: General Provisions"^^xsd:string ;
+.
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-12
+  rdf:type voag:GeneralProvisionsClause ;
+  voag:clauseNumber 12 ;
+  voag:title "General Provisions"^^xsd:string ;
+  vaem:description "<p class=\"size-12\">This license does not grant you the right to use any trademark, service mark, tradename, or logo of the Copyright Holder.</p>"^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 12: General Provisions"^^xsd:string ;
+.
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-13
+  rdf:type voag:GeneralProvisionsClause ;
+  voag:clauseNumber 13 ;
+  voag:title "General Provisions"^^xsd:string ;
+  vaem:description "<p class=\"size-12\">This license includes the non-exclusive, worldwide, free-of-charge patent license to make, have made, use, offer to sell, sell, import and otherwise transfer the Package with respect to any patent claims licensable by the Copyright Holder that are necessarily infringed by the Package. If you institute patent litigation (including a cross-claim or counterclaim) against any party alleging that the Package constitutes direct or contributory patent infringement, then this Artistic License to you shall terminate on the date that such litigation is filed.</p>"^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 12: General Provisions"^^xsd:string ;
+.
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-14
+  rdf:type voag:WarrantyClause ;
+  voag:clauseNumber 14 ;
+  voag:title "Disclaimer of Warranty"^^xsd:string ;
+  vaem:description "<p class=\"size-12\">THE PACKAGE IS PROVIDED BY THE COPYRIGHT HOLDER AND CONTRIBUTORS \"AS IS' AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES. THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT ARE DISCLAIMED TO THE EXTENT PERMITTED BY YOUR LOCAL LAW. UNLESS REQUIRED BY LAW, NO COPYRIGHT HOLDER OR CONTRIBUTOR WILL BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES ARISING IN ANY WAY OUT OF THE USE OF THE PACKAGE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>"^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 12: Disclaimer of Warranty"^^xsd:string ;
+.
+voag:COMMON-PUBLIC-LICENSE_V1PT0
   rdf:type voag:License ;
   voag:incompatibleWith voag:GNU-GPL_V2 ;
   voag:incompatibleWith voag:GNU-GPL_V3 ;
@@ -909,7 +1049,7 @@ voag:COMMON_PUBLIC_LICENSE_V1PT0
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Common Public License Version 1.0"^^xsd:string ;
 .
-voag:CONDOR_PUBLIC_LICENSE
+voag:CONDOR-PUBLIC-LICENSE
   rdf:type voag:License ;
   voag:incompatibleWith voag:GNU-GPL_V2 ;
   voag:incompatibleWith voag:GNU-GPL_V3 ;
@@ -929,7 +1069,7 @@ voag:CPAL
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Common Public Attribution License 1.0 (CPAL)"^^xsd:string ;
 .
-voag:CRYPTIX_GENERAL_LICENSE
+voag:CRYPTIX-GENERAL-LICENSE
   rdf:type voag:License ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://www.cryptix.org/LICENSE.TXT" ;
@@ -938,9 +1078,9 @@ voag:CRYPTIX_GENERAL_LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Cryptix General License"^^xsd:string ;
-  rdfs:seeAlso voag:X11_LICENSE ;
+  rdfs:seeAlso voag:X11-LICENSE ;
 .
-voag:DSL_LICENSE
+voag:DSL-LICENSE
   rdf:type voag:License ;
   voag:url "http://www.gnu.org/licenses/dsl.html" ;
   vaem:acronym "dsl"^^xsd:string ;
@@ -969,7 +1109,7 @@ voag:ECOS_V2PT0
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "eCos license version 2.0"^^xsd:string ;
 .
-voag:ECPAT_LICENSE
+voag:ECPAT-LICENSE
   rdf:type voag:License ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://www.jclark.com/xml/copying.txt" ;
@@ -979,7 +1119,7 @@ voag:ECPAT_LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Expat License"^^xsd:string ;
 .
-voag:EIFFEL_FORUM_LICENSE_V2
+voag:EIFFEL-FORUM-LICENSE_V2
   rdf:type voag:License ;
   voag:url "http://www.gnu.org/licenses/eiffel-forum-license-2.html" ;
   vaem:acronym "Eiffel"^^xsd:string ;
@@ -996,7 +1136,17 @@ voag:EPL_V1PT0
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Eclipse Public License Version 1.0"^^xsd:string ;
-  rdfs:seeAlso voag:COMMON_PUBLIC_LICENSE_V1PT0 ;
+  rdfs:seeAlso voag:COMMON-PUBLIC-LICENSE_V1PT0 ;
+.
+voag:EU-DATAGRID-LICENSE
+  rdf:type voag:License ;
+  voag:compatibleWith voag:GNU-GPL_V3 ;
+  voag:url "http://www.opensource.org/licenses/eudatagrid.php" ;
+  vaem:acronym "EUDataGrid"^^xsd:string ;
+  vaem:description "This is a simple, permissive non-copyleft free software license, compatible with the GNU GPL."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "EU DataGrid Software License"^^xsd:string ;
 .
 voag:EUPL_V1PT1
   rdf:type voag:License ;
@@ -1009,15 +1159,23 @@ voag:EUPL_V1PT1
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "European Union Public License (EUPL) version 1.1"^^xsd:string ;
 .
-voag:EU_DATAGRID_LICENSE
+voag:FREE-ART-LICENSE
   rdf:type voag:License ;
-  voag:compatibleWith voag:GNU-GPL_V3 ;
-  voag:url "http://www.opensource.org/licenses/eudatagrid.php" ;
-  vaem:acronym "EUDataGrid"^^xsd:string ;
-  vaem:description "This is a simple, permissive non-copyleft free software license, compatible with the GNU GPL."^^xsd:string ;
+  voag:url "http://artlibre.org/licence/lalgb.html" ;
+  vaem:acronym "FreeArt"^^xsd:string ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "EU DataGrid Software License"^^xsd:string ;
+  rdfs:label "Free Art License"^^xsd:string ;
+.
+voag:FREE-BSD-LICENSE
+  rdf:type voag:License ;
+  voag:compatibleWith voag:GNU-GPL_V3 ;
+  voag:url "http://www.freebsd.org/copyright/freebsd-license.html" ;
+  vaem:acronym "FreeBSD"^^xsd:string ;
+  vaem:description "This is the original BSD license with the advertising clause and another clause removed. (It is also sometimes called the “2-clause BSD license”.) It is a simple, permissive non-copyleft free software license, compatible with the GNU GPL. If you want a simple, permissive non-copyleft free software license, the FreeBSD license is a reasonable choice. However, please don't call it a “BSD” or “BSD-style” license, because that is likely to cause confusion which could lead to use of the flawed original BSD license."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "FreeBSD license"^^xsd:string ;
 .
 voag:FREEBSD_DL
   rdf:type voag:License ;
@@ -1029,7 +1187,7 @@ voag:FREEBSD_DL
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "FreeBSD Documentation License"^^xsd:string ;
 .
-voag:FREETYPE_PROJECT_LICENSE
+voag:FREETYPE-PROJECT-LICENSE
   rdf:type voag:License ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
   voag:incompatibleWith voag:GNU-GPL_V2 ;
@@ -1040,24 +1198,6 @@ voag:FREETYPE_PROJECT_LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Freetype Project License"^^xsd:string ;
 .
-voag:FREE_ART_LICENSE
-  rdf:type voag:License ;
-  voag:url "http://artlibre.org/licence/lalgb.html" ;
-  vaem:acronym "FreeArt"^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "Free Art License"^^xsd:string ;
-.
-voag:FREE_BSD_LICENSE
-  rdf:type voag:License ;
-  voag:compatibleWith voag:GNU-GPL_V3 ;
-  voag:url "http://www.freebsd.org/copyright/freebsd-license.html" ;
-  vaem:acronym "FreeBSD"^^xsd:string ;
-  vaem:description "This is the original BSD license with the advertising clause and another clause removed. (It is also sometimes called the “2-clause BSD license”.) It is a simple, permissive non-copyleft free software license, compatible with the GNU GPL. If you want a simple, permissive non-copyleft free software license, the FreeBSD license is a reasonable choice. However, please don't call it a “BSD” or “BSD-style” license, because that is likely to cause confusion which could lead to use of the flawed original BSD license."^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "FreeBSD license"^^xsd:string ;
-.
 voag:GMD_VOAG-LICENSES
   rdf:type vaem:GraphMetaData ;
   dct:author "Ralph Hodgson"^^xsd:string ;
@@ -1065,7 +1205,7 @@ voag:GMD_VOAG-LICENSES
   dct:modified "2015-04-02"^^xsd:date ;
   dct:subject "Licensing, Attribution,  Governance and Provenance"^^xsd:string ;
   dct:title "Vocabulary Of Attribution and Governance (VOAG) Licenses  - Version 2.0"^^xsd:string ;
-  vaem:description "VOAG stands for <i>Vocabulary Of Attribution and Governance</i>. The ontology is intended to specify licensing, attribution, provenance and governance of an ontology. VOAG captures many common license types and their restrictions. Where a license requires attribution, VOAG provides resources that allow the attribution should be made. Provenance is defined in terms of source and pedigree. A miminal model of governance is provided based on how issues, releases and changes are managed. VOAG does not import, but makes uses of some concepts from <a href=\"http://vocab.deri.ie/void\">VOID</a>, notably <code class=\"boxed\">void:Dataset</code>."^^xsd:string ;
+  vaem:description "VOAG stands for <i>Vocabulary Of Attribution and Governance</i>. In this graph VOAG is used to describe a number of common license types. Where a license requires attribution, VOAG provides resources that allow the attribution should be made. Provenance is defined in terms of source and pedigree. A miminal model of governance is provided based on how issues, releases and changes are managed. VOAG does not import, but makes uses of some concepts from <a href=\"http://vocab.deri.ie/void\">VOID</a>, notably <code class=\"boxed\">void:Dataset</code>."^^xsd:string ;
   vaem:hasGraphRole vaem:VocabularyGraph ;
   vaem:hasLicenseType voag:CC-SHAREALIKE_3PT0-US ;
   vaem:hasOwner vaem:TopQuadrant ;
@@ -1080,11 +1220,27 @@ voag:GMD_VOAG-LICENSES
   vaem:previousPublishedVersion "http://linkedmodel.org/doc/voag/1.0/"^^xsd:anyURI ;
   vaem:rdfxmlFileURL "http://voag.linkedmodel.org/2.0/schema/REFDATA_voag-licenses-v2.0.rdf"^^xsd:anyURI ;
   vaem:revision "2.0"^^xsd:string ;
-  vaem:title "Software Licenses in the \"Vocabulary Of Attribution and Governance (VOAG)\", version 2.0"^^xsd:string ;
+  vaem:title "VOAG Software Licenses  version 2.0"^^xsd:string ;
   vaem:turtleFileURL "http://voag.linkedmodel.org/2.0/schema/REFDATA_voag-licenses-v2.0.ttl"^^xsd:anyURI ;
   vaem:url "http://voag.linkedmodel.org/2.0/vocab/voag"^^xsd:anyURI ;
   vaem:withAttributionTo voag:TopQuadrantAttribution ;
   rdfs:label "Software Licenses in the \"Vocabulary Of Attribution and Governance (VOAG)\", version 2.0"^^xsd:string ;
+.
+voag:GNU-ALL-PERMISSIVE-LICENSE
+  rdf:type voag:License ;
+  voag:compatibleWith voag:GNU-GPL_V3 ;
+  voag:permits voag:CCP_DerivativeWorks ;
+  voag:permits voag:CCP_Distribution ;
+  voag:permits voag:CCP_Reproduction ;
+  voag:permits voag:CCP_Sharing ;
+  voag:requires voag:CCR_Attribution ;
+  voag:requires voag:CCR_Copyleft ;
+  voag:url "http://www.gnu.org/prep/maintain/html_node/License-Notices-for-Other-Files.html" ;
+  vaem:acronym "GNUAllPermissive"^^xsd:string ;
+  vaem:description "This is a simple permissive free software license, compatible with the GNU GPL, which we recommend GNU packages use for README and other small supporting files. All developers can feel free to use it in similar situations. "^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "GNU All-Permissive License"^^xsd:string ;
 .
 voag:GNU-FDL
   rdf:type voag:License ;
@@ -1180,23 +1336,7 @@ voag:GNU-LGPL_V3
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "GNU Lesser General Public License (LGPL) version 3"^^xsd:string ;
 .
-voag:GNU_ALL_PERMISSIVE_LICENSE
-  rdf:type voag:License ;
-  voag:compatibleWith voag:GNU-GPL_V3 ;
-  voag:permits voag:CCP_DerivativeWorks ;
-  voag:permits voag:CCP_Distribution ;
-  voag:permits voag:CCP_Reproduction ;
-  voag:permits voag:CCP_Sharing ;
-  voag:requires voag:CCR_Attribution ;
-  voag:requires voag:CCR_Copyleft ;
-  voag:url "http://www.gnu.org/prep/maintain/html_node/License-Notices-for-Other-Files.html" ;
-  vaem:acronym "GNUAllPermissive"^^xsd:string ;
-  vaem:description "This is a simple permissive free software license, compatible with the GNU GPL, which we recommend GNU packages use for README and other small supporting files. All developers can feel free to use it in similar situations. "^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "GNU All-Permissive License"^^xsd:string ;
-.
-voag:GNU_VERBATIM_COPYING_LICENSE
+voag:GNU-VERBATIM-COPYING-LICENSE
   rdf:type voag:License ;
   voag:url "http://www.gnu.org/licenses/licenses.html#VerbatimCopying" ;
   vaem:acronym "GNUVerbatim"^^xsd:string ;
@@ -1225,7 +1365,7 @@ voag:HESSLA
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Hacktivismo Enhanced-Source Software License Agreement"^^xsd:string ;
 .
-voag:IBM_PUBLIC_LICENSE_V1PT0
+voag:IBM-PUBLIC-LICENSE_V1PT0
   rdf:type voag:License ;
   voag:incompatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://www.opensource.org/licenses/ibmpl.php" ;
@@ -1235,7 +1375,7 @@ voag:IBM_PUBLIC_LICENSE_V1PT0
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "IBM Public License, Version 1.0"^^xsd:string ;
 .
-voag:IJG_LICENSE
+voag:IJG-LICENSE
   rdf:type voag:License ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://dev.w3.org/cvsweb/Amaya/libjpeg/Attic/README?rev=1.2" ;
@@ -1245,7 +1385,7 @@ voag:IJG_LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Independent JPEG Group License"^^xsd:string ;
 .
-voag:IMATRIX_STANDARD_FUNCTION_LIBRARY_LICENSE
+voag:IMATRIX-STANDARD-FUNCTION-LIBRARY-LICENSE
   rdf:type voag:License ;
   voag:url "http://legacy.imatix.com/html/sfl/sfl4.htm#license" ;
   vaem:acronym "iMatix"^^xsd:string ;
@@ -1254,7 +1394,7 @@ voag:IMATRIX_STANDARD_FUNCTION_LIBRARY_LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "License of the iMatix Standard Function Library"^^xsd:string ;
 .
-voag:IMLIB2_LICENSE
+voag:IMLIB2-LICENSE
   rdf:type voag:License ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://trac.enlightenment.org/e/browser/trunk/imlib2/COPYING" ;
@@ -1264,7 +1404,7 @@ voag:IMLIB2_LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "License of imlib2"^^xsd:string ;
 .
-voag:INTEL_OPEN_SOURCE_LICENSE
+voag:INTEL_OPEN_SOURCE-LICENSE
   rdf:type voag:License ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://www.opensource.org/licenses/intel-open-source-license.html" ;
@@ -1284,7 +1424,7 @@ voag:IPL_V1PT0
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Interbase Public License, Version 1.0"^^xsd:string ;
 .
-voag:ISC_LICENSE
+voag:ISC-LICENSE
   rdf:type voag:License ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://www.isc.org/software/license" ;
@@ -1294,7 +1434,7 @@ voag:ISC_LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "ISC License"^^xsd:string ;
 .
-voag:JAHIA_COMMUNITY_SOURCE_LICENSE
+voag:JAHIA-COMMUNITY-SOURCE-LICENSE
   rdf:type voag:License ;
   voag:incompatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://www.jahia.org/jahia/Jahia/pid/145" ;
@@ -1314,7 +1454,7 @@ voag:JOSL_V1PT0
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Jabber Open Source License, Version 1.0"^^xsd:string ;
 .
-voag:JSON_LICENSE
+voag:JSON-LICENSE
   rdf:type voag:License ;
   voag:incompatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://www.json.org/license.html" ;
@@ -1346,7 +1486,7 @@ voag:LPPL_V1PT3A
   rdfs:label "LaTeX Project Public License 1.3a"^^xsd:string ;
   prov:wasDerivedFrom voag:LPPL_V1PT2 ;
 .
-voag:LUCENT_PUBLIC_LICENSE_V1PT02
+voag:LUCENT-PUBLIC-LICENSE_V1PT02
   rdf:type voag:License ;
   voag:incompatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://plan9.bell-labs.com/plan9dist/license.html" ;
@@ -1367,7 +1507,7 @@ voag:LinkedModelLogo-200x80
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "LinkedModel ICON 200 x 80"^^xsd:string ;
 .
-voag:MODIFIED_BSD_LICENSE
+voag:MODIFIED-BSD-LICENSE
   rdf:type voag:License ;
   voag:url "http://www.xfree86.org/3.3.6/COPYRIGHT2.html#5" ;
   vaem:acronym "ModifiedBSD"^^xsd:string ;
@@ -1375,7 +1515,7 @@ voag:MODIFIED_BSD_LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Modified BSD license"^^xsd:string ;
-  rdfs:seeAlso voag:BSD_ORIGINAL_LICENSE ;
+  rdfs:seeAlso voag:BSD-ORIGINAL-LICENSE ;
 .
 voag:MPL
   rdf:type voag:License ;
@@ -1446,7 +1586,7 @@ voag:MS-SSL
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Microsoft's Shared Source CLI, C#, and Jscript License"^^xsd:string ;
 .
-voag:NASA_OPEN_SOURCE_AGREEMENT
+voag:NASA-OPEN-SOURCE_AGREEMENT
   rdf:type voag:License ;
   voag:url "http://www.opensource.org/licenses/nasa1.3" ;
   vaem:acronym "NASA"^^xsd:string ;
@@ -1455,7 +1595,7 @@ voag:NASA_OPEN_SOURCE_AGREEMENT
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "NASA Open Source Agreement"^^xsd:string ;
 .
-voag:NCSA_LICENSE
+voag:NCSA-LICENSE
   rdf:type voag:License ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://www.opensource.org/licenses/UoI-NCSA.php" ;
@@ -1465,7 +1605,7 @@ voag:NCSA_LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "NCSA/University of Illinois Open Source License"^^xsd:string ;
 .
-voag:NOKIA_OPEN_SOURCE_LICENSE
+voag:NOKIA_OPEN_SOURCE-LICENSE
   rdf:type voag:License ;
   voag:url "http://opensource.org/licenses/nokia.html" ;
   vaem:acronym "Nokia"^^xsd:string ;
@@ -1507,17 +1647,7 @@ voag:OCL
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Open Content License, Version 1.0"^^xsd:string ;
 .
-voag:OPENLDAP_LICENSE_V2PT7
-  rdf:type voag:License ;
-  voag:compatibleWith voag:GNU-GPL_V3 ;
-  voag:url "http://www.openldap.org/software/release/license.html" ;
-  vaem:acronym "newOpenLDAP"^^xsd:string ;
-  vaem:description "This is a permissive non-copyleft free software license that is compatible with the GNU GPL."^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "OpenLDAP License, Version 2.7"^^xsd:string ;
-.
-voag:OPEN_DIRECTORY_LICENSE
+voag:OPEN-DIRECTORY-LICENSE
   rdf:type voag:License ;
   voag:incompatibleWith voag:GNU-FDL ;
   voag:url "http://dmoz.org/license.html" ;
@@ -1527,7 +1657,7 @@ voag:OPEN_DIRECTORY_LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Open Directory License (aka dmoz.org License)"^^xsd:string ;
 .
-voag:OPEN_PUBLICATION_LICENSE_V1PT0
+voag:OPEN-PUBLICATION-LICENSE_V1PT0
   rdf:type voag:License ;
   voag:incompatibleWith voag:GNU-FDL ;
   voag:url "http://opencontent.org/openpub/" ;
@@ -1537,17 +1667,17 @@ voag:OPEN_PUBLICATION_LICENSE_V1PT0
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Open Publication License, Version 1.0"^^xsd:string ;
 .
-voag:OPEN_SOFTWARE_LICENSE
+voag:OPEN-SOFTWARE-LICENSE
   rdf:type voag:License ;
   voag:incompatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://www.opensource.org/licenses/osl-3.0.php" ;
   vaem:acronym "OSL"^^xsd:string ;
-  vaem:description "The Open Software License is a free software license. It is incompatible with the GNU GPL in several ways. Recent versions of the Open Software License have a term which requires distributors to try to obtain explicit assent to the license. This means that distributing OSL software on ordinary FTP sites, sending patches to ordinary mailing lists, or storing the software in an ordinary version control system, is arguably a violation of the license and would subject you to possible termination of the license. Thus, the Open Software License makes it very difficult to develop software using the ordinary tools of free software development. For this reason, and because it is incompatible with the GPL, GNU recommend that no version of the OSL be used for any software.  GNU urge you not to use the Open Software License for software you write. However, there is no reason to avoid running programs that have been released under this license."^^xsd:string ;
+  vaem:description "<p class=\"size-12\">The Open Software License is a free software license. It is incompatible with the GNU GPL in several ways. Recent versions of the Open Software License have a term which requires distributors to try to obtain explicit assent to the license. This means that distributing OSL software on ordinary FTP sites, sending patches to ordinary mailing lists, or storing the software in an ordinary version control system, is arguably a violation of the license and would subject you to possible termination of the license. Thus, the Open Software License makes it very difficult to develop software using the ordinary tools of free software development. For this reason, and because it is incompatible with the GPL, GNU recommend that no version of the OSL be used for any software.  GNU urge you not to use the Open Software License for software you write. However, there is no reason to avoid running programs that have been released under this license.</p>"^^xsd:string ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Open Software License, all versions through 3.0"^^xsd:string ;
 .
-voag:OPEN_SSL_LICENSE
+voag:OPEN-SSL-LICENSE
   rdf:type voag:License ;
   voag:incompatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://www.sdisw.com/openssl.htm" ;
@@ -1556,6 +1686,16 @@ voag:OPEN_SSL_LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "OpenSSL license"^^xsd:string ;
+.
+voag:OPENLDAP-LICENSE_V2PT7
+  rdf:type voag:License ;
+  voag:compatibleWith voag:GNU-GPL_V3 ;
+  voag:url "http://www.openldap.org/software/release/license.html" ;
+  vaem:acronym "newOpenLDAP"^^xsd:string ;
+  vaem:description "This is a permissive non-copyleft free software license that is compatible with the GNU GPL."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "OpenLDAP License, Version 2.7"^^xsd:string ;
 .
 voag:OPL
   rdf:type voag:License ;
@@ -1570,6 +1710,20 @@ voag:OPL
 voag:PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0
   rdf:type voag:License ;
   voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-00 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-01 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-02 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-03 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-04 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-05 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-06 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-07 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-08 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-09 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-10 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-11 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-12 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-13 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-14 ;
   voag:url "http://www.perlfoundation.org/artistic_license_2_0" ;
   vaem:acronym "ArtisticLicense2"^^xsd:string ;
   vaem:description "This license establishes the terms under which a given free software Package may be copied, modified, distributed, and/or redistributed. The intent is that the Copyright Holder maintains some artistic control over the development of that Package while still keeping the Package available as open source and free software. You are always permitted to make arrangements wholly outside of this license directly with the Copyright Holder of a given Package. If the terms of this license do not permit the full use that you propose to make of the Package, you should contact the Copyright Holder and seek a different licensing arrangement. This Perl Foundation license is a free software license, compatible with the GPL."^^xsd:string ;
@@ -1577,7 +1731,7 @@ voag:PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Perl Foundation Artistic License 2.0"^^xsd:string ;
 .
-voag:PHORUM_LICENSE_V2PT0
+voag:PHORUM-LICENSE_V2PT0
   rdf:type voag:License ;
   voag:incompatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://phorum.org/license.txt" ;
@@ -1587,7 +1741,7 @@ voag:PHORUM_LICENSE_V2PT0
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Phorum License, Version 2.0"^^xsd:string ;
 .
-voag:PHP_LICENSE_V3PT01
+voag:PHP-LICENSE_V3PT01
   rdf:type voag:License ;
   voag:url "http://www.php.net/license/3_01.txt" ;
   vaem:acronym "PHP-3.01"^^xsd:string ;
@@ -1596,7 +1750,7 @@ voag:PHP_LICENSE_V3PT01
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "PHP License, Version 3.01"^^xsd:string ;
 .
-voag:PYTHON_LICENSE_V1PT6B1_THROUGH_2PT0_AND_2PT1
+voag:PYTHON-LICENSE_V1PT6B1-TO-V2PT1
   rdf:type voag:License ;
   voag:url "http://www.handle.net/python_licenses/python1.6_9-5-00.html" ;
   vaem:acronym "PythonOld"^^xsd:string ;
@@ -1605,7 +1759,7 @@ voag:PYTHON_LICENSE_V1PT6B1_THROUGH_2PT0_AND_2PT1
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "License of Python 1.6b1 through 2.0 and 2.1"^^xsd:string ;
 .
-voag:PYTHON_LICENSE_V2PT0PT1_AND_OTHERS
+voag:PYTHON-LICENSE_V2PT0PT1
   rdf:type voag:License ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://www.python.org/2.0.1/license.html" ;
@@ -1615,7 +1769,7 @@ voag:PYTHON_LICENSE_V2PT0PT1_AND_OTHERS
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "License of Python 2.0.1, 2.1.1, and newer versions"^^xsd:string ;
 .
-voag:QPL_LICENSE_V1PT0
+voag:QPL-LICENSE_V1PT0
   rdf:type voag:License ;
   voag:incompatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://doc.trolltech.com/3.0/license.html" ;
@@ -1645,7 +1799,7 @@ voag:RPSL_V1PT0
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "RealNetworks Public Source License (RPSL), Version 1.0"^^xsd:string ;
 .
-voag:RUBY_LICENSE
+voag:RUBY-LICENSE
   rdf:type voag:License ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://www.ruby-lang.org/en/LICENSE.txt" ;
@@ -1655,7 +1809,7 @@ voag:RUBY_LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "License of Ruby"^^xsd:string ;
 .
-voag:SGI_FREE_SOFTWARE_LICENSE_B_V2PT0
+voag:SGI-FREE-SOFTWARE-LICENSE-B_V2PT0
   rdf:type voag:License ;
   voag:url "http://oss.sgi.com/projects/FreeB/" ;
   vaem:acronym "SGIFreeB"^^xsd:string ;
@@ -1663,7 +1817,7 @@ voag:SGI_FREE_SOFTWARE_LICENSE_B_V2PT0
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "SGI Free Software License B, version 2.0"^^xsd:string ;
-  rdfs:seeAlso voag:X11_LICENSE ;
+  rdfs:seeAlso voag:X11-LICENSE ;
 .
 voag:SIL-OFL_V1PT1
   rdf:type voag:License ;
@@ -1705,7 +1859,7 @@ voag:SPL
   rdfs:label "Sun Public License"^^xsd:string ;
   rdfs:seeAlso voag:MPL ;
 .
-voag:STANDARD_ML_OF_NJ_LICENSE
+voag:STANDARD_ML_OF_NJ-LICENSE
   rdf:type voag:License ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://cm.bell-labs.com/cm/cs/what/smlnj/license.html" ;
@@ -1724,7 +1878,7 @@ voag:SYSTEMC_V3PT0
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "SystemC \"Open Source\" License, Version 3.0"^^xsd:string ;
 .
-voag:UNICODE_LICENSE
+voag:UNICODE-LICENSE
   rdf:type voag:License ;
   voag:url "http://www.unicode.org/copyright.html#Exhibit1" ;
   vaem:acronym "Unicode"^^xsd:string ;
@@ -1753,7 +1907,7 @@ voag:UtahPublicLicense
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "University of Utah Public License"^^xsd:string ;
 .
-voag:VIM_LICENSE_V6PT1_OR_LATER
+voag:VIM-LICENSE_V6PT1_OR_LATER
   rdf:type voag:License ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://www.gnu.org/licenses/vim-license.txt" ;
@@ -1773,7 +1927,7 @@ voag:VOAG-OntologyLogo_360x110
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "VOAG Logo"^^xsd:string ;
 .
-voag:W3C_SOFTWARE_LICENSE
+voag:W3C_SOFTWARE-LICENSE
   rdf:type voag:License ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231" ;
@@ -1783,7 +1937,7 @@ voag:W3C_SOFTWARE_LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "W3C Software Notice and License"^^xsd:string ;
 .
-voag:WEBM_LICENSE
+voag:WEBM-LICENSE
   rdf:type voag:License ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://www.webmproject.org/license/" ;
@@ -1802,7 +1956,7 @@ voag:WTFPL_V2
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "WTFPL, Version 2"^^xsd:string ;
 .
-voag:X11_LICENSE
+voag:X11-LICENSE
   rdf:type voag:License ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://www.xfree86.org/3.3.6/COPYRIGHT2.html#3" ;
@@ -1812,7 +1966,7 @@ voag:X11_LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "X11 License"^^xsd:string ;
 .
-voag:XFREE86_LICENSE_V1PT1
+voag:XFREE86-LICENSE_V1PT1
   rdf:type voag:License ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://www.xfree86.org/current/LICENSE4.html" ;
@@ -1822,7 +1976,7 @@ voag:XFREE86_LICENSE_V1PT1
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "XFree86 1.1 License"^^xsd:string ;
 .
-voag:XINETD_LICENSE
+voag:XINETD-LICENSE
   rdf:type voag:License ;
   voag:incompatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://fedoraproject.org/wiki/Licensing/Xinetd_License" ;
@@ -1832,7 +1986,7 @@ voag:XINETD_LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "License of xinetd"^^xsd:string ;
 .
-voag:YAHOO_PUBLIC_LICENSE_V1PT0
+voag:YAHOO-PUBLIC-LICENSE_V1PT0
   rdf:type voag:License ;
   voag:incompatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://info.yahoo.com/legal/us/yahoo/publiclicense/publiclicense-1813.html" ;
@@ -1842,7 +1996,7 @@ voag:YAHOO_PUBLIC_LICENSE_V1PT0
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Yahoo! Public License 1.0"^^xsd:string ;
 .
-voag:ZEND_LICENSE_V2PT0
+voag:ZEND-LICENSE_V2PT0
   rdf:type voag:License ;
   voag:url "http://www.zend.com/license/2_00.txt" ;
   vaem:acronym "Zend"^^xsd:string ;
@@ -1851,7 +2005,7 @@ voag:ZEND_LICENSE_V2PT0
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Zend License, Version 2.0"^^xsd:string ;
 .
-voag:ZLIB_LICENSE
+voag:ZLIB-LICENSE
   rdf:type voag:License ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
   voag:url "http://www.gzip.org/zlib/zlib_license.html" ;
@@ -1861,41 +2015,41 @@ voag:ZLIB_LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "License of ZLib"^^xsd:string ;
 .
-voag:ZOPE_PUBLICE_LICENSE_V1
-  rdf:type voag:License ;
-  voag:incompatibleWith voag:GNU-GPL_V3 ;
-  voag:supercededBy voag:ZOPE_PUBLIC_LICENSE_V2PT0 ;
-  voag:url "http://www.zope.org/Resources/ZPL" ;
-  vaem:acronym "Zope"^^xsd:string ;
-  vaem:description "This is a simple, fairly permissive non-copyleft free software license with practical problems like those of the original BSD license, including incompatibility with the GNU GPL. GNU urge you not to use the ZPL version 1 for software you write. However, there is no reason to avoid running programs that have been released under this license, such as previous versions of Zope. Version 2.0 of the Zope Public License is GPL-compatible."^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
-  rdfs:label "Zope Public License version 1"^^xsd:string ;
-  rdfs:seeAlso voag:ZOPE_PUBLIC_LICENSE_V2PT0 ;
-.
-voag:ZOPE_PUBLIC_LICENSE_V2PT0
+voag:ZOPE-PUBLIC-LICENSE_V2PT0
   rdf:type voag:License ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
-  voag:supercedes voag:ZOPE_PUBLICE_LICENSE_V1 ;
+  voag:supercedes voag:ZOPE-PUBLICE-LICENSE_V1 ;
   voag:url "http://www.zope.org/Resources/ZPL" ;
   vaem:acronym "Zope20"^^xsd:string ;
   vaem:description "This is a simple, permissive non-copyleft free software license which is compatible with the GNU GPL."^^xsd:string ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Zope Public License, versions 2.0"^^xsd:string ;
-  prov:wasDerivedFrom voag:ZOPE_PUBLICE_LICENSE_V1 ;
+  prov:wasDerivedFrom voag:ZOPE-PUBLICE-LICENSE_V1 ;
 .
-voag:ZOPE_PUBLIC_LICENSE_V2PT1
+voag:ZOPE-PUBLIC-LICENSE_V2PT1
   rdf:type voag:License ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
-  voag:supercedes voag:ZEND_LICENSE_V2PT0 ;
+  voag:supercedes voag:ZEND-LICENSE_V2PT0 ;
   voag:url "http://www.zope.org/Resources/ZPL" ;
   vaem:acronym "Zope20"^^xsd:string ;
   vaem:description "This is a simple, permissive non-copyleft free software license which is compatible with the GNU GPL."^^xsd:string ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
   rdfs:label "Zope Public License, versions 2.1"^^xsd:string ;
-  prov:wasDerivedFrom voag:ZOPE_PUBLIC_LICENSE_V2PT0 ;
+  prov:wasDerivedFrom voag:ZOPE-PUBLIC-LICENSE_V2PT0 ;
+.
+voag:ZOPE-PUBLICE-LICENSE_V1
+  rdf:type voag:License ;
+  voag:incompatibleWith voag:GNU-GPL_V3 ;
+  voag:supercededBy voag:ZOPE-PUBLIC-LICENSE_V2PT0 ;
+  voag:url "http://www.zope.org/Resources/ZPL" ;
+  vaem:acronym "Zope"^^xsd:string ;
+  vaem:description "This is a simple, fairly permissive non-copyleft free software license with practical problems like those of the original BSD license, including incompatibility with the GNU GPL. GNU urge you not to use the ZPL version 1 for software you write. However, there is no reason to avoid running programs that have been released under this license, such as previous versions of Zope. Version 2.0 of the Zope Public License is GPL-compatible."^^xsd:string ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/refdata/voag> ;
+  rdfs:label "Zope Public License version 1"^^xsd:string ;
+  rdfs:seeAlso voag:ZOPE-PUBLIC-LICENSE_V2PT0 ;
 .
 voag:hasClause
   dct:description "The term \"Source Code\" means the preferred form of the Original Work for making modifications to it and all available documentation describing how to modify the Original Work. "^^xsd:string ;

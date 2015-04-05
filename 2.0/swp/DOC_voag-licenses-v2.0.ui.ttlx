@@ -68,6 +68,31 @@
   owl:imports <http://www.linkedmodel.org/1.1/swp/lmdoc> ;
   owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
 .
+voag-doc:AbstractSection
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:metadata ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  ui:prototype """
+<ui:group let:ns=\"{= spl:object(?metadata, vaem:namespace) }\">
+    <h2 id=\"{= fn:lower-case(?sectionHeading) }\">{= ?sectionHeading }</h2>
+    <div class=\"lm-abstract\">
+        <p class=\"lm-para\">{= spl:object(?metadata, vaem:intent) }</p>
+        <lmdoc:MaybeDescription arg:node=\"{= ?metadata }\"/>
+        <p class=\"lm-para\">The namespace for all resources in this ontology is: <code class=\"boxed\">
+                <a href=\"{= ?ns }\">{= ?ns }</a>
+            </code>
+        </p>
+    </div>
+</ui:group>
+"""^^ui:Literal ;
+  ui:responseType ui:HTML ;
+  vaem:todo "The namespaces for all referenced vocabularies are giving in the section on <a href=\"#ns\">Namespaces</a>. "^^xsd:string ;
+  rdfs:label "Abstract section"^^xsd:string ;
+  rdfs:subClassOf voag-doc:Sections ;
+.
 voag-doc:Elements
   rdf:type ui:NodeClass ;
   rdfs:label "Elements"^^xsd:string ;
@@ -164,6 +189,9 @@ voag-doc:InstancesSection
                         <lmdoc:VSpace arg:margin=\"30px;\"/>
                         <lmdoc:ObjectsGroup arg:filterFunction=\"{= swa:isAnnotationProperty }\" arg:label=\"Annotations\" arg:predicates=\"{= ?rs }\" arg:subject=\"{= ?instance }\"/>
                         <lmdoc:VSpace arg:margin=\"40px;\"/>
+                        <ui:call arg:graph=\"{= ?graph }\" arg:resource=\"{= ?instance }\" ui:template=\"{= lmdoc:ReferencesToResourceInGivenGraph }\" ui:varName=\"whereusedreferences\">
+                            <lmdoc:WhereUsedSubjectsGroup arg:label=\"Where Used (in this graph)\" arg:object=\"{= ?instance }\" arg:predicates=\"{= ?whereusedreferences }\"/>
+                        </ui:call>
                         <lmdoc:ResourceFooter arg:options=\"CSV,JSONLD,RDF,TURTLE\" arg:resource=\"{= ?instance }\"/>
                     </div>
                 </ui:call>
@@ -187,13 +215,22 @@ voag-doc:IntroductionSectionForRefDataGraph
     ] ;
   ui:prototype """
 <ui:group let:myGraphMetadata=\"{= spl:object(?graph, vaem:hasGraphMetadata) }\">
-    <h2 id=\"{= lmdoc:makeAnchorFromString(?sectionHeading) }\">{= ?sectionHeading }</h2>
-    <p class=\"lm-para\">The purpose of this graph is to hold industry-standard licenses for software.
+    <ui:group let:ns=\"{= spl:object(?myGraphMetadata, vaem:namespace) }\">
+        <h2 id=\"{= lmdoc:makeAnchorFromString(?sectionHeading) }\">{= ?sectionHeading }</h2>
+        <p class=\"lm-para\">The purpose of this graph is to hold industry-standard licenses for software.
 Some {= lmdoc:countOfInstanceOfType(voag:licence) } specifications are described.
 Where possible links have been provided to normative documentation of the licenses.
-In some cases license clauses of a few licenses have been included in the graph.</p>
-    <p class=\"lm-para\">The reference data graph uses v2.0 of the <code class=\"boxed\">VOAG</code> schema.
+In some cases license clauses of a few licenses have been included in the graph.
+As an example the<a href=\"#voag_GNU-GPL\">GNU GPL license</a> has all of its clauses in the graph.</p>
+        <p class=\"lm-para\">The reference data graph uses v2.0 of the <code class=\"boxed\">VOAG</code> schema.
 VOAG is doucmented on the web at <a href=\"http://voag.linkedmodel.org/2.0/doc/2015/SCHEMA_voag-v2.0\">this page</a>. </p>
+        <p class=\"lm-para\">The namespace for all resources in this ontology is: <code class=\"boxed\">
+                <a href=\"{= ?ns }\">{= ?ns }</a>
+            </code>
+        </p>
+        <p class=\"lm-para\">All resources are within the <code class=\"boxed\">{= spl:object(?myGraphMetadata, vaem:namespacePrefix) }</code> namespace (<code>{= ?ns }</code>).</p>
+        <p class=\"lm-para\" let:graphType=\"{= fn:lower-case(ui:label(spl:object(?myGraphMetadata, vaem:hasGraphRole))) }\">The <code class=\"boxed\">{= ?graphType }</code> is available as &nbsp;<a href=\"{= spl:object(?metadata, vaem:rdfxmlFileURL) }\">RDF/XML</a> and <a href=\"{= spl:object(?metadata, vaem:turtleFileURL) }\">Turtle</a>.</p>
+    </ui:group>
 </ui:group>
 """^^ui:Literal ;
   ui:responseType ui:HTML ;
@@ -215,7 +252,7 @@ voag-doc:Parts
   rdfs:label "Parts"^^xsd:string ;
   rdfs:subClassOf voag-doc:Elements ;
 .
-voag-doc:RefData
+voag-doc:RefDataGraph
   rdf:type ui:NodeClass ;
   spin:constraint [
       rdf:type spl:Argument ;
@@ -229,7 +266,7 @@ voag-doc:RefData
             <ui:group let:myGraphMetadata=\"{= spl:object(?myGraph, vaem:hasGraphMetadata) }\">
                 <lmdoc:GraphHeader arg:resource=\"{= ?myGraphMetadata }\"/>
                 <section class=\"introductory\" id=\"abstract\" property=\"dct:abstract\" rel=\"bibo:Chapter\" resource=\"#ref\" typeof=\"bibo:Chapter\">
-                    <lmdoc:AbstractSection arg:metadata=\"{= ?myGraphMetadata }\" arg:sectionHeading=\"Abstract\"/>
+                    <voag-doc:AbstractSection arg:metadata=\"{= ?myGraphMetadata }\" arg:sectionHeading=\"Abstract\"/>
                 </section>
                 <section id=\"toc\">
                     <voag-doc:TableOfContents arg:graph=\"{= ?myGraph }\" arg:sectionHeading=\"Table of Contents\"/>
@@ -269,8 +306,8 @@ voag-doc:RefData
   ui:responseType ui:HTML ;
   rdfs:comment """Test with:
 
-http://localhost:8083/tbl/swp?_viewClass=voag-doc:RefData&graph=http://voag.linkedmodel.org/2.0/refdata/voag"""^^xsd:string ;
-  rdfs:label "Ref data documentor"^^xsd:string ;
+http://localhost:8083/tbl/swp?_viewClass=voag-doc:RefDataGraph&graph=http://voag.linkedmodel.org/2.0/refdata/voag"""^^xsd:string ;
+  rdfs:label "Ref data graph"^^xsd:string ;
   rdfs:subClassOf voag-doc:Pages ;
 .
 voag-doc:Sections
@@ -362,6 +399,13 @@ voag:License
 .
 voag:Logo
   rdfs:subClassOf voag-doc:Parts ;
+.
+lmdoc:WhereUsedLabeledSubjects
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:predicate ;
+      spl:valueType rdf:Property ;
+    ] ;
 .
 vaem:GraphMetaData
   rdfs:subClassOf voag-doc:Parts ;
