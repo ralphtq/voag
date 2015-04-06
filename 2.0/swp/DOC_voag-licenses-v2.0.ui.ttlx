@@ -81,10 +81,6 @@ voag-doc:AbstractSection
     <div class=\"lm-abstract\">
         <p class=\"lm-para\">{= spl:object(?metadata, vaem:intent) }</p>
         <lmdoc:MaybeDescription arg:node=\"{= ?metadata }\"/>
-        <p class=\"lm-para\">The namespace for all resources in this ontology is: <code class=\"boxed\">
-                <a href=\"{= ?ns }\">{= ?ns }</a>
-            </code>
-        </p>
     </div>
 </ui:group>
 """^^ui:Literal ;
@@ -218,18 +214,14 @@ voag-doc:IntroductionSectionForRefDataGraph
     <ui:group let:ns=\"{= spl:object(?myGraphMetadata, vaem:namespace) }\">
         <h2 id=\"{= lmdoc:makeAnchorFromString(?sectionHeading) }\">{= ?sectionHeading }</h2>
         <p class=\"lm-para\">The purpose of this graph is to hold industry-standard licenses for software.
-Some {= lmdoc:countOfInstanceOfType(voag:licence) } specifications are described.
+Some {= lmdoc:countOfInstanceOfType(?graph, voag:License) } license specifications are described.
 Where possible links have been provided to normative documentation of the licenses.
 In some cases license clauses of a few licenses have been included in the graph.
-As an example the<a href=\"#voag_GNU-GPL\">GNU GPL license</a> has all of its clauses in the graph.</p>
+As an example the &nbsp;<a href=\"#voag_GNU-GPL\">GNU GPL license</a> has all of its clauses in the graph.</p>
         <p class=\"lm-para\">The reference data graph uses v2.0 of the <code class=\"boxed\">VOAG</code> schema.
-VOAG is doucmented on the web at <a href=\"http://voag.linkedmodel.org/2.0/doc/2015/SCHEMA_voag-v2.0\">this page</a>. </p>
-        <p class=\"lm-para\">The namespace for all resources in this ontology is: <code class=\"boxed\">
-                <a href=\"{= ?ns }\">{= ?ns }</a>
-            </code>
-        </p>
-        <p class=\"lm-para\">All resources are within the <code class=\"boxed\">{= spl:object(?myGraphMetadata, vaem:namespacePrefix) }</code> namespace (<code>{= ?ns }</code>).</p>
-        <p class=\"lm-para\" let:graphType=\"{= fn:lower-case(ui:label(spl:object(?myGraphMetadata, vaem:hasGraphRole))) }\">The <code class=\"boxed\">{= ?graphType }</code> is available as &nbsp;<a href=\"{= spl:object(?metadata, vaem:rdfxmlFileURL) }\">RDF/XML</a> and <a href=\"{= spl:object(?metadata, vaem:turtleFileURL) }\">Turtle</a>.</p>
+Documentation on VOAG can be found on the web at <a href=\"http://voag.linkedmodel.org/2.0/doc/2015/SCHEMA_voag-v2.0\">this page</a>. 
+All resources are within the <code class=\"boxed\">VOAG</code> namespace (<code>{= ?ns }</code>).</p>
+        <p class=\"lm-para\" let:graphType=\"{= fn:lower-case(ui:label(spl:object(?myGraphMetadata, vaem:hasGraphRole))) }\">The <code class=\"boxed\">reference data graph</code> is available as &nbsp;<a href=\"{= spl:object(?metadata, vaem:rdfxmlFileURL) }\">RDF/XML</a> and <a href=\"{= spl:object(?metadata, vaem:turtleFileURL) }\">Turtle</a>.</p>
     </ui:group>
 </ui:group>
 """^^ui:Literal ;
@@ -338,40 +330,40 @@ voag-doc:TableOfContents
         <h2 id=\"{= lmdoc:makeAnchorFromString(?sectionHeading) }\">{= ?sectionHeading }</h2>
     </a>
     <ol class=\"lm-toc-numeric\">
-        <li>
+        <li class=\"lm-toce\">
             <lmdoc:TOCEntry arg:heading=\"Introduction\"/>
         </li>
-        <li>
+        <li class=\"lm-toce\">
             <lmdoc:TOCEntry arg:heading=\"Resource Index\"/>
             <ol class=\"lm-toc\">
-                <li>
+                <li class=\"lm-toce\">
                     <lmdoc:TOCEntry arg:heading=\"Imported Graphs\"/>
                 </li>
-                <li>
+                <li class=\"lm-toce\">
                     <lmdoc:TOCEntry arg:heading=\"Non-imported Resources\"/>
                 </li>
             </ol>
         </li>
-        <li>
+        <li class=\"lm-toce\">
             <lmdoc:TOCEntry arg:heading=\"Resource Details\"/>
             <ol class=\"lm-toc\">
                 <ui:call arg:graph=\"{= ?graph }\" ui:template=\"{= lmdoc:AllClasses }\">
                     <ui:if ui:condition=\"{= spr:rowCount(?rs) &gt; 0 }\">
-                        <li>
+                        <li class=\"lm-toce\">
                             <lmdoc:TOCEntry arg:count=\"{= spr:rowCount(?rs) }\" arg:heading=\"Classes\"/>
                         </li>
                     </ui:if>
                 </ui:call>
                 <ui:call arg:graph=\"{= ?graph }\" ui:template=\"{= lmdoc:AllProperties }\">
                     <ui:if ui:condition=\"{= spr:rowCount(?rs) &gt; 0 }\">
-                        <li>
+                        <li class=\"lm-toce\">
                             <lmdoc:TOCEntry arg:count=\"{= spr:rowCount(?rs) }\" arg:heading=\"Properties\"/>
                         </li>
                     </ui:if>
                 </ui:call>
                 <ui:call arg:graph=\"{= ?graph }\" ui:template=\"{= lmdoc:AllInstances }\">
                     <ui:if ui:condition=\"{= spr:rowCount(?rs) &gt; 0 }\">
-                        <li>
+                        <li class=\"lm-toce\">
                             <lmdoc:TOCEntry arg:count=\"{= spr:rowCount(?rs) }\" arg:heading=\"Instances\"/>
                         </li>
                     </ui:if>

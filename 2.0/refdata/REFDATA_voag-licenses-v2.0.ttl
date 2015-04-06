@@ -1205,7 +1205,7 @@ voag:GMD_VOAG-LICENSES
   dct:modified "2015-04-02"^^xsd:date ;
   dct:subject "Licensing, Attribution,  Governance and Provenance"^^xsd:string ;
   dct:title "Vocabulary Of Attribution and Governance (VOAG) Licenses  - Version 2.0"^^xsd:string ;
-  vaem:description "VOAG stands for <i>Vocabulary Of Attribution and Governance</i>. In this graph VOAG is used to describe a number of common license types. Where a license requires attribution, VOAG provides resources that allow the attribution should be made. Provenance is defined in terms of source and pedigree. A miminal model of governance is provided based on how issues, releases and changes are managed. VOAG does not import, but makes uses of some concepts from <a href=\"http://vocab.deri.ie/void\">VOID</a>, notably <code class=\"boxed\">void:Dataset</code>."^^xsd:string ;
+  vaem:description "VOAG stands for <i>Vocabulary Of Attribution and Governance</i>. In this graph VOAG is used to describe a number of common license types.  A license in VOAG is a <code class=\"boxed\">voag:GovernedObject</code> with clauses representing what the license grants such as modification and distribution rights, disclaimers, liabilities, warranties and other rights.. The model of licenses places importance on expressing compatibility between licenses. Where a license requires attribution, VOAG provides resources that allow the attribution should be made. Provenance is defined in terms of source and pedigree. A miminal model of governance is provided based on how issues, releases and changes are managed. VOAG does not import, but makes uses of some concepts from <a href=\"http://vocab.deri.ie/void\">VOID</a>, notably <code class=\"boxed\">void:Dataset</code>."^^xsd:string ;
   vaem:hasGraphRole vaem:VocabularyGraph ;
   vaem:hasLicenseType voag:CC-SHAREALIKE_3PT0-US ;
   vaem:hasOwner vaem:TopQuadrant ;
@@ -1218,10 +1218,10 @@ voag:GMD_VOAG-LICENSES
   vaem:namespacePrefix "voag"^^xsd:string ;
   vaem:owner "TopQuadrant, Inc."^^xsd:string ;
   vaem:previousPublishedVersion "http://linkedmodel.org/doc/voag/1.0/"^^xsd:anyURI ;
-  vaem:rdfxmlFileURL "http://voag.linkedmodel.org/2.0/schema/REFDATA_voag-licenses-v2.0.rdf"^^xsd:anyURI ;
+  vaem:rdfxmlFileURL "http://voag.linkedmodel.org/2.0/refdata/REFDATA_voag-licenses-v2.0.rdf"^^xsd:anyURI ;
   vaem:revision "2.0"^^xsd:string ;
   vaem:title "VOAG Software Licenses  version 2.0"^^xsd:string ;
-  vaem:turtleFileURL "http://voag.linkedmodel.org/2.0/schema/REFDATA_voag-licenses-v2.0.ttl"^^xsd:anyURI ;
+  vaem:turtleFileURL "http://voag.linkedmodel.org/2.0/refdata/REFDATA_voag-licenses-v2.0.ttl"^^xsd:anyURI ;
   vaem:url "http://voag.linkedmodel.org/2.0/vocab/voag"^^xsd:anyURI ;
   vaem:withAttributionTo voag:TopQuadrantAttribution ;
   rdfs:label "Software Licenses in the \"Vocabulary Of Attribution and Governance (VOAG)\", version 2.0"^^xsd:string ;
