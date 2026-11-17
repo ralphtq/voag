@@ -7,7 +7,6 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix voag: <http://voag.linkedmodel.org/voag/> .
-@prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 voag:Accreditation a rdfs:Class,
@@ -3335,7 +3334,6 @@ voag:isGovernedBy a rdf:Property ;
     dcterms:author "Ralph Hodgson"^^xsd:string ;
     dcterms:modified "2026-09-28"^^xsd:date ;
     vaem:hasGraphMetadata voag:GMD_VOAG ;
-    owl:imports <http://rdfs.org/ns/void>,
-        <http://www.linkedmodel.org/schema/dtype>,
+    owl:imports <http://www.linkedmodel.org/schema/dtype>,
         <http://www.linkedmodel.org/schema/vaem> .
 
