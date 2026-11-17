@@ -32,13 +32,6 @@ dct:title
   rdfs:label "title"^^xsd:string ;
   rdfs:range xsd:string ;
 .
-void:Dataset
-  rdf:type owl:Class ;
-  dct:description "A set of RDF triples that are published, maintained or aggregated by a single provider."^^xsd:string ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
-  rdfs:label "VOID Dataset"^^xsd:string ;
-  rdfs:subClassOf voag:GovernedObject ;
-.
 <http://voag.linkedmodel.org/schema/voag>
   rdf:type owl:Ontology ;
   dct:author "Ralph Hodgson"^^xsd:string ;
@@ -701,20 +694,26 @@ voag:GMD_VOAG
   dct:modified "2015-03-31"^^xsd:date ;
   dct:subject "Licensing, Attribution and Governance"^^xsd:string ;
   dct:title "Schema for \"Vocabulary Of Attribution and Governance (VOAG)\" - Version 2.0"^^xsd:string ;
-  vaem:description """VOAG stands for <i>Vocabulary Of Attribution and Governance</i>. The ontology is intended to specify licensing, attribution, provenance and governance of an ontology.  A miminal model of governance defines how issues, releases and changes are managed. VOAG does not import, but makes uses of some concepts from <a href=\"http://vocab.deri.ie/void\">VOID</a>, notably <code class=\"boxed\">void:Dataset</code>.  Provenance is defined in terms of source and pedigree. Some use of <a href=\"http://www.w3.org/TR/prov-o/\">PROVO</a>, the W3C provenance ontology, is made, but not by import.
-
-The VOAG schema has a companion VOAG reference data graph that holds license types. This specifies many common license types and their restrictions. Where a license requires attribution, VOAG provides resources that allow the attribution should be made. Documentation of this graph can be found at <a href=\"http://voag.linkedmodel.org/doc/2015/REFDATA_voag-license-types-v2.0.html\">VOAG Licenses Documentation</a>."""^^xsd:string ;
+  vaem:description """VOAG stands for <i>Vocabulary Of Attribution and Governance</i>. 
+  The ontology is intended to specify licensing, attribution, provenance and governance of an ontology.
+  A minimal model of governance defines how issues, releases and changes are managed.
+  Provenance is defined in terms of source and pedigree. 
+  Some use of <a href=\"http://www.w3.org/TR/prov-o/\">PROVO</a>, the W3C provenance ontology, is made, but not by import.
+  The VOAG schema has a companion VOAG reference data graph that holds license types. 
+  This specifies many common license types and their restrictions. 
+  Where a license requires attribution, VOAG provides resources that allow the attribution should be made.
+  """^^xsd:string ;
   vaem:hasGraphRole vaem:SchemaGraph ;
   vaem:hasLicenseType <http://voag.linkedmodel.org/voag#CC-SHAREALIKE_3PT0-US> ;
-  vaem:hasOwner vaem:TopQuadrant ;
-  vaem:hasSteward vaem:TopQuadrant ;
+  vaem:hasOwner vaem:LinkedModels ;
+  vaem:hasSteward vaem:LinkedModels ;
   vaem:intent "VOAG is a schema for intellectual capital rights, attribution and governance. Uses the PROVO ontology for provenance.  Typical use of the ontology is to refer to its resources, as opposed to importing the ontology."^^xsd:string ;
   vaem:latestPublishedVersion "http://voag.linkedmodel.org/2.0/doc/2015/SCHEMA_voag-v2.0.html"^^xsd:anyURI ;
   vaem:logo "http://www.linkedmodel.org/lib/lm/images/logos/voag_logo_360x110.png"^^xsd:anyURI ;
   vaem:name "voag"^^xsd:string ;
   vaem:namespace "http://voag.linkedmodel.org/voag/"^^xsd:anyURI ;
   vaem:namespacePrefix "voag"^^xsd:string ;
-  vaem:owner "TopQuadrant, Inc."^^xsd:string ;
+  vaem:owner "Linkedmodels"^^xsd:string ;
   vaem:previousPublishedVersion "http://linkedmodel.org/doc/voag/1.0/"^^xsd:anyURI ;
   vaem:rdfxmlFileURL "http://voag.linkedmodel.org/2.0/schema/SCHEMA_voag-v2.0.rdf"^^xsd:anyURI ;
   vaem:revision "2.0"^^xsd:string ;
@@ -725,10 +724,10 @@ The VOAG schema has a companion VOAG reference data graph that holds license typ
   vaem:usesNonImportedResource dct:description ;
   vaem:usesNonImportedResource dct:subject ;
   vaem:usesNonImportedResource dct:title ;
-  vaem:usesNonImportedResource voag:TopQuadrantAttribution ;
+  vaem:usesNonImportedResource voag:LinkedModelsAttribution ;
   vaem:usesNonImportedResource prov:Entity ;
   vaem:usesNonImportedResource prov:wasInfluencedBy ;
-  vaem:withAttributionTo voag:TopQuadrantAttribution ;
+  vaem:withAttributionTo voag:LinkedModelsAttribution ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "Schema for \"Vocabulary Of Attribution and Governance (VOAG)\" - Version 2.0"^^xsd:string ;
@@ -1096,7 +1095,7 @@ voag:Graph
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
   rdfs:label "Graph"^^xsd:string ;
-  rdfs:subClassOf void:Dataset ;
+  rdfs:subClassOf voag:GovernedObject ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:allValuesFrom voag:Attribution ;
@@ -2011,27 +2010,27 @@ voag:TerminationClause
   rdfs:label "Termination clause"^^xsd:string ;
   rdfs:subClassOf voag:Clause ;
 .
-voag:TopQuadrantAttribution
+voag:LinkedModelsAttribution
   rdf:type voag:Attribution ;
-  dct:description "Attribution must be given to TopQuadrant."^^xsd:string ;
-  voag:hasLogo voag:TopQuadrantLogo-613x150 ;
-  voag:pointOfContact "Ralph Hodgson, TopQuadrant, Inc."^^xsd:string ;
-  voag:url "http://www.topquadrant.com"^^xsd:anyURI ;
-  vaem:name "TopQuadrant, Inc."^^xsd:string ;
+  dct:description "Attribution must be given to Linkedmodels."^^xsd:string ;
+  voag:hasLogo voag:LinkedModelsLogo ;
+  voag:pointOfContact "Ralph Hodgson, Linkedmodels"^^xsd:string ;
+  voag:url "http://www.linkedmodels.org"^^xsd:anyURI ;
+  vaem:name "Linkedmodels"^^xsd:string ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
-  rdfs:label "TopQuadrant attribution"^^xsd:string ;
+  rdfs:label "Linkedmodels attribution"^^xsd:string ;
 .
-voag:TopQuadrantLogo-613x150
+voag:LinkedModelsLogo
   rdf:type voag:AttributionLogo ;
   rdf:type voag:OrganizationLogo ;
-  dct:description "TopQuadrant's logo - diamond with company name to the right"^^xsd:string ;
+  dct:description "Linkedmodels's logo - diamond with company name to the right"^^xsd:string ;
   voag:height "150"^^xsd:string ;
   voag:image "http://www.linkedmodel.org/lib/lm/images/logos/TQ_logo_C_2009_SM_print.jpg"^^xsd:anyURI ;
   voag:width "613"^^xsd:string ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
-  rdfs:label "TopQuadrant Logo 613 x 150"^^xsd:string ;
+  rdfs:label "Linkedmodels Logo 613 x 150"^^xsd:string ;
 .
 voag:TurtleIcon-32bX35
   rdf:type voag:Icon ;

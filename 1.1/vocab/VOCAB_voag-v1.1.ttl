@@ -33,9 +33,20 @@ dc:title
   dc:author "Ralph Hodgson" ;
   dc:subject "Licensing, Attribution,  Governance and Provenance" ;
   dc:title "Vocabulary Of Attribution and Governance" ;
-  voag:intent "Provides a basic vocabulary for intellectual capital rights, attribution and governance. Uses the PROVO ontology for provenance.  Typical use of the ontology is to refer to its resources, as opposed to importing the ontology." ;
+  voag:intent """Provides a basic vocabulary for intellectual capital rights, attribution and governance. 
+  Uses the PROVO ontology for provenance.  
+  Typical use of the ontology is to refer to its resources, as opposed to importing the ontology.
+  """ ;
   vaem:dateCreated "2012-11-01T10:00:00"^^xsd:dateTime ;
-  vaem:description "VOAG stands for \"Vocabulary Of Attribution and Governance\". The ontology is intended to specify licensing, attribution, provenance and governance of an ontology. VOAG captures many common license types and their restrictions. Where a license requires attribution, VOAG provides resources that allow the attribution should be made. Provenance is defined in terms of source and pedigree. A miminal model of governance is provided based on how issues, releases and changes are managed. VOAG does not import, but makes uses of some concepts from VOID (http://vocab.deri.ie/void), notably void:Dataset." ;
+  vaem:description """
+  VOAG stands for "Vocabulary Of Attribution and Governance". 
+  The ontology is intended to specify licensing, attribution, provenance and governance of an ontology. 
+  VOAG captures many common license types and their restrictions. 
+  Where a license requires attribution, VOAG provides resources that allow the attribution should be made. 
+  Provenance is defined in terms of source and pedigree. 
+  A minimal model of governance is provided based on how issues, releases and changes are managed. 
+  VOAG does not import, but makes uses of some concepts from VOID (http://vocab.deri.ie/void), notably void:Dataset.
+  """ ;
   vaem:hasCatalogEntry voag:VOAG-CatalogEntry ;
   vaem:hasGraphRole vaem:VocabularyGraph ;
   vaem:hasLicenseType voag:CC-SHAREALIKE_3PT0-US ;
@@ -51,9 +62,9 @@ dc:title
   vaem:usesNonImportedResource dc:subject ;
   vaem:usesNonImportedResource dc:title ;
   vaem:usesNonImportedResource voag:CC-SHAREALIKE_3PT0-US ;
-  vaem:usesNonImportedResource voag:TopQuadrantAttribution ;
+  vaem:usesNonImportedResource voag:LinkedModelsAttribution ;
   vaem:usesNonImportedResource voag:VOAG-CatalogEntry ;
-  vaem:withAttributionTo voag:TopQuadrantAttribution ;
+  vaem:withAttributionTo voag:LinkedModelsAttribution ;
   rdfs:label "Vocabulary Of Attribution and Governance" ;
   owl:imports <http://rdfs.org/ns/void> ;
   owl:imports <http://voag.linkedmodel.org/1.1/schema/voag> ;
@@ -1047,11 +1058,11 @@ voag:TopQuadrant_ONTOLOGY-LICENSE
   voag:prohibits voag:CCP_Reproduction ;
   voag:prohibits voag:CCP_Sharing ;
   voag:requires voag:CCR_Attribution ;
-  voag:url "http://www.topquadrant.com/docs/legal/EULA.pdf" ;
+  voag:url "http://www.linkedmodels.org/docs/legal/EULA.pdf" ;
   vaem:acronym "TQONTL" ;
   vaem:description "This is a restricted copyright icense." ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/vocab/voag> ;
-  rdfs:label "TopQuadrant Ontology License" ;
+  rdfs:label "Linkedmodels Ontology License" ;
 .
 voag:UNICODE_LICENSE
   rdf:type voag:LicenseModel ;
