@@ -1,5 +1,4 @@
 # baseURI: http://voag.linkedmodel.org/2.0/schema/voag
-# imports: http://rdfs.org/ns/void
 # imports: http://www.linkedmodel.org/schema/dtype
 # imports: http://www.linkedmodel.org/schema/vaem
 
@@ -12,7 +11,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix voag: <http://voag.linkedmodel.org/voag/> .
-@prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 dcterms:description
@@ -36,7 +34,6 @@ dcterms:title
   dcterms:author "Ralph Hodgson" ;
   dcterms:modified "2015-03-30"^^xsd:date ;
   vaem:hasGraphMetadata voag:GMD_VOAG ;
-  owl:imports <http://rdfs.org/ns/void> ;
   owl:imports <http://www.linkedmodel.org/schema/dtype> ;
   owl:imports <http://www.linkedmodel.org/schema/vaem> ;
   owl:versionIRI <http://voag.linkedmodel.org/2.0/schema/voag> ;

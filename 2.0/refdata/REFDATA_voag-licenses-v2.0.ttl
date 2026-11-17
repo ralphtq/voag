@@ -1,5 +1,4 @@
 # baseURI: http://voag.linkedmodel.org/2.0/refdata/voag
-# imports: http://rdfs.org/ns/void
 # imports: http://voag.linkedmodel.org/2.0/schema/voag
 # imports: http://www.linkedmodel.org/2.0/schema/vaem
 # imports: http://www.linkedmodel.org/schema/dtype
@@ -48,7 +47,6 @@ dcterms:title
 <http://voag.linkedmodel.org/2.0/refdata/voag>
   rdf:type owl:Ontology ;
   vaem:hasGraphMetadata voag:GMD_VOAG-LICENSES ;
-  owl:imports <http://rdfs.org/ns/void> ;
   owl:imports <http://voag.linkedmodel.org/2.0/schema/voag> ;
   owl:imports <http://www.linkedmodel.org/2.0/schema/vaem> ;
   owl:imports <http://www.linkedmodel.org/schema/dtype> ;

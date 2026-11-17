@@ -1,5 +1,4 @@
 # baseURI: http://voag.linkedmodel.org/1.1/vocab/voag
-# imports: http://rdfs.org/ns/void
 # imports: http://voag.linkedmodel.org/1.1/schema/voag
 # imports: http://www.linkedmodel.org/1.1/schema/dtype
 # imports: http://www.linkedmodel.org/2.0/schema/vaem
@@ -62,7 +61,6 @@ dc:title
   vaem:usesNonImportedResource voag:VOAG-CatalogEntry ;
   vaem:withAttributionTo voag:LinkedModelsAttribution ;
   rdfs:label "Vocabulary Of Attribution and Governance" ;
-  owl:imports <http://rdfs.org/ns/void> ;
   owl:imports <http://voag.linkedmodel.org/1.1/schema/voag> ;
   owl:imports <http://www.linkedmodel.org/1.1/schema/dtype> ;
   owl:imports <http://www.linkedmodel.org/2.0/schema/vaem> ;
