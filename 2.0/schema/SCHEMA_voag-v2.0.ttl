@@ -1255,8 +1255,9 @@ voag:License
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
+      owl:allValuesFrom voag:DistributionClause ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty voag:DistributionClause ;
+      owl:onProperty voag:distributionClause ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -2051,6 +2052,13 @@ voag:dispositionStatus
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:label "disposition status" ;
   rdfs:subPropertyOf voag:hasApprovalStatus ;
+.
+voag:distributionClause
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain voag:License ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
+  rdfs:label "distribution clause" ;
+  rdfs:range voag:DistributionClause ;
 .
 voag:documentedAt
   rdf:type rdf:Property ;
