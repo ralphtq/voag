@@ -6,8 +6,6 @@
 
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dtype: <http://www.linkedmodel.org/schema/dtype#> .
-@prefix omv: <http://omv.ontoware.org/2005/05/ontology#> .
-@prefix ontology: <http://omv.ontoware.org/2005/05/ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -15,7 +13,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix voag: <http://voag.linkedmodel.org/voag#> .
-@prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 dc:subject
@@ -44,8 +41,7 @@ dc:title
   VOAG captures many common license types and their restrictions. 
   Where a license requires attribution, VOAG provides resources that allow the attribution should be made. 
   Provenance is defined in terms of source and pedigree. 
-  A minimal model of governance is provided based on how issues, releases and changes are managed. 
-  VOAG does not import, but makes uses of some concepts from VOID (http://vocab.deri.ie/void), notably void:Dataset.
+  A minimal model of governance is provided based on how issues, releases and changes are managed.
   """ ;
   vaem:hasCatalogEntry voag:VOAG-CatalogEntry ;
   vaem:hasGraphRole vaem:VocabularyGraph ;

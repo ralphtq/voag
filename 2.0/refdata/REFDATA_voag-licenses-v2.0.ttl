@@ -5,11 +5,8 @@
 # imports: http://www.linkedmodel.org/schema/dtype
 # imports: http://www.w3.org/2004/02/skos/core
 
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dtype: <http://www.linkedmodel.org/schema/dtype#> .
-@prefix omv: <http://omv.ontoware.org/2005/05/ontology#> .
-@prefix ontology: <http://omv.ontoware.org/2005/05/ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -17,34 +14,33 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix voag: <http://voag.linkedmodel.org/voag/> .
-@prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-dct:author
+dcterms:author
   rdf:type owl:AnnotationProperty ;
   rdfs:label "author" ;
   rdfs:range xsd:string ;
 .
-dct:created
+dcterms:created
   rdf:type owl:AnnotationProperty ;
   rdfs:label "created" ;
   rdfs:range xsd:date ;
 .
-dct:description
+dcterms:description
   rdfs:label "description" ;
   rdfs:range xsd:string ;
 .
-dct:modified
+dcterms:modified
   rdf:type owl:AnnotationProperty ;
   rdfs:label "modified" ;
   rdfs:range xsd:date ;
 .
-dct:subject
+dcterms:subject
   rdf:type owl:AnnotationProperty ;
   rdfs:label "subject" ;
   rdfs:range xsd:string ;
 .
-dct:title
+dcterms:title
   rdf:type owl:AnnotationProperty ;
   rdfs:label "title" ;
   rdfs:range xsd:string ;
@@ -1200,11 +1196,11 @@ voag:FREETYPE-PROJECT-LICENSE
 .
 voag:GMD_VOAG-LICENSES
   rdf:type vaem:GraphMetaData ;
-  dct:author "Ralph Hodgson" ;
-  dct:created "2012-11-01"^^xsd:date ;
-  dct:modified "2015-04-02"^^xsd:date ;
-  dct:subject "Licensing, Attribution,  Governance and Provenance" ;
-  dct:title "Vocabulary Of Attribution and Governance (VOAG) Licenses  - Version 2.0" ;
+  dcterms:author "Ralph Hodgson" ;
+  dcterms:created "2012-11-01"^^xsd:date ;
+  dcterms:modified "2015-04-02"^^xsd:date ;
+  dcterms:subject "Licensing, Attribution,  Governance and Provenance" ;
+  dcterms:title "Vocabulary Of Attribution and Governance (VOAG) Licenses  - Version 2.0" ;
   vaem:description """
   VOAG stands for <i>Vocabulary Of Attribution and Governance</i>. 
   In this graph VOAG is used to describe a number of common license types.  
@@ -2060,7 +2056,7 @@ voag:ZOPE-PUBLICE-LICENSE_V1
   rdfs:seeAlso voag:ZOPE-PUBLIC-LICENSE_V2PT0 ;
 .
 voag:hasClause
-  dct:description "The term \"Source Code\" means the preferred form of the Original Work for making modifications to it and all available documentation describing how to modify the Original Work. " ;
+  dcterms:description "The term \"Source Code\" means the preferred form of the Original Work for making modifications to it and all available documentation describing how to modify the Original Work. " ;
 .
 vaem:Attribution
   rdfs:subClassOf voag:Attribution ;
@@ -2476,22 +2472,22 @@ vaem:Attribution
 [
   rdf:type owl:Restriction ;
   owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-  owl:onProperty dct:description ;
+  owl:onProperty dcterms:description ;
 ].
 [
   rdf:type owl:Restriction ;
   owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-  owl:onProperty dct:description ;
+  owl:onProperty dcterms:description ;
 ].
 [
   rdf:type owl:Restriction ;
   owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-  owl:onProperty dct:description ;
+  owl:onProperty dcterms:description ;
 ].
 [
   rdf:type owl:Restriction ;
   owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-  owl:onProperty dct:description ;
+  owl:onProperty dcterms:description ;
 ].
 [
   rdf:type owl:Restriction ;
