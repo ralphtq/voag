@@ -3334,6 +3334,6 @@ voag:isGovernedBy a rdf:Property ;
     dcterms:author "Ralph Hodgson"^^xsd:string ;
     dcterms:modified "2026-09-28"^^xsd:date ;
     vaem:hasGraphMetadata voag:GMD_VOAG ;
-    owl:imports <http://www.linkedmodel.org/schema/dtype>,
-        <http://www.linkedmodel.org/schema/vaem> .
+    owl:imports <http://www.linkedmodel.org/2.0.0/schema/shacl/dtype>,
+        <http://www.linkedmodel.org/3.0.0/schema/shacl/vaem> .
 
