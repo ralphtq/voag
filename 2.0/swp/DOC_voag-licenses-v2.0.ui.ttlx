@@ -1,0 +1,407 @@
+# baseURI: http://voag.linkedmodel.org/2.0/swp/doc/licenses
+# imports: http://topbraid.org/swa
+# imports: http://voag.linkedmodel.org/2.0/refdata/voag
+# imports: http://www.linkedmodel.org/1.1/swp/lmdoc
+
+@prefix SWP_voag-documentor: <http://voag.linkedmodel.org/2.0/swp/SWP_voag-documentor#> .
+@prefix afn: <http://jena.hpl.hp.com/ARQ/function#> .
+@prefix arg: <http://spinrdf.org/arg#> .
+@prefix catalog: <http://www.linkedmodel.org/schema/catalog#> .
+@prefix composite: <http://www.topbraid.org/2007/05/composite.owl#> .
+@prefix css: <http://uispin.org/css#> .
+@prefix daml: <http://www.daml.org/2001/03/daml+oil#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix default: <http://uispin.org/default#> .
+@prefix dtype: <http://www.linkedmodel.org/schema/dtype#> .
+@prefix email: <http://topbraid.org/email#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix html: <http://uispin.org/html#> .
+@prefix iess: <http://ies.topbraidlive.org/schema/ies#> .
+@prefix let: <http://uispin.org/let#> .
+@prefix letrs: <http://uispin.org/letrs#> .
+@prefix list: <http://jena.hpl.hp.com/ARQ/list#> .
+@prefix lmdoc: <http://www.linkedmodel.org/oui/lmdoc#> .
+@prefix lmlib: <http://vaem.linkedmodel.org/spin/lib/> .
+@prefix omv: <http://omv.ontoware.org/2005/05/ontology#> .
+@prefix ontology: <http://omv.ontoware.org/2005/05/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix search: <http://topbraid.org/search#> .
+@prefix search.spin: <http://topbraid.org/search.spin#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sm: <http://topbraid.org/sparqlmotion#> .
+@prefix smf: <http://topbraid.org/sparqlmotionfunctions#> .
+@prefix sml: <http://topbraid.org/sparqlmotionlib#> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix sparqlmotionlib-swp: <http://topbraid.org/sparqlmotionlib-swp#> .
+@prefix spif: <http://spinrdf.org/spif#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix spin.ui: <http://spinrdf.org/spin.ui#> .
+@prefix spinx: <http://spinrdf.org/spinx#> .
+@prefix spl: <http://spinrdf.org/spl#> .
+@prefix spl-dynamic-ranges: <http://spinrdf.org/spl-dynamic-ranges#> .
+@prefix spr: <http://spinrdf.org/spr#> .
+@prefix spra: <http://spinrdf.org/spra#> .
+@prefix style: <http://uispin.org/style#> .
+@prefix swa: <http://topbraid.org/swa#> .
+@prefix swon: <http://uispin.org/swon#> .
+@prefix sxml: <http://topbraid.org/sxml#> .
+@prefix tui: <http://uispin.org/tui#> .
+@prefix ui: <http://uispin.org/ui#> .
+@prefix uix: <http://topbraidlive.org/uix#> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voag: <http://voag.linkedmodel.org/voag/> .
+@prefix voag-doc: <http://voag.linkedmodel.org/swp/doc/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://voag.linkedmodel.org/2.0/swp/doc/licenses>
+  rdf:type owl:Ontology ;
+  owl:imports <http://topbraid.org/swa> ;
+  owl:imports <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  owl:imports <http://www.linkedmodel.org/1.1/swp/lmdoc> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+voag-doc:AbstractSection
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:metadata ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  ui:prototype """
+<ui:group let:ns=\"{= spl:object(?metadata, vaem:namespace) }\">
+    <h2 id=\"{= fn:lower-case(?sectionHeading) }\">{= ?sectionHeading }</h2>
+    <div class=\"lm-abstract\">
+        <p class=\"lm-para\">{= spl:object(?metadata, vaem:intent) }</p>
+        <lmdoc:MaybeDescription arg:node=\"{= ?metadata }\"/>
+    </div>
+</ui:group>
+"""^^ui:Literal ;
+  ui:responseType ui:HTML ;
+  vaem:todo "The namespaces for all referenced vocabularies are giving in the section on <a href=\"#ns\">Namespaces</a>. "^^xsd:string ;
+  rdfs:label "Abstract section"^^xsd:string ;
+  rdfs:subClassOf voag-doc:Sections ;
+.
+voag-doc:Elements
+  rdf:type ui:NodeClass ;
+  rdfs:label "Elements"^^xsd:string ;
+  rdfs:subClassOf ui:Element ;
+.
+voag-doc:IndexSection
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:graph ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  ui:prototype """
+<ui:group let:myGraphMetadata=\"{= spl:object(?graph, vaem:hasGraphMetadata) }\">
+    <ui:group let:ns=\"{= spl:object(?myGraphMetadata, vaem:namespace) }\">
+        <h2 id=\"{= lmdoc:makeAnchorFromString(?sectionHeading) }\">{= ?sectionHeading }</h2>
+        <ui:call arg:graph=\"{= ?graph }\" ui:template=\"{= lmdoc:AllClasses }\" ui:varName=\"classes\">
+            <ui:if ui:condition=\"{= spr:rowCount(?classes) &gt; 0 }\">
+                <dt>Classes:</dt>
+                <dd>
+                    <ui:forEach ui:resultSet=\"{= ?classes }\" ui:separator=\" | \">
+                        <lmdoc:ResourceDocLink arg:resource=\"{= ?class }\" arg:title=\"{= lmdoc:getDescription(?class) }\"/>
+                    </ui:forEach>
+                </dd>
+                <div style=\"margin: 40px 0 25px 0;\"/>
+            </ui:if>
+        </ui:call>
+        <ui:call arg:graph=\"{= ?graph }\" ui:template=\"{= lmdoc:AllProperties }\" ui:varName=\"properties\">
+            <ui:if ui:condition=\"{= spr:rowCount(?properties) &gt; 0 }\">
+                <dt>Properties:</dt>
+                <dd>
+                    <ui:forEach ui:resultSet=\"{= ?properties }\" ui:separator=\" | \">
+                        <lmdoc:ResourceDocLink arg:resource=\"{= ?property }\" arg:title=\"{= lmdoc:getDescription(?property) }\"/>
+                    </ui:forEach>
+                </dd>
+                <div style=\"margin: 40px 0 25px 0;\"/>
+            </ui:if>
+        </ui:call>
+        <p class=\"lm-para\">The instances index section is ordered alphabetically by class name.</p>
+        <ui:call arg:graph=\"{= ?graph }\" ui:template=\"{= lmdoc:AllInstanceTypes }\" ui:varName=\"instancetypes\">
+            <ui:if ui:condition=\"{= spr:rowCount(?instancetypes) &gt; 0 }\">
+                <h3>Instances Index</h3>
+                <ui:forEach ui:resultSet=\"{= ?instancetypes }\">
+                    <dt>
+                        <lmdoc:URIResourceViewer arg:label=\"{= xsd:string(lmdoc:countOfInstanceOfType(?graph, ?class)) }\" arg:object=\"{= ?class }\"/>
+                    </dt>
+                    <dd>
+                        <ui:call arg:graph=\"{= ?graph }\" arg:type=\"{= ?class }\" ui:template=\"{= lmdoc:AllInstanceOfType }\" ui:varName=\"instances\">
+                            <ui:if ui:condition=\"{= spr:rowCount(?instances) &gt; 0 }\">
+                                <ui:forEach ui:resultSet=\"{= ?instances }\" ui:separator=\" | \">
+                                    <lmdoc:ResourceDocLink arg:resource=\"{= ?instance }\" arg:title=\"{= lmdoc:getDescription(?instance) }\"/>
+                                </ui:forEach>
+                            </ui:if>
+                        </ui:call>
+                    </dd>
+                </ui:forEach>
+            </ui:if>
+        </ui:call>
+    </ui:group>
+</ui:group>
+"""^^ui:Literal ;
+  ui:responseType ui:HTML ;
+  rdfs:label "Index section"^^xsd:string ;
+  rdfs:subClassOf voag-doc:Sections ;
+.
+voag-doc:InstancesSection
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:graph ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  ui:prototype """
+<ui:group let:myGraphMetadata=\"{= spl:object(?graph, vaem:hasGraphMetadata) }\">
+    <ui:call arg:graph=\"{= ?graph }\" ui:template=\"{= lmdoc:AllInstances }\" ui:varName=\"instances\">
+        <ui:if ui:condition=\"{= spr:rowCount(?instances) &gt; 0 }\">
+            <h2 id=\"{= lmdoc:makeAnchorFromString(?sectionHeading) }\">{= ?sectionHeading }</h2>
+            <ui:forEach ui:resultSet=\"{= ?instances }\">
+                <ui:call arg:subject=\"{= ?instance }\" ui:template=\"{= swa:modeProperty(swa:formObjectPredicateSelectionTemplate) }\">
+                    <lmdoc:VSpace arg:margin=\"20px;\"/>
+                    <div class=\"lm-header-box\">
+                        <lmdoc:ResourceDocAnchor arg:node=\"{= ?instance }\" arg:typeLabel=\"Instance \"/>
+                    </div>
+                    <div class=\"lm-resource-box\">
+                        <div class=\"swa-sub-title\">Type</div>
+                        <dd class=\"size-14\">
+                            <lmdoc:ObjectsBody arg:predicate=\"{= rdf:type }\" arg:subject=\"{= ?instance }\" ui:args=\"*\"/>
+                        </dd>
+                        <lmdoc:VSpace arg:margin=\"30px;\"/>
+                        <div class=\"swa-sub-title\">Description</div>
+                        <lmdoc:MaybeDescription arg:node=\"{= ?instance }\"/>
+                        <lmdoc:VSpace arg:margin=\"30px;\"/>
+                        <lmdoc:ObjectsGroup arg:filterFunction=\"{= swa:isNonAnnotationProperty }\" arg:label=\"Properties\" arg:predicates=\"{= ?rs }\" arg:subject=\"{= ?instance }\"/>
+                        <lmdoc:VSpace arg:margin=\"30px;\"/>
+                        <lmdoc:ObjectsGroup arg:filterFunction=\"{= swa:isAnnotationProperty }\" arg:label=\"Annotations\" arg:predicates=\"{= ?rs }\" arg:subject=\"{= ?instance }\"/>
+                        <lmdoc:VSpace arg:margin=\"40px;\"/>
+                        <ui:call arg:graph=\"{= ?graph }\" arg:resource=\"{= ?instance }\" ui:template=\"{= lmdoc:ReferencesToResourceInGivenGraph }\" ui:varName=\"whereusedreferences\">
+                            <lmdoc:WhereUsedSubjectsGroup arg:label=\"Where Used (in this graph)\" arg:object=\"{= ?instance }\" arg:predicates=\"{= ?whereusedreferences }\"/>
+                        </ui:call>
+                        <lmdoc:ResourceFooter arg:options=\"CSV,JSONLD,RDF,TURTLE\" arg:resource=\"{= ?instance }\"/>
+                    </div>
+                </ui:call>
+                <lmdoc:VSpace arg:margin=\"40px;\"/>
+            </ui:forEach>
+        </ui:if>
+    </ui:call>
+    <div style=\"margin: 40px 0 25px 0;\"/>
+</ui:group>
+"""^^ui:Literal ;
+  ui:responseType ui:HTML ;
+  rdfs:label "Instances section"^^xsd:string ;
+  rdfs:subClassOf voag-doc:Sections ;
+.
+voag-doc:IntroductionSectionForRefDataGraph
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:graph ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  ui:prototype """
+<ui:group let:myGraphMetadata=\"{= spl:object(?graph, vaem:hasGraphMetadata) }\">
+    <ui:group let:ns=\"{= spl:object(?myGraphMetadata, vaem:namespace) }\">
+        <h2 id=\"{= lmdoc:makeAnchorFromString(?sectionHeading) }\">{= ?sectionHeading }</h2>
+        <p class=\"lm-para\">The purpose of this graph is to hold industry-standard licenses for software.
+Some {= lmdoc:countOfInstanceOfType(?graph, voag:License) } license specifications are described.
+Where possible links have been provided to normative documentation of the licenses.
+In some cases license clauses of a few licenses have been included in the graph.
+As an example the &nbsp;<a href=\"#voag_GNU-GPL\">GNU GPL license</a> has all of its clauses in the graph.</p>
+        <p class=\"lm-para\">The reference data graph uses v2.0 of the <code class=\"boxed\">VOAG</code> schema.
+Documentation on VOAG can be found on the web at <a href=\"http://voag.linkedmodel.org/2.0/doc/2015/SCHEMA_voag-v2.0\">this page</a>. 
+All resources are within the <code class=\"boxed\">VOAG</code> namespace (<code>{= ?ns }</code>).</p>
+        <p class=\"lm-para\" let:graphType=\"{= fn:lower-case(ui:label(spl:object(?myGraphMetadata, vaem:hasGraphRole))) }\">The <code class=\"boxed\">reference data graph</code> is available as &nbsp;<a href=\"{= spl:object(?metadata, vaem:rdfxmlFileURL) }\">RDF/XML</a> and <a href=\"{= spl:object(?metadata, vaem:turtleFileURL) }\">Turtle</a>.</p>
+    </ui:group>
+</ui:group>
+"""^^ui:Literal ;
+  ui:responseType ui:HTML ;
+  rdfs:label "Introduction section for reference data graph"^^xsd:string ;
+  rdfs:subClassOf voag-doc:Sections ;
+.
+voag-doc:Pages
+  rdf:type ui:NodeClass ;
+  rdfs:label "Pages"^^xsd:string ;
+  rdfs:subClassOf voag-doc:Elements ;
+.
+voag-doc:Parts
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:type ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  rdfs:label "Parts"^^xsd:string ;
+  rdfs:subClassOf voag-doc:Elements ;
+.
+voag-doc:RefDataGraph
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:graph ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  ui:prototype """
+<ui:group let:myGraph=\"{= IRI(?graph) }\">
+    <ui:setContext ui:varName=\"graph\" ui:varValue=\"{= ?myGraph }\">
+        <ui:setContext ui:queryGraph=\"{= ui:unionOfGraphs(ui:graphWithImports(?myGraph), ui:graphWithImports(&lt;http://www.linkedmodel.org/1.1/swp/lmdoc&gt;)) }\">
+            <ui:group let:myGraphMetadata=\"{= spl:object(?myGraph, vaem:hasGraphMetadata) }\">
+                <lmdoc:GraphHeader arg:resource=\"{= ?myGraphMetadata }\"/>
+                <section class=\"introductory\" id=\"abstract\" property=\"dct:abstract\" rel=\"bibo:Chapter\" resource=\"#ref\" typeof=\"bibo:Chapter\">
+                    <voag-doc:AbstractSection arg:metadata=\"{= ?myGraphMetadata }\" arg:sectionHeading=\"Abstract\"/>
+                </section>
+                <section id=\"toc\">
+                    <voag-doc:TableOfContents arg:graph=\"{= ?myGraph }\" arg:sectionHeading=\"Table of Contents\"/>
+                </section>
+                <hr/>
+                <section class=\"informative\" id=\"index\">
+                    <voag-doc:IntroductionSectionForRefDataGraph arg:graph=\"{= ?myGraph }\" arg:sectionHeading=\"Introduction\"/>
+                </section>
+                <section class=\"informative\" id=\"index\">
+                    <voag-doc:IndexSection arg:graph=\"{= ?myGraph }\" arg:sectionHeading=\"Resource Index\"/>
+                </section>
+                <section id=\"namespaces-1\" rel=\"bibo:Chapter\" resource=\"#ref\" typeof=\"bibo:Chapter\">
+                    <lmdoc:ImportedNamespaces arg:graph=\"{= ?myGraph }\" arg:sectionHeading=\"Imported Graphs\"/>
+                </section>
+                <section id=\"non-imported-myGraphMetadatas\" rel=\"bibo:Chapter\" resource=\"#ref\" typeof=\"bibo:Chapter\">
+                    <lmdoc:NonImportedResources arg:metadata=\"{= ?myGraphMetadata }\" arg:sectionHeading=\"Non-imported Resources\"/>
+                </section>
+                <section class=\"details\" id=\"details\" property=\"dct:abstract\" rel=\"bibo:Chapter\" resource=\"#ref\" typeof=\"bibo:Chapter\">
+                    <h2 id=\"{= lmdoc:makeAnchorFromString(?sectionHeading) }\">Resource Details</h2>
+                    <section class=\"informative\" id=\"classes\">
+                        <lmdoc:ClassesSection arg:graph=\"{= ?myGraph }\" arg:sectionHeading=\"Classes\"/>
+                    </section>
+                    <section class=\"informative\" id=\"properties\">
+                        <lmdoc:PropertiesSection arg:graph=\"{= ?myGraph }\" arg:sectionHeading=\"Properties\"/>
+                    </section>
+                    <section class=\"informative\" id=\"instances\">
+                        <voag-doc:InstancesSection arg:graph=\"{= ?myGraph }\" arg:sectionHeading=\"Instances\"/>
+                    </section>
+                    <div class=\"size-10\">Generated {= xsd:date(afn:now()) } by lmdoc version {= spl:object(lmdoc:GMD_LMDOC, vaem:revision) } using&nbsp;<a href=\"http://www.topquadrant.com/technology/sparql-web-pages-swp/\">TopBraid SPARQL Web Pages (SWP)</a>
+                    </div>
+                </section>
+            </ui:group>
+        </ui:setContext>
+    </ui:setContext>
+</ui:group>
+"""^^ui:Literal ;
+  ui:responseType ui:HTML ;
+  rdfs:comment """Test with:
+
+http://localhost:8083/tbl/swp?_viewClass=voag-doc:RefDataGraph&graph=http://voag.linkedmodel.org/2.0/refdata/voag"""^^xsd:string ;
+  rdfs:label "Ref data graph"^^xsd:string ;
+  rdfs:subClassOf voag-doc:Pages ;
+.
+voag-doc:Sections
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:sectionHeading ;
+      spl:valueType xsd:string ;
+    ] ;
+  rdfs:label "Sections"^^xsd:string ;
+  rdfs:subClassOf voag-doc:Elements ;
+.
+voag-doc:TableOfContents
+  rdf:type ui:NodeClass ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:graph ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:resource ;
+      spl:valueType rdfs:Resource ;
+    ] ;
+  ui:prototype """
+<ui:group>
+    <a id=\"lmdoc_top\">
+        <h2 id=\"{= lmdoc:makeAnchorFromString(?sectionHeading) }\">{= ?sectionHeading }</h2>
+    </a>
+    <ol class=\"lm-toc-numeric\">
+        <li class=\"lm-toce\">
+            <lmdoc:TOCEntry arg:heading=\"Introduction\"/>
+        </li>
+        <li class=\"lm-toce\">
+            <lmdoc:TOCEntry arg:heading=\"Resource Index\"/>
+            <ol class=\"lm-toc\">
+                <li class=\"lm-toce\">
+                    <lmdoc:TOCEntry arg:heading=\"Imported Graphs\"/>
+                </li>
+                <li class=\"lm-toce\">
+                    <lmdoc:TOCEntry arg:heading=\"Non-imported Resources\"/>
+                </li>
+            </ol>
+        </li>
+        <li class=\"lm-toce\">
+            <lmdoc:TOCEntry arg:heading=\"Resource Details\"/>
+            <ol class=\"lm-toc\">
+                <ui:call arg:graph=\"{= ?graph }\" ui:template=\"{= lmdoc:AllClasses }\">
+                    <ui:if ui:condition=\"{= spr:rowCount(?rs) &gt; 0 }\">
+                        <li class=\"lm-toce\">
+                            <lmdoc:TOCEntry arg:count=\"{= spr:rowCount(?rs) }\" arg:heading=\"Classes\"/>
+                        </li>
+                    </ui:if>
+                </ui:call>
+                <ui:call arg:graph=\"{= ?graph }\" ui:template=\"{= lmdoc:AllProperties }\">
+                    <ui:if ui:condition=\"{= spr:rowCount(?rs) &gt; 0 }\">
+                        <li class=\"lm-toce\">
+                            <lmdoc:TOCEntry arg:count=\"{= spr:rowCount(?rs) }\" arg:heading=\"Properties\"/>
+                        </li>
+                    </ui:if>
+                </ui:call>
+                <ui:call arg:graph=\"{= ?graph }\" ui:template=\"{= lmdoc:AllInstances }\">
+                    <ui:if ui:condition=\"{= spr:rowCount(?rs) &gt; 0 }\">
+                        <li class=\"lm-toce\">
+                            <lmdoc:TOCEntry arg:count=\"{= spr:rowCount(?rs) }\" arg:heading=\"Instances\"/>
+                        </li>
+                    </ui:if>
+                </ui:call>
+            </ol>
+        </li>
+    </ol>
+</ui:group>
+"""^^ui:Literal ;
+  ui:responseType ui:HTML ;
+  rdfs:label "Table of contents"^^xsd:string ;
+  rdfs:subClassOf voag-doc:Sections ;
+.
+voag:Clause
+  rdfs:subClassOf voag-doc:Parts ;
+.
+voag:EnumeratedValue
+  rdfs:subClassOf voag-doc:Parts ;
+.
+voag:GovernedObject
+  rdfs:subClassOf voag-doc:Parts ;
+.
+voag:License
+  rdfs:subClassOf voag-doc:Parts ;
+.
+voag:Logo
+  rdfs:subClassOf voag-doc:Parts ;
+.
+lmdoc:WhereUsedLabeledSubjects
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:predicate arg:predicate ;
+      spl:valueType rdf:Property ;
+    ] ;
+.
+vaem:GraphMetaData
+  rdfs:subClassOf voag-doc:Parts ;
+.
+vaem:Party
+  rdfs:subClassOf voag-doc:Parts ;
+.
