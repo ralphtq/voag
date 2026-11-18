@@ -50,8 +50,9 @@ voag:GMD_VOAG-LICENSE-ISC
   a vaem:GraphMetaData ;
   dcterms:author "Ralph Hodgson" ;
   dcterms:created "2026-11-18"^^xsd:date ;
-  dcterms:description "ISC License, described in the Vocabulary Of Attribution and Governance (VOAG)." ;
+  dcterms:description "ISC License, described in the Vocabulary Of Attribution and Governance (VOAG). The clause text is taken from the SPDX License List (ISC)." ;
   dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:source <https://spdx.org/licenses/ISC.html> ;
   dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
   dcterms:title "VOAG License: ISC License - Version $$VERSION$$" ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-isc> ;
@@ -76,6 +77,22 @@ voag:ISC-LICENSE
   vaem:acronym "ISC" ;
   vaem:description "This license is sometimes also known as the OpenBSD License. It is a free software license, and compatible with the GNU GPL. This license does have an unfortunate wording choice: it provides recipients with \"Permission to use, copy, modify, and/or distribute this software....\" This is roughly the same language from the license of Pine that the University of Washington later claimed prohibited people from distributing modified versions of the software." ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
-  voag:url "http://www.isc.org/software/license" .
+  voag:hasClause voag:CLS_ISC-01 ;
+  voag:hasClause voag:CLS_ISC-02 ;
+  voag:url "https://www.isc.org/licenses/"^^xsd:anyURI .
 
+voag:CLS_ISC-01
+  a voag:GrantClause ;
+  dcterms:description "Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-isc> ;
+  rdfs:label "ISC License - Permission" ;
+  voag:clauseNumber 1 ;
+  voag:title "Permission" .
 
+voag:CLS_ISC-02
+  a voag:DisclaimerClause ;
+  dcterms:description """THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-isc> ;
+  rdfs:label "ISC License - Disclaimer" ;
+  voag:clauseNumber 2 ;
+  voag:title "Disclaimer" .
