@@ -240,21 +240,6 @@ voag:CC0
   voag:permits voag:CCP_Sharing ;
   voag:url "http://creativecommons.org/publicdomain/zero/1.0/legalcode" .
 
-voag:CCBY-4PT0-LICENSE
-  a voag:License ;
-  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag> ;
-  rdfs:label "Creative Commons Attribution 4.0 license" ;
-  vaem:acronym "ccby4pt0" ;
-  vaem:description """
-<p>You are free to:</p>
-<ul>
-<li>Share — copy and redistribute the material in any medium or format for any purpose, even commercially.</li>
-<li>Adapt — remix, transform, and build upon the material for any purpose, even commercially.</li>
-</ul>
-<p>The licensor cannot revoke these freedoms as long as you follow the license terms.</p>
-"""^^rdf:HTML ;
-  voag:url "https://creativecommons.org/licenses/by/4.0/legalcode.en" .
-
 voag:CCBY-LICENSE
   a voag:License ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag> ;
