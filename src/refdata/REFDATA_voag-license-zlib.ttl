@@ -50,8 +50,9 @@ voag:GMD_VOAG-LICENSE-ZLIB
   a vaem:GraphMetaData ;
   dcterms:author "Ralph Hodgson" ;
   dcterms:created "2026-11-18"^^xsd:date ;
-  dcterms:description "License of ZLib, described in the Vocabulary Of Attribution and Governance (VOAG)." ;
+  dcterms:description "License of ZLib, described in the Vocabulary Of Attribution and Governance (VOAG). The clause text is taken from the SPDX License List (Zlib)." ;
   dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:source <https://spdx.org/licenses/Zlib.html> ;
   dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
   dcterms:title "VOAG License: License of ZLib - Version $$VERSION$$" ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-zlib> ;
@@ -76,6 +77,28 @@ voag:ZLIB-LICENSE
   vaem:acronym "ZLib" ;
   vaem:description "This is a free software license, and compatible with the GPL." ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
-  voag:url "http://www.gzip.org/zlib/zlib_license.html" .
+  voag:hasClause voag:CLS_ZLIB-01 ;
+  voag:hasClause voag:CLS_ZLIB-02 ;
+  voag:url "http://www.zlib.net/zlib_license.html"^^xsd:anyURI .
 
+voag:CLS_ZLIB-01
+  a voag:DisclaimerClause ;
+  dcterms:description "This software is provided 'as-is', without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this software." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-zlib> ;
+  rdfs:label "License of ZLib - Disclaimer" ;
+  voag:clauseNumber 1 ;
+  voag:title "Disclaimer" .
 
+voag:CLS_ZLIB-02
+  a voag:GrantClause ;
+  dcterms:description """Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation would be appreciated but is not required.
+
+2. Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
+
+3. This notice may not be removed or altered from any source distribution.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-zlib> ;
+  rdfs:label "License of ZLib - Permission and Conditions" ;
+  voag:clauseNumber 2 ;
+  voag:title "Permission and Conditions" .

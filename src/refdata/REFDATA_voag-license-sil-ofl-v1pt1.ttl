@@ -50,8 +50,9 @@ voag:GMD_VOAG-LICENSE-SIL-OFL-V1PT1
   a vaem:GraphMetaData ;
   dcterms:author "Ralph Hodgson" ;
   dcterms:created "2026-11-18"^^xsd:date ;
-  dcterms:description "SIL Open Font License 1.1, described in the Vocabulary Of Attribution and Governance (VOAG)." ;
+  dcterms:description "SIL Open Font License 1.1, described in the Vocabulary Of Attribution and Governance (VOAG). The clause text is taken from the SPDX License List (OFL-1.1)." ;
   dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:source <https://spdx.org/licenses/OFL-1.1.html> ;
   dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
   dcterms:title "VOAG License: SIL Open Font License 1.1 - Version $$VERSION$$" ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-sil-ofl-v1pt1> ;
@@ -75,6 +76,58 @@ voag:SIL-OFL_V1PT1
   rdfs:label "SIL Open Font License 1.1" ;
   vaem:acronym "SILOFL" ;
   vaem:description "The Open Font License (including its original release, version 1.0) is a free copyleft license for fonts. Its only unusual requirement is that fonts be distributed with some computer program, rather than alone. Since a simple Hello World program will satisfy the requirement, it is harmless. Neither GNU nor SIL recommend the use of this license for anything other than fonts." ;
-  voag:url "http://scripts.sil.org/OFL_web" .
+  voag:hasClause voag:CLS_SIL-OFL_V1PT1-01 ;
+  voag:hasClause voag:CLS_SIL-OFL_V1PT1-02 ;
+  voag:hasClause voag:CLS_SIL-OFL_V1PT1-03 ;
+  voag:hasClause voag:CLS_SIL-OFL_V1PT1-04 ;
+  voag:url "http://scripts.sil.org/OFL_web"^^xsd:anyURI .
 
+voag:CLS_SIL-OFL_V1PT1-01
+  a voag:DefinitionClause ;
+  dcterms:description """"Font Software" refers to the set of files released by the Copyright Holder(s) under this license and clearly marked as such. This may include source files, build scripts and documentation.
 
+"Reserved Font Name" refers to any names specified as such after the copyright statement(s).
+
+"Original Version" refers to the collection of Font Software components as distributed by the Copyright Holder(s).
+
+"Modified Version" refers to any derivative made by adding to, deleting, or substituting — in part or in whole — any of the components of the Original Version, by changing formats or by porting the Font Software to a new environment.
+
+"Author" refers to any designer, engineer, programmer, technical writer or other person who contributed to the Font Software.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-sil-ofl-v1pt1> ;
+  rdfs:label "SIL Open Font License 1.1 - Definitions" ;
+  voag:clauseNumber 1 ;
+  voag:title "Definitions" .
+
+voag:CLS_SIL-OFL_V1PT1-02
+  a voag:GrantClause ;
+  dcterms:description """Permission is hereby granted, free of charge, to any person obtaining a copy of the Font Software, to use, study, copy, merge, embed, modify, redistribute, and sell modified and unmodified copies of the Font Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components, in Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled, redistributed and/or sold with any software, provided that each copy contains the above copyright notice and this license. These can be included either as stand-alone text files, human-readable headers or in the appropriate machine-readable metadata fields within text or binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font Name(s) unless explicit written permission is granted by the corresponding Copyright Holder. This restriction only applies to the primary font name as presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font Software shall not be used to promote, endorse or advertise any Modified Version, except to acknowledge the contribution(s) of the Copyright Holder(s) and the Author(s) or with their explicit written permission.
+
+5) The Font Software, modified or unmodified, in part or in whole, must be distributed entirely under this license, and must not be distributed under any other license. The requirement for fonts to remain under this license does not apply to any document created using the Font Software.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-sil-ofl-v1pt1> ;
+  rdfs:label "SIL Open Font License 1.1 - Permission & Conditions" ;
+  voag:clauseNumber 2 ;
+  voag:title "Permission & Conditions" .
+
+voag:CLS_SIL-OFL_V1PT1-03
+  a voag:TerminationClause ;
+  dcterms:description "This license becomes null and void if any of the above conditions are not met." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-sil-ofl-v1pt1> ;
+  rdfs:label "SIL Open Font License 1.1 - Termination" ;
+  voag:clauseNumber 3 ;
+  voag:title "Termination" .
+
+voag:CLS_SIL-OFL_V1PT1-04
+  a voag:DisclaimerClause ;
+  dcterms:description """THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM OTHER DEALINGS IN THE FONT SOFTWARE.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-sil-ofl-v1pt1> ;
+  rdfs:label "SIL Open Font License 1.1 - Disclaimer" ;
+  voag:clauseNumber 4 ;
+  voag:title "Disclaimer" .

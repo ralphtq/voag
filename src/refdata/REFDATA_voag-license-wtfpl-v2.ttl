@@ -50,8 +50,9 @@ voag:GMD_VOAG-LICENSE-WTFPL-V2
   a vaem:GraphMetaData ;
   dcterms:author "Ralph Hodgson" ;
   dcterms:created "2026-11-18"^^xsd:date ;
-  dcterms:description "WTFPL, Version 2, described in the Vocabulary Of Attribution and Governance (VOAG)." ;
+  dcterms:description "WTFPL, Version 2, described in the Vocabulary Of Attribution and Governance (VOAG). The clause text is taken from the SPDX License List (WTFPL)." ;
   dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:source <https://spdx.org/licenses/WTFPL.html> ;
   dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
   dcterms:title "VOAG License: WTFPL, Version 2 - Version $$VERSION$$" ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-wtfpl-v2> ;
@@ -75,6 +76,13 @@ voag:WTFPL_V2
   rdfs:label "WTFPL, Version 2" ;
   vaem:acronym "WTFPL" ;
   vaem:description "This is a free software license, very permissive and GPL-compatible." ;
-  voag:url "http://sam.zoy.org/wtfpl/COPYING" .
+  voag:hasClause voag:CLS_WTFPL_V2-00 ;
+  voag:url "http://sam.zoy.org/wtfpl/COPYING"^^xsd:anyURI .
 
-
+voag:CLS_WTFPL_V2-00
+  a voag:GrantClause ;
+  dcterms:description "You just DO WHAT THE FUCK YOU WANT TO." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-wtfpl-v2> ;
+  rdfs:label "WTFPL, Version 2 - Permission" ;
+  voag:clauseNumber 0 ;
+  voag:title "Permission" .

@@ -6,6 +6,9 @@ Usage:
 SPEC.py defines BATCH, a list of licences (see scripts/spdx_clause_specs/). Each gives the
 licence IRI local name, its refdata file slug, its SPDX identifier, the clause IRI prefix,
 and the clauses as line numbers in the SPDX text, with title and VOAG clause class.
+A clause's "num" is the licence's own section number, stripped from the text with the
+section's heading; an unnumbered section can name a "heading" line to drop instead, and
+"n" sets the clause number explicitly (otherwise unnumbered clauses count from 1).
 
 SPDX_TEXT_DIR holds <SPDX-ID>.txt files from
   https://raw.githubusercontent.com/spdx/license-list-data/main/text/<SPDX-ID>.txt
@@ -23,7 +26,8 @@ s = importlib.util.spec_from_file_location("spec", spec_path)
 spec = importlib.util.module_from_spec(s)
 s.loader.exec_module(spec)
 
-ITEM = re.compile(r"^(\(?[a-zA-Z0-9]{1,4}[.)]|[ivx]+\.|-|\*)\s")
+# list-item markers: (a) a) a. A. 1. 1) 1.1. (i) iv. - *
+ITEM = re.compile(r"^(\(?([a-zA-Z]|\d{1,3}(\.\d{1,3})*|[ivx]{1,5})[.)]|-|\*)\s")
 DROP_LINES = re.compile(r"^(NO WARRANTY|END OF TERMS AND CONDITIONS)$")
 
 
@@ -49,12 +53,17 @@ def reflow(lines):
     return re.sub(r"[ \t]+", " ", text).strip()
 
 
-def strip_heading(lines, num, title):
-    """On the section's first source line, remove 'N.' and the section's own heading (if it has one)."""
-    if num is None:
-        return lines
+def strip_heading(lines, num, title, heading=None):
+    """On the section's first source line, remove 'N.' and the section's own heading (if it has one).
+    For an unnumbered section, `heading` is the text of a heading line to drop."""
     lines = list(lines)
     first = lines[0].strip()
+    if num is None:
+        if heading is not None:
+            if first.lower() != heading.lower():
+                raise SystemExit(f"expected heading {heading!r}, found {first[:60]!r}")
+            lines[0] = ""
+        return lines
     m = re.match(r"^%s\.\s*" % re.escape(str(num)), first)
     if not m:
         raise SystemExit(f"section {num} does not start with its number: {first[:60]!r}")
@@ -114,9 +123,9 @@ for lic in spec.BATCH:
     for k, c in enumerate(clauses):
         start = c["start"]
         end = clauses[k + 1]["start"] if k + 1 < len(clauses) else lic["end"]
-        text = reflow(strip_heading(src[start - 1:end - 1], c.get("num"), c["title"]))
+        text = reflow(strip_heading(src[start - 1:end - 1], c.get("num"), c["title"], c.get("heading")))
         assert text, (L, c)
-        n = c.get("num") if c.get("num") is not None else k + 1
+        n = c.get("n", c.get("num") if c.get("num") is not None else k + 1)
         cid = f"voag:CLS_{lic['clause_prefix']}-{int(n):02d}"
         links.append(cid)
         blocks.append(

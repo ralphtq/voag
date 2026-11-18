@@ -53,15 +53,74 @@ voag:APACHE_V1PT0
   rdfs:seeAlso voag:GNU-GPL ;
   vaem:acronym "apache1" ;
   vaem:description "This is a simple, permissive non-copyleft free software license with an advertising clause. This creates practical problems like those of the original BSD license, including incompatibility with the GNU GPL" ;
+  voag:hasClause voag:CLS_APACHE_V1PT0-01 ;
+  voag:hasClause voag:CLS_APACHE_V1PT0-02 ;
+  voag:hasClause voag:CLS_APACHE_V1PT0-03 ;
+  voag:hasClause voag:CLS_APACHE_V1PT0-04 ;
+  voag:hasClause voag:CLS_APACHE_V1PT0-05 ;
+  voag:hasClause voag:CLS_APACHE_V1PT0-06 ;
   voag:incompatibleWith voag:GNU-GPL_V3 ;
-  voag:url "http://www.apache.org/licenses/LICENSE-1.0" .
+  voag:url "http://www.apache.org/licenses/LICENSE-1.0"^^xsd:anyURI .
+
+voag:CLS_APACHE_V1PT0-01
+  a voag:DistributionClause ;
+  dcterms:description """Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-apache-v1pt0> ;
+  rdfs:label "Apache License, Version 1.0 - Redistribution and Use" ;
+  voag:clauseNumber 1 ;
+  voag:title "Redistribution and Use" .
+
+voag:CLS_APACHE_V1PT0-02
+  a voag:AttributionRightsClause ;
+  dcterms:description """3. All advertising materials mentioning features or use of this software must display the following acknowledgment: "This product includes software developed by the Apache Group for use in the Apache HTTP server project (http://www.apache.org/).\"""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-apache-v1pt0> ;
+  rdfs:label "Apache License, Version 1.0 - Advertising Acknowledgment" ;
+  voag:clauseNumber 2 ;
+  voag:title "Advertising Acknowledgment" .
+
+voag:CLS_APACHE_V1PT0-03
+  a voag:RestrictionsClause ;
+  dcterms:description """4. The names "Apache" and "Apache Software Foundation" must not be used to endorse or promote products derived from this software without prior written permission. For written permission, please contact apache@apache.org.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-apache-v1pt0> ;
+  rdfs:label "Apache License, Version 1.0 - Endorsement" ;
+  voag:clauseNumber 3 ;
+  voag:title "Endorsement" .
+
+voag:CLS_APACHE_V1PT0-04
+  a voag:RestrictionsClause ;
+  dcterms:description """5. Products derived from this software may not be called "Apache" nor may "Apache" appear in their name, without prior written permission of the Apache Group.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-apache-v1pt0> ;
+  rdfs:label "Apache License, Version 1.0 - Use of the Apache Name" ;
+  voag:clauseNumber 4 ;
+  voag:title "Use of the Apache Name" .
+
+voag:CLS_APACHE_V1PT0-05
+  a voag:AttributionRightsClause ;
+  dcterms:description """6. Redistributions of any form whatsoever must retain the following acknowledgment: "This product includes software developed by the Apache Group for use in the Apache HTTP server project (http://www.apache.org/).\"""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-apache-v1pt0> ;
+  rdfs:label "Apache License, Version 1.0 - Acknowledgment in Redistributions" ;
+  voag:clauseNumber 5 ;
+  voag:title "Acknowledgment in Redistributions" .
+
+voag:CLS_APACHE_V1PT0-06
+  a voag:DisclaimerClause ;
+  dcterms:description "THIS SOFTWARE IS PROVIDED BY THE APACHE GROUP ``AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE APACHE GROUP OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-apache-v1pt0> ;
+  rdfs:label "Apache License, Version 1.0 - Disclaimer" ;
+  voag:clauseNumber 6 ;
+  voag:title "Disclaimer" .
 
 voag:GMD_VOAG-LICENSE-APACHE-V1PT0
   a vaem:GraphMetaData ;
   dcterms:author "Ralph Hodgson" ;
   dcterms:created "2026-11-18"^^xsd:date ;
-  dcterms:description "Apache License, Version 1.0, described in the Vocabulary Of Attribution and Governance (VOAG)." ;
+  dcterms:description "Apache License, Version 1.0, described in the Vocabulary Of Attribution and Governance (VOAG). The clause text is taken from the SPDX License List (Apache-1.0)." ;
   dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:source <https://spdx.org/licenses/Apache-1.0.html> ;
   dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
   dcterms:title "VOAG License: Apache License, Version 1.0 - Version $$VERSION$$" ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-apache-v1pt0> ;
@@ -78,5 +137,3 @@ voag:GMD_VOAG-LICENSE-APACHE-V1PT0
   vaem:title "VOAG License: Apache License, Version 1.0 - Version $$VERSION$$" ;
   vaem:turtleFileURL "http://voag.linkedmodel.org/$$VERSION$$/refdata/REFDATA_voag-license-apache-v1pt0-v$$VERSION$$.ttl"^^xsd:anyURI ;
   vaem:withAttributionTo voag:LinkedModelsAttribution .
-
-
