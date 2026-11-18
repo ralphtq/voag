@@ -1,0 +1,4 @@
+# Turtle and RDF/XML: text with LF line endings, so diffs and merges work line by line.
+# Linguist treats Turtle as data, so count it in the language statistics.
+*.ttl text eol=lf linguist-language=Turtle linguist-detectable=true
+*.rdf text eol=lf linguist-language=XML
