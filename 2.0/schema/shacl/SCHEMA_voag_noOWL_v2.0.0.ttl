@@ -13,7 +13,7 @@ voag:Accreditation a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Accreditation"^^xsd:string ;
     dcterms:description """
-A minimal representation of accredidation
+A minimal representation of accreditation
 """^^xsd:string ;
     voag:wasInfluencedBy "http://en.wikipedia.org/wiki/Accreditation"^^xsd:string ;
     rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0.0/schema/shacl/voag> ;
@@ -34,7 +34,7 @@ voag:AdministrativeEvent a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Administrative Event"^^xsd:string ;
     dcterms:description """
-An event that is associated with the admistration aspect of governance.
+An event that is associated with the administration aspect of governance.
 Typically these are curation events.
 """^^xsd:string ;
     rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0.0/schema/shacl/voag> ;
@@ -268,7 +268,7 @@ voag:Document a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Document"^^xsd:string ;
     dcterms:description """
-A minimal representaiton of a 'document'.
+A minimal representation of a 'document'.
 """^^xsd:string ;
     rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0.0/schema/shacl/voag> ;
     sh:property voag:Document-dateCreated,
@@ -422,7 +422,7 @@ voag:GovernedService a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Governed service"^^xsd:string ;
     dcterms:description """
-A miniminal representaiton of a governed service.
+A minimal representation of a governed service.
 """^^xsd:string ;
     rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0.0/schema/shacl/voag> ;
     rdfs:subClassOf voag:Service ;
@@ -592,7 +592,7 @@ voag:NonGovernedService a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Governed service"^^xsd:string ;
     dcterms:description """
-A miniminal representaiton of a non-governed service.
+A minimal representation of a non-governed service.
 """^^xsd:string ;
     rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0.0/schema/shacl/voag> ;
     rdfs:subClassOf voag:Service ;
@@ -641,11 +641,11 @@ voag:Pedigree a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Pedigree"^^xsd:string ;
     dcterms:description """
-Pedigree captures aspects of an artifact that have to do with maturity, quality, salience, and accredidation.
+Pedigree captures aspects of an artifact that have to do with maturity, quality, salience, and accreditation.
 """^^xsd:string ;
     rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0.0/schema/shacl/voag> ;
     rdfs:subClassOf voag:Qualifier ;
-    sh:property voag:Pedigree-hasAccredidation,
+    sh:property voag:Pedigree-hasAccreditation,
         voag:Pedigree-hasMaturity,
         voag:Pedigree-usage,
         voag:Pedigree-usedBy .
@@ -2275,11 +2275,11 @@ voag:Party-name a sh:PropertyShape ;
     sh:maxCount 1 ;
     sh:path vaem:name .
 
-voag:Pedigree-hasAccredidation a sh:PropertyShape ;
+voag:Pedigree-hasAccreditation a sh:PropertyShape ;
     rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0.0/schema/shacl/voag> ;
     sh:class voag:Accreditation ;
     sh:maxCount 1 ;
-    sh:path voag:hasAccredidation .
+    sh:path voag:hasAccreditation .
 
 voag:Pedigree-hasMaturity a sh:PropertyShape ;
     rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0.0/schema/shacl/voag> ;
@@ -2545,8 +2545,8 @@ self-explanatory
 """^^xsd:string ;
     rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0.0/schema/shacl/voag> .
 
-voag:hasAccredidation a rdf:Property ;
-    rdfs:label "has accredidation"^^xsd:string ;
+voag:hasAccreditation a rdf:Property ;
+    rdfs:label "has accreditation"^^xsd:string ;
     dcterms:description """
 self-explanatory
 """^^xsd:string ;

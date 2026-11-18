@@ -40,7 +40,7 @@ dcterms:title
 .
 voag:Accreditation
   rdf:type owl:Class ;
-  dcterms:description "A minimal representation of accredidation" ;
+  dcterms:description "A minimal representation of accreditation" ;
   voag:wasInfluencedBy "http://en.wikipedia.org/wiki/Accreditation" ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:label "Accreditation" ;
@@ -58,7 +58,7 @@ voag:AdjunctClause
 .
 voag:AdministrativeEvent
   rdf:type owl:Class ;
-  dcterms:description "An event that is associated with the admistration aspect of governance. Typically these are curation events." ;
+  dcterms:description "An event that is associated with the administration aspect of governance. Typically these are curation events." ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:label "Administrative Event" ;
   rdfs:subClassOf voag:Event ;
@@ -508,7 +508,7 @@ voag:DistributionClause
 .
 voag:Document
   rdf:type owl:Class ;
-  dcterms:description "A minimal representaiton of a 'document'." ;
+  dcterms:description "A minimal representation of a 'document'." ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:label "Document" ;
   rdfs:subClassOf owl:Thing ;
@@ -997,7 +997,7 @@ voag:GovernedObject
 .
 voag:GovernedService
   rdf:type owl:Class ;
-  dcterms:description "A miniminal representaiton of a governed service." ;
+  dcterms:description "A minimal representation of a governed service." ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:label "Governed service" ;
   rdfs:subClassOf voag:Service ;
@@ -1373,7 +1373,7 @@ voag:NonConcurrenceEvent
 .
 voag:NonGovernedService
   rdf:type owl:Class ;
-  dcterms:description "A miniminal representaiton of a non-governed service." ;
+  dcterms:description "A minimal representation of a non-governed service." ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:label "Governed service" ;
   rdfs:subClassOf voag:Service ;
@@ -1525,14 +1525,14 @@ voag:PatentGrantClause
 .
 voag:Pedigree
   rdf:type owl:Class ;
-  dcterms:description "Pedigree captures aspects of an artifact that have to do with maturity, quality, salience, and accredidation." ;
+  dcterms:description "Pedigree captures aspects of an artifact that have to do with maturity, quality, salience, and accreditation." ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
   rdfs:label "Pedigree" ;
   rdfs:subClassOf voag:Qualifier ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:allValuesFrom voag:Accreditation ;
-      owl:onProperty voag:hasAccredidation ;
+      owl:onProperty voag:hasAccreditation ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -1547,7 +1547,7 @@ voag:Pedigree
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty voag:hasAccredidation ;
+      owl:onProperty voag:hasAccreditation ;
     ] ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
@@ -2114,11 +2114,11 @@ voag:governs
   rdfs:label "governs" ;
   owl:inverseOf voag:isGovernedBy ;
 .
-voag:hasAccredidation
+voag:hasAccreditation
   rdf:type owl:ObjectProperty ;
   dcterms:description "self-explanatory" ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/schema/voag> ;
-  rdfs:label "has accredidation" ;
+  rdfs:label "has accreditation" ;
 .
 voag:hasAnticipatedChangeType
   rdf:type owl:ObjectProperty ;
