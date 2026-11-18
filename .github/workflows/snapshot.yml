@@ -1,0 +1,59 @@
+name: Snapshot
+
+# Builds <next version>-SNAPSHOT from src/ and runs all release checks.
+# On a push it also replaces the rolling "snapshot" pre-release on GitHub:
+# the snapshot tag is moved to the pushed commit and the release's files are
+# replaced, so one stable link always serves the latest build.
+# Pull requests are dry runs: build and check only, nothing is published.
+on:
+  push:
+    branches: [main, release-pipeline]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: snapshot
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install rdflib pyshacl
+
+      - name: Build and check a SNAPSHOT release
+        id: build
+        run: |
+          version="$(python -c "import json; print(json.load(open('release.json'))['version'])")-SNAPSHOT"
+          python scripts/release.py --version "$version"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: voag-dist-snapshot
+          path: dist/
+
+      - name: Replace the snapshot pre-release
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          version: ${{ steps.build.outputs.version }}
+        run: |
+          set -euo pipefail
+          zip_name="voag-${version}.zip"
+          (cd dist && zip -qr "../${zip_name}" .)
+          gh release delete snapshot --cleanup-tag --yes || echo "no previous snapshot release"
+          git tag -f snapshot "${GITHUB_SHA}"
+          git push -f origin refs/tags/snapshot
+          gh release create snapshot --prerelease --verify-tag \
+            --title "VOAG ${version}" \
+            --notes "Rolling snapshot of VOAG ${version}, built from ${GITHUB_REF_NAME} at ${GITHUB_SHA::7}. Replaced on every push; not a finished release, and its IRIs carry -SNAPSHOT." \
+            "${zip_name}" $(find dist -name '*.ttl')
+          echo "Snapshot ${version} published from ${GITHUB_SHA::7}" >> "$GITHUB_STEP_SUMMARY"

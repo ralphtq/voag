@@ -29,14 +29,19 @@ wording of one license label.
 ## Layout
 
 ```
+src/shacl/     SHACL source of the next release (versions as tokens)
+src/owl/       OWL source of the next release
 schema/        current (unversioned) VOAG
 1.1/           v1.1 schema and vocabulary
 2.0/schema/    v2.0 schema
 2.0/schema/shacl/  SHACL-only version of v2.0
 2.0/refdata/   v2.0 license reference data
 images/        logo
-scripts/       parse check
+scripts/       parse check, release build and snapshot comparison
+release.json   version, pinned imports and files of the next release
 ```
+
+Releases are built from `src/`; see [RELEASING.md](RELEASING.md).
 
 ## SHACL schema
 
@@ -45,6 +50,42 @@ VOAG 2.0. It imports the SHACL schemas of VAEM
 (`http://www.linkedmodel.org/3.0.0/schema/shacl/vaem`) and DTYPE
 (`http://www.linkedmodel.org/2.0.0/schema/shacl/dtype`) rather than their OWL
 versions.
+
+## Formatting
+
+The source schemas in `src/` and the Markdown files are formatted with
+[Spotless](https://github.com/diffplug/spotless), using the settings QUDT
+uses. `pom.xml` holds those settings; it covers
+`src/**/*.ttl`, `README.md`, `CHANGELOG.md` and `RELEASING.md`, and nothing
+in the version folders.
+
+You need Java 25 (the RDF formatter will not run on older Java) and Maven
+3.6.3 or later. Maven uses the Java in `JAVA_HOME`, so check `mvn -v` shows
+Java 25 first. On a Mac with Homebrew:
+
+```
+brew install --cask temurin@25
+export JAVA_HOME=$(/usr/libexec/java_home -v 25)
+mvn -v
+```
+
+Run these from the top of the repository. To list the files that need
+formatting, without changing anything:
+
+```
+mvn spotless:check
+```
+
+To format them in place:
+
+```
+mvn spotless:apply
+```
+
+Formatting does not change the triples, but it removes `#` comments from
+Turtle files. Review the result with `git diff`, and undo it with
+`git restore <files>` if needed. The Format trial workflow on GitHub runs
+the same formatter on each push and reports any file it would change.
 
 ## History
 
