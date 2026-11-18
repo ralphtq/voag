@@ -1,0 +1,94 @@
+name: Format trial
+
+# Trial of QUDT's Spotless formatting on VOAG's sources. Formats src/**/*.ttl
+# and the Markdown files with QUDT's settings in the runner's checkout only,
+# checks that no triples changed, and attaches the formatted files and a diff
+# to the run. Nothing is committed.
+on:
+  push:
+    branches: [release-pipeline]
+    paths:
+      - "src/**"
+      - "*.md"
+      - "pom.xml"
+      - ".github/workflows/format-trial.yml"
+
+jobs:
+  format-trial:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "25"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install rdflib
+
+      - name: Keep the unformatted files
+        run: |
+          mkdir -p ../before
+          cp -r src ../before/src
+          cp *.md ../before/
+
+      - name: Run spotless:apply
+        run: mvn -B -ntp spotless:apply
+
+      - name: Compare before and after
+        run: |
+          set -uo pipefail
+          mkdir -p ../trial
+          diff -ru ../before/src src > ../trial/format.diff || true
+          for f in ../before/*.md; do diff -u "$f" "$(basename "$f")" >> ../trial/format.diff || true; done
+          cp -r src ../trial/src-formatted
+          cp *.md ../trial/
+          python - <<'PY'
+          import pathlib, rdflib
+          from rdflib.compare import graph_diff, to_isomorphic
+          from rdflib import Literal, XSD
+
+          def plain(g):
+              # RDF 1.1: "x" and "x"^^xsd:string are the same literal; the formatter writes the short form
+              out = rdflib.Graph()
+              for s, p, o in g:
+                  if isinstance(o, Literal) and o.datatype == XSD.string:
+                      o = Literal(str(o))
+                  out.add((s, p, o))
+              return out
+
+          lines = []
+          for after in sorted(pathlib.Path("src").rglob("*.ttl")):
+              before = pathlib.Path("../before") / after
+              a = before.read_text(encoding="utf-8").splitlines()
+              b = after.read_text(encoding="utf-8").splitlines()
+              ga, gb = plain(rdflib.Graph().parse(before)), plain(rdflib.Graph().parse(after))
+              same = to_isomorphic(ga) == to_isomorphic(gb)
+              if not same:
+                  _, only_a, only_b = graph_diff(to_isomorphic(ga), to_isomorphic(gb))
+                  for label, triples in (("before only", only_a), ("after only", only_b)):
+                      for t in sorted(triples, key=str)[:8]:
+                          print(f"::notice title=Changed triple ({after})::{label}: " + " | ".join(repr(str(x))[:150] for x in t))
+              changed = sum(1 for x, y in zip(a, b) if x != y) + abs(len(a) - len(b))
+              line = f"{after}: {len(a)} -> {len(b)} lines, about {changed} lines differ; triples {'unchanged' if same else 'CHANGED'}"
+              lines.append(line)
+              print(f"::notice title=Format trial::{line}")
+          for md in ("README.md", "CHANGELOG.md", "RELEASING.md"):
+              a = (pathlib.Path("../before") / md).read_text(encoding="utf-8")
+              b = pathlib.Path(md).read_text(encoding="utf-8")
+              line = f"{md}: {'unchanged' if a == b else 'reformatted'}"
+              lines.append(line)
+              print(f"::notice title=Format trial::{line}")
+          pathlib.Path("../trial/SUMMARY.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
+          with open(__import__("os").environ["GITHUB_STEP_SUMMARY"], "a") as s:
+              s.write("## Format trial\n\n" + "\n".join(f"- {l}" for l in lines) + "\n")
+          PY
+
+      - name: Move the results into the workspace
+        run: cp -r ../trial format-trial-out
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: voag-format-trial
+          path: format-trial-out/

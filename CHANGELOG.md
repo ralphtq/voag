@@ -14,3 +14,4 @@
 - Added the SHACL-only schema `2.0/schema/shacl/SCHEMA_voag_noOWL_v2.0.0.ttl`,
   which imports the VAEM and DTYPE SHACL schemas.
 - Added a GitHub Action that checks every Turtle and RDF/XML file parses.
+
