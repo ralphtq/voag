@@ -50,8 +50,9 @@ voag:GMD_VOAG-LICENSE-X11
   a vaem:GraphMetaData ;
   dcterms:author "Ralph Hodgson" ;
   dcterms:created "2026-11-18"^^xsd:date ;
-  dcterms:description "X11 License, described in the Vocabulary Of Attribution and Governance (VOAG)." ;
+  dcterms:description "X11 License, described in the Vocabulary Of Attribution and Governance (VOAG). The clause text is taken from the SPDX License List (X11)." ;
   dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:source <https://spdx.org/licenses/X11.html> ;
   dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
   dcterms:title "VOAG License: X11 License - Version $$VERSION$$" ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-x11> ;
@@ -76,6 +77,40 @@ voag:X11-LICENSE
   vaem:acronym "X11License" ;
   vaem:description "This is a simple, permissive non-copyleft free software license, compatible with the GNU GPL. Older versions of XFree86 used the same license, and some of the current variants of XFree86 also do. Later versions of XFree86 are distributed under the XFree86 1.1 license. This license is sometimes called the MIT license, but that term is misleading, since MIT has used many licenses for software." ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
-  voag:url "http://www.xfree86.org/3.3.6/COPYRIGHT2.html#3" .
+  voag:hasClause voag:CLS_X11-01 ;
+  voag:hasClause voag:CLS_X11-02 ;
+  voag:hasClause voag:CLS_X11-03 ;
+  voag:hasClause voag:CLS_X11-04 ;
+  voag:url "http://www.xfree86.org/3.3.6/COPYRIGHT2.html#3"^^xsd:anyURI .
 
+voag:CLS_X11-01
+  a voag:GrantClause ;
+  dcterms:description """Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-x11> ;
+  rdfs:label "X11 License - Permission" ;
+  voag:clauseNumber 1 ;
+  voag:title "Permission" .
 
+voag:CLS_X11-02
+  a voag:AttributionRightsClause ;
+  dcterms:description "The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-x11> ;
+  rdfs:label "X11 License - Conditions" ;
+  voag:clauseNumber 2 ;
+  voag:title "Conditions" .
+
+voag:CLS_X11-03
+  a voag:DisclaimerClause ;
+  dcterms:description """THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE X CONSORTIUM BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-x11> ;
+  rdfs:label "X11 License - Disclaimer" ;
+  voag:clauseNumber 3 ;
+  voag:title "Disclaimer" .
+
+voag:CLS_X11-04
+  a voag:RestrictionsClause ;
+  dcterms:description "Except as contained in this notice, the name of the X Consortium shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization from the X Consortium." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-x11> ;
+  rdfs:label "X11 License - Use of the X Consortium Name" ;
+  voag:clauseNumber 4 ;
+  voag:title "Use of the X Consortium Name" .

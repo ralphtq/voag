@@ -52,15 +52,56 @@ voag:BSD-ORIGINAL-LICENSE
   rdfs:label "Original BSD license" ;
   vaem:acronym "OriginalBSD" ;
   vaem:description "This is a simple, permissive non-copyleft free software license with a serious flaw: the “obnoxious BSD advertising clause”. The flaw is not fatal; that is, it does not render the software non-free. But it does cause practical problems, including incompatibility with the GNU GPL. If you want to use a simple, permissive non-copyleft free software license, it is much better to use the modified BSD license or the X11 license. However, there is no reason not to use programs that have been released under the original BSD license." ;
+  voag:hasClause voag:CLS_BSD-ORIGINAL-01 ;
+  voag:hasClause voag:CLS_BSD-ORIGINAL-02 ;
+  voag:hasClause voag:CLS_BSD-ORIGINAL-03 ;
+  voag:hasClause voag:CLS_BSD-ORIGINAL-04 ;
   voag:incompatibleWith voag:GNU-GPL_V3 ;
-  voag:url "http://www.xfree86.org/3.3.6/COPYRIGHT2.html#6" .
+  voag:url "http://www.xfree86.org/3.3.6/COPYRIGHT2.html#6"^^xsd:anyURI .
+
+voag:CLS_BSD-ORIGINAL-01
+  a voag:DistributionClause ;
+  dcterms:description """Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-bsd-original> ;
+  rdfs:label "Original BSD license - Redistribution and Use" ;
+  voag:clauseNumber 1 ;
+  voag:title "Redistribution and Use" .
+
+voag:CLS_BSD-ORIGINAL-02
+  a voag:AttributionRightsClause ;
+  dcterms:description "3. All advertising materials mentioning features or use of this software must display the following acknowledgement: This product includes software developed by the organization." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-bsd-original> ;
+  rdfs:label "Original BSD license - Advertising Acknowledgment" ;
+  voag:clauseNumber 2 ;
+  voag:title "Advertising Acknowledgment" .
+
+voag:CLS_BSD-ORIGINAL-03
+  a voag:RestrictionsClause ;
+  dcterms:description "4. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-bsd-original> ;
+  rdfs:label "Original BSD license - Endorsement" ;
+  voag:clauseNumber 3 ;
+  voag:title "Endorsement" .
+
+voag:CLS_BSD-ORIGINAL-04
+  a voag:DisclaimerClause ;
+  dcterms:description """THIS SOFTWARE IS PROVIDED BY COPYRIGHT HOLDER "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL COPYRIGHT HOLDER BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-bsd-original> ;
+  rdfs:label "Original BSD license - Disclaimer" ;
+  voag:clauseNumber 4 ;
+  voag:title "Disclaimer" .
 
 voag:GMD_VOAG-LICENSE-BSD-ORIGINAL
   a vaem:GraphMetaData ;
   dcterms:author "Ralph Hodgson" ;
   dcterms:created "2026-11-18"^^xsd:date ;
-  dcterms:description "Original BSD license, described in the Vocabulary Of Attribution and Governance (VOAG)." ;
+  dcterms:description "Original BSD license, described in the Vocabulary Of Attribution and Governance (VOAG). The clause text is taken from the SPDX License List (BSD-4-Clause)." ;
   dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:source <https://spdx.org/licenses/BSD-4-Clause.html> ;
   dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
   dcterms:title "VOAG License: Original BSD license - Version $$VERSION$$" ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-bsd-original> ;
@@ -77,5 +118,3 @@ voag:GMD_VOAG-LICENSE-BSD-ORIGINAL
   vaem:title "VOAG License: Original BSD license - Version $$VERSION$$" ;
   vaem:turtleFileURL "http://voag.linkedmodel.org/$$VERSION$$/refdata/REFDATA_voag-license-bsd-original-v$$VERSION$$.ttl"^^xsd:anyURI ;
   vaem:withAttributionTo voag:LinkedModelsAttribution .
-
-

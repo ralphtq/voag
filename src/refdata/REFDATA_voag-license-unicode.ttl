@@ -50,8 +50,9 @@ voag:GMD_VOAG-LICENSE-UNICODE
   a vaem:GraphMetaData ;
   dcterms:author "Ralph Hodgson" ;
   dcterms:created "2026-11-18"^^xsd:date ;
-  dcterms:description "Unicode, Inc. License Agreement for Data Files and Software, described in the Vocabulary Of Attribution and Governance (VOAG)." ;
+  dcterms:description "Unicode, Inc. License Agreement for Data Files and Software, described in the Vocabulary Of Attribution and Governance (VOAG). The clause text is taken from the SPDX License List (Unicode-DFS-2016)." ;
   dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:source <https://spdx.org/licenses/Unicode-DFS-2016.html> ;
   dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
   dcterms:title "VOAG License: Unicode, Inc. License Agreement for Data Files and Software - Version $$VERSION$$" ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-unicode> ;
@@ -75,6 +76,51 @@ voag:UNICODE-LICENSE
   rdfs:label "Unicode, Inc. License Agreement for Data Files and Software" ;
   vaem:acronym "Unicode" ;
   vaem:description "This is a license that Unicode, Inc. has applied to the Unicode Character Database—various data files that developers can use to help implement the Unicode standard in their own programs. It is a simple permissive license, compatible with all versions of the GPL. If you want to use files covered by this License Agreement in your own software, that shouldn't be any problem, but we recommend that you also include a full copy of its text. Some of the files contain alternative license terms which are nonfree, or no licensing information at all, so including a copy of the License Agreement will help avoid confusion when others want to distribute your software. Of course, you'll also need to follow the conditions in this License Agreement for distributing the files, but those are very straightforward.  Take care to ensure that the files you are using are covered by this License Agreement. Other files published by Unicode, Inc. are covered by the Unicode Terms of Use, a different, nonfree license that appears on the same page but covers different files. A short explanation at the top of this License Agreement details which files it covers. Do not use this License Agreement for your own software. If you want to use a simple permissive license for your project, please use the Expat license; it is by far more common, and widely recognized in the free software community." ;
-  voag:url "http://www.unicode.org/copyright.html#Exhibit1" .
+  voag:hasClause voag:CLS_UNICODE-01 ;
+  voag:hasClause voag:CLS_UNICODE-02 ;
+  voag:hasClause voag:CLS_UNICODE-03 ;
+  voag:hasClause voag:CLS_UNICODE-04 ;
+  voag:url "http://www.unicode.org/copyright.html#Exhibit1"^^xsd:anyURI .
 
+voag:CLS_UNICODE-01
+  a voag:DefinitionClause ;
+  dcterms:description """Unicode Data Files include all data files under the directories http://www.unicode.org/Public/, http://www.unicode.org/reports/, http://www.unicode.org/cldr/data/, http://source.icu-project.org/repos/icu/, and http://www.unicode.org/utility/trac/browser/.
 
+Unicode Data Files do not include PDF online code charts under the directory http://www.unicode.org/Public/.
+
+Software includes any source code published in the Unicode Standard or under the directories http://www.unicode.org/Public/, http://www.unicode.org/reports/, http://www.unicode.org/cldr/data/, http://source.icu-project.org/repos/icu/, and http://www.unicode.org/utility/trac/browser/.
+
+NOTICE TO USER: Carefully read the following legal agreement. BY DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING UNICODE INC.'S DATA FILES ("DATA FILES"), AND/OR SOFTWARE ("SOFTWARE"), YOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE TERMS AND CONDITIONS OF THIS AGREEMENT. IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE THE DATA FILES OR SOFTWARE.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-unicode> ;
+  rdfs:label "Unicode, Inc. License Agreement for Data Files and Software - Scope" ;
+  voag:clauseNumber 1 ;
+  voag:title "Scope" .
+
+voag:CLS_UNICODE-02
+  a voag:GrantClause ;
+  dcterms:description """Copyright © 1991-2016 Unicode, Inc. All rights reserved. Distributed under the Terms of Use in http://www.unicode.org/copyright.html.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of the Unicode data files and any associated documentation (the "Data Files") or Unicode software and any associated documentation (the "Software") to deal in the Data Files or Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, and/or sell copies of the Data Files or Software, and to permit persons to whom the Data Files or Software are furnished to do so, provided that either
+
+(a) this copyright and permission notice appear with all copies of the Data Files or Software, or
+(b) this copyright and permission notice appear in associated Documentation.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-unicode> ;
+  rdfs:label "Unicode, Inc. License Agreement for Data Files and Software - Copyright and Permission Notice" ;
+  voag:clauseNumber 2 ;
+  voag:title "Copyright and Permission Notice" .
+
+voag:CLS_UNICODE-03
+  a voag:DisclaimerClause ;
+  dcterms:description """THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THE DATA FILES OR SOFTWARE.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-unicode> ;
+  rdfs:label "Unicode, Inc. License Agreement for Data Files and Software - Disclaimer" ;
+  voag:clauseNumber 3 ;
+  voag:title "Disclaimer" .
+
+voag:CLS_UNICODE-04
+  a voag:RestrictionsClause ;
+  dcterms:description "Except as contained in this notice, the name of a copyright holder shall not be used in advertising or otherwise to promote the sale, use or other dealings in these Data Files or Software without prior written authorization of the copyright holder." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-unicode> ;
+  rdfs:label "Unicode, Inc. License Agreement for Data Files and Software - Use of Names" ;
+  voag:clauseNumber 4 ;
+  voag:title "Use of Names" .

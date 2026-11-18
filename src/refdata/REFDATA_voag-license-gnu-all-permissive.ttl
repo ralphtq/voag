@@ -50,8 +50,9 @@ voag:GMD_VOAG-LICENSE-GNU-ALL-PERMISSIVE
   a vaem:GraphMetaData ;
   dcterms:author "Ralph Hodgson" ;
   dcterms:created "2026-11-18"^^xsd:date ;
-  dcterms:description "GNU All-Permissive License, described in the Vocabulary Of Attribution and Governance (VOAG)." ;
+  dcterms:description "GNU All-Permissive License, described in the Vocabulary Of Attribution and Governance (VOAG). The clause text is taken from the SPDX License List (FSFAP)." ;
   dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:source <https://spdx.org/licenses/FSFAP.html> ;
   dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
   dcterms:title "VOAG License: GNU All-Permissive License - Version $$VERSION$$" ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-gnu-all-permissive> ;
@@ -76,12 +77,19 @@ voag:GNU-ALL-PERMISSIVE-LICENSE
   vaem:acronym "GNUAllPermissive" ;
   vaem:description "This is a simple permissive free software license, compatible with the GNU GPL, which we recommend GNU packages use for README and other small supporting files. All developers can feel free to use it in similar situations. " ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
+  voag:hasClause voag:CLS_GNU-ALL-PERMISSIVE-01 ;
   voag:permits voag:CCP_DerivativeWorks ;
   voag:permits voag:CCP_Distribution ;
   voag:permits voag:CCP_Reproduction ;
   voag:permits voag:CCP_Sharing ;
   voag:requires voag:CCR_Attribution ;
   voag:requires voag:CCR_Copyleft ;
-  voag:url "http://www.gnu.org/prep/maintain/html_node/License-Notices-for-Other-Files.html" .
+  voag:url "http://www.gnu.org/prep/maintain/html_node/License-Notices-for-Other-Files.html"^^xsd:anyURI .
 
-
+voag:CLS_GNU-ALL-PERMISSIVE-01
+  a voag:GrantClause ;
+  dcterms:description "Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved. This file is offered as-is, without any warranty." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-gnu-all-permissive> ;
+  rdfs:label "GNU All-Permissive License - Permission" ;
+  voag:clauseNumber 1 ;
+  voag:title "Permission" .

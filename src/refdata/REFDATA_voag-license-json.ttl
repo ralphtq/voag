@@ -50,8 +50,9 @@ voag:GMD_VOAG-LICENSE-JSON
   a vaem:GraphMetaData ;
   dcterms:author "Ralph Hodgson" ;
   dcterms:created "2026-11-18"^^xsd:date ;
-  dcterms:description "The JSON License, described in the Vocabulary Of Attribution and Governance (VOAG)." ;
+  dcterms:description "The JSON License, described in the Vocabulary Of Attribution and Governance (VOAG). The clause text is taken from the SPDX License List (JSON)." ;
   dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:source <https://spdx.org/licenses/JSON.html> ;
   dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
   dcterms:title "VOAG License: The JSON License - Version $$VERSION$$" ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-json> ;
@@ -75,7 +76,41 @@ voag:JSON-LICENSE
   rdfs:label "The JSON License" ;
   vaem:acronym "JSON" ;
   vaem:description "This is the license of the original implementation of the JSON data interchange format. This license uses the Expat license as a base, but adds a clause mandating: “The Software shall be used for Good, not Evil.” This is a restriction on usage and thus conflicts with freedom 0. The restriction might be unenforcible, but we cannot presume that. Thus, the license is nonfree." ;
+  voag:hasClause voag:CLS_JSON-01 ;
+  voag:hasClause voag:CLS_JSON-02 ;
+  voag:hasClause voag:CLS_JSON-03 ;
+  voag:hasClause voag:CLS_JSON-04 ;
   voag:incompatibleWith voag:GNU-GPL_V3 ;
-  voag:url "http://www.json.org/license.html" .
+  voag:url "http://www.json.org/license.html"^^xsd:anyURI .
 
+voag:CLS_JSON-01
+  a voag:GrantClause ;
+  dcterms:description """Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-json> ;
+  rdfs:label "The JSON License - Permission" ;
+  voag:clauseNumber 1 ;
+  voag:title "Permission" .
 
+voag:CLS_JSON-02
+  a voag:AttributionRightsClause ;
+  dcterms:description "The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-json> ;
+  rdfs:label "The JSON License - Conditions" ;
+  voag:clauseNumber 2 ;
+  voag:title "Conditions" .
+
+voag:CLS_JSON-03
+  a voag:UsageClause ;
+  dcterms:description "The Software shall be used for Good, not Evil." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-json> ;
+  rdfs:label "The JSON License - Good, not Evil" ;
+  voag:clauseNumber 3 ;
+  voag:title "Good, not Evil" .
+
+voag:CLS_JSON-04
+  a voag:DisclaimerClause ;
+  dcterms:description """THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-json> ;
+  rdfs:label "The JSON License - Disclaimer" ;
+  voag:clauseNumber 4 ;
+  voag:title "Disclaimer" .

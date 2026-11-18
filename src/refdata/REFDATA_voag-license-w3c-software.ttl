@@ -50,8 +50,9 @@ voag:GMD_VOAG-LICENSE-W3C-SOFTWARE
   a vaem:GraphMetaData ;
   dcterms:author "Ralph Hodgson" ;
   dcterms:created "2026-11-18"^^xsd:date ;
-  dcterms:description "W3C Software Notice and License, described in the Vocabulary Of Attribution and Governance (VOAG)." ;
+  dcterms:description "W3C Software Notice and License, described in the Vocabulary Of Attribution and Governance (VOAG). The clause text is taken from the SPDX License List (W3C)." ;
   dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:source <https://spdx.org/licenses/W3C.html> ;
   dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
   dcterms:title "VOAG License: W3C Software Notice and License - Version $$VERSION$$" ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-w3c-software> ;
@@ -76,6 +77,41 @@ voag:W3C_SOFTWARE-LICENSE
   vaem:acronym "W3C" ;
   vaem:description "This is a free software license and is GPL compatible." ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
-  voag:url "http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231" .
+  voag:hasClause voag:CLS_W3C_SOFTWARE-01 ;
+  voag:hasClause voag:CLS_W3C_SOFTWARE-02 ;
+  voag:hasClause voag:CLS_W3C_SOFTWARE-03 ;
+  voag:url "http://www.w3.org/Consortium/Legal/2002/copyright-software-20021231"^^xsd:anyURI .
 
+voag:CLS_W3C_SOFTWARE-01
+  a voag:GrantClause ;
+  dcterms:description """By obtaining, using and/or copying this work, you (the licensee) agree that you have read, understood, and will comply with the following terms and conditions.
 
+Permission to copy, modify, and distribute this software and its documentation, with or without modification, for any purpose and without fee or royalty is hereby granted, provided that you include the following on ALL copies of the software and documentation or portions thereof, including modifications:
+
+The full text of this NOTICE in a location viewable to users of the redistributed or derivative work.
+
+Any pre-existing intellectual property disclaimers, notices, or terms and conditions. If none exist, the W3C Software Short Notice should be included (hypertext is preferred, text is permitted) within the body of any redistributed or derivative code.
+
+Notice of any changes or modifications to the files, including the date changes were made. (We recommend you provide URIs to the location from which the code is derived.)""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-w3c-software> ;
+  rdfs:label "W3C Software Notice and License - License" ;
+  voag:clauseNumber 1 ;
+  voag:title "License" .
+
+voag:CLS_W3C_SOFTWARE-02
+  a voag:DisclaimerClause ;
+  dcterms:description """THIS SOFTWARE AND DOCUMENTATION IS PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE OR THAT THE USE OF THE SOFTWARE OR DOCUMENTATION WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+
+COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE SOFTWARE OR DOCUMENTATION.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-w3c-software> ;
+  rdfs:label "W3C Software Notice and License - Disclaimers" ;
+  voag:clauseNumber 2 ;
+  voag:title "Disclaimers" .
+
+voag:CLS_W3C_SOFTWARE-03
+  a voag:RestrictionsClause ;
+  dcterms:description "The name and trademarks of copyright holders may NOT be used in advertising or publicity pertaining to the software without specific, written prior permission. Title to copyright in this software and any associated documentation will at all times remain with copyright holders." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-w3c-software> ;
+  rdfs:label "W3C Software Notice and License - Use of Names and Trademarks" ;
+  voag:clauseNumber 3 ;
+  voag:title "Use of Names and Trademarks" .

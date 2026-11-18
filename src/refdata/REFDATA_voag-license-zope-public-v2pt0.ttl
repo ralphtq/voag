@@ -51,8 +51,9 @@ voag:GMD_VOAG-LICENSE-ZOPE-PUBLIC-V2PT0
   a vaem:GraphMetaData ;
   dcterms:author "Ralph Hodgson" ;
   dcterms:created "2026-11-18"^^xsd:date ;
-  dcterms:description "Zope Public License, versions 2.0, described in the Vocabulary Of Attribution and Governance (VOAG)." ;
+  dcterms:description "Zope Public License, versions 2.0, described in the Vocabulary Of Attribution and Governance (VOAG). The clause text is taken from the SPDX License List (ZPL-2.0)." ;
   dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:source <https://spdx.org/licenses/ZPL-2.0.html> ;
   dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
   dcterms:title "VOAG License: Zope Public License, versions 2.0 - Version $$VERSION$$" ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-zope-public-v2pt0> ;
@@ -78,7 +79,54 @@ voag:ZOPE-PUBLIC-LICENSE_V2PT0
   vaem:acronym "Zope20" ;
   vaem:description "This is a simple, permissive non-copyleft free software license which is compatible with the GNU GPL." ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
+  voag:hasClause voag:CLS_ZOPE-PUBLIC_V2PT0-01 ;
+  voag:hasClause voag:CLS_ZOPE-PUBLIC_V2PT0-02 ;
+  voag:hasClause voag:CLS_ZOPE-PUBLIC_V2PT0-03 ;
+  voag:hasClause voag:CLS_ZOPE-PUBLIC_V2PT0-04 ;
+  voag:hasClause voag:CLS_ZOPE-PUBLIC_V2PT0-05 ;
   voag:supercedes voag:ZOPE-PUBLICE-LICENSE_V1 ;
-  voag:url "http://www.zope.org/Resources/ZPL" .
+  voag:url "https://opensource.org/license/ZPL-2.0"^^xsd:anyURI .
 
+voag:CLS_ZOPE-PUBLIC_V2PT0-01
+  a voag:DistributionClause ;
+  dcterms:description """Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 
+1. Redistributions in source code must retain the above copyright notice, this list of conditions, and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions, and the following disclaimer in the documentation and/or other materials provided with the distribution.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-zope-public-v2pt0> ;
+  rdfs:label "Zope Public License, versions 2.0 - Redistribution and Use" ;
+  voag:clauseNumber 1 ;
+  voag:title "Redistribution and Use" .
+
+voag:CLS_ZOPE-PUBLIC_V2PT0-02
+  a voag:RestrictionsClause ;
+  dcterms:description "3. The name Zope Corporation (tm) must not be used to endorse or promote products derived from this software without prior written permission from Zope Corporation." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-zope-public-v2pt0> ;
+  rdfs:label "Zope Public License, versions 2.0 - Endorsement" ;
+  voag:clauseNumber 2 ;
+  voag:title "Endorsement" .
+
+voag:CLS_ZOPE-PUBLIC_V2PT0-03
+  a voag:RestrictionsClause ;
+  dcterms:description "4. The right to distribute this software or to use it for any purpose does not give you the right to use Servicemarks (sm) or Trademarks (tm) of Zope Corporation. Use of them is covered in a separate agreement (see http://www.zope.com/Marks)." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-zope-public-v2pt0> ;
+  rdfs:label "Zope Public License, versions 2.0 - Trademarks" ;
+  voag:clauseNumber 3 ;
+  voag:title "Trademarks" .
+
+voag:CLS_ZOPE-PUBLIC_V2PT0-04
+  a voag:ModificationClause ;
+  dcterms:description "5. If any files are modified, you must cause the modified files to carry prominent notices stating that you changed the files and the date of any change." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-zope-public-v2pt0> ;
+  rdfs:label "Zope Public License, versions 2.0 - Modification Notices" ;
+  voag:clauseNumber 4 ;
+  voag:title "Modification Notices" .
+
+voag:CLS_ZOPE-PUBLIC_V2PT0-05
+  a voag:DisclaimerClause ;
+  dcterms:description "THIS SOFTWARE IS PROVIDED BY ZOPE CORPORATION ``AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL ZOPE CORPORATION OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-zope-public-v2pt0> ;
+  rdfs:label "Zope Public License, versions 2.0 - Disclaimer" ;
+  voag:clauseNumber 5 ;
+  voag:title "Disclaimer" .
