@@ -1,0 +1,81 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix voag: <http://voag.linkedmodel.org/voag/> .
+
+<http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-lppl-v1pt2>
+  a owl:Ontology ;
+  owl:imports <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> ;
+  vaem:hasGraphMetadata voag:GMD_VOAG-LICENSE-LPPL-V1PT2 .
+
+dcterms:author
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "author" ;
+  rdfs:range xsd:string .
+
+dcterms:created
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "created" ;
+  rdfs:range xsd:date .
+
+dcterms:modified
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "modified" ;
+  rdfs:range xsd:date .
+
+dcterms:subject
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "subject" ;
+  rdfs:range xsd:string .
+
+dcterms:title
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "title" ;
+  rdfs:range xsd:string .
+
+dcterms:description
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "description" ;
+  rdfs:range xsd:string .
+
+voag:GMD_VOAG-LICENSE-LPPL-V1PT2
+  a vaem:GraphMetaData ;
+  dcterms:author "Ralph Hodgson" ;
+  dcterms:created "2026-11-18"^^xsd:date ;
+  dcterms:description "LaTeX Project Public License 1.2, described in the Vocabulary Of Attribution and Governance (VOAG)." ;
+  dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
+  dcterms:title "VOAG License: LaTeX Project Public License 1.2 - Version $$VERSION$$" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-lppl-v1pt2> ;
+  rdfs:label "VOAG License: LaTeX Project Public License 1.2 - Version $$VERSION$$" ;
+  vaem:hasGraphRole vaem:VocabularyGraph ;
+  vaem:hasLicenseType voag:CCBY-4PT0-LICENSE ;
+  vaem:hasOwner vaem:LinkedModels ;
+  vaem:hasSteward vaem:LinkedModels ;
+  vaem:name "voag" ;
+  vaem:namespace "http://voag.linkedmodel.org/voag/" ;
+  vaem:namespacePrefix "voag" ;
+  vaem:owner "Linkedmodels" ;
+  vaem:revision "$$VERSION$$" ;
+  vaem:title "VOAG License: LaTeX Project Public License 1.2 - Version $$VERSION$$" ;
+  vaem:turtleFileURL "http://voag.linkedmodel.org/$$VERSION$$/refdata/REFDATA_voag-license-lppl-v1pt2-v$$VERSION$$.ttl"^^xsd:anyURI ;
+  vaem:withAttributionTo voag:LinkedModelsAttribution .
+
+voag:LPPL_V1PT2
+  a voag:License ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-lppl-v1pt2> ;
+  rdfs:label "LaTeX Project Public License 1.2" ;
+  vaem:acronym "LPPL-1.2" ;
+  vaem:description "This license is an incomplete statement of the distribution terms for LaTeX. As far as it goes, it is a free software license, but incompatible with the GPL because it has many requirements that are not in the GPL.  This license contains complex and annoying restrictions on how to publish a modified version, including one requirement that falls just barely on the good side of the line of what is acceptable: that any modified file must have a new name. The reason this requirement is acceptable for LaTeX is that TeX has a facility to allow you to map file names, to specify “use file bar when file foo is requested”. With this facility, the requirement is merely annoying; without the facility, the same requirement would be a serious obstacle, and we would have to conclude it makes the program non-free. This condition may cause trouble with some major modifications. For example, if you wanted to port an LPPL-covered work to another system that lacked a similar remapping facility, but still required users to request this file by name, you would need to implement a remapping facility too to keep this software free. That would be a nuisance, but the fact that a license would make code nonfree if transplanted into a very different context does not make it nonfree in the original context. The LPPL says that some files, in certain versions of LaTeX, may have additional restrictions, which could render them non-free. For this reason, it may take some careful checking to produce a version of LaTeX that is free software. The LPPL makes the controversial claim that simply having files on a machine where a few other people could log in and access them in itself constitutes distribution. We believe courts would not uphold this claim, but it is not good for people to start making the claim. Note: These comments are for version 1.2 (3 Sep 1999) of the LPPL." ;
+  voag:compatibleWith voag:GNU-GPL_V3 ;
+  voag:url "http://www.latex-project.org/lppl/lppl-1-2.txt" .
+
+

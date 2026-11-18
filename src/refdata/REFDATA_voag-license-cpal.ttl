@@ -1,0 +1,80 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix voag: <http://voag.linkedmodel.org/voag/> .
+
+<http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-cpal>
+  a owl:Ontology ;
+  owl:imports <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> ;
+  vaem:hasGraphMetadata voag:GMD_VOAG-LICENSE-CPAL .
+
+dcterms:author
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "author" ;
+  rdfs:range xsd:string .
+
+dcterms:created
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "created" ;
+  rdfs:range xsd:date .
+
+dcterms:modified
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "modified" ;
+  rdfs:range xsd:date .
+
+dcterms:subject
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "subject" ;
+  rdfs:range xsd:string .
+
+dcterms:title
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "title" ;
+  rdfs:range xsd:string .
+
+dcterms:description
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "description" ;
+  rdfs:range xsd:string .
+
+voag:CPAL
+  a voag:License ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-cpal> ;
+  rdfs:label "Common Public Attribution License 1.0 (CPAL)" ;
+  vaem:acronym "CPAL" ;
+  vaem:description "This is a free software license. It is based on the Mozilla Public License, and is incompatible with the GPL for the same reasons: it has several requirements for modified versions that do not exist in the GPL. It also requires you to publish the source of the program if you allow others to use it." ;
+  voag:url "http://opensource.org/licenses/cpal_1.0" .
+
+voag:GMD_VOAG-LICENSE-CPAL
+  a vaem:GraphMetaData ;
+  dcterms:author "Ralph Hodgson" ;
+  dcterms:created "2026-11-18"^^xsd:date ;
+  dcterms:description "Common Public Attribution License 1.0 (CPAL), described in the Vocabulary Of Attribution and Governance (VOAG)." ;
+  dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
+  dcterms:title "VOAG License: Common Public Attribution License 1.0 (CPAL) - Version $$VERSION$$" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-cpal> ;
+  rdfs:label "VOAG License: Common Public Attribution License 1.0 (CPAL) - Version $$VERSION$$" ;
+  vaem:hasGraphRole vaem:VocabularyGraph ;
+  vaem:hasLicenseType voag:CCBY-4PT0-LICENSE ;
+  vaem:hasOwner vaem:LinkedModels ;
+  vaem:hasSteward vaem:LinkedModels ;
+  vaem:name "voag" ;
+  vaem:namespace "http://voag.linkedmodel.org/voag/" ;
+  vaem:namespacePrefix "voag" ;
+  vaem:owner "Linkedmodels" ;
+  vaem:revision "$$VERSION$$" ;
+  vaem:title "VOAG License: Common Public Attribution License 1.0 (CPAL) - Version $$VERSION$$" ;
+  vaem:turtleFileURL "http://voag.linkedmodel.org/$$VERSION$$/refdata/REFDATA_voag-license-cpal-v$$VERSION$$.ttl"^^xsd:anyURI ;
+  vaem:withAttributionTo voag:LinkedModelsAttribution .
+
+

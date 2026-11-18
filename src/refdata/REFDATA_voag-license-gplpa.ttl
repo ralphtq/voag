@@ -1,0 +1,81 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix voag: <http://voag.linkedmodel.org/voag/> .
+
+<http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-gplpa>
+  a owl:Ontology ;
+  owl:imports <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> ;
+  vaem:hasGraphMetadata voag:GMD_VOAG-LICENSE-GPLPA .
+
+dcterms:author
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "author" ;
+  rdfs:range xsd:string .
+
+dcterms:created
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "created" ;
+  rdfs:range xsd:date .
+
+dcterms:modified
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "modified" ;
+  rdfs:range xsd:date .
+
+dcterms:subject
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "subject" ;
+  rdfs:range xsd:string .
+
+dcterms:title
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "title" ;
+  rdfs:range xsd:string .
+
+dcterms:description
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "description" ;
+  rdfs:range xsd:string .
+
+voag:GMD_VOAG-LICENSE-GPLPA
+  a vaem:GraphMetaData ;
+  dcterms:author "Ralph Hodgson" ;
+  dcterms:created "2026-11-18"^^xsd:date ;
+  dcterms:description "GPL for Computer Programs of the Public Administration, described in the Vocabulary Of Attribution and Governance (VOAG)." ;
+  dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
+  dcterms:title "VOAG License: GPL for Computer Programs of the Public Administration - Version $$VERSION$$" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-gplpa> ;
+  rdfs:label "VOAG License: GPL for Computer Programs of the Public Administration - Version $$VERSION$$" ;
+  vaem:hasGraphRole vaem:VocabularyGraph ;
+  vaem:hasLicenseType voag:CCBY-4PT0-LICENSE ;
+  vaem:hasOwner vaem:LinkedModels ;
+  vaem:hasSteward vaem:LinkedModels ;
+  vaem:name "voag" ;
+  vaem:namespace "http://voag.linkedmodel.org/voag/" ;
+  vaem:namespacePrefix "voag" ;
+  vaem:owner "Linkedmodels" ;
+  vaem:revision "$$VERSION$$" ;
+  vaem:title "VOAG License: GPL for Computer Programs of the Public Administration - Version $$VERSION$$" ;
+  vaem:turtleFileURL "http://voag.linkedmodel.org/$$VERSION$$/refdata/REFDATA_voag-license-gplpa-v$$VERSION$$.ttl"^^xsd:anyURI ;
+  vaem:withAttributionTo voag:LinkedModelsAttribution .
+
+voag:GPLPA
+  a voag:License ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-gplpa> ;
+  rdfs:label "GPL for Computer Programs of the Public Administration" ;
+  vaem:acronym "GPL-PA" ;
+  vaem:description "The GPL-PA (whose original name in Portuguese is “Licença Pública Geral para Administração Pública”) is non-free for several reasons: (1) It permits use only in “normal circumstances”; (2) It does not allow distribution of source code without binaries; (3) Its permissions lapse after 50 years." ;
+  voag:incompatibleWith voag:GNU-GPL_V3 ;
+  voag:url "http://www.celepar.pr.gov.br/modules/conteudo/conteudo.php?conteudo=69" .
+
+

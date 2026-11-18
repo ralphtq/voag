@@ -1,0 +1,81 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix voag: <http://voag.linkedmodel.org/voag/> .
+
+<http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-open-software>
+  a owl:Ontology ;
+  owl:imports <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> ;
+  vaem:hasGraphMetadata voag:GMD_VOAG-LICENSE-OPEN-SOFTWARE .
+
+dcterms:author
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "author" ;
+  rdfs:range xsd:string .
+
+dcterms:created
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "created" ;
+  rdfs:range xsd:date .
+
+dcterms:modified
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "modified" ;
+  rdfs:range xsd:date .
+
+dcterms:subject
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "subject" ;
+  rdfs:range xsd:string .
+
+dcterms:title
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "title" ;
+  rdfs:range xsd:string .
+
+dcterms:description
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "description" ;
+  rdfs:range xsd:string .
+
+voag:GMD_VOAG-LICENSE-OPEN-SOFTWARE
+  a vaem:GraphMetaData ;
+  dcterms:author "Ralph Hodgson" ;
+  dcterms:created "2026-11-18"^^xsd:date ;
+  dcterms:description "Open Software License, all versions through 3.0, described in the Vocabulary Of Attribution and Governance (VOAG)." ;
+  dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
+  dcterms:title "VOAG License: Open Software License, all versions through 3.0 - Version $$VERSION$$" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-open-software> ;
+  rdfs:label "VOAG License: Open Software License, all versions through 3.0 - Version $$VERSION$$" ;
+  vaem:hasGraphRole vaem:VocabularyGraph ;
+  vaem:hasLicenseType voag:CCBY-4PT0-LICENSE ;
+  vaem:hasOwner vaem:LinkedModels ;
+  vaem:hasSteward vaem:LinkedModels ;
+  vaem:name "voag" ;
+  vaem:namespace "http://voag.linkedmodel.org/voag/" ;
+  vaem:namespacePrefix "voag" ;
+  vaem:owner "Linkedmodels" ;
+  vaem:revision "$$VERSION$$" ;
+  vaem:title "VOAG License: Open Software License, all versions through 3.0 - Version $$VERSION$$" ;
+  vaem:turtleFileURL "http://voag.linkedmodel.org/$$VERSION$$/refdata/REFDATA_voag-license-open-software-v$$VERSION$$.ttl"^^xsd:anyURI ;
+  vaem:withAttributionTo voag:LinkedModelsAttribution .
+
+voag:OPEN-SOFTWARE-LICENSE
+  a voag:License ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-open-software> ;
+  rdfs:label "Open Software License, all versions through 3.0" ;
+  vaem:acronym "OSL" ;
+  vaem:description "<p>The Open Software License is a free software license. It is incompatible with the GNU GPL in several ways. Recent versions of the Open Software License have a term which requires distributors to try to obtain explicit assent to the license. This means that distributing OSL software on ordinary FTP sites, sending patches to ordinary mailing lists, or storing the software in an ordinary version control system, is arguably a violation of the license and would subject you to possible termination of the license. Thus, the Open Software License makes it very difficult to develop software using the ordinary tools of free software development. For this reason, and because it is incompatible with the GPL, GNU recommend that no version of the OSL be used for any software.  GNU urge you not to use the Open Software License for software you write. However, there is no reason to avoid running programs that have been released under this license.</p>"^^rdf:HTML ;
+  voag:incompatibleWith voag:GNU-GPL_V3 ;
+  voag:url "http://www.opensource.org/licenses/osl-3.0.php" .
+
+

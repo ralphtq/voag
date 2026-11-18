@@ -1,0 +1,81 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix voag: <http://voag.linkedmodel.org/voag/> .
+
+<http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-sml>
+  a owl:Ontology ;
+  owl:imports <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> ;
+  vaem:hasGraphMetadata voag:GMD_VOAG-LICENSE-SML .
+
+dcterms:author
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "author" ;
+  rdfs:range xsd:string .
+
+dcterms:created
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "created" ;
+  rdfs:range xsd:date .
+
+dcterms:modified
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "modified" ;
+  rdfs:range xsd:date .
+
+dcterms:subject
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "subject" ;
+  rdfs:range xsd:string .
+
+dcterms:title
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "title" ;
+  rdfs:range xsd:string .
+
+dcterms:description
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "description" ;
+  rdfs:range xsd:string .
+
+voag:GMD_VOAG-LICENSE-SML
+  a vaem:GraphMetaData ;
+  dcterms:author "Ralph Hodgson" ;
+  dcterms:created "2026-11-18"^^xsd:date ;
+  dcterms:description "Simple Machines License, described in the Vocabulary Of Attribution and Governance (VOAG)." ;
+  dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
+  dcterms:title "VOAG License: Simple Machines License - Version $$VERSION$$" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-sml> ;
+  rdfs:label "VOAG License: Simple Machines License - Version $$VERSION$$" ;
+  vaem:hasGraphRole vaem:VocabularyGraph ;
+  vaem:hasLicenseType voag:CCBY-4PT0-LICENSE ;
+  vaem:hasOwner vaem:LinkedModels ;
+  vaem:hasSteward vaem:LinkedModels ;
+  vaem:name "voag" ;
+  vaem:namespace "http://voag.linkedmodel.org/voag/" ;
+  vaem:namespacePrefix "voag" ;
+  vaem:owner "Linkedmodels" ;
+  vaem:revision "$$VERSION$$" ;
+  vaem:title "VOAG License: Simple Machines License - Version $$VERSION$$" ;
+  vaem:turtleFileURL "http://voag.linkedmodel.org/$$VERSION$$/refdata/REFDATA_voag-license-sml-v$$VERSION$$.ttl"^^xsd:anyURI ;
+  vaem:withAttributionTo voag:LinkedModelsAttribution .
+
+voag:SML
+  a voag:License ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-sml> ;
+  rdfs:label "Simple Machines License" ;
+  vaem:acronym "SML" ;
+  vaem:description "Despite the name, this is a software license, and it's non-free for several reasons: (1) You must get the licensor's permission before distributing the software; (2) You cannot sell copies of the software; (3) It's possible that your license can be terminated if you received the software from someone who did not obey the license's terms." ;
+  voag:incompatibleWith voag:GNU-GPL_V3 ;
+  voag:url "http://www.simplemachines.org/about/license.php" .
+
+
