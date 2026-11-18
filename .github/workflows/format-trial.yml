@@ -47,12 +47,23 @@ jobs:
           python - <<'PY'
           import pathlib, rdflib
           from rdflib.compare import graph_diff, to_isomorphic
+          from rdflib import Literal, XSD
+
+          def plain(g):
+              # RDF 1.1: "x" and "x"^^xsd:string are the same literal; the formatter writes the short form
+              out = rdflib.Graph()
+              for s, p, o in g:
+                  if isinstance(o, Literal) and o.datatype == XSD.string:
+                      o = Literal(str(o))
+                  out.add((s, p, o))
+              return out
+
           lines = []
           for after in sorted(pathlib.Path("src").rglob("*.ttl")):
               before = pathlib.Path("../before") / after
               a = before.read_text(encoding="utf-8").splitlines()
               b = after.read_text(encoding="utf-8").splitlines()
-              ga, gb = rdflib.Graph().parse(before), rdflib.Graph().parse(after)
+              ga, gb = plain(rdflib.Graph().parse(before)), plain(rdflib.Graph().parse(after))
               same = to_isomorphic(ga) == to_isomorphic(gb)
               if not same:
                   _, only_a, only_b = graph_diff(to_isomorphic(ga), to_isomorphic(gb))

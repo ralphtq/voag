@@ -208,6 +208,8 @@ voag:BSD-ORIGINAL-LICENSE
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
   rdfs:label "Original BSD license" ;
 .
+https://creativecommons.org/licenses/by/4.0/
+
 voag:CC-SHAREALIKE_3PT0-US
   rdf:type voag:License ;
   voag:documentedAt "http://creativecommons.org/licenses/by-sa/3.0/us/legalcode" ;
@@ -240,6 +242,13 @@ voag:CC0
   vaem:description "CC0 is a public domain dedication from Creative Commons. A work released under CC0 is dedicated to the public domain to the fullest extent permitted by law. If that is not possible for any reason, CC0 also provides a simple permissive license as a fallback. Both public domain works and the simple license provided by CC0 are compatible with the GNU GPL. If you want to release your work to the public domain, use CC0." ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
   rdfs:label "CC0" ;
+.
+voag:CCBY-LICENSE
+  rdf:type voag:License ;
+  voag:url "http://creativecommons.org/licenses/by/2.0/legalcode" ;
+  vaem:acronym "ccby" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/2.0/refdata/voag> ;
+  rdfs:label "Creative Commons Attribution 2.0 license" ;
 .
 voag:CCBY-LICENSE
   rdf:type voag:License ;
