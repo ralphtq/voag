@@ -2739,12 +2739,3 @@ prov:wasInfluencedBy
   rdfs:isDefinedBy <http://www.w3.org/TR/prov-o/> ;
   rdfs:seeAlso prov:wasInfluencedBy ;
 .
-(
-  voag:WidelyAdopted
-  voag:SomeAdoption
-  voag:EarlyAdoption
-  voag:Proposed
-  voag:UnknownMaturity
-  voag:Experimental
-  voag:InDevelopment
-).
