@@ -52,14 +52,77 @@ voag:BERKELEY-DATABASE-LICENSE
   rdfs:label "Berkeley Database License" ;
   vaem:acronym "BerkleyDB" ;
   vaem:description "This is a free software license, compatible with the GNU GPL. It is also known as the \"Sleepycat Software Product License\"." ;
-  voag:url "http://www.oracle.com/technology/software/products/berkeley-db/htdocs/oslicense.html" .
+  voag:hasClause voag:CLS_BERKELEY-DATABASE-01 ;
+  voag:hasClause voag:CLS_BERKELEY-DATABASE-02 ;
+  voag:hasClause voag:CLS_BERKELEY-DATABASE-03 ;
+  voag:hasClause voag:CLS_BERKELEY-DATABASE-04 ;
+  voag:url "https://opensource.org/license/Sleepycat"^^xsd:anyURI .
+
+voag:CLS_BERKELEY-DATABASE-01
+  a voag:DistributionClause ;
+  dcterms:description """Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+- Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+- Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+- Redistributions in any form must be accompanied by information on how to obtain complete source code for the DB software and any accompanying software that uses the DB software. The source code must either be included in the distribution or be available for no more than the cost of distribution plus a nominal fee, and must be freely redistributable under reasonable conditions. For an executable file, complete source code means the source code for all modules it contains. It does not include source code for modules or files that typically accompany the major components of the operating system on which the executable file runs.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-berkeley-database> ;
+  rdfs:label "Berkeley Database License - Redistribution and Use" ;
+  voag:clauseNumber 1 ;
+  voag:title "Redistribution and Use" .
+
+voag:CLS_BERKELEY-DATABASE-02
+  a voag:DisclaimerClause ;
+  dcterms:description "THIS SOFTWARE IS PROVIDED BY SLEEPYCAT SOFTWARE ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT, ARE DISCLAIMED. IN NO EVENT SHALL SLEEPYCAT SOFTWARE BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-berkeley-database> ;
+  rdfs:label "Berkeley Database License - Disclaimer" ;
+  voag:clauseNumber 2 ;
+  voag:title "Disclaimer" .
+
+voag:CLS_BERKELEY-DATABASE-03
+  a voag:AdjunctClause ;
+  dcterms:description """Copyright (c) 1990, 1993, 1994, 1995 The Regents of the University of California. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+- Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+- Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+- Neither the name of the University nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-berkeley-database> ;
+  rdfs:label "Berkeley Database License - University of California License" ;
+  voag:clauseNumber 3 ;
+  voag:title "University of California License" .
+
+voag:CLS_BERKELEY-DATABASE-04
+  a voag:AdjunctClause ;
+  dcterms:description """Copyright (c) 1995, 1996 The President and Fellows of Harvard University. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+- Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+- Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+- Neither the name of the University nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY HARVARD AND ITS CONTRIBUTORS ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL HARVARD OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-berkeley-database> ;
+  rdfs:label "Berkeley Database License - Harvard University License" ;
+  voag:clauseNumber 4 ;
+  voag:title "Harvard University License" .
 
 voag:GMD_VOAG-LICENSE-BERKELEY-DATABASE
   a vaem:GraphMetaData ;
   dcterms:author "Ralph Hodgson" ;
   dcterms:created "2026-11-18"^^xsd:date ;
-  dcterms:description "Berkeley Database License, described in the Vocabulary Of Attribution and Governance (VOAG)." ;
+  dcterms:description "Berkeley Database License, described in the Vocabulary Of Attribution and Governance (VOAG). The clause text is taken from the SPDX License List (Sleepycat)." ;
   dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:source <https://spdx.org/licenses/Sleepycat.html> ;
   dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
   dcterms:title "VOAG License: Berkeley Database License - Version $$VERSION$$" ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-berkeley-database> ;
@@ -76,5 +139,3 @@ voag:GMD_VOAG-LICENSE-BERKELEY-DATABASE
   vaem:title "VOAG License: Berkeley Database License - Version $$VERSION$$" ;
   vaem:turtleFileURL "http://voag.linkedmodel.org/$$VERSION$$/refdata/REFDATA_voag-license-berkeley-database-v$$VERSION$$.ttl"^^xsd:anyURI ;
   vaem:withAttributionTo voag:LinkedModelsAttribution .
-
-

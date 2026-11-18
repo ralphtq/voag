@@ -50,8 +50,9 @@ voag:GMD_VOAG-LICENSE-IMATRIX-STANDARD-FUNCTION-LIBRARY
   a vaem:GraphMetaData ;
   dcterms:author "Ralph Hodgson" ;
   dcterms:created "2026-11-18"^^xsd:date ;
-  dcterms:description "License of the iMatix Standard Function Library, described in the Vocabulary Of Attribution and Governance (VOAG)." ;
+  dcterms:description "License of the iMatix Standard Function Library, described in the Vocabulary Of Attribution and Governance (VOAG). The clause text is taken from the SPDX License List (iMatix)." ;
   dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:source <https://spdx.org/licenses/iMatix.html> ;
   dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
   dcterms:title "VOAG License: License of the iMatix Standard Function Library - Version $$VERSION$$" ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-imatrix-standard-function-library> ;
@@ -75,6 +76,63 @@ voag:IMATRIX-STANDARD-FUNCTION-LIBRARY-LICENSE
   rdfs:label "License of the iMatix Standard Function Library" ;
   vaem:acronym "iMatix" ;
   vaem:description "This is a free software license and is GPL compatible." ;
-  voag:url "http://legacy.imatix.com/html/sfl/sfl4.htm#license" .
+  voag:hasClause voag:CLS_IMATRIX-STANDARD-FUNCTION-LIBRARY-01 ;
+  voag:hasClause voag:CLS_IMATRIX-STANDARD-FUNCTION-LIBRARY-02 ;
+  voag:hasClause voag:CLS_IMATRIX-STANDARD-FUNCTION-LIBRARY-03 ;
+  voag:hasClause voag:CLS_IMATRIX-STANDARD-FUNCTION-LIBRARY-04 ;
+  voag:hasClause voag:CLS_IMATRIX-STANDARD-FUNCTION-LIBRARY-05 ;
+  voag:url "http://legacy.imatix.com/html/sfl/sfl4.htm#license"^^xsd:anyURI .
 
+voag:CLS_IMATRIX-STANDARD-FUNCTION-LIBRARY-01
+  a voag:Clause ;
+  dcterms:description "The Product is, and remains, Copyright © 1991-2000 iMatix Corporation, with exception of specific copyrights as noted in the individual source files." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-imatrix-standard-function-library> ;
+  rdfs:label "License of the iMatix Standard Function Library - Statement Of Copyright" ;
+  voag:clauseNumber 1 ;
+  voag:title "Statement Of Copyright" .
 
+voag:CLS_IMATRIX-STANDARD-FUNCTION-LIBRARY-02
+  a voag:UsageClause ;
+  dcterms:description """You do not need to provide the source code for the Product as part of your product. However, you must do one of these things to comply with the Product License Agreement:
+
+1. Provide the source code for Product modules that you use, or
+2. Make your product freely available according to a license similar to the GNU General Public License, or the Perl Artistic License, or
+3. Add this phrase to the documentation for your product: "This product uses parts of the iMatix SFL, Copyright © 1991-2000 iMatix Corporation <http://www.imatix.com>".""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-imatrix-standard-function-library> ;
+  rdfs:label "License of the iMatix Standard Function Library - Conditions Of Use" ;
+  voag:clauseNumber 2 ;
+  voag:title "Conditions Of Use" .
+
+voag:CLS_IMATRIX-STANDARD-FUNCTION-LIBRARY-03
+  a voag:GrantClause ;
+  dcterms:description """You may freely and at no cost use the Product in any project, commercial, academic, military, or private, so long as you respect the License Agreement. The License Agreement does not affect any software except the Product. In particular, any application that uses the Product does not itself fall under the License Agreement.
+
+You may modify any part of the Product, including sources and documentation, except this License Agreement, which you may not modify.
+
+You must clearly indicate any modifications at the start of each source file. The user of any modified Product code must know that the source file is not original.
+
+At your discretion, you may rewrite or reuse any part of the Product so that your derived code is not obviously part of the Product. This derived code does not fall under the Product License Agreement directly, but you must include a credit at the start of each source file indicating the original authorship and source of the code, and a statement of copyright as follows:"Parts copyright (c) 1991-2000 iMatix Corporation.\"""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-imatrix-standard-function-library> ;
+  rdfs:label "License of the iMatix Standard Function Library - Rights Of Usage" ;
+  voag:clauseNumber 3 ;
+  voag:title "Rights Of Usage" .
+
+voag:CLS_IMATRIX-STANDARD-FUNCTION-LIBRARY-04
+  a voag:DistributionClause ;
+  dcterms:description """You may freely distribute the Product, or any subset of the Product, by any means. The License, in the form of the file called "LICENSE.TXT" must accompany any such distribution.
+
+You may charge a fee for distributing the Product, for providing a warranty on the Product, for making modifications to the Product, or for any other service provided in relation to the Product. You are not required to ask our permission for any of these activities.
+
+At no time will iMatix associate itself with any distribution of the Product except that supplied from the Internet site http://www.imatix.com.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-imatrix-standard-function-library> ;
+  rdfs:label "License of the iMatix Standard Function Library - Rights Of Distribution" ;
+  voag:clauseNumber 4 ;
+  voag:title "Rights Of Distribution" .
+
+voag:CLS_IMATRIX-STANDARD-FUNCTION-LIBRARY-05
+  a voag:DisclaimerClause ;
+  dcterms:description """The Product is provided as free software, in the hope that it will be useful. It is provided "as-is", without warranty of any kind, either expressed or implied, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose. The entire risk as to the quality and performance of the Product is with you. Should the Product prove defective, the full cost of repair, servicing, or correction lies with you.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-imatrix-standard-function-library> ;
+  rdfs:label "License of the iMatix Standard Function Library - Disclaimer Of Warranty" ;
+  voag:clauseNumber 5 ;
+  voag:title "Disclaimer Of Warranty" .

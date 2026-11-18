@@ -50,8 +50,9 @@ voag:GMD_VOAG-LICENSE-SGI-FREE-SOFTWARE-B-V2PT0
   a vaem:GraphMetaData ;
   dcterms:author "Ralph Hodgson" ;
   dcterms:created "2026-11-18"^^xsd:date ;
-  dcterms:description "SGI Free Software License B, version 2.0, described in the Vocabulary Of Attribution and Governance (VOAG)." ;
+  dcterms:description "SGI Free Software License B, version 2.0, described in the Vocabulary Of Attribution and Governance (VOAG). The clause text is taken from the SPDX License List (SGI-B-2.0)." ;
   dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:source <https://spdx.org/licenses/SGI-B-2.0.html> ;
   dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
   dcterms:title "VOAG License: SGI Free Software License B, version 2.0 - Version $$VERSION$$" ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-sgi-free-software-b-v2pt0> ;
@@ -76,6 +77,40 @@ voag:SGI-FREE-SOFTWARE-LICENSE-B_V2PT0
   rdfs:seeAlso voag:X11-LICENSE ;
   vaem:acronym "SGIFreeB" ;
   vaem:description "The SGI Free Software License B version 2.0 is a free software license. It is essentially identical to the X11 License, with an optional alternative way of providing license notices. Previous versions of the SGI Free Software License B were not free software licenses, despite their name. However, they all included clauses that allow you to upgrade to new versions of the license, if you choose to do so. As a result, if a piece of software was released under any version of the SGI Free License B, you can use it under the terms of this free version." ;
-  voag:url "http://oss.sgi.com/projects/FreeB/" .
+  voag:hasClause voag:CLS_SGI-FREE-SOFTWARE-B_V2PT0-01 ;
+  voag:hasClause voag:CLS_SGI-FREE-SOFTWARE-B_V2PT0-02 ;
+  voag:hasClause voag:CLS_SGI-FREE-SOFTWARE-B_V2PT0-03 ;
+  voag:hasClause voag:CLS_SGI-FREE-SOFTWARE-B_V2PT0-04 ;
+  voag:url "http://oss.sgi.com/projects/FreeB/"^^xsd:anyURI .
 
+voag:CLS_SGI-FREE-SOFTWARE-B_V2PT0-01
+  a voag:GrantClause ;
+  dcterms:description """Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-sgi-free-software-b-v2pt0> ;
+  rdfs:label "SGI Free Software License B, version 2.0 - Permission" ;
+  voag:clauseNumber 1 ;
+  voag:title "Permission" .
 
+voag:CLS_SGI-FREE-SOFTWARE-B_V2PT0-02
+  a voag:AttributionRightsClause ;
+  dcterms:description "The above copyright notice including the dates of first publication and either this permission notice or a reference to http://oss.sgi.com/projects/FreeB/ shall be included in all copies or substantial portions of the Software." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-sgi-free-software-b-v2pt0> ;
+  rdfs:label "SGI Free Software License B, version 2.0 - Conditions" ;
+  voag:clauseNumber 2 ;
+  voag:title "Conditions" .
+
+voag:CLS_SGI-FREE-SOFTWARE-B_V2PT0-03
+  a voag:DisclaimerClause ;
+  dcterms:description """THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL SILICON GRAPHICS, INC. BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-sgi-free-software-b-v2pt0> ;
+  rdfs:label "SGI Free Software License B, version 2.0 - Disclaimer" ;
+  voag:clauseNumber 3 ;
+  voag:title "Disclaimer" .
+
+voag:CLS_SGI-FREE-SOFTWARE-B_V2PT0-04
+  a voag:RestrictionsClause ;
+  dcterms:description "Except as contained in this notice, the name of Silicon Graphics, Inc. shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization from Silicon Graphics, Inc." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-sgi-free-software-b-v2pt0> ;
+  rdfs:label "SGI Free Software License B, version 2.0 - Use of the Silicon Graphics Name" ;
+  voag:clauseNumber 4 ;
+  voag:title "Use of the Silicon Graphics Name" .

@@ -8,7 +8,8 @@ licence IRI local name, its refdata file slug, its SPDX identifier, the clause I
 and the clauses as line numbers in the SPDX text, with title and VOAG clause class.
 A clause's "num" is the licence's own section number, stripped from the text with the
 section's heading; an unnumbered section can name a "heading" line to drop instead, and
-"n" sets the clause number explicitly (otherwise unnumbered clauses count from 1).
+"n" sets the clause number explicitly (otherwise unnumbered clauses count from 1), and
+"stop" ends a clause before the next one starts (to leave out text in between).
 
 SPDX_TEXT_DIR holds <SPDX-ID>.txt files from
   https://raw.githubusercontent.com/spdx/license-list-data/main/text/<SPDX-ID>.txt
@@ -27,8 +28,8 @@ spec = importlib.util.module_from_spec(s)
 s.loader.exec_module(spec)
 
 # list-item markers: (a) a) a. A. 1. 1) 1.1. (i) iv. - *
-ITEM = re.compile(r"^(\(?([a-zA-Z]|\d{1,3}(\.\d{1,3})*|[ivx]{1,5})[.)]|-|\*)\s")
-DROP_LINES = re.compile(r"^(NO WARRANTY|END OF TERMS AND CONDITIONS)$")
+ITEM = re.compile(r"^(\(?([a-zA-Z]|\d{1,3}(\.\d{1,3})*|[ivxIVX]{1,5})[.)]|-|\*|•|o(?=\s))\s")
+DROP_LINES = re.compile(r"^(NO WARRANTY|END OF TERMS AND CONDITIONS|[=-]{3,})$")
 
 
 def reflow(lines):
@@ -64,14 +65,14 @@ def strip_heading(lines, num, title, heading=None):
                 raise SystemExit(f"expected heading {heading!r}, found {first[:60]!r}")
             lines[0] = ""
         return lines
-    m = re.match(r"^%s\.\s*" % re.escape(str(num)), first)
+    m = re.match(r"^%s(?:\.0)?[.)]?\s*" % re.escape(str(num)), first)
     if not m:
         raise SystemExit(f"section {num} does not start with its number: {first[:60]!r}")
     rest = first[m.end():]
-    if rest.rstrip(".").strip().lower() == title.lower():
+    if rest.rstrip(".:").strip().lower() == title.lower():
         rest = ""                                   # heading on a line of its own
-    elif rest.lower().startswith(title.lower() + ". "):
-        rest = rest[len(title) + 2:]                # inline heading: "N. Title. Body..."
+    elif rest.lower().startswith(title.lower() + "."):
+        rest = rest[len(title) + 1:].lstrip()       # inline heading: "N. Title. Body..."
     lines[0] = rest
     return lines
 
@@ -122,7 +123,7 @@ for lic in spec.BATCH:
     blocks, links = [], []
     for k, c in enumerate(clauses):
         start = c["start"]
-        end = clauses[k + 1]["start"] if k + 1 < len(clauses) else lic["end"]
+        end = c.get("stop") or (clauses[k + 1]["start"] if k + 1 < len(clauses) else lic["end"])
         text = reflow(strip_heading(src[start - 1:end - 1], c.get("num"), c["title"], c.get("heading")))
         assert text, (L, c)
         n = c.get("n", c.get("num") if c.get("num") is not None else k + 1)

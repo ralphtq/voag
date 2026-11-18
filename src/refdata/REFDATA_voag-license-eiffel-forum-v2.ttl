@@ -51,14 +51,44 @@ voag:EIFFEL-FORUM-LICENSE_V2
   rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-eiffel-forum-v2> ;
   rdfs:label "Eiffel Forum License, version 2" ;
   vaem:acronym "Eiffel" ;
-  voag:url "http://www.gnu.org/licenses/eiffel-forum-license-2.html" .
+  voag:hasClause voag:CLS_EIFFEL-FORUM_V2-01 ;
+  voag:hasClause voag:CLS_EIFFEL-FORUM_V2-02 ;
+  voag:hasClause voag:CLS_EIFFEL-FORUM_V2-03 ;
+  voag:url "http://www.gnu.org/licenses/eiffel-forum-license-2.html"^^xsd:anyURI .
+
+voag:CLS_EIFFEL-FORUM_V2-01
+  a voag:GrantClause ;
+  dcterms:description """Permission is hereby granted to use, copy, modify and/or distribute this package, provided that:
+- copyright notices are retained unchanged,
+- any distribution of this package, whether modified or not, includes this license text.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-eiffel-forum-v2> ;
+  rdfs:label "Eiffel Forum License, version 2 - Permission" ;
+  voag:clauseNumber 1 ;
+  voag:title "Permission" .
+
+voag:CLS_EIFFEL-FORUM_V2-02
+  a voag:DistributionClause ;
+  dcterms:description "Permission is hereby also granted to distribute binary programs which depend on this package. If the binary program depends on a modified version of this package, you are encouraged to publicly release the modified version of this package." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-eiffel-forum-v2> ;
+  rdfs:label "Eiffel Forum License, version 2 - Distribution of Binary Programs" ;
+  voag:clauseNumber 2 ;
+  voag:title "Distribution of Binary Programs" .
+
+voag:CLS_EIFFEL-FORUM_V2-03
+  a voag:DisclaimerClause ;
+  dcterms:description """THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT WARRANTY. ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHORS BE LIABLE TO ANY PARTY FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES ARISING IN ANY WAY OUT OF THE USE OF THIS PACKAGE.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-eiffel-forum-v2> ;
+  rdfs:label "Eiffel Forum License, version 2 - Disclaimer" ;
+  voag:clauseNumber 3 ;
+  voag:title "Disclaimer" .
 
 voag:GMD_VOAG-LICENSE-EIFFEL-FORUM-V2
   a vaem:GraphMetaData ;
   dcterms:author "Ralph Hodgson" ;
   dcterms:created "2026-11-18"^^xsd:date ;
-  dcterms:description "Eiffel Forum License, version 2, described in the Vocabulary Of Attribution and Governance (VOAG)." ;
+  dcterms:description "Eiffel Forum License, version 2, described in the Vocabulary Of Attribution and Governance (VOAG). The clause text is taken from the SPDX License List (EFL-2.0)." ;
   dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:source <https://spdx.org/licenses/EFL-2.0.html> ;
   dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
   dcterms:title "VOAG License: Eiffel Forum License, version 2 - Version $$VERSION$$" ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-eiffel-forum-v2> ;
@@ -75,5 +105,3 @@ voag:GMD_VOAG-LICENSE-EIFFEL-FORUM-V2
   vaem:title "VOAG License: Eiffel Forum License, version 2 - Version $$VERSION$$" ;
   vaem:turtleFileURL "http://voag.linkedmodel.org/$$VERSION$$/refdata/REFDATA_voag-license-eiffel-forum-v2-v$$VERSION$$.ttl"^^xsd:anyURI ;
   vaem:withAttributionTo voag:LinkedModelsAttribution .
-
-

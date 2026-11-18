@@ -38,7 +38,7 @@ for lic in spec.BATCH:
     #    the only source words not in a clause are the section numbers and headings that were stripped
     src = open(os.path.join(text_dir, lic["spdx"] + ".txt"), encoding="utf-8").read().split("\n")
     keep = [ln for ln in src[lic["clauses"][0]["start"] - 1:lic["end"] - 1]
-            if ln.strip() not in ("NO WARRANTY", "END OF TERMS AND CONDITIONS")]
+            if ln.strip() not in ("NO WARRANTY", "END OF TERMS AND CONDITIONS") and not re.fullmatch(r"[=-]{3,}", ln.strip())]
     region = " ".join(words(" ".join(keep)))
     cls = sorted(after.objects(L, V.hasClause), key=lambda c: int(after.value(c, V.clauseNumber)))
     pos, leftover = 0, []

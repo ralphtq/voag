@@ -50,8 +50,9 @@ voag:GMD_VOAG-LICENSE-STANDARD-ML-OF-NJ
   a vaem:GraphMetaData ;
   dcterms:author "Ralph Hodgson" ;
   dcterms:created "2026-11-18"^^xsd:date ;
-  dcterms:description "Standard ML of New Jersey Copyright License, described in the Vocabulary Of Attribution and Governance (VOAG)." ;
+  dcterms:description "Standard ML of New Jersey Copyright License, described in the Vocabulary Of Attribution and Governance (VOAG). The clause text is taken from the SPDX License List (SMLNJ)." ;
   dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:source <https://spdx.org/licenses/SMLNJ.html> ;
   dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
   dcterms:title "VOAG License: Standard ML of New Jersey Copyright License - Version $$VERSION$$" ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-standard-ml-of-nj> ;
@@ -76,6 +77,22 @@ voag:STANDARD_ML_OF_NJ-LICENSE
   vaem:acronym "StandardMLofNJ" ;
   vaem:description "This is a simple, permissive non-copyleft free software license, compatible with the GNU GPL." ;
   voag:compatibleWith voag:GNU-GPL_V3 ;
-  voag:url "http://cm.bell-labs.com/cm/cs/what/smlnj/license.html" .
+  voag:hasClause voag:CLS_STANDARD_ML_OF_NJ-01 ;
+  voag:hasClause voag:CLS_STANDARD_ML_OF_NJ-02 ;
+  voag:url "https://www.smlnj.org/license.html"^^xsd:anyURI .
 
+voag:CLS_STANDARD_ML_OF_NJ-01
+  a voag:GrantClause ;
+  dcterms:description "Permission to use, copy, modify, and distribute this software and its documentation for any purpose and without fee is hereby granted, provided that the above copyright notice appear in all copies and that both the copyright notice and this permission notice and warranty disclaimer appear in supporting documentation, and that the name of Lucent Technologies, Bell Labs or any Lucent entity not be used in advertising or publicity pertaining to distribution of the software without specific, written prior permission." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-standard-ml-of-nj> ;
+  rdfs:label "Standard ML of New Jersey Copyright License - Permission" ;
+  voag:clauseNumber 1 ;
+  voag:title "Permission" .
 
+voag:CLS_STANDARD_ML_OF_NJ-02
+  a voag:DisclaimerClause ;
+  dcterms:description "Lucent disclaims all warranties with regard to this software, including all implied warranties of merchantability and fitness. In no event shall Lucent be liable for any special, indirect or consequential damages or any damages whatsoever resulting from loss of use, data or profits, whether in an action of contract, negligence or other tortious action, arising out of or in connection with the use or performance of this software." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-standard-ml-of-nj> ;
+  rdfs:label "Standard ML of New Jersey Copyright License - Disclaimer" ;
+  voag:clauseNumber 2 ;
+  voag:title "Disclaimer" .
