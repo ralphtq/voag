@@ -1,0 +1,145 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix voag: <http://voag.linkedmodel.org/voag/> .
+
+<http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-eu-datagrid>
+  a owl:Ontology ;
+  owl:imports <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> ;
+  vaem:hasGraphMetadata voag:GMD_VOAG-LICENSE-EU-DATAGRID .
+
+dcterms:author
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "author" ;
+  rdfs:range xsd:string .
+
+dcterms:created
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "created" ;
+  rdfs:range xsd:date .
+
+dcterms:modified
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "modified" ;
+  rdfs:range xsd:date .
+
+dcterms:subject
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "subject" ;
+  rdfs:range xsd:string .
+
+dcterms:title
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "title" ;
+  rdfs:range xsd:string .
+
+dcterms:description
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "description" ;
+  rdfs:range xsd:string .
+
+voag:EU-DATAGRID-LICENSE
+  a voag:License ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-eu-datagrid> ;
+  rdfs:label "EU DataGrid Software License" ;
+  vaem:acronym "EUDataGrid" ;
+  vaem:description "This is a simple, permissive non-copyleft free software license, compatible with the GNU GPL." ;
+  voag:compatibleWith voag:GNU-GPL_V3 ;
+  voag:hasClause voag:CLS_EU-DATAGRID-00 ;
+  voag:hasClause voag:CLS_EU-DATAGRID-01 ;
+  voag:hasClause voag:CLS_EU-DATAGRID-02 ;
+  voag:hasClause voag:CLS_EU-DATAGRID-03 ;
+  voag:hasClause voag:CLS_EU-DATAGRID-04 ;
+  voag:hasClause voag:CLS_EU-DATAGRID-05 ;
+  voag:hasClause voag:CLS_EU-DATAGRID-06 ;
+  voag:url "http://www.opensource.org/licenses/eudatagrid.php"^^xsd:anyURI .
+
+voag:CLS_EU-DATAGRID-00
+  a voag:GrantClause ;
+  dcterms:description "Installation, use, reproduction, display, modification and redistribution of this software, with or without modification, in source and binary forms, are permitted. Any exercise of rights under this license by you or your sub-licensees is subject to the following conditions:" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-eu-datagrid> ;
+  rdfs:label "EU DataGrid Software License - Permission" ;
+  voag:clauseNumber 0 ;
+  voag:title "Permission" .
+
+voag:CLS_EU-DATAGRID-01
+  a voag:AttributionRightsClause ;
+  dcterms:description "Redistributions of this software, with or without modification, must reproduce the above copyright notice and the above license statement as well as this list of conditions, in the software, the user documentation and any other materials provided with the software." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-eu-datagrid> ;
+  rdfs:label "EU DataGrid Software License - Copyright Notice in Redistributions" ;
+  voag:clauseNumber 1 ;
+  voag:title "Copyright Notice in Redistributions" .
+
+voag:CLS_EU-DATAGRID-02
+  a voag:AttributionRightsClause ;
+  dcterms:description """The user documentation, if any, included with a redistribution, must include the following notice: "This product includes software developed by the EU DataGrid (http://www.eu-datagrid.org/)."
+
+Alternatively, if that is where third-party acknowledgments normally appear, this acknowledgment must be reproduced in the software itself.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-eu-datagrid> ;
+  rdfs:label "EU DataGrid Software License - Acknowledgment in Documentation" ;
+  voag:clauseNumber 2 ;
+  voag:title "Acknowledgment in Documentation" .
+
+voag:CLS_EU-DATAGRID-03
+  a voag:RestrictionsClause ;
+  dcterms:description """The names "EDG", "EDG Toolkit", “EU DataGrid” and "EU DataGrid Project" may not be used to endorse or promote software, or products derived therefrom, except with prior written permission by hep-project-grid-edg-license@cern.ch.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-eu-datagrid> ;
+  rdfs:label "EU DataGrid Software License - Endorsement" ;
+  voag:clauseNumber 3 ;
+  voag:title "Endorsement" .
+
+voag:CLS_EU-DATAGRID-04
+  a voag:Clause ;
+  dcterms:description "You are under no obligation to provide anyone with any bug fixes, patches, upgrades or other modifications, enhancements or derivatives of the features,functionality or performance of this software that you may develop. However, if you publish or distribute your modifications, enhancements or derivative works without contemporaneously requiring users to enter into a separate written license agreement, then you are deemed to have granted participants in the EU DataGrid a worldwide, non-exclusive, royalty-free, perpetual license to install, use, reproduce, display, modify, redistribute and sub-license your modifications, enhancements or derivative works, whether in binary or source code form, under the license conditions stated in this list of conditions." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-eu-datagrid> ;
+  rdfs:label "EU DataGrid Software License - No Obligation to Provide Updates" ;
+  voag:clauseNumber 4 ;
+  voag:title "No Obligation to Provide Updates" .
+
+voag:CLS_EU-DATAGRID-05
+  a voag:DisclaimerClause ;
+  dcterms:description """THIS SOFTWARE IS PROVIDED BY THE EU DATAGRID AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, OF SATISFACTORY QUALITY, AND FITNESS FOR A PARTICULAR PURPOSE OR USE ARE DISCLAIMED. THE EU DATAGRID AND CONTRIBUTORS MAKE NO REPRESENTATION THAT THE SOFTWARE, MODIFICATIONS, ENHANCEMENTS OR DERIVATIVE WORKS THEREOF, WILL NOT INFRINGE ANY PATENT, COPYRIGHT, TRADE SECRET OR OTHER PROPRIETARY RIGHT.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-eu-datagrid> ;
+  rdfs:label "EU DataGrid Software License - Disclaimer" ;
+  voag:clauseNumber 5 ;
+  voag:title "Disclaimer" .
+
+voag:CLS_EU-DATAGRID-06
+  a voag:LimitationOfLiabilityClause ;
+  dcterms:description "THE EU DATAGRID AND CONTRIBUTORS SHALL HAVE NO LIABILITY TO LICENSEE OR OTHER PERSONS FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES OF ANY CHARACTER INCLUDING, WITHOUT LIMITATION, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES, LOSS OF USE, DATA OR PROFITS, OR BUSINESS INTERRUPTION, HOWEVER CAUSED AND ON ANY THEORY OF CONTRACT, WARRANTY, TORT (INCLUDING NEGLIGENCE), PRODUCT LIABILITY OR OTHERWISE, ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-eu-datagrid> ;
+  rdfs:label "EU DataGrid Software License - Limitation of Liability" ;
+  voag:clauseNumber 6 ;
+  voag:title "Limitation of Liability" .
+
+voag:GMD_VOAG-LICENSE-EU-DATAGRID
+  a vaem:GraphMetaData ;
+  dcterms:author "Ralph Hodgson" ;
+  dcterms:created "2026-11-18"^^xsd:date ;
+  dcterms:description "EU DataGrid Software License, described in the Vocabulary Of Attribution and Governance (VOAG). The clause text is taken from the SPDX License List (EUDatagrid)." ;
+  dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:source <https://spdx.org/licenses/EUDatagrid.html> ;
+  dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
+  dcterms:title "VOAG License: EU DataGrid Software License - Version $$VERSION$$" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-eu-datagrid> ;
+  rdfs:label "VOAG License: EU DataGrid Software License - Version $$VERSION$$" ;
+  vaem:hasGraphRole vaem:VocabularyGraph ;
+  vaem:hasLicenseType voag:CCBY-4PT0-LICENSE ;
+  vaem:hasOwner vaem:LinkedModels ;
+  vaem:hasSteward vaem:LinkedModels ;
+  vaem:name "voag" ;
+  vaem:namespace "http://voag.linkedmodel.org/voag/" ;
+  vaem:namespacePrefix "voag" ;
+  vaem:owner "Linkedmodels" ;
+  vaem:revision "$$VERSION$$" ;
+  vaem:title "VOAG License: EU DataGrid Software License - Version $$VERSION$$" ;
+  vaem:turtleFileURL "http://voag.linkedmodel.org/$$VERSION$$/refdata/REFDATA_voag-license-eu-datagrid-v$$VERSION$$.ttl"^^xsd:anyURI ;
+  vaem:withAttributionTo voag:LinkedModelsAttribution .

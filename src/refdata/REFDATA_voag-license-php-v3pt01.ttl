@@ -1,0 +1,137 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix voag: <http://voag.linkedmodel.org/voag/> .
+
+<http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-php-v3pt01>
+  a owl:Ontology ;
+  owl:imports <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> ;
+  vaem:hasGraphMetadata voag:GMD_VOAG-LICENSE-PHP-V3PT01 .
+
+dcterms:author
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "author" ;
+  rdfs:range xsd:string .
+
+dcterms:created
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "created" ;
+  rdfs:range xsd:date .
+
+dcterms:modified
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "modified" ;
+  rdfs:range xsd:date .
+
+dcterms:subject
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "subject" ;
+  rdfs:range xsd:string .
+
+dcterms:title
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "title" ;
+  rdfs:range xsd:string .
+
+dcterms:description
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "description" ;
+  rdfs:range xsd:string .
+
+voag:GMD_VOAG-LICENSE-PHP-V3PT01
+  a vaem:GraphMetaData ;
+  dcterms:author "Ralph Hodgson" ;
+  dcterms:created "2026-11-18"^^xsd:date ;
+  dcterms:description "PHP License, Version 3.01, described in the Vocabulary Of Attribution and Governance (VOAG). The clause text is taken from the SPDX License List (PHP-3.01)." ;
+  dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:source <https://spdx.org/licenses/PHP-3.01.html> ;
+  dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
+  dcterms:title "VOAG License: PHP License, Version 3.01 - Version $$VERSION$$" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-php-v3pt01> ;
+  rdfs:label "VOAG License: PHP License, Version 3.01 - Version $$VERSION$$" ;
+  vaem:hasGraphRole vaem:VocabularyGraph ;
+  vaem:hasLicenseType voag:CCBY-4PT0-LICENSE ;
+  vaem:hasOwner vaem:LinkedModels ;
+  vaem:hasSteward vaem:LinkedModels ;
+  vaem:name "voag" ;
+  vaem:namespace "http://voag.linkedmodel.org/voag/" ;
+  vaem:namespacePrefix "voag" ;
+  vaem:owner "Linkedmodels" ;
+  vaem:revision "$$VERSION$$" ;
+  vaem:title "VOAG License: PHP License, Version 3.01 - Version $$VERSION$$" ;
+  vaem:turtleFileURL "http://voag.linkedmodel.org/$$VERSION$$/refdata/REFDATA_voag-license-php-v3pt01-v$$VERSION$$.ttl"^^xsd:anyURI ;
+  vaem:withAttributionTo voag:LinkedModelsAttribution .
+
+voag:PHP-LICENSE_V3PT01
+  a voag:License ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-php-v3pt01> ;
+  rdfs:label "PHP License, Version 3.01" ;
+  vaem:acronym "PHP-3.01" ;
+  vaem:description "This license is used by most of PHP4. It is a non-copyleft free software license. It is incompatible with the GNU GPL because it includes strong restrictions on the use of “PHP” in the name of derived products. GNU recommend that you not use this license for anything except PHP add-ons." ;
+  voag:hasClause voag:CLS_PHP_V3PT01-01 ;
+  voag:hasClause voag:CLS_PHP_V3PT01-02 ;
+  voag:hasClause voag:CLS_PHP_V3PT01-03 ;
+  voag:hasClause voag:CLS_PHP_V3PT01-04 ;
+  voag:hasClause voag:CLS_PHP_V3PT01-05 ;
+  voag:hasClause voag:CLS_PHP_V3PT01-06 ;
+  voag:url "http://www.php.net/license/3_01.txt"^^xsd:anyURI .
+
+voag:CLS_PHP_V3PT01-01
+  a voag:DistributionClause ;
+  dcterms:description """Redistribution and use in source and binary forms, with or without modification, is permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-php-v3pt01> ;
+  rdfs:label "PHP License, Version 3.01 - Redistribution and Use" ;
+  voag:clauseNumber 1 ;
+  voag:title "Redistribution and Use" .
+
+voag:CLS_PHP_V3PT01-02
+  a voag:RestrictionsClause ;
+  dcterms:description """3. The name "PHP" must not be used to endorse or promote products derived from this software without prior written permission. For written permission, please contact group@php.net.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-php-v3pt01> ;
+  rdfs:label "PHP License, Version 3.01 - Endorsement" ;
+  voag:clauseNumber 2 ;
+  voag:title "Endorsement" .
+
+voag:CLS_PHP_V3PT01-03
+  a voag:RestrictionsClause ;
+  dcterms:description """4. Products derived from this software may not be called "PHP", nor may "PHP" appear in their name, without prior written permission from group@php.net. You may indicate that your software works in conjunction with PHP by saying "Foo for PHP" instead of calling it "PHP Foo" or "phpfoo\"""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-php-v3pt01> ;
+  rdfs:label "PHP License, Version 3.01 - Use of the PHP Name" ;
+  voag:clauseNumber 3 ;
+  voag:title "Use of the PHP Name" .
+
+voag:CLS_PHP_V3PT01-04
+  a voag:VersionClause ;
+  dcterms:description "5. The PHP Group may publish revised and/or new versions of the license from time to time. Each version will be given a distinguishing version number. Once covered code has been published under a particular version of the license, you may always continue to use it under the terms of that version. You may also choose to use such covered code under the terms of any subsequent version of the license published by the PHP Group. No one other than the PHP Group has the right to modify the terms applicable to covered code created under this License." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-php-v3pt01> ;
+  rdfs:label "PHP License, Version 3.01 - Revised Versions" ;
+  voag:clauseNumber 4 ;
+  voag:title "Revised Versions" .
+
+voag:CLS_PHP_V3PT01-05
+  a voag:AttributionRightsClause ;
+  dcterms:description """6. Redistributions of any form whatsoever must retain the following acknowledgment: "This product includes PHP software, freely available from <http://www.php.net/software/>".""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-php-v3pt01> ;
+  rdfs:label "PHP License, Version 3.01 - Acknowledgment in Redistributions" ;
+  voag:clauseNumber 5 ;
+  voag:title "Acknowledgment in Redistributions" .
+
+voag:CLS_PHP_V3PT01-06
+  a voag:DisclaimerClause ;
+  dcterms:description "THIS SOFTWARE IS PROVIDED BY THE PHP DEVELOPMENT TEAM ``AS IS'' AND ANY EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE PHP DEVELOPMENT TEAM OR ITS CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-php-v3pt01> ;
+  rdfs:label "PHP License, Version 3.01 - Disclaimer" ;
+  voag:clauseNumber 6 ;
+  voag:title "Disclaimer" .

@@ -31,7 +31,7 @@ wording of one license label.
 ```
 src/shacl/     SHACL source of the next release (versions as tokens)
 src/owl/       OWL source of the next release
-src/refdata/   license reference data, being cleaned up (not released yet)
+src/refdata/   license reference data, one graph per license (not released yet)
 schema/        current (unversioned) VOAG
 1.1/           v1.1 schema and vocabulary
 2.0/schema/    v2.0 schema
@@ -43,6 +43,10 @@ release.json   version, pinned imports and files of the next release
 ```
 
 Releases are built from `src/`; see [RELEASING.md](RELEASING.md).
+
+The license reference data, where its clause text comes from, and the
+licenses that still have no clauses are described in
+[src/refdata/README.md](src/refdata/README.md).
 
 ## SHACL schema
 

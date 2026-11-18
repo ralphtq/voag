@@ -1,0 +1,153 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix voag: <http://voag.linkedmodel.org/voag/> .
+
+<http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-python-v1pt6b1-to-v2pt1>
+  a owl:Ontology ;
+  owl:imports <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> ;
+  vaem:hasGraphMetadata voag:GMD_VOAG-LICENSE-PYTHON-V1PT6B1-TO-V2PT1 .
+
+dcterms:author
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "author" ;
+  rdfs:range xsd:string .
+
+dcterms:created
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "created" ;
+  rdfs:range xsd:date .
+
+dcterms:modified
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "modified" ;
+  rdfs:range xsd:date .
+
+dcterms:subject
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "subject" ;
+  rdfs:range xsd:string .
+
+dcterms:title
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "title" ;
+  rdfs:range xsd:string .
+
+dcterms:description
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "description" ;
+  rdfs:range xsd:string .
+
+voag:GMD_VOAG-LICENSE-PYTHON-V1PT6B1-TO-V2PT1
+  a vaem:GraphMetaData ;
+  dcterms:author "Ralph Hodgson" ;
+  dcterms:created "2026-11-18"^^xsd:date ;
+  dcterms:description "License of Python 1.6b1 through 2.0 and 2.1, described in the Vocabulary Of Attribution and Governance (VOAG). The clause text is taken from the SPDX License List (CNRI-Python)." ;
+  dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:source <https://spdx.org/licenses/CNRI-Python.html> ;
+  dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
+  dcterms:title "VOAG License: License of Python 1.6b1 through 2.0 and 2.1 - Version $$VERSION$$" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-python-v1pt6b1-to-v2pt1> ;
+  rdfs:label "VOAG License: License of Python 1.6b1 through 2.0 and 2.1 - Version $$VERSION$$" ;
+  vaem:hasGraphRole vaem:VocabularyGraph ;
+  vaem:hasLicenseType voag:CCBY-4PT0-LICENSE ;
+  vaem:hasOwner vaem:LinkedModels ;
+  vaem:hasSteward vaem:LinkedModels ;
+  vaem:name "voag" ;
+  vaem:namespace "http://voag.linkedmodel.org/voag/" ;
+  vaem:namespacePrefix "voag" ;
+  vaem:owner "Linkedmodels" ;
+  vaem:revision "$$VERSION$$" ;
+  vaem:title "VOAG License: License of Python 1.6b1 through 2.0 and 2.1 - Version $$VERSION$$" ;
+  vaem:turtleFileURL "http://voag.linkedmodel.org/$$VERSION$$/refdata/REFDATA_voag-license-python-v1pt6b1-to-v2pt1-v$$VERSION$$.ttl"^^xsd:anyURI ;
+  vaem:withAttributionTo voag:LinkedModelsAttribution .
+
+voag:PYTHON-LICENSE_V1PT6B1-TO-V2PT1
+  a voag:License ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-python-v1pt6b1-to-v2pt1> ;
+  rdfs:label "License of Python 1.6b1 through 2.0 and 2.1" ;
+  vaem:acronym "PythonOld" ;
+  vaem:description "This is a free software license but is incompatible with the GNU GPL. The primary incompatibility is that this Python license is governed by the laws of the State of Virginia, in the USA, and the GPL does not permit this." ;
+  voag:hasClause voag:CLS_PYTHON_V1PT6B1-TO-V2PT1-01 ;
+  voag:hasClause voag:CLS_PYTHON_V1PT6B1-TO-V2PT1-02 ;
+  voag:hasClause voag:CLS_PYTHON_V1PT6B1-TO-V2PT1-03 ;
+  voag:hasClause voag:CLS_PYTHON_V1PT6B1-TO-V2PT1-04 ;
+  voag:hasClause voag:CLS_PYTHON_V1PT6B1-TO-V2PT1-05 ;
+  voag:hasClause voag:CLS_PYTHON_V1PT6B1-TO-V2PT1-06 ;
+  voag:hasClause voag:CLS_PYTHON_V1PT6B1-TO-V2PT1-07 ;
+  voag:hasClause voag:CLS_PYTHON_V1PT6B1-TO-V2PT1-08 ;
+  voag:url "http://www.handle.net/python_licenses/python1.6_9-5-00.html"^^xsd:anyURI .
+
+voag:CLS_PYTHON_V1PT6B1-TO-V2PT1-01
+  a voag:DefinitionClause ;
+  dcterms:description """This LICENSE AGREEMENT is between the Corporation for National Research Initiatives, having an office at 1895 Preston White Drive, Reston, VA 20191 ("CNRI"), and the Individual or Organization ("Licensee") accessing and otherwise using Python 1.6, beta 1 software in source or binary form and its associated documentation, as released at the www.python.org Internet site on August 4, 2000 ("Python 1.6b1").""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-python-v1pt6b1-to-v2pt1> ;
+  rdfs:label "License of Python 1.6b1 through 2.0 and 2.1 - Parties" ;
+  voag:clauseNumber 1 ;
+  voag:title "Parties" .
+
+voag:CLS_PYTHON_V1PT6B1-TO-V2PT1-02
+  a voag:GrantClause ;
+  dcterms:description """Subject to the terms and conditions of this License Agreement, CNRI hereby grants Licensee a non-exclusive, royalty-free, world-wide license to reproduce, analyze, test, perform and/or display publicly, prepare derivative works, distribute, and otherwise use Python 1.6b1 alone or in any derivative version, provided, however, that CNRIs License Agreement is retained in Python 1.6b1, alone or in any derivative version prepared by Licensee.
+
+Alternately, in lieu of CNRIs License Agreement, Licensee may substitute the following text (omitting the quotes): "Python 1.6, beta 1, is made available subject to the terms and conditions in CNRIs License Agreement. This Agreement may be located on the Internet using the following unique, persistent identifier (known as a handle): 1895.22/1011. This Agreement may also be obtained from a proxy server on the Internet using the URL:http://hdl.handle.net/1895.22/1011".""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-python-v1pt6b1-to-v2pt1> ;
+  rdfs:label "License of Python 1.6b1 through 2.0 and 2.1 - License Grant" ;
+  voag:clauseNumber 2 ;
+  voag:title "License Grant" .
+
+voag:CLS_PYTHON_V1PT6B1-TO-V2PT1-03
+  a voag:ModificationClause ;
+  dcterms:description "In the event Licensee prepares a derivative work that is based on or incorporates Python 1.6b1 or any part thereof, and wants to make the derivative work available to the public as provided herein, then Licensee hereby agrees to indicate in any such work the nature of the modifications made to Python 1.6b1." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-python-v1pt6b1-to-v2pt1> ;
+  rdfs:label "License of Python 1.6b1 through 2.0 and 2.1 - Derivative Works" ;
+  voag:clauseNumber 3 ;
+  voag:title "Derivative Works" .
+
+voag:CLS_PYTHON_V1PT6B1-TO-V2PT1-04
+  a voag:DisclaimerClause ;
+  dcterms:description """CNRI is making Python 1.6b1 available to Licensee on an "AS IS" basis. CNRI MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED. BY WAY OF EXAMPLE, BUT NOT LIMITATION, CNRI MAKES NO AND DISCLAIMS ANY REPRESENTATION OR WARRANTY OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE OR THAT THE USE OF PYTHON 1.6b1 WILL NOT INFRINGE ANY THIRD PARTY RIGHTS.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-python-v1pt6b1-to-v2pt1> ;
+  rdfs:label "License of Python 1.6b1 through 2.0 and 2.1 - Disclaimer of Warranty" ;
+  voag:clauseNumber 4 ;
+  voag:title "Disclaimer of Warranty" .
+
+voag:CLS_PYTHON_V1PT6B1-TO-V2PT1-05
+  a voag:LimitationOfLiabilityClause ;
+  dcterms:description "CNRI SHALL NOT BE LIABLE TO LICENSEE OR ANY OTHER USERS OF THE SOFTWARE FOR ANY INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES OR LOSS AS A RESULT OF USING, MODIFYING OR DISTRIBUTING PYTHON 1.6b1, OR ANY DERIVATIVE THEREOF, EVEN IF ADVISED OF THE POSSIBILITY THEREOF." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-python-v1pt6b1-to-v2pt1> ;
+  rdfs:label "License of Python 1.6b1 through 2.0 and 2.1 - Limitation of Liability" ;
+  voag:clauseNumber 5 ;
+  voag:title "Limitation of Liability" .
+
+voag:CLS_PYTHON_V1PT6B1-TO-V2PT1-06
+  a voag:TerminationClause ;
+  dcterms:description "This License Agreement will automatically terminate upon a material breach of its terms and conditions." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-python-v1pt6b1-to-v2pt1> ;
+  rdfs:label "License of Python 1.6b1 through 2.0 and 2.1 - Termination" ;
+  voag:clauseNumber 6 ;
+  voag:title "Termination" .
+
+voag:CLS_PYTHON_V1PT6B1-TO-V2PT1-07
+  a voag:JuristricationClause ;
+  dcterms:description "This License Agreement shall be governed by and interpreted in all respects by the law of the State of Virginia, excluding conflict of law provisions. Nothing in this License Agreement shall be deemed to create any relationship of agency, partnership, or joint venture between CNRI and Licensee. This License Agreement does not grant permission to use CNRI trademarks or trade name in a trademark sense to endorse or promote products or services of Licensee, or any third party." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-python-v1pt6b1-to-v2pt1> ;
+  rdfs:label "License of Python 1.6b1 through 2.0 and 2.1 - Governing Law" ;
+  voag:clauseNumber 7 ;
+  voag:title "Governing Law" .
+
+voag:CLS_PYTHON_V1PT6B1-TO-V2PT1-08
+  a voag:Clause ;
+  dcterms:description """By clicking on the "ACCEPT" button where indicated, or by copying, installing or otherwise using Python 1.6b1, Licensee agrees to be bound by the terms and conditions of this License Agreement.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-python-v1pt6b1-to-v2pt1> ;
+  rdfs:label "License of Python 1.6b1 through 2.0 and 2.1 - Acceptance" ;
+  voag:clauseNumber 8 ;
+  voag:title "Acceptance" .

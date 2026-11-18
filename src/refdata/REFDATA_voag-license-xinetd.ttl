@@ -1,0 +1,113 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix voag: <http://voag.linkedmodel.org/voag/> .
+
+<http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-xinetd>
+  a owl:Ontology ;
+  owl:imports <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> ;
+  vaem:hasGraphMetadata voag:GMD_VOAG-LICENSE-XINETD .
+
+dcterms:author
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "author" ;
+  rdfs:range xsd:string .
+
+dcterms:created
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "created" ;
+  rdfs:range xsd:date .
+
+dcterms:modified
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "modified" ;
+  rdfs:range xsd:date .
+
+dcterms:subject
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "subject" ;
+  rdfs:range xsd:string .
+
+dcterms:title
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "title" ;
+  rdfs:range xsd:string .
+
+dcterms:description
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "description" ;
+  rdfs:range xsd:string .
+
+voag:GMD_VOAG-LICENSE-XINETD
+  a vaem:GraphMetaData ;
+  dcterms:author "Ralph Hodgson" ;
+  dcterms:created "2026-11-18"^^xsd:date ;
+  dcterms:description "License of xinetd, described in the Vocabulary Of Attribution and Governance (VOAG). The clause text is taken from the SPDX License List (xinetd)." ;
+  dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:source <https://spdx.org/licenses/xinetd.html> ;
+  dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
+  dcterms:title "VOAG License: License of xinetd - Version $$VERSION$$" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-xinetd> ;
+  rdfs:label "VOAG License: License of xinetd - Version $$VERSION$$" ;
+  vaem:hasGraphRole vaem:VocabularyGraph ;
+  vaem:hasLicenseType voag:CCBY-4PT0-LICENSE ;
+  vaem:hasOwner vaem:LinkedModels ;
+  vaem:hasSteward vaem:LinkedModels ;
+  vaem:name "voag" ;
+  vaem:namespace "http://voag.linkedmodel.org/voag/" ;
+  vaem:namespacePrefix "voag" ;
+  vaem:owner "Linkedmodels" ;
+  vaem:revision "$$VERSION$$" ;
+  vaem:title "VOAG License: License of xinetd - Version $$VERSION$$" ;
+  vaem:turtleFileURL "http://voag.linkedmodel.org/$$VERSION$$/refdata/REFDATA_voag-license-xinetd-v$$VERSION$$.ttl"^^xsd:anyURI ;
+  vaem:withAttributionTo voag:LinkedModelsAttribution .
+
+voag:XINETD-LICENSE
+  a voag:License ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-xinetd> ;
+  rdfs:label "License of xinetd" ;
+  vaem:acronym "xinetd" ;
+  vaem:description "This is a copyleft free software license, incompatible with the GPL. It is incompatible because it places extra restrictions on redistribution of modified versions that contradict the redistribution requirements in the GPL." ;
+  voag:hasClause voag:CLS_XINETD-01 ;
+  voag:hasClause voag:CLS_XINETD-02 ;
+  voag:hasClause voag:CLS_XINETD-03 ;
+  voag:incompatibleWith voag:GNU-GPL_V3 ;
+  voag:url "http://fedoraproject.org/wiki/Licensing/Xinetd_License"^^xsd:anyURI .
+
+voag:CLS_XINETD-01
+  a voag:GrantClause ;
+  dcterms:description "The author (Panagiotis Tsirigotis) grants permission to use, copy, and distribute this software and its documentation for any purpose and without fee, provided that the above copyright notice extant in files in this distribution is not removed from files included in any redistribution and that this copyright notice is also included in any redistribution." ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-xinetd> ;
+  rdfs:label "License of xinetd - Permission" ;
+  voag:clauseNumber 1 ;
+  voag:title "Permission" .
+
+voag:CLS_XINETD-02
+  a voag:ModificationClause ;
+  dcterms:description """Modifications to this software may be distributed, either by distributing the modified software or by distributing patches to the original software, under the following additional terms:
+
+1. The version number will be modified as follows:
+a. The first 3 components of the version number (i.e <number>.<number>.<number>) will remain unchanged.
+b. A new component will be appended to the version number to indicate the modification level. The form of this component is up to the author of the modifications.
+
+2. The author of the modifications will include his/her name by appending it along with the new version number to this file and will be responsible for any wrong behavior of the modified software.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-xinetd> ;
+  rdfs:label "License of xinetd - Modifications" ;
+  voag:clauseNumber 2 ;
+  voag:title "Modifications" .
+
+voag:CLS_XINETD-03
+  a voag:DisclaimerClause ;
+  dcterms:description """The author makes no representations about the suitability of this software for any purpose. It is provided "as is" without any express or implied warranty.""" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-xinetd> ;
+  rdfs:label "License of xinetd - Disclaimer" ;
+  voag:clauseNumber 3 ;
+  voag:title "Disclaimer" .

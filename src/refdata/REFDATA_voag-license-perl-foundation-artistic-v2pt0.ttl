@@ -1,0 +1,236 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix voag: <http://voag.linkedmodel.org/voag/> .
+
+<http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-perl-foundation-artistic-v2pt0>
+  a owl:Ontology ;
+  owl:imports <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> ;
+  vaem:hasGraphMetadata voag:GMD_VOAG-LICENSE-PERL-FOUNDATION-ARTISTIC-V2PT0 .
+
+dcterms:author
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "author" ;
+  rdfs:range xsd:string .
+
+dcterms:created
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "created" ;
+  rdfs:range xsd:date .
+
+dcterms:modified
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "modified" ;
+  rdfs:range xsd:date .
+
+dcterms:subject
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "subject" ;
+  rdfs:range xsd:string .
+
+dcterms:title
+  a rdf:Property ;
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "title" ;
+  rdfs:range xsd:string .
+
+dcterms:description
+  rdfs:isDefinedBy dcterms: ;
+  rdfs:label "description" ;
+  rdfs:range xsd:string .
+
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-00
+  a voag:DefinitionClause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-perl-foundation-artistic-v2pt0> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 00: Definitions" ;
+  vaem:description """<p>"Copyright Holder" means the individual(s) or organization(s) named in the copyright notice for the entire Package.</p>
+<p>"Contributor" means any party that has contributed code or other material to the Package, in accordance with the Copyright Holder's procedures.</p>
+<p>"You" and "your" means any person who would like to copy, distribute, or modify the Package.</p>
+<p>"Package" means the collection of files distributed by the Copyright Holder, and derivatives of that collection and/or of those files. A given Package may consist of either the Standard Version, or a Modified Version.</p>
+<p>"Distribute" means providing a copy of the Package or making it accessible to anyone else, or in the case of a company or organization, to others outside of your company or organization.</p>
+<p>"Distributor Fee" means any fee that you charge for Distributing this Package or providing support for this Package to another party. It does not mean licensing fees.</p>
+<p>"Standard Version" refers to the Package if it has not been modified, or has been modified only in ways explicitly requested by the Copyright Holder.</p>
+<p>"Modified Version" means the Package, if it has been changed, and such changes were not explicitly requested by the Copyright Holder.</p>
+<p>"Original License" means this Artistic License as Distributed with the Standard Version of the Package, in its current version or as it may be modified by The Perl Foundation in the future.</p>
+<p>"Source" form means the source code, documentation source, and configuration files for the Package.</p>
+<p>"Compiled" form means the compiled bytecode, object code, binary, or any other form resulting from mechanical transformation or translation of the Source form.</p>"""^^rdf:HTML ;
+  voag:clauseNumber 0 ;
+  voag:title "Definitions" .
+
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-01
+  a voag:GrantClause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-perl-foundation-artistic-v2pt0> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 01: Permission for Use and Modification Without Distribution" ;
+  vaem:description """<p>You are permitted to use the Standard Version and create and use Modified Versions for any purpose without restriction, provided that you do not Distribute the Modified Version.
+Permissions for Redistribution of the Standard Version</p>"""^^rdf:HTML ;
+  voag:clauseNumber 1 ;
+  voag:title "Permission for Use and Modification Without Distribution" .
+
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-02
+  a voag:DistributionClause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-perl-foundation-artistic-v2pt0> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 02: Permission for Use and Modification Without Distribution" ;
+  vaem:description "<p>You may Distribute verbatim copies of the Source form of the Standard Version of this Package in any medium without restriction, either gratis or for a Distributor Fee, provided that you duplicate all of the original copyright notices and associated disclaimers. At your discretion, such verbatim copies may or may not include a Compiled form of the Package.</p>"^^rdf:HTML ;
+  voag:clauseNumber 2 ;
+  voag:title "Permission for Use and Modification Without Distribution" .
+
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-03
+  a voag:GrantClause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-perl-foundation-artistic-v2pt0> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 03: Distribution of Modified Versions of the Package as Source" ;
+  vaem:description "<p>You may apply any bug fixes, portability changes, and other modifications made available from the Copyright Holder. The resulting Package will still be considered the Standard Version, and as such will be subject to the Original License.</p>"^^rdf:HTML ;
+  voag:clauseNumber 3 ;
+  voag:title "Distribution of Modified Versions of the Package as Source" .
+
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-04
+  a voag:GrantClause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-perl-foundation-artistic-v2pt0> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 04: Permission for Use and Modification Without Distribution" ;
+  vaem:description """<p>You may Distribute your Modified Version as Source (either gratis or for a Distributor Fee, and with or without a Compiled form of the Modified Version) provided that you clearly document how it differs from the Standard Version, including, but not limited to, documenting any non-standard features, executables, or modules, and provided that you do at least ONE of the following:</p>
+<ol class="lower-alpha">
+<li>make the Modified Version available to the Copyright Holder of the Standard Version, under the Original License, so that the Copyright Holder may include your modifications in the Standard Version.</li>
+
+<li>ensure that installation of your Modified Version does not prevent the user installing or running the Standard Version. In addition, the Modified Version must bear a name that is different from the name of the Standard Version.</li>
+<li> allow anyone who receives a copy of the Modified Version to make the Source form of the Modified Version available to others under
+<ol class="lm-lower-roman"><li>the Original License or</li>
+<li>a license that permits the licensee to freely copy, modify and redistribute the Modified Version using the same licensing terms that apply to the copy that the licensee received, and requires that the Source form of the Modified Version, and of any works derived from it, be made freely available in that license fees are prohibited but Distributor Fees are allowed.</li>
+</ol>
+</li>
+</ol>"""^^rdf:HTML ;
+  voag:clauseNumber 4 ;
+  voag:title "Permission for Use and Modification Without Distribution" .
+
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-05
+  a voag:DistributionClause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-perl-foundation-artistic-v2pt0> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 05: Distribution of Compiled Forms of the Standard Version or Modified Versions without the Source" ;
+  vaem:description "<p>You may Distribute Compiled forms of the Standard Version without the Source, provided that you include complete instructions on how to get the Source of the Standard Version. Such instructions must be valid at the time of your distribution. If these instructions, at any time while you are carrying out such distribution, become invalid, you must provide new instructions on demand or cease further distribution. If you provide valid instructions or cease distribution within thirty days after you become aware that the instructions are invalid, then you do not forfeit any of your rights under this license.</p>"^^rdf:HTML ;
+  voag:clauseNumber 5 ;
+  voag:title "Distribution of Compiled Forms of the Standard Version or Modified Versions without the Source" .
+
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-06
+  a voag:DistributionClause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-perl-foundation-artistic-v2pt0> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 06: Distribution of Compiled Forms of the Standard Version or Modified Versions without the Source" ;
+  vaem:description "<p>You may Distribute a Modified Version in Compiled form without the Source, provided that you comply with Section 4 with respect to the Source of the Modified Version.</p>"^^rdf:HTML ;
+  voag:clauseNumber 6 ;
+  voag:title "Distribution of Compiled Forms of the Standard Version or Modified Versions without the Source" .
+
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-07
+  a voag:DistributionClause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-perl-foundation-artistic-v2pt0> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 05: Distribution of Compiled Forms of the Standard Version or Modified Versions without the Source" ;
+  vaem:description "<p>You may aggregate the Package (either the Standard Version or Modified Version) with other packages and Distribute the resulting aggregation provided that you do not charge a licensing fee for the Package. Distributor Fees are permitted, and licensing fees for other components in the aggregation are permitted. The terms of this license apply to the use and Distribution of the Standard or Modified Versions as included in the aggregation.</p>"^^rdf:HTML ;
+  voag:clauseNumber 7 ;
+  voag:title "Distribution of Compiled Forms of the Standard Version or Modified Versions without the Source" .
+
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-08
+  a voag:DistributionClause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-perl-foundation-artistic-v2pt0> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 08: Items That are Not Considered Part of a Modified Version" ;
+  vaem:description "<p>You are permitted to link Modified and Standard Versions with other works, to embed the Package in a larger work of your own, or to build stand-alone binary or bytecode versions of applications that include the Package, and Distribute the result without restriction, provided the result does not expose a direct interface to the Package.</p>"^^rdf:HTML ;
+  voag:clauseNumber 8 ;
+  voag:title "Items That are Not Considered Part of a Modified Version" .
+
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-09
+  a voag:GeneralProvisionsClause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-perl-foundation-artistic-v2pt0> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 09: General Provisions" ;
+  vaem:description "<p>Works (including, but not limited to, modules and scripts) that merely extend or make use of the Package, do not, by themselves, cause the Package to be a Modified Version. In addition, such works are not considered parts of the Package itself, and are not subject to the terms of this license.</p>"^^rdf:HTML ;
+  voag:clauseNumber 9 ;
+  voag:title "General Provisions" .
+
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-10
+  a voag:GeneralProvisionsClause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-perl-foundation-artistic-v2pt0> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 10: General Provisions" ;
+  vaem:description "<p>Any use, modification, and distribution of the Standard or Modified Versions is governed by this Artistic License. By using, modifying or distributing the Package, you accept this license. Do not use, modify, or distribute the Package, if you do not accept this license.</p>"^^rdf:HTML ;
+  voag:clauseNumber 10 ;
+  voag:title "General Provisions" .
+
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-11
+  a voag:GeneralProvisionsClause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-perl-foundation-artistic-v2pt0> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 11: General Provisions" ;
+  vaem:description "<p>If your Modified Version has been derived from a Modified Version made by someone other than you, you are nevertheless required to ensure that your Modified Version complies with the requirements of this license.</p>"^^rdf:HTML ;
+  voag:clauseNumber 11 ;
+  voag:title "General Provisions" .
+
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-12
+  a voag:GeneralProvisionsClause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-perl-foundation-artistic-v2pt0> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 12: General Provisions" ;
+  vaem:description "<p>This license does not grant you the right to use any trademark, service mark, tradename, or logo of the Copyright Holder.</p>"^^rdf:HTML ;
+  voag:clauseNumber 12 ;
+  voag:title "General Provisions" .
+
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-13
+  a voag:GeneralProvisionsClause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-perl-foundation-artistic-v2pt0> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 12: General Provisions" ;
+  vaem:description "<p>This license includes the non-exclusive, worldwide, free-of-charge patent license to make, have made, use, offer to sell, sell, import and otherwise transfer the Package with respect to any patent claims licensable by the Copyright Holder that are necessarily infringed by the Package. If you institute patent litigation (including a cross-claim or counterclaim) against any party alleging that the Package constitutes direct or contributory patent infringement, then this Artistic License to you shall terminate on the date that such litigation is filed.</p>"^^rdf:HTML ;
+  voag:clauseNumber 13 ;
+  voag:title "General Provisions" .
+
+voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-14
+  a voag:WarrantyClause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-perl-foundation-artistic-v2pt0> ;
+  rdfs:label "Perl Foundation Artistic License 2.0 Clause 12: Disclaimer of Warranty" ;
+  vaem:description "<p>THE PACKAGE IS PROVIDED BY THE COPYRIGHT HOLDER AND CONTRIBUTORS \"AS IS' AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES. THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT ARE DISCLAIMED TO THE EXTENT PERMITTED BY YOUR LOCAL LAW. UNLESS REQUIRED BY LAW, NO COPYRIGHT HOLDER OR CONTRIBUTOR WILL BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES ARISING IN ANY WAY OUT OF THE USE OF THE PACKAGE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>"^^rdf:HTML ;
+  voag:clauseNumber 14 ;
+  voag:title "Disclaimer of Warranty" .
+
+voag:GMD_VOAG-LICENSE-PERL-FOUNDATION-ARTISTIC-V2PT0
+  a vaem:GraphMetaData ;
+  dcterms:author "Ralph Hodgson" ;
+  dcterms:created "2026-11-18"^^xsd:date ;
+  dcterms:description "Perl Foundation Artistic License 2.0, described in the Vocabulary Of Attribution and Governance (VOAG)." ;
+  dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
+  dcterms:title "VOAG License: Perl Foundation Artistic License 2.0 - Version $$VERSION$$" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-perl-foundation-artistic-v2pt0> ;
+  rdfs:label "VOAG License: Perl Foundation Artistic License 2.0 - Version $$VERSION$$" ;
+  vaem:hasGraphRole vaem:VocabularyGraph ;
+  vaem:hasLicenseType voag:CCBY-4PT0-LICENSE ;
+  vaem:hasOwner vaem:LinkedModels ;
+  vaem:hasSteward vaem:LinkedModels ;
+  vaem:name "voag" ;
+  vaem:namespace "http://voag.linkedmodel.org/voag/" ;
+  vaem:namespacePrefix "voag" ;
+  vaem:owner "Linkedmodels" ;
+  vaem:revision "$$VERSION$$" ;
+  vaem:title "VOAG License: Perl Foundation Artistic License 2.0 - Version $$VERSION$$" ;
+  vaem:turtleFileURL "http://voag.linkedmodel.org/$$VERSION$$/refdata/REFDATA_voag-license-perl-foundation-artistic-v2pt0-v$$VERSION$$.ttl"^^xsd:anyURI ;
+  vaem:withAttributionTo voag:LinkedModelsAttribution .
+
+voag:PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0
+  a voag:License ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-perl-foundation-artistic-v2pt0> ;
+  rdfs:label "Perl Foundation Artistic License 2.0" ;
+  vaem:acronym "ArtisticLicense2" ;
+  vaem:description "This license establishes the terms under which a given free software Package may be copied, modified, distributed, and/or redistributed. The intent is that the Copyright Holder maintains some artistic control over the development of that Package while still keeping the Package available as open source and free software. You are always permitted to make arrangements wholly outside of this license directly with the Copyright Holder of a given Package. If the terms of this license do not permit the full use that you propose to make of the Package, you should contact the Copyright Holder and seek a different licensing arrangement. This Perl Foundation license is a free software license, compatible with the GPL." ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-00 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-01 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-02 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-03 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-04 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-05 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-06 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-07 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-08 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-09 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-10 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-11 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-12 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-13 ;
+  voag:hasClause voag:CLS_PERL-FOUNDATION-ARTISTIC-LICENSE_v2PT0-14 ;
+  voag:url "http://www.perlfoundation.org/artistic_license_2_0" .
+
+
