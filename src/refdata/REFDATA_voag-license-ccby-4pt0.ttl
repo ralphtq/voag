@@ -3,8 +3,6 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix voag: <http://voag.linkedmodel.org/voag/> .
 
@@ -236,8 +234,10 @@ voag:GMD_VOAG-LICENSE-CCBY-4PT0
   a vaem:GraphMetaData ;
   dcterms:author "Ralph Hodgson" ;
   dcterms:created "2026-11-18"^^xsd:date ;
-  dcterms:description "The Creative Commons Attribution 4.0 International license, with its clauses, described in the Vocabulary Of Attribution and Governance (VOAG)." ;
+  dcterms:description "The Creative Commons Attribution 4.0 International license, with its clauses, described in the Vocabulary Of Attribution and Governance (VOAG). The clause text is taken from the Creative Commons legal code, which Creative Commons dedicates to the public domain under CC0. The permits and requires terms are taken from Creative Commons' RDF for the license, available under CC BY 4.0." ;
   dcterms:modified "$$RELEASE_DATE$$"^^xsd:date ;
+  dcterms:source <https://creativecommons.org/licenses/by/4.0/legalcode.en> ;
+  dcterms:source <https://creativecommons.org/licenses/by/4.0/rdf> ;
   dcterms:subject "Licensing, Attribution, Governance and Provenance" ;
   dcterms:title "VOAG License: Creative Commons Attribution 4.0 International - Version $$VERSION$$" ;
   rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/refdata/voag-license-ccby-4pt0> ;
@@ -254,3 +254,5 @@ voag:GMD_VOAG-LICENSE-CCBY-4PT0
   vaem:title "VOAG License: Creative Commons Attribution 4.0 International - Version $$VERSION$$" ;
   vaem:turtleFileURL "http://voag.linkedmodel.org/$$VERSION$$/refdata/REFDATA_voag-license-ccby-4pt0-v$$VERSION$$.ttl"^^xsd:anyURI ;
   vaem:withAttributionTo voag:LinkedModelsAttribution .
+
+
