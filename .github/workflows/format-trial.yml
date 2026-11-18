@@ -46,13 +46,19 @@ jobs:
           cp *.md ../trial/
           python - <<'PY'
           import pathlib, rdflib
-          from rdflib.compare import to_isomorphic
+          from rdflib.compare import graph_diff, to_isomorphic
           lines = []
           for after in sorted(pathlib.Path("src").rglob("*.ttl")):
               before = pathlib.Path("../before") / after
               a = before.read_text(encoding="utf-8").splitlines()
               b = after.read_text(encoding="utf-8").splitlines()
-              same = to_isomorphic(rdflib.Graph().parse(before)) == to_isomorphic(rdflib.Graph().parse(after))
+              ga, gb = rdflib.Graph().parse(before), rdflib.Graph().parse(after)
+              same = to_isomorphic(ga) == to_isomorphic(gb)
+              if not same:
+                  _, only_a, only_b = graph_diff(to_isomorphic(ga), to_isomorphic(gb))
+                  for label, triples in (("before only", only_a), ("after only", only_b)):
+                      for t in sorted(triples, key=str)[:8]:
+                          print(f"::notice title=Changed triple ({after})::{label}: " + " | ".join(repr(str(x))[:150] for x in t))
               changed = sum(1 for x, y in zip(a, b) if x != y) + abs(len(a) - len(b))
               line = f"{after}: {len(a)} -> {len(b)} lines, about {changed} lines differ; triples {'unchanged' if same else 'CHANGED'}"
               lines.append(line)
