@@ -16,6 +16,7 @@
 dcterms:description
   rdfs:label "description" ;
   rdfs:range xsd:string ;
+  rdfs:isDefinedBy dcterms: ;
 .
 dcterms:subject
   rdf:type owl:AnnotationProperty ;
@@ -50,11 +51,13 @@ voag:AdditionalClause
   rdf:type owl:Class ;
   rdfs:label "Additional clause" ;
   rdfs:subClassOf voag:Clause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:AdjunctClause
   rdf:type owl:Class ;
   rdfs:label "Adjunct clause" ;
   rdfs:subClassOf voag:Clause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:AdministrativeEvent
   rdf:type owl:Class ;
@@ -109,6 +112,7 @@ voag:AttorneyFeesClause
   rdf:type owl:Class ;
   rdfs:label "Attorney fees clause" ;
   rdfs:subClassOf voag:Clause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:Attribution
   rdf:type owl:Class ;
@@ -153,6 +157,7 @@ voag:AttributionRightsClause
   rdf:type owl:Class ;
   rdfs:label "Attribution rights clause" ;
   rdfs:subClassOf voag:Clause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:BiMonthly
   rdf:type voag:ChangeFrequency ;
@@ -179,6 +184,7 @@ voag:CC-SHAREALIKE_3PT0-US
   rdf:type voag:License ;
   dcterms:description "self-explanatory" ;
   rdfs:label "Creative Commons Attribution - Share Alike 3.0 United States License" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:CCPH_CommercialUse
   rdf:type voag:CreativeCommonsProhibition ;
@@ -377,6 +383,7 @@ voag:Clause
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty vaem:description ;
     ] ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:ClosedIssue
   rdf:type voag:IssueStatus ;
@@ -405,6 +412,7 @@ voag:CopyrightGrantClause
   rdfs:domain voag:License ;
   rdfs:label "Cpyright grant clause" ;
   rdfs:subClassOf voag:GrantClause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:CreativeCommonsJurisdiction
   rdf:type owl:Class ;
@@ -464,6 +472,7 @@ voag:DefinitionClause
   rdf:type owl:Class ;
   rdfs:label "Definition clause" ;
   rdfs:subClassOf voag:Clause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:DeletionEvent
   rdf:type owl:Class ;
@@ -498,6 +507,7 @@ voag:DisclaimerClause
   rdf:type owl:Class ;
   rdfs:label "Disclaimer clause" ;
   rdfs:subClassOf voag:Clause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:DistributionClause
   rdf:type owl:Class ;
@@ -611,6 +621,7 @@ voag:ExclusionClause
   rdf:type owl:Class ;
   rdfs:label "Exclusion lclause" ;
   rdfs:subClassOf voag:Clause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:Experimental
   rdf:type voag:Maturity ;
@@ -693,6 +704,7 @@ voag:GeneralProvisionsClause
   rdf:type owl:Class ;
   rdfs:label "General provisions clause" ;
   rdfs:subClassOf voag:Clause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:Governance
   rdf:type owl:Class ;
@@ -890,7 +902,7 @@ voag:GovernanceProtocol
   owl:equivalentClass [
       rdf:type owl:Class ;
       dcterms:description "self-explanatory" ;
-      rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
+      rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
       owl:intersectionOf (
           [
             rdf:type owl:Restriction ;
@@ -1013,6 +1025,7 @@ voag:GrantClause
       owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty vaem:description ;
     ] ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:Graph
   rdf:type owl:Class ;
@@ -1226,6 +1239,7 @@ voag:JuristricationClause
   rdf:type owl:Class ;
   rdfs:label "Juristrication clause" ;
   rdfs:subClassOf voag:Clause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:License
   rdf:type owl:Class ;
@@ -1279,6 +1293,7 @@ voag:LimitationOfLiabilityClause
   rdf:type owl:Class ;
   rdfs:label "Limitation of liability clause" ;
   rdfs:subClassOf voag:Clause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:LinkedModelLogo-200x80
   rdf:type voag:Logo ;
@@ -1288,6 +1303,7 @@ voag:LinkedModelLogo-200x80
   voag:image "http://www.linkedmodel.org/lib/lm/images/logos/linkedmodels-logo.gif"^^xsd:anyURI ;
   voag:width "200" ;
   rdfs:label "LinkedModel ICON 200 x 80" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:Logo
   rdf:type owl:Class ;
@@ -1316,6 +1332,7 @@ voag:MiscClause
   rdf:type owl:Class ;
   rdfs:label "Misc clause" ;
   rdfs:subClassOf voag:Clause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:ModificationChange
   rdf:type voag:ChangeType ;
@@ -1327,6 +1344,7 @@ voag:ModificationClause
   rdf:type owl:Class ;
   rdfs:label "Modification clause" ;
   rdfs:subClassOf voag:Clause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:Monthly
   rdf:type voag:ChangeFrequency ;
@@ -1522,6 +1540,7 @@ voag:PatentGrantClause
   rdfs:domain voag:License ;
   rdfs:label "Patent grant clause" ;
   rdfs:subClassOf voag:GrantClause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:Pedigree
   rdf:type owl:Class ;
@@ -1613,6 +1632,7 @@ voag:ProtectionClause
   rdf:type owl:Class ;
   rdfs:label "Protection clause" ;
   rdfs:subClassOf voag:Clause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:Provenance
   rdf:type owl:Class ;
@@ -1645,7 +1665,7 @@ voag:Provenance
       owl:allValuesFrom [
           rdf:type owl:Class ;
           dcterms:description "self-explanatory" ;
-          rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
+          rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
           owl:unionOf (
               voag:Party
               voag:Document
@@ -1745,6 +1765,7 @@ voag:RestrictionsClause
   rdf:type owl:Class ;
   rdfs:label "Restrictions clause" ;
   rdfs:subClassOf voag:Clause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:RetreivalEvent
   rdf:type owl:Class ;
@@ -1769,6 +1790,7 @@ voag:RightToUseClause
   rdf:type owl:Class ;
   rdfs:label "Right to use clause" ;
   rdfs:subClassOf voag:Clause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:SPARQLIcon-80X15
   rdf:type voag:Icon ;
@@ -1794,7 +1816,7 @@ voag:SchemaGraph
   owl:equivalentClass [
       rdf:type owl:Class ;
       dcterms:description "self-explanatory" ;
-      rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
+      rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
       owl:intersectionOf (
           voag:Graph
           [
@@ -1833,6 +1855,7 @@ voag:SourceCodeGrantClause
   rdfs:domain voag:License ;
   rdfs:label "Source code grant clause" ;
   rdfs:subClassOf voag:GrantClause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:StakeholderGroup
   rdf:type owl:Class ;
@@ -1878,6 +1901,7 @@ voag:TerminationClause
   rdf:type owl:Class ;
   rdfs:label "Termination clause" ;
   rdfs:subClassOf voag:Clause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:LinkedModelsAttribution
   rdf:type voag:Attribution ;
@@ -1923,6 +1947,7 @@ voag:UsageClause
   rdf:type owl:Class ;
   rdfs:label "Usage clause" ;
   rdfs:subClassOf voag:Clause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:VOAG-OntologyLogo_360x110
   rdf:type voag:ProductLogo ;
@@ -1931,11 +1956,13 @@ voag:VOAG-OntologyLogo_360x110
   voag:image "http://www.linkedmodel.org/lib/lm/images/logos/voag_logo_360x110.png"^^xsd:anyURI ;
   voag:width "180" ;
   rdfs:label "VOAG Logo" ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:VersionClause
   rdf:type owl:Class ;
   rdfs:label "Version clause" ;
   rdfs:subClassOf voag:Clause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:VocabGraph
   rdf:type owl:Class ;
@@ -1951,7 +1978,7 @@ voag:VocabGraph
   owl:equivalentClass [
       rdf:type owl:Class ;
       dcterms:description "self-explanatory" ;
-      rdfs:isDefinedBy <http://voag.linkedmodel.org/schema/voag> ;
+      rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
       owl:intersectionOf (
           voag:Graph
           [
@@ -1966,6 +1993,7 @@ voag:WarrantyClause
   rdf:type owl:Class ;
   rdfs:label "Warranty clause" ;
   rdfs:subClassOf voag:Clause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:Weekly
   rdf:type voag:ChangeFrequency ;
@@ -2010,6 +2038,7 @@ voag:clauseNumber
   rdfs:domain voag:Clause ;
   rdfs:label "clause number" ;
   rdfs:range xsd:integer ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:compatibleWith
   rdf:type owl:ObjectProperty ;
@@ -2713,6 +2742,7 @@ voag:withRespectTo
   rdfs:domain voag:AdjunctClause ;
   rdfs:label "with respect to" ;
   rdfs:range voag:Clause ;
+  rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/voag> ;
 .
 voag:witnessTo
   rdf:type owl:ObjectProperty ;
@@ -2733,6 +2763,7 @@ prov:Entity
   rdf:type owl:Class ;
   dcterms:description "self-explanatory" ;
   rdfs:label "Entity" ;
+  rdfs:isDefinedBy <http://www.w3.org/TR/prov-o/> ;
 .
 prov:wasInfluencedBy
   rdf:type rdf:Property ;

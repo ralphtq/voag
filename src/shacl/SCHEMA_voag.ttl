@@ -22,13 +22,15 @@ A minimal representation of accreditation
 voag:AdditionalClause a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Additional clause"^^xsd:string ;
-    rdfs:subClassOf voag:Clause .
+    rdfs:subClassOf voag:Clause ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:AdjunctClause a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Adjunct clause"^^xsd:string ;
     rdfs:subClassOf voag:Clause ;
-    sh:property voag:AdjunctClause-withRespectTo .
+    sh:property voag:AdjunctClause-withRespectTo ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:AdministrativeEvent a rdfs:Class,
         sh:NodeShape ;
@@ -71,7 +73,8 @@ An archival occurrence.
 voag:AttorneyFeesClause a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Attorney fees clause"^^xsd:string ;
-    rdfs:subClassOf voag:Clause .
+    rdfs:subClassOf voag:Clause ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:Attribution a rdfs:Class,
         sh:NodeShape ;
@@ -99,7 +102,8 @@ self-explanatory
 voag:AttributionRightsClause a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Attribution rights clause"^^xsd:string ;
-    rdfs:subClassOf voag:Clause .
+    rdfs:subClassOf voag:Clause ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:Catalog a rdfs:Class,
         sh:NodeShape ;
@@ -145,7 +149,8 @@ voag:Clause a rdfs:Class,
     rdfs:label "License clause"^^xsd:string ;
     sh:property voag:Clause-clauseNumber,
         voag:Clause-description,
-        voag:Clause-title .
+        voag:Clause-title ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:ConcurrenceEvent a rdfs:Class,
         sh:NodeShape ;
@@ -173,7 +178,8 @@ voag:CopyrightGrantClause a rdfs:Class,
     dcterms:description """
 A permission that a Licensor grants.
 """^^xsd:string ;
-    rdfs:subClassOf voag:GrantClause .
+    rdfs:subClassOf voag:GrantClause ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:CreativeCommonsJurisdiction a rdfs:Class,
         sh:NodeShape ;
@@ -229,7 +235,8 @@ A potentially copyrightable work
 voag:DefinitionClause a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Definition clause"^^xsd:string ;
-    rdfs:subClassOf voag:Clause .
+    rdfs:subClassOf voag:Clause ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:DeletionEvent a rdfs:Class,
         sh:NodeShape ;
@@ -253,7 +260,8 @@ An"Assigned Role" with the following instance(s): "Assurer", "Project Management
 voag:DisclaimerClause a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Disclaimer clause"^^xsd:string ;
-    rdfs:subClassOf voag:Clause .
+    rdfs:subClassOf voag:Clause ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:DistributionClause a rdfs:Class,
         sh:NodeShape ;
@@ -305,7 +313,8 @@ A governance-related event.
 voag:ExclusionClause a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Exclusion lclause"^^xsd:string ;
-    rdfs:subClassOf voag:Clause .
+    rdfs:subClassOf voag:Clause ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:Figure a rdfs:Class,
         sh:NodeShape ;
@@ -320,7 +329,8 @@ An illustration of some kind.
 voag:GeneralProvisionsClause a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "General provisions clause"^^xsd:string ;
-    rdfs:subClassOf voag:Clause .
+    rdfs:subClassOf voag:Clause ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:Governance a rdfs:Class,
         sh:NodeShape ;
@@ -435,7 +445,8 @@ voag:GrantClause a rdfs:Class,
 A grant is a permission to perform some action.
 """^^xsd:string ;
     rdfs:subClassOf voag:Clause ;
-    sh:property voag:GrantClause-description .
+    sh:property voag:GrantClause-description ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:Graph a rdfs:Class,
         sh:NodeShape ;
@@ -520,7 +531,8 @@ The status of an issue: "Closed", "Deferred", "Non issue", "Open", "Resolved".
 voag:JuristricationClause a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Juristrication clause"^^xsd:string ;
-    rdfs:subClassOf voag:Clause .
+    rdfs:subClassOf voag:Clause ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:License a rdfs:Class,
         sh:NodeShape ;
@@ -548,7 +560,8 @@ A License describes the licensing conditions associated with a software artifact
 voag:LimitationOfLiabilityClause a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Limitation of liability clause"^^xsd:string ;
-    rdfs:subClassOf voag:Clause .
+    rdfs:subClassOf voag:Clause ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:Logo a rdfs:Class,
         sh:NodeShape ;
@@ -572,12 +585,14 @@ self-explanatory
 voag:MiscClause a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Misc clause"^^xsd:string ;
-    rdfs:subClassOf voag:Clause .
+    rdfs:subClassOf voag:Clause ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:ModificationClause a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Modification clause"^^xsd:string ;
-    rdfs:subClassOf voag:Clause .
+    rdfs:subClassOf voag:Clause ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:NonConcurrenceEvent a rdfs:Class,
         sh:NodeShape ;
@@ -635,7 +650,8 @@ voag:PatentGrantClause a rdfs:Class,
     dcterms:description """
 A permission that a Licensor grants.
 """^^xsd:string ;
-    rdfs:subClassOf voag:GrantClause .
+    rdfs:subClassOf voag:GrantClause ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:Pedigree a rdfs:Class,
         sh:NodeShape ;
@@ -693,7 +709,8 @@ self-explanatory
 voag:ProtectionClause a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Protection clause"^^xsd:string ;
-    rdfs:subClassOf voag:Clause .
+    rdfs:subClassOf voag:Clause ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:Provenance a rdfs:Class,
         sh:NodeShape ;
@@ -746,7 +763,8 @@ A "Governance Event".
 voag:RestrictionsClause a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Restrictions clause"^^xsd:string ;
-    rdfs:subClassOf voag:Clause .
+    rdfs:subClassOf voag:Clause ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:RetreivalEvent a rdfs:Class,
         sh:NodeShape ;
@@ -770,7 +788,8 @@ A review occurrence.
 voag:RightToUseClause a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Right to use clause"^^xsd:string ;
-    rdfs:subClassOf voag:Clause .
+    rdfs:subClassOf voag:Clause ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:SchemaGraph a rdfs:Class,
         sh:NodeShape ;
@@ -798,7 +817,8 @@ voag:SourceCodeGrantClause a rdfs:Class,
     dcterms:description """
 A permission that a Licensor grants.
 """^^xsd:string ;
-    rdfs:subClassOf voag:GrantClause .
+    rdfs:subClassOf voag:GrantClause ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:StakeholderGroup a rdfs:Class,
         sh:NodeShape ;
@@ -824,17 +844,20 @@ An industry, de facto or de jure standard
 voag:TerminationClause a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Termination clause"^^xsd:string ;
-    rdfs:subClassOf voag:Clause .
+    rdfs:subClassOf voag:Clause ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:UsageClause a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Usage clause"^^xsd:string ;
-    rdfs:subClassOf voag:Clause .
+    rdfs:subClassOf voag:Clause ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:VersionClause a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Version clause"^^xsd:string ;
-    rdfs:subClassOf voag:Clause .
+    rdfs:subClassOf voag:Clause ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:VocabGraph a rdfs:Class,
         sh:NodeShape ;
@@ -849,14 +872,16 @@ self-explanatory
 voag:WarrantyClause a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Warranty clause"^^xsd:string ;
-    rdfs:subClassOf voag:Clause .
+    rdfs:subClassOf voag:Clause ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 prov:Entity a rdfs:Class,
         sh:NodeShape ;
     rdfs:label "Entity"^^xsd:string ;
     dcterms:description """
 self-explanatory
-"""^^xsd:string .
+"""^^xsd:string ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/prov-o/> .
 
 dcterms:subject-range a sh:NodeShape ;
     rdfs:label "Values of subject" ;
@@ -1117,7 +1142,8 @@ LinkedModel Logo
     voag:caption "LinkedModel Standard ICON"^^xsd:string ;
     voag:height "80"^^xsd:string ;
     voag:image "http://www.linkedmodel.org/lib/lm/images/logos/linkedmodels-logo.gif"^^xsd:anyURI ;
-    voag:width "200"^^xsd:string .
+    voag:width "200"^^xsd:string ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:ModificationChange a voag:ChangeType ;
     rdfs:label "Modification change"^^xsd:string ;
@@ -1309,7 +1335,8 @@ voag:VOAG-OntologyLogo_360x110 a voag:ProductLogo ;
     voag:caption "VOAG Logo"^^xsd:string ;
     voag:height "55"^^xsd:string ;
     voag:image "http://www.linkedmodel.org/lib/lm/images/logos/voag_logo_360x110.png"^^xsd:anyURI ;
-    voag:width "180"^^xsd:string .
+    voag:width "180"^^xsd:string ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:accountableFor a rdf:Property ;
     rdfs:label "accountable for"^^xsd:string ;
@@ -2475,7 +2502,8 @@ A short description, typically used on a table or a figure.
     rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:clauseNumber a rdf:Property ;
-    rdfs:label "clause number"^^xsd:string .
+    rdfs:label "clause number"^^xsd:string ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:compatibleWith a rdf:Property ;
     rdfs:label "compatible with"^^xsd:string ;
@@ -2920,7 +2948,8 @@ Width is typically used to specify an image's width attribute.
     rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:withRespectTo a rdf:Property ;
-    rdfs:label "with respect to"^^xsd:string .
+    rdfs:label "with respect to"^^xsd:string ;
+    rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
 voag:LinkedModelsAttribution a voag:Attribution ;
     rdfs:label "Linkedmodels attribution"^^xsd:string ;
@@ -3072,7 +3101,8 @@ self-explanatory
 """^^xsd:string ;
     rdfs:isDefinedBy <http://voag.linkedmodel.org/$$VERSION$$/schema/shacl/voag> .
 
-dcterms:description rdfs:label "description"^^xsd:string .
+dcterms:description rdfs:label "description"^^xsd:string ;
+    rdfs:isDefinedBy dcterms: .
 
 voag:hasLogo a rdf:Property ;
     rdfs:label "has logo"^^xsd:string ;
