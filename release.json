@@ -1,0 +1,14 @@
+{
+  "name": "voag",
+  "version": "2.0.0",
+  "imports": {"vaem": "3.0.0", "dtype": "2.0.0"},
+  "files": [
+    {"src": "src/owl/SCHEMA_voag.ttl", "dist": "{version}/schema/SCHEMA_voag-v{version}.ttl", "role": "owl"},
+    {"src": "src/shacl/SCHEMA_voag.ttl", "dist": "{version}/schema/shacl/SCHEMA_voag_noOWL_v{version}.ttl", "role": "shacl"}
+  ],
+  "compare_ignore": [
+    "http://www.linkedmodel.org/schema/vaem#releaseDate",
+    "http://purl.org/dc/terms/modified",
+    "http://www.linkedmodel.org/schema/vaem#timestamp"
+  ]
+}
