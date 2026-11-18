@@ -18,31 +18,31 @@
   vaem:hasGraphMetadata voag:GMD_VOAG-LICENSES .
 
 dcterms:author
-  a owl:AnnotationProperty ;
+  a rdf:Property ;
   rdfs:isDefinedBy dcterms: ;
   rdfs:label "author" ;
   rdfs:range xsd:string .
 
 dcterms:created
-  a owl:AnnotationProperty ;
+  a rdf:Property ;
   rdfs:isDefinedBy dcterms: ;
   rdfs:label "created" ;
   rdfs:range xsd:date .
 
 dcterms:modified
-  a owl:AnnotationProperty ;
+  a rdf:Property ;
   rdfs:isDefinedBy dcterms: ;
   rdfs:label "modified" ;
   rdfs:range xsd:date .
 
 dcterms:subject
-  a owl:AnnotationProperty ;
+  a rdf:Property ;
   rdfs:isDefinedBy dcterms: ;
   rdfs:label "subject" ;
   rdfs:range xsd:string .
 
 dcterms:title
-  a owl:AnnotationProperty ;
+  a rdf:Property ;
   rdfs:isDefinedBy dcterms: ;
   rdfs:label "title" ;
   rdfs:range xsd:string .
