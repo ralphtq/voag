@@ -31,6 +31,7 @@ wording of one license label.
 ```
 src/shacl/     SHACL source of the next release (versions as tokens)
 src/owl/       OWL source of the next release
+src/refdata/   license reference data, being cleaned up (not released yet)
 schema/        current (unversioned) VOAG
 1.1/           v1.1 schema and vocabulary
 2.0/schema/    v2.0 schema

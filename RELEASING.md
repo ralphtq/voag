@@ -2,8 +2,8 @@
 
 A release is built from the files in `src/`, which carry tokens instead of
 version numbers. Nothing in `1.1/`, `2.0/` or `schema/` is changed by a
-release. The license reference data in `2.0/refdata/` is not part of a
-release yet.
+release. The license reference data in `src/refdata/` (published as
+`2.0/refdata/`) is not part of a release yet.
 
 |        Token         |                              Replaced by                              |
 |----------------------|-----------------------------------------------------------------------|
