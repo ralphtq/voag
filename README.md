@@ -9,15 +9,15 @@ uses VOAG terms.
 
 ## IRIs
 
-| What | IRI | File |
-|---|---|---|
-| Ontology (current) | `http://voag.linkedmodel.org/schema/voag` | `schema/voag.ttl` (v2.0) |
-| Namespace | `http://voag.linkedmodel.org/voag/` (prefix `voag:`) | |
-| v2.0 | `http://voag.linkedmodel.org/2.0/schema/voag` | `2.0/schema/SCHEMA_voag-v2.0.ttl` |
-| v2.0 license reference data | `http://voag.linkedmodel.org/2.0/refdata/voag` | `2.0/refdata/REFDATA_voag-licenses-v2.0.ttl` |
-| v1.1 | `http://voag.linkedmodel.org/1.1/schema/voag` | `1.1/schema/SCHEMA_voag-v1.1.ttl` |
-| v1.1 vocabulary | `http://voag.linkedmodel.org/1.1/vocab/voag` | `1.1/vocab/VOCAB_voag-v1.1.ttl` |
-| v2.0 SHACL (no OWL) | `http://voag.linkedmodel.org/2.0.0/schema/shacl/voag` | `2.0/schema/shacl/SCHEMA_voag_noOWL_v2.0.0.ttl` |
+|            What             |                          IRI                          |                      File                       |
+|-----------------------------|-------------------------------------------------------|-------------------------------------------------|
+| Ontology (current)          | `http://voag.linkedmodel.org/schema/voag`             | `schema/voag.ttl` (v2.0)                        |
+| Namespace                   | `http://voag.linkedmodel.org/voag/` (prefix `voag:`)  |                                                 |
+| v2.0                        | `http://voag.linkedmodel.org/2.0/schema/voag`         | `2.0/schema/SCHEMA_voag-v2.0.ttl`               |
+| v2.0 license reference data | `http://voag.linkedmodel.org/2.0/refdata/voag`        | `2.0/refdata/REFDATA_voag-licenses-v2.0.ttl`    |
+| v1.1                        | `http://voag.linkedmodel.org/1.1/schema/voag`         | `1.1/schema/SCHEMA_voag-v1.1.ttl`               |
+| v1.1 vocabulary             | `http://voag.linkedmodel.org/1.1/vocab/voag`          | `1.1/vocab/VOCAB_voag-v1.1.ttl`                 |
+| v2.0 SHACL (no OWL)         | `http://voag.linkedmodel.org/2.0.0/schema/shacl/voag` | `2.0/schema/shacl/SCHEMA_voag_noOWL_v2.0.0.ttl` |
 
 The IRIs are unchanged by the move out of `linkedmodels`. `schema/voag.ttl`
 and `2.0/schema/SCHEMA_voag-v2.0.ttl` define the same terms. Apart from the
